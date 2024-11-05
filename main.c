@@ -2,5 +2,6 @@
 
 int main(){
     printf("Hello, from p1---Mine-Contamination-in-BiH!\n");
+    printf("\nIt's working");
     
 }
