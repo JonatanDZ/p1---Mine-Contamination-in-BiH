@@ -1,5 +1,6 @@
 #include <stdio.h>
 
-int main(int, char**){
+int main(){
     printf("Hello, from p1---Mine-Contamination-in-BiH!\n");
+    
 }
