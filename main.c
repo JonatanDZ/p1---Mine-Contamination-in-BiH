@@ -5,4 +5,12 @@ int main(){
     printf("Hej");
     printf("Done");
     printf("hi");
+    printf("hi");
+    printf("hi");
+    printf("hi");
+    printf("hi");
+    printf("hi");
+    printf("hi");
+    printf("hi");
+    printf("hi");
 }
