@@ -18,8 +18,7 @@ typedef enum {
 
 int main(){
 
-int arr1[] =                                             {mountain2, mountain2, mountain2, mountain1, forest, forest, field, field, city, city, asphalt, city,city,city,city,city, water, water, asphalt, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2, mountain2};
-
+int arr1[] =                                     {mountain2, mountain2, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, city, city, city, water, water, asphalt, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1};
 
 int length = sizeof(arr1)/sizeof(int);    
 printf("%d", length); 
