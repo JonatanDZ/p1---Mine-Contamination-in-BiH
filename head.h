@@ -19,4 +19,5 @@ typedef enum {
 } moveValue;
 
 
-void createMap(int* map);
+void createMap(int* map, const int mapSize);
+//void printMap(int* map, const int mapSize);
