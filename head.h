@@ -5,7 +5,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <conio.h> 
 
 typedef enum {
     mine = 167,
