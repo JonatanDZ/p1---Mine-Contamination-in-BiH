@@ -1,51 +1,64 @@
 #include <stdbool.h>
 #include "aStar.h"
+#include <math.h>
 
 #define ROW 32
 #define COL 32
 
-typedef struct pair {
+/**
+ *User-defined type for cell coordinate pair.
+ **/
+typedef struct {
     int row;
     int column;
-}Pair;
+} coordinates_t;
 
-typedef struct ppair {
+//TODO: gør senere
+typedef struct { // TODO: Hold øje med hvad denne skal bruges til
     double d;
-    Pair;
-}pPair;
+    coordinates_t;
+} cCoordinates_t;
 
-//Struct der har de nødvendige parametre
-struct cell {
-    //Row and column index of its parent
-    // Note that 0 <= i <= ROW-1 & 0 <= j <= COL-1
-    int parent_i, parent_j;
-    //Parametre til udregning af f = g + h
+// TODO: find ud af parent, neighbour etc. fis
+// Struct der har de nødvendige parametre
+typedef struct {
+    // Row and column index of its parent
+    // Note that 0 <= parentRow <= ROW-1 & 0 <= parentColumn <= COL-1
+    int parentRow, parentColumn;
+    // Parameters to calculate f = g + h
     double f, g, h;
-};
+} cell_t;
 
-//Utlility function checking if a cell is valid or not.
-bool isValid(int row, int col) {
+/**
+ *Utility function checking if a cell is valid or not. by returning 0 or 1.
+ **/
+int isValid(int row, int col) {
     return (row >= 0) && (row < ROW) && (col >= 0) && (col < COL);
 }
 
-//Utility function checking if a cell is blocked.
-bool isUnblocked(int* map, int mapSize, int row, int col) {
-    if(map[row * mapSize + col] == 1) {
-        return true;
-    } else {
-        return false;
-    }
+/**
+ *Utility function checking if a cell is blocked by a landmine or water.
+ **/
+int isUnblocked(int* map, int mapSize, int row, int col) {
+    // [row * mapSize + col] finds the column and row in the 'array'.
+    return map[row * mapSize + col] > 00; // TODO: kan også være den skal være == 1?
+}
+/**
+ *Utility function checking if the cell is the destination
+**/
+int isDestination(int row, int col, coordinates_t dest) {
+    return row == dest.row && col == dest.column;
 }
 
-bool isDestination(int row, int col, Pair dest) {
-    if (row == dest.row && col == dest.column) {
-        return (true);
-    } else {
-        return (false);
-    }
+/**
+ *
+**/
+double calcHValueDia(int row, int col, coordinates_t dest) {
+    int diffRow = abs(row - dest.row);
+    int diffCol = abs(col - dest.column);
+    int D, D2; //TODO: find ud af hvad D skal være. (1 for længden af cellen eller vægten af cellen)
+    return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
-double 
-
 
 void aStarSearch(int map, spawn, dest){
 
