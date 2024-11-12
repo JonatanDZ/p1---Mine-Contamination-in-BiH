@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/build",
+  "command": "/usr/bin/clang  -I/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/p1---Mine-Contamination-in-BiH.dir/main.c.o -c /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/main.c",
+  "file": "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/main.c",
+  "output": "CMakeFiles/p1---Mine-Contamination-in-BiH.dir/main.c.o"
+},
+{
+  "directory": "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/build",
+  "command": "/usr/bin/clang  -I/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/p1---Mine-Contamination-in-BiH.dir/createMap.c.o -c /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c",
+  "file": "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c",
+  "output": "CMakeFiles/p1---Mine-Contamination-in-BiH.dir/createMap.c.o"
+},
+{
+  "directory": "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/build",
+  "command": "/usr/bin/clang  -I/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/p1---Mine-Contamination-in-BiH.dir/printMap.c.o -c /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c",
+  "file": "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c",
+  "output": "CMakeFiles/p1---Mine-Contamination-in-BiH.dir/printMap.c.o"
+}
+]
