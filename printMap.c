@@ -8,6 +8,4 @@ printfmap(int* map, const int mapSize){
         }
         printf("\n");
     }
-
-
 }
