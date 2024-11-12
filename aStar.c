@@ -51,7 +51,7 @@ int isDestination(int row, int col, coordinates_t dest) {
 }
 
 /**
- *
+ *Calculate H-value with the diagonal distance
 **/
 double calcHValueDia(int row, int col, coordinates_t dest) {
     int diffRow = abs(row - dest.row);
@@ -59,6 +59,13 @@ double calcHValueDia(int row, int col, coordinates_t dest) {
     int D, D2; //TODO: find ud af hvad D skal være. (1 for længden af cellen eller vægten af cellen)
     return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
+/**
+ *Calculate H-value with the Euclidean distance
+ **/
+double calcHValueEuc(int row, int col, coordinates_t dest) {
+    return sqrt(pow(row - dest.row, 2) + pow(col - dest.column, 2));
+}
+
 
 void aStarSearch(int map, spawn, dest){
 
