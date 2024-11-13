@@ -1,17 +1,16 @@
-#include <stdio.h>
-int printMap(int* map);
+#include "header.h"
+
+
 
 int main(){
-    printf("Hello, from p1---Mine-Contamination-in-BiH!\n");
-}
+    printf("Hello, from p1---Mine-Contamination-in-BiH!\n\n");
 
-int printMap(int* map){
-    int length = sizeof(map);
-    for (int i = 0; i < length; i++){
-        for (int j = 0; j < length; j++){
-            printf(" %d ", map[i * length + j]);
-        }
-        printf("\n");
-    }
-    return map;
+    const int mapSize = 32;
+    int* map = malloc((mapSize * mapSize) * sizeof(int));
+
+    createMap(map, mapSize);
+
+    printMap(map, mapSize);
+
+    return 0;
 }

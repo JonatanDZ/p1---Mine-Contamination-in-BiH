@@ -1,0 +1,13 @@
+# ninja log v6
+3	371	7531396287926345	build.ninja	155bb8252e7a925f
+23	203	7531395688672023	CMakeFiles/tester.dir/createMap.c.obj	ba7d61d185f11bcd
+19	98	7531395862066293	CMakeFiles/tester.dir/main.c.obj	b56a885bd75ae440
+98	172	7531395862854386	tester.exe	ddb2992420a134c9
+25	82	7531397134859259	CMakeFiles/tester.dir/printMap.c.obj	522a5fc56f542a49
+21	330	7531397134819483	CMakeFiles/tester.dir/createMap.c.obj	ba7d61d185f11bcd
+18	342	7531397134789263	CMakeFiles/tester.dir/main.c.obj	b56a885bd75ae440
+342	415	7531397138026417	tester.exe	3b3cca869fa9c68c
+31	362	7531399935679780	CMakeFiles/tester.dir/main.c.obj	b56a885bd75ae440
+76	364	7531399936125529	CMakeFiles/tester.dir/printMap.c.obj	522a5fc56f542a49
+39	367	7531399935755260	CMakeFiles/tester.dir/createMap.c.obj	ba7d61d185f11bcd
+367	553	7531399939029383	tester.exe	3b3cca869fa9c68c
