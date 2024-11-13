@@ -1,0 +1,3 @@
+C:/Users/marku/CLionProjects/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/p1___Mine_Contamination_in_BiH.dir
+C:/Users/marku/CLionProjects/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/marku/CLionProjects/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/rebuild_cache.dir

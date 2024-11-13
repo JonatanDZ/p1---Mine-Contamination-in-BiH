@@ -1,4 +1,6 @@
-#include "head.h"
+#include "header.h"
+
+
 
 int main(){
     printf("Hello, from p1---Mine-Contamination-in-BiH!\n\n");
@@ -8,14 +10,7 @@ int main(){
 
     createMap(map, mapSize);
 
-    //printMap(map, mapSize);
-
-    for (int i = 0; i < mapSize; i++){
-        for (int j = 0; j < mapSize; j++){
-            printf(" %c", map[i * mapSize + j]);
-        }
-        printf("\n");
-    }
+    printMap(map, mapSize);
 
     return 0;
 }

@@ -1,0 +1,6 @@
+# ninja log v6
+2	426	7531887183732927	build.ninja	9fbd9f8090d1a7a1
+19	140	7531887185108212	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj	bd276e77b45344e8
+16	148	7531887185078232	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	28d5497062051e9c
+21	152	7531887185138214	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj	fbf3ac074ae8e011
+152	265	7531887186443780	p1___Mine_Contamination_in_BiH.exe	a4e038fade62e41d
