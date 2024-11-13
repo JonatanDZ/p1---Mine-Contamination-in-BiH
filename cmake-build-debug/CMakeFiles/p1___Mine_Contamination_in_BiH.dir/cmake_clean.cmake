@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.o"
   "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.o.d"
+  "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.o"
+  "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.o.d"
   "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.o"
   "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.o.d"
   "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.o"

@@ -23,4 +23,7 @@ void createMap(int* map, const int mapSize);
 
 void printMap(int* map, const int mapSize);
 
+int input(int* map, const int mapSize);
+
+
 #endif //HEADER_H
