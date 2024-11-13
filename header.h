@@ -5,7 +5,6 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#endif //HEADER_H
 
 
 #include <stdlib.h>
@@ -25,3 +24,5 @@ typedef enum {
 void createMap(int* map, const int mapSize);
 
 void printMap(int* map, const int mapSize);
+
+#endif
