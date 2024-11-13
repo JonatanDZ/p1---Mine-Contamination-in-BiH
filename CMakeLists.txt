@@ -1,8 +1,7 @@
-cmake_minimum_required(VERSION 3.5.0)
-project(p1---Mine-Contamination-in-BiH VERSION 0.1.0 LANGUAGES C)
+cmake_minimum_required(VERSION 3.29)
+project(p1___Mine_Contamination_in_BiH C)
 
-add_executable(p1---Mine-Contamination-in-BiH main.c)
+set(CMAKE_C_STANDARD 11)
 
-include(CTest)
-enable_testing()
-
+add_executable(p1___Mine_Contamination_in_BiH main.c createMap.c printMap.c
+        input.c)

@@ -1,0 +1,3 @@
+/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/p1___Mine_Contamination_in_BiH.dir
+/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/rebuild_cache.dir
