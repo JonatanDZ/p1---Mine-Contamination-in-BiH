@@ -1,6 +1,9 @@
 #include <stdbool.h>
 #include "aStar.h"
 #include <math.h>
+#include <stdio.h>
+#include "stack.h"
+
 
 #define ROW 32
 #define COL 32
@@ -66,7 +69,20 @@ double calcHValueEuc(int row, int col, coordinates_t dest) {
     return sqrt(pow(row - dest.row, 2) + pow(col - dest.column, 2));
 }
 
+void tracePath(cell_t cellDetails[][COL], coordinates_t dest) {
+    printf("\nThe path is ");
+    int row = dest.row;
+    int col = dest.column;
 
-void aStarSearch(int map, spawn, dest){
+    while(!(cellDetails[row][col].parentRow == row && cellDetails[row][col].parentColumn == col)) {
+        printf("(%d, %d"), row, col);
+        int tempRow = cellDetails[row][col].parentRow
+        int tempCol =
+    }
+}
+
+
+
+void aStarSearch(int* map, spawn, dest){
 
 }
