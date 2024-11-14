@@ -1,19 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
-#include <stdlib.h>
-#include <limits.h>
+#include <float.h>
 
-// Enum for move values
+// Enum for move values (Tile Costs)
 typedef enum {
-    int mine = 00,
-    int water = 00,
-    int asphalt = 10,
-    int city = 15,
-    int field = 20,
-    int forest = 25,
-    int mountain1 = 30,
-    int mountain2 = 35
+    mine = 167,
+    water = 247,
+    asphalt = 223,
+    city = 202,
+    field = 173,
+    forest = 216,
+    mountain1 = 133,
+    mountain2 = 142
 } moveValue;
 
 #define ROW 32
@@ -34,14 +34,14 @@ int direction[4][2] = {
     {-1, 0}  // Up
 };
 
-// Check if a cell is valid (within grid bounds)
+// Function to check if a cell is valid
 bool isValid(int row, int col) {
     return (row >= 0) && (row < ROW) && (col >= 0) && (col < COL);
 }
 
-// Check if a cell is not moveable (water or mine)
+// Function to check if a cell is an obstacle (water or mine)
 bool isObstacle(int grid[ROW][COL], int row, int col) {
-    return grid[row][col] == mine || grid[row][col] == water;
+    return (grid[row][col] == water || grid[row][col] == mine);
 }
 
 // Heuristic function (Manhattan Distance)
@@ -51,32 +51,31 @@ double heuristic(int row, int col, int goalRow, int goalCol) {
 
 // A* Algorithm
 void aStar(int grid[ROW][COL], int startRow, int startCol, int goalRow, int goalCol) {
-    // Initialize nodes array
+    // Initialize the nodes array
     Node nodes[ROW][COL];
     for (int i = 0; i < ROW; i++) {
         for (int j = 0; j < COL; j++) {
             nodes[i][j].parentRow = -1;
             nodes[i][j].parentCol = -1;
-            nodes[i][j].gCost = INFINITY;
-            nodes[i][j].hCost = INFINITY;
-            nodes[i][j].fCost = INFINITY;
+            nodes[i][j].gCost = DBL_MAX;
+            nodes[i][j].hCost = DBL_MAX;
+            nodes[i][j].fCost = DBL_MAX;
             nodes[i][j].inOpenList = false;
             nodes[i][j].inClosedList = false;
         }
     }
 
-    // Initialize starting node
+    // Initialize the starting node
     nodes[startRow][startCol].gCost = 0.0;
     nodes[startRow][startCol].hCost = heuristic(startRow, startCol, goalRow, goalCol);
     nodes[startRow][startCol].fCost = nodes[startRow][startCol].hCost;
     nodes[startRow][startCol].inOpenList = true;
 
-    // Main loop
+    // Priority queue replacement using a simple loop (inefficient but simple for small grids)
     while (1) {
-        int currentRow = -1, currentCol = -1;
-        double minFCost = INFINITY;
-
         // Find the node with the lowest fCost in the open list
+        int currentRow = -1, currentCol = -1;
+        double minFCost = DBL_MAX;
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COL; j++) {
                 if (nodes[i][j].inOpenList && nodes[i][j].fCost < minFCost) {
@@ -95,15 +94,15 @@ void aStar(int grid[ROW][COL], int startRow, int startCol, int goalRow, int goal
 
         // If goal is reached, reconstruct the path
         if (currentRow == goalRow && currentCol == goalCol) {
-            printf("Path found:\n");
+            // Replace the path cells with 69
             while (currentRow != startRow || currentCol != startCol) {
-                printf("-> (%d, %d) ", currentRow, currentCol);
+                grid[currentRow][currentCol] = 69; // Mark the path
                 int tempRow = nodes[currentRow][currentCol].parentRow;
                 int tempCol = nodes[currentRow][currentCol].parentCol;
                 currentRow = tempRow;
                 currentCol = tempCol;
             }
-            printf("-> (%d, %d)\n", startRow, startCol);
+            grid[startRow][startCol] = 69; // Mark the start position
             return;
         }
 
@@ -118,9 +117,9 @@ void aStar(int grid[ROW][COL], int startRow, int startCol, int goalRow, int goal
 
             // If the neighbor is valid, not an obstacle, and not in the closed list
             if (isValid(newRow, newCol) && !isObstacle(grid, newRow, newCol) && !nodes[newRow][newCol].inClosedList) {
-                // Calculate costs using move values from the enum
-                double tileCost = grid[newRow][newCol];
-                double newGCost = nodes[currentRow][currentCol].gCost + tileCost;
+                // Calculate the new gCost (cost to move from the start to this tile)
+                double moveCost = grid[newRow][newCol];  // Cost based on tile type (from the enum)
+                double newGCost = nodes[currentRow][currentCol].gCost + moveCost;
                 double newHCost = heuristic(newRow, newCol, goalRow, goalCol);
                 double newFCost = newGCost + newHCost;
 
@@ -135,6 +134,16 @@ void aStar(int grid[ROW][COL], int startRow, int startCol, int goalRow, int goal
                 }
             }
         }
+    }
+}
+
+// Function to print the grid
+void printGrid(int grid[ROW][COL]) {
+    for (int i = 0; i < ROW; i++) {
+        for (int j = 0; j < COL; j++) {
+            printf("%02c ", grid[i][j]);
+        }
+        printf("\n");
     }
 }
 
@@ -174,11 +183,14 @@ int main() {
             {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
             };
 
-
     int startRow = 0, startCol = 0;
     int goalRow = 31, goalCol = 31;
 
     aStar(grid, startRow, startCol, goalRow, goalCol);
+
+    // Print the grid with the shortest path marked by 69
+    printf("Grid with the path (marked as 69):\n");
+    printGrid(grid);
 
     return 0;
 }
