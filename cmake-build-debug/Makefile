@@ -129,54 +129,6 @@ p1___Mine_Contamination_in_BiH/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build
 .PHONY : p1___Mine_Contamination_in_BiH/fast
 
-createMap.o: createMap.c.o
-.PHONY : createMap.o
-
-# target to build an object file
-createMap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.o
-.PHONY : createMap.c.o
-
-createMap.i: createMap.c.i
-.PHONY : createMap.i
-
-# target to preprocess a source file
-createMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.i
-.PHONY : createMap.c.i
-
-createMap.s: createMap.c.s
-.PHONY : createMap.s
-
-# target to generate assembly for a file
-createMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.s
-.PHONY : createMap.c.s
-
-input.o: input.c.o
-.PHONY : input.o
-
-# target to build an object file
-input.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.o
-.PHONY : input.c.o
-
-input.i: input.c.i
-.PHONY : input.i
-
-# target to preprocess a source file
-input.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.i
-.PHONY : input.c.i
-
-input.s: input.c.s
-.PHONY : input.s
-
-# target to generate assembly for a file
-input.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.s
-.PHONY : input.c.s
-
 main.o: main.c.o
 .PHONY : main.o
 
@@ -201,30 +153,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.s
 .PHONY : main.c.s
 
-printMap.o: printMap.c.o
-.PHONY : printMap.o
-
-# target to build an object file
-printMap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.o
-.PHONY : printMap.c.o
-
-printMap.i: printMap.c.i
-.PHONY : printMap.i
-
-# target to preprocess a source file
-printMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.i
-.PHONY : printMap.c.i
-
-printMap.s: printMap.c.s
-.PHONY : printMap.s
-
-# target to generate assembly for a file
-printMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.s
-.PHONY : printMap.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,18 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... p1___Mine_Contamination_in_BiH"
-	@echo "... createMap.o"
-	@echo "... createMap.i"
-	@echo "... createMap.s"
-	@echo "... input.o"
-	@echo "... input.i"
-	@echo "... input.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... printMap.o"
-	@echo "... printMap.i"
-	@echo "... printMap.s"
 .PHONY : help
 
 
