@@ -45,9 +45,14 @@ void push(stack_t *stack, int value){
   stack->array[++stack->top] = value;
   printf("Pushed %d onto the stack\n", value);
 }
-
+//
 int pop(stack_t *stack) {
   // comment
   if (isEmpty(stack)) {
     printf("Stack Underflow\n");
+    return -1;
+  }
+   // comment
+  return stack->array[stack->top];
+
 }
