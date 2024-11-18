@@ -1,11 +1,8 @@
 # ninja log v6
-2	426	7532683748331860	build.ninja	9fbd9f8090d1a7a1
-19	140	7531887185108212	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj	bd276e77b45344e8
-16	148	7531887185078232	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	28d5497062051e9c
-21	152	7531887185138214	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj	fbf3ac074ae8e011
-152	265	7531887186443780	p1___Mine_Contamination_in_BiH.exe	a4e038fade62e41d
+2	426	7536284645273900	build.ninja	9fbd9f8090d1a7a1
 34	163	7532683756198941	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	f9e7907fd2ff0637
-40	175	7532683756248990	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj	a536ae2d2add8ae6
-49	188	7532683756343812	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj	b55b02d1129d0fe
-54	189	7532683756393832	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj	252b075aed7b3009
 189	315	7532683757747655	p1___Mine_Contamination_in_BiH.exe	3a669f0734124645
+27	268	7536284676087590	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	f9e7907fd2ff0637
+268	364	7536284678497815	p1___Mine_Contamination_in_BiH.exe	f3b4568da553ce47
+3	174	7536289743195962	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	f9e7907fd2ff0637
+174	381	7536289744912647	p1___Mine_Contamination_in_BiH.exe	f3b4568da553ce47

@@ -57,30 +57,6 @@ build CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj: C_COMPILER__p1__
   TARGET_COMPILE_PDB = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\
   TARGET_PDB = p1___Mine_Contamination_in_BiH.pdb
 
-build CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj: C_COMPILER__p1___Mine_Contamination_in_BiH_unscanned_Debug C$:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c || cmake_object_order_depends_target_p1___Mine_Contamination_in_BiH
-  DEP_FILE = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\createMap.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir
-  OBJECT_FILE_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir
-  TARGET_COMPILE_PDB = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\
-  TARGET_PDB = p1___Mine_Contamination_in_BiH.pdb
-
-build CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj: C_COMPILER__p1___Mine_Contamination_in_BiH_unscanned_Debug C$:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c || cmake_object_order_depends_target_p1___Mine_Contamination_in_BiH
-  DEP_FILE = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\printMap.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir
-  OBJECT_FILE_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir
-  TARGET_COMPILE_PDB = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\
-  TARGET_PDB = p1___Mine_Contamination_in_BiH.pdb
-
-build CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj: C_COMPILER__p1___Mine_Contamination_in_BiH_unscanned_Debug C$:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c || cmake_object_order_depends_target_p1___Mine_Contamination_in_BiH
-  DEP_FILE = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\input.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir
-  OBJECT_FILE_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir
-  TARGET_COMPILE_PDB = CMakeFiles\p1___Mine_Contamination_in_BiH.dir\
-  TARGET_PDB = p1___Mine_Contamination_in_BiH.pdb
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target p1___Mine_Contamination_in_BiH
@@ -89,7 +65,7 @@ build CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj: C_COMPILER__p1_
 #############################################
 # Link the executable p1___Mine_Contamination_in_BiH.exe
 
-build p1___Mine_Contamination_in_BiH.exe: C_EXECUTABLE_LINKER__p1___Mine_Contamination_in_BiH_Debug CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj
+build p1___Mine_Contamination_in_BiH.exe: C_EXECUTABLE_LINKER__p1___Mine_Contamination_in_BiH_Debug CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\p1___Mine_Contamination_in_BiH.dir

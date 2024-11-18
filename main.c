@@ -147,8 +147,8 @@ void printGrid(int grid[ROW][COL]) {
     }
 }
 
-int main() {
-    int grid[ROW][COL] = { //This is our hardcoded map
+void createMap(int grid[ROW][COL]) {
+    int tempMap[ROW][COL] = { //This is our hardcoded map
             {mountain2,mountain2,mountain2,mountain2,mountain2,mountain1,mountain1,mountain1,forest,forest, field, asphalt, city, water, water, city, city, asphalt, field,field,field,mine, forest, forest, mine, forest, forest, mine, mountain1, mountain2, mountain2, mountain2},
             {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,forest,forest,asphalt,asphalt, city, water, water, city, asphalt, field, field, field, field,mine,forest,forest,forest,forest,forest,mountain1, mountain1, mountain2, mountain2,},
             {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain1, mountain1, forest, field, asphalt, asphalt, city, water, water, asphalt, asphalt, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain2},
@@ -183,8 +183,26 @@ int main() {
             {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
             };
 
+    for (int i = 0; i < ROW; i++) {
+        for (int j = 0; j < COL; j++) {
+            grid[i][j] = tempMap[i][j];
+        }
+    }
+    return;
+}
+
+
+int main() {
+
+
+
+
+    int grid[ROW][COL];
+
+    createMap(grid);
+
     int startRow = 0, startCol = 0;
-    int goalRow = 31, goalCol = 31;
+    int goalRow = ROW-1, goalCol = COL-1;
 
     aStar(grid, startRow, startCol, goalRow, goalCol);
 
