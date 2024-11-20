@@ -15,6 +15,8 @@
 #include <assert.h>
 
 typedef struct {
+    int Row;
+    int Col;
     int parentRow;
     int parentCol;
     double g;

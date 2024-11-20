@@ -5,8 +5,8 @@
 bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
     if (map[row][col] == water || map[row][col] == mine) {
         printf("hej");
-        return 1;
+        return false;
     }
     printf("ost");
-    return 0;
+    return true;
 }

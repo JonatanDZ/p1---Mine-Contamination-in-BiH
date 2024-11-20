@@ -15,4 +15,5 @@ add_executable(new_targe
         input.c
         printMap.c
         aStarTest.c
+        TimAstar.c
 )
