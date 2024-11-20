@@ -10,8 +10,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
 
 typedef struct {
     int parentRow;
@@ -22,8 +20,6 @@ typedef struct {
     bool OpenList;
     bool ClosedList;
 } cell_t;
-
-
 
 typedef enum {
     mine = 167,
@@ -46,6 +42,5 @@ void insertH(double* hMap, int destRow, int destCol);
 
 double hCalc(int i, int j, int destRow, int destCol);
 
-int linSearch(int arr[]);
 
 #endif //HEADER_H
