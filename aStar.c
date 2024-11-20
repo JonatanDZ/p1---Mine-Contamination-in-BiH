@@ -54,7 +54,8 @@ int isDestination(int row, int col, coordinates_t dest) {
 }
 
 /**
- *Calculate H-value with the diagonal distance
+ *Calculate H-value with the diagonal distance. Manhatten Distance, total of the absolute volues of the descrepencies
+ * between the x and y coordinates of the current and the goal cells
 **/
 double calcHValueDia(int row, int col, coordinates_t dest) {
     int diffRow = abs(row - dest.row);
@@ -63,7 +64,7 @@ double calcHValueDia(int row, int col, coordinates_t dest) {
     return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
 /**
- *Calculate H-value with the Euclidean distance
+ *Calculate H-value with the Euclidean distance. The distance between goal cell and the current cell
  **/
 double calcHValueEuc(int row, int col, coordinates_t dest) {
     return sqrt(pow(row - dest.row, 2) + pow(col - dest.column, 2));
