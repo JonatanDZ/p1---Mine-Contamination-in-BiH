@@ -1,3 +1,0 @@
-C:/Users/a-bti/OneDrive - Aalborg Universitet/Programming/GitHub/P1_SW1/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/p1___Mine_Contamination_in_BiH.dir
-C:/Users/a-bti/OneDrive - Aalborg Universitet/Programming/GitHub/P1_SW1/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/a-bti/OneDrive - Aalborg Universitet/Programming/GitHub/P1_SW1/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/rebuild_cache.dir
