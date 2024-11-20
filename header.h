@@ -10,6 +10,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
 
 typedef struct {
     int parentRow;
@@ -32,15 +34,16 @@ typedef enum {
     mountain2 = 142
 } moveValue;
 
-void createMap(int* map, const int mapSize);
+void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
+void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
-void printMap(double* map, const int mapSize);
-
-int input(int* map, const int mapSize, int* destRow, int* destCol);
+int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, int* destRow, int* destCol);
 
 void insertH(double* hMap, int destRow, int destCol);
 
 double hCalc(int i, int j, int destRow, int destCol);
+
+bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 
 #endif //HEADER_H

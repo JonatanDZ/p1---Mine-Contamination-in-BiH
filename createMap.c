@@ -4,7 +4,7 @@
 
 #include "header.h"
 
-void createMap(int* map, const int mapSize){
+void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
 
 
     int templateMap[32][32] = { //This is our hardcoded map
@@ -41,9 +41,9 @@ void createMap(int* map, const int mapSize){
             {asphalt, water, water, city, city, water, city, field, mine, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2}, //
             {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
             };
-        for (int i = 0; i < mapSize; i++) {
-            for (int j = 0; j < mapSize; j++) {
-                map[i * mapSize + j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
+        for (int i = 0; i < MAPSIZEROW; i++) {
+            for (int j = 0; j < MAPSIZECOL; j++) {
+                map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
         }
     }
 }

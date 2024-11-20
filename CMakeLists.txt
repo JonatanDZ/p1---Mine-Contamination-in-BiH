@@ -4,3 +4,14 @@ project(p1___Mine_Contamination_in_BiH C)
 set(CMAKE_C_STANDARD 11)
 
 
+add_executable(new_targe
+        aStar.c
+        createMap.c
+        main.c
+        header.h
+        linSearch.c
+        aStar.c
+        ifObstacle.c
+        input.c
+        printMap.c
+)
