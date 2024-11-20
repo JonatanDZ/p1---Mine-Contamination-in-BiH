@@ -46,5 +46,6 @@ void insertH(double* hMap, int destRow, int destCol);
 
 double hCalc(int i, int j, int destRow, int destCol);
 
+int linSearch(int arr[]);
 
 #endif //HEADER_H
