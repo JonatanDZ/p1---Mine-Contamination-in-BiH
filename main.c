@@ -1,23 +1,28 @@
 #include "header.h"
 
-#define MAPSIZEROW 32
-#define MAPSIZECOL 32
 
-typedef struct {
-    
 
-}, cell;
+
 
 
 int main(){
     const int mapSize = 32;
+    int destRow;
+    int destCol;
     int* map = malloc((mapSize * mapSize) * sizeof(int));
+    double* hMap = malloc((mapSize * mapSize) * sizeof(double));
 
     createMap(map, mapSize);
 
-    input(map, mapSize);
+    input(map, mapSize, &destRow, &destCol);
 
-    printMap(map, mapSize);
+    insertH(hMap, destRow, destCol);
+
+
+
+
+
+    printMap(hMap, mapSize);
 
 
     return 0;

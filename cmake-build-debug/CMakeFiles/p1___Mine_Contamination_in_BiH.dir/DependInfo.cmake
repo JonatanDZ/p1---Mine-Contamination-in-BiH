@@ -8,10 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.o" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.o.d"
-  "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.o" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.o.d"
-  "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/main.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.o" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.o.d"
-  "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.o" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.o.d"
+  "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStar.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/aStar.c.obj" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/aStar.c.obj.d"
+  "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj.d"
+  "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj.d"
+  "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/main.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj.d"
+  "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj" "gcc" "CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
