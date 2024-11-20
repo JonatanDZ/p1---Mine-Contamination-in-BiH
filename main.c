@@ -1,12 +1,19 @@
 #include "header.h"
-
+#include <stdbool.h>
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 
-typedef struct {
-    
 
-}, cell;
+    typedef struct {
+    int parentRow;
+    int parentCol;
+    double g;
+    double h;
+    double f;
+    bool OpenList;
+    bool ClosedList;
+} cell;
+
 
 
 int main(){
