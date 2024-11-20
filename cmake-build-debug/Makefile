@@ -153,6 +153,30 @@ createMap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.s
 .PHONY : createMap.c.s
 
+ifObstacle.o: ifObstacle.c.o
+.PHONY : ifObstacle.o
+
+# target to build an object file
+ifObstacle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/ifObstacle.c.o
+.PHONY : ifObstacle.c.o
+
+ifObstacle.i: ifObstacle.c.i
+.PHONY : ifObstacle.i
+
+# target to preprocess a source file
+ifObstacle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/ifObstacle.c.i
+.PHONY : ifObstacle.c.i
+
+ifObstacle.s: ifObstacle.c.s
+.PHONY : ifObstacle.s
+
+# target to generate assembly for a file
+ifObstacle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1___Mine_Contamination_in_BiH.dir/build.make CMakeFiles/p1___Mine_Contamination_in_BiH.dir/ifObstacle.c.s
+.PHONY : ifObstacle.c.s
+
 input.o: input.c.o
 .PHONY : input.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... createMap.o"
 	@echo "... createMap.i"
 	@echo "... createMap.s"
+	@echo "... ifObstacle.o"
+	@echo "... ifObstacle.i"
+	@echo "... ifObstacle.s"
 	@echo "... input.o"
 	@echo "... input.i"
 	@echo "... input.s"

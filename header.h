@@ -7,6 +7,22 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "header.h"
+#include <stdbool.h>
+#define MAPSIZEROW 32
+#define MAPSIZECOL 32
+
+
+typedef struct {
+    int parentRow;
+    int parentCol;
+    double g;
+    double h;
+    double f;
+    bool OpenList;
+    bool ClosedList;
+} cell_t;
+
 
 typedef enum {
     mine = 167,
@@ -25,5 +41,6 @@ void printMap(int* map, const int mapSize);
 
 int input(int* map, const int mapSize);
 
+bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 #endif //HEADER_H
