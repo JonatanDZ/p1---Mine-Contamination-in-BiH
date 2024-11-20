@@ -18,10 +18,10 @@ int search(int arr[], int N, int x) {
     return -1;
 }
 
-/***
+/**
  * DET HER ER BARE FOR AT TESTE AT FUNKTIONEN VIRKER, DEN OVRE ER SELVE FUNKTION VI SKAL HAVE TILFØJET TIL ASTAR
 
-/** // Our main function
+// main function to check if the function above works
 int main(void) {
     // We declare and initialize an integer array 'arr'
     int arr[] = { 2, 3, 4, 10, 40 };
@@ -38,4 +38,5 @@ int main(void) {
     (result == -1) ? printf("Element is not present in array") : printf("Element is present at index %d", result);
 
     return 0;
-} //
+}
+**/
