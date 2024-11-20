@@ -1,25 +1,11 @@
 #include "header.h"
-#include <stdbool.h>
-#define MAPSIZEROW 32
-#define MAPSIZECOL 32
-
-
-    typedef struct {
-    int parentRow;
-    int parentCol;
-    double g;
-    double h;
-    double f;
-    bool OpenList;
-    bool ClosedList;
-} cell_t;
-
 
 
 int main(){
     const int mapSize = 32;
     int* map = malloc((mapSize * mapSize) * sizeof(int));
 
+    ifObstacle(map, 2, 2);
     createMap(map, mapSize);
 
     input(map, mapSize);

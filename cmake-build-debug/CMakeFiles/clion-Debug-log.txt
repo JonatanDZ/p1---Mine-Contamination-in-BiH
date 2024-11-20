@@ -2,4 +2,3 @@
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug
-CMake File API: /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug: /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-41670af432709e9ff19d.json (No such file or directory)
