@@ -10,12 +10,14 @@ int main(){
     int destRow;
     int destCol;
     int* map = malloc((mapSize * mapSize) * sizeof(int));
+    //Vi laver et h map, hvor h-værdien af hvert felt er givet
     double* hMap = malloc((mapSize * mapSize) * sizeof(double));
 
     createMap(map, mapSize);
 
     input(map, mapSize, &destRow, &destCol);
 
+    //Denne funktion sætter h-værdi på et hvert felt tilsvarende til map
     insertH(hMap, destRow, destCol);
 
 
