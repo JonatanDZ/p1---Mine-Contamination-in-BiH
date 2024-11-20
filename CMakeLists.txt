@@ -14,4 +14,5 @@ add_executable(new_targe
         ifObstacle.c
         input.c
         printMap.c
+        aStarTest.c
 )

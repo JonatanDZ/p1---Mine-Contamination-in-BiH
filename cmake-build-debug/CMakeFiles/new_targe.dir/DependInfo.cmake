@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStar.c" "CMakeFiles/new_targe.dir/aStar.c.obj" "gcc" "CMakeFiles/new_targe.dir/aStar.c.obj.d"
+  "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c" "CMakeFiles/new_targe.dir/aStarTest.c.obj" "gcc" "CMakeFiles/new_targe.dir/aStarTest.c.obj.d"
   "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c" "CMakeFiles/new_targe.dir/createMap.c.obj" "gcc" "CMakeFiles/new_targe.dir/createMap.c.obj.d"
   "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/ifObstacle.c" "CMakeFiles/new_targe.dir/ifObstacle.c.obj" "gcc" "CMakeFiles/new_targe.dir/ifObstacle.c.obj.d"
   "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c" "CMakeFiles/new_targe.dir/input.c.obj" "gcc" "CMakeFiles/new_targe.dir/input.c.obj.d"

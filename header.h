@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include <assert.h>
 
 typedef struct {
     int parentRow;
@@ -44,6 +45,8 @@ void insertH(double* hMap, int destRow, int destCol);
 double hCalc(int i, int j, int destRow, int destCol);
 
 bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
+
+bool isWithinArray(int row, int col);
 
 
 #endif //HEADER_H

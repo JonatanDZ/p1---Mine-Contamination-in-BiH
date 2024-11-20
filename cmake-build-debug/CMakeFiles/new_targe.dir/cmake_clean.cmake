@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/new_targe.dir/aStar.c.obj"
   "CMakeFiles/new_targe.dir/aStar.c.obj.d"
+  "CMakeFiles/new_targe.dir/aStarTest.c.obj"
+  "CMakeFiles/new_targe.dir/aStarTest.c.obj.d"
   "CMakeFiles/new_targe.dir/createMap.c.obj"
   "CMakeFiles/new_targe.dir/createMap.c.obj.d"
   "CMakeFiles/new_targe.dir/ifObstacle.c.obj"

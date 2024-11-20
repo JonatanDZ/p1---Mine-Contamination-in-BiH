@@ -15,3 +15,10 @@ void insertH(double* hMap, int destRow, int destCol){
 double hCalc(int i, int j, int destRow, int destCol) {
   return sqrt(pow((i - destRow),2)+pow((j - destCol),2));         //En formel for hvordan den eucleadian distance beregnes ud fra nuværende og dest cellerne
 }
+
+bool isWithinArray(int row, int col) {
+  if (row >= 0 && row < MAPSIZEROW && col >= 0 && col < MAPSIZECOL) {
+    return true;
+  }
+  return false;
+}

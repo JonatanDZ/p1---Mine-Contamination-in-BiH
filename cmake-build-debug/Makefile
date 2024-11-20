@@ -152,6 +152,30 @@ aStar.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStar.c.s
 .PHONY : aStar.c.s
 
+aStarTest.obj: aStarTest.c.obj
+.PHONY : aStarTest.obj
+
+# target to build an object file
+aStarTest.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStarTest.c.obj
+.PHONY : aStarTest.c.obj
+
+aStarTest.i: aStarTest.c.i
+.PHONY : aStarTest.i
+
+# target to preprocess a source file
+aStarTest.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStarTest.c.i
+.PHONY : aStarTest.c.i
+
+aStarTest.s: aStarTest.c.s
+.PHONY : aStarTest.s
+
+# target to generate assembly for a file
+aStarTest.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStarTest.c.s
+.PHONY : aStarTest.c.s
+
 createMap.obj: createMap.c.obj
 .PHONY : createMap.obj
 
@@ -308,6 +332,9 @@ help:
 	@echo ... aStar.obj
 	@echo ... aStar.i
 	@echo ... aStar.s
+	@echo ... aStarTest.obj
+	@echo ... aStarTest.i
+	@echo ... aStarTest.s
 	@echo ... createMap.obj
 	@echo ... createMap.i
 	@echo ... createMap.s
