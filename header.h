@@ -5,13 +5,11 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include "header.h"
-#include <stdbool.h>
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 
+#include <stdlib.h>
+#include <stdio.h>
 
 typedef struct {
     int parentRow;
@@ -22,7 +20,6 @@ typedef struct {
     bool OpenList;
     bool ClosedList;
 } cell_t;
-
 
 typedef enum {
     mine = 167,
@@ -37,10 +34,13 @@ typedef enum {
 
 void createMap(int* map, const int mapSize);
 
-void printMap(int* map, const int mapSize);
+void printMap(double* map, const int mapSize);
 
-int input(int* map, const int mapSize);
+int input(int* map, const int mapSize, int* destRow, int* destCol);
 
-bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
+void insertH(double* hMap, int destRow, int destCol);
+
+double hCalc(int i, int j, int destRow, int destCol);
+
 
 #endif //HEADER_H

@@ -5,27 +5,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int input(int* map, const int mapSize) {
+int input(int* map, const int mapSize, int* destRow, int* destCol) {
     // Starter fra 0, så minus en for koordinat.
-    int startPosistion = 10000;
-    int startInputX;
-    int startInputY;
+
+    int startPosistion = 57;
+    int startRow;
+    int startCol;
 
     printf("Input x og y koordinat for start koordinator");
-    scanf(" %d%d", &startInputX, &startInputY);
+    scanf(" %d %d", &startRow, &startCol);
 
-    map[startInputX * mapSize + startInputY] = startPosistion;
+    map[startRow * mapSize + startCol] = startPosistion;
 
-    int endPosistion = 10000;
-    int endInputX;
-    int endInputY;
+    int endPosistion = 57;
+
+
 
     printf("Input x og y koordinat for end koordinator");
-    scanf(" %d%d", &endInputX, &endInputY);
+    scanf(" %d %d", destRow, destCol);
 
-    map[endInputX * mapSize + endInputY] = endPosistion;
 
-    if (startInputX == endInputX && startInputY == endInputY) {
+    map[*destRow * mapSize + *destCol] = endPosistion;
+
+    if (startRow == *destRow && startCol == *destCol) {
         return EXIT_FAILURE;
     }
+
+    return 1;
 }

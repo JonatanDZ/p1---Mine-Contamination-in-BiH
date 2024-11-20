@@ -4,10 +4,11 @@
 
 #include "header.h"
 
-void printMap(int* map, const int mapSize) { //We are printing the map
-    for (int i = 0; i < mapSize; i++){
-        for (int j = 0; j < mapSize; j++){
-            printf(" %d ", map[i * mapSize + j]);
+void printMap(double* map, const int mapSize) { //We are printing the map
+    printf("\n");
+    for (int i = 0; i < mapSize - 2; i++){
+        for (int j = 0; j < mapSize - 2; j++){
+            printf("%3.0lf ", map[i * mapSize + j]);
         }
         printf("\n");
     }
