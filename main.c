@@ -12,7 +12,7 @@
     double f;
     bool OpenList;
     bool ClosedList;
-} cell;
+} cell_t;
 
 
 
