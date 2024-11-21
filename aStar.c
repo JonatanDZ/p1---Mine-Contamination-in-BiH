@@ -43,6 +43,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
 }
 
+
 cell_t popCell(cell_t list[], int n) {
   int length = sizeof(list)/sizeof(list[0]);
   cell_t returnCell = list[n];
@@ -52,7 +53,7 @@ cell_t popCell(cell_t list[], int n) {
   return returnCell;
 }
 
-void generateSuccessors(map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], coor_t dest) {
+void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], coor_t dest) {
 
   for (int row = -1; row <= 1; row++) {
     for (int col = -1; col <= 1; col++) {
@@ -88,6 +89,7 @@ void generateSuccessors(map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t 
     }
   }
 }
+
 
 void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
   for(int i = 0; i < MAPSIZEROW; i++){                            // laves to for-løkker, for at indsætte værdierne i et 2D-array

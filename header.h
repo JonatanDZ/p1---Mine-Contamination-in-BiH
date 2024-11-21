@@ -59,9 +59,11 @@ bool isWithinArray(int row, int col);
 
 int linSearch(cell_t cellList[]);
 
-void generateSuccessors(map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], coor_t dest);
+void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], coor_t dest);
 cell_t popCell(cell_t list[], int i);
 bool isDestination(int row, int col, coor_t dest);
+
+
 
 
 #endif //HEADER_H
