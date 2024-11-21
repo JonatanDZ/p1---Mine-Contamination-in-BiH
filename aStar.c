@@ -4,10 +4,33 @@
 #include "header.h"
 
 
-void insertH(double* hMap, int destRow, int destCol){
+void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
+  cell_t open[99];
+  cell_t closed[99];
+
+  cell_t cellStart;
+  cellStart.parentCoor.row = start.row;
+  cellStart.parentCoor.col = start.col;
+  cellStart.h = hCalc(start.row, start.col, dest.row, dest.col);
+  cellStart.g = map[start.row][start.col]; //denne er 0 det er givet i input.c
+  cellStart.f = cellStart.g + cellStart.h;
+
+  open[0] = cellStart;
+
+  while(sizeof(open) > 0) {
+    linSearch(open);
+
+  }
+
+
+
+
+}
+
+void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
   for(int i = 0; i < MAPSIZEROW; i++){                            // laves to for-løkker, for at indsætte værdierne i et 2D-array
     for(int j = 0; j < MAPSIZECOL; j++){
-      hMap[(i * MAPSIZEROW) + j] = hCalc(i, j, destRow, destCol); //hCalc funktionen bruges, da det er her den har beregnet værdierne og indsætter dem
+      hMap[i][j] = hCalc(i, j, dest.row, dest.col); //hCalc funktionen bruges, da det er her den har beregnet værdierne og indsætter dem
     }
   }
 }

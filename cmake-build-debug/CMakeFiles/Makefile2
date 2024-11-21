@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-Bi
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/new_targe.dir/all
+all: CMakeFiles/main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/new_targe.dir/clean
+clean: CMakeFiles/main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/new_targe.dir
+# Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/new_targe.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target new_targe"
-.PHONY : CMakeFiles/new_targe.dir/all
+CMakeFiles/main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/new_targe.dir/rule: cmake_check_build_system
+CMakeFiles/main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/new_targe.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/new_targe.dir/rule
+.PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-new_targe: CMakeFiles/new_targe.dir/rule
-.PHONY : new_targe
+main: CMakeFiles/main.dir/rule
+.PHONY : main
 
 # clean rule for target.
-CMakeFiles/new_targe.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/clean
-.PHONY : CMakeFiles/new_targe.dir/clean
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

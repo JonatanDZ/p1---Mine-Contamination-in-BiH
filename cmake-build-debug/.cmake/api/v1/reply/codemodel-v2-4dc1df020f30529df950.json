@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "new_targe::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-new_targe-Debug-9989c8cf7a49fe3945bc.json",
-					"name" : "new_targe",
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-6c1ec6a3b2f21f2d1c0a.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

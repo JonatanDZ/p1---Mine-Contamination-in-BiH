@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named new_targe
+# Target rules for targets named main
 
 # Build rule for target.
-new_targe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 new_targe
-.PHONY : new_targe
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-new_targe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/build
-.PHONY : new_targe/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 aStar.obj: aStar.c.obj
 .PHONY : aStar.obj
 
 # target to build an object file
 aStar.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStar.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStar.c.obj
 .PHONY : aStar.c.obj
 
 aStar.i: aStar.c.i
@@ -141,7 +141,7 @@ aStar.i: aStar.c.i
 
 # target to preprocess a source file
 aStar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStar.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStar.c.i
 .PHONY : aStar.c.i
 
 aStar.s: aStar.c.s
@@ -149,7 +149,7 @@ aStar.s: aStar.c.s
 
 # target to generate assembly for a file
 aStar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStar.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStar.c.s
 .PHONY : aStar.c.s
 
 aStarTest.obj: aStarTest.c.obj
@@ -157,7 +157,7 @@ aStarTest.obj: aStarTest.c.obj
 
 # target to build an object file
 aStarTest.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStarTest.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStarTest.c.obj
 .PHONY : aStarTest.c.obj
 
 aStarTest.i: aStarTest.c.i
@@ -165,7 +165,7 @@ aStarTest.i: aStarTest.c.i
 
 # target to preprocess a source file
 aStarTest.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStarTest.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStarTest.c.i
 .PHONY : aStarTest.c.i
 
 aStarTest.s: aStarTest.c.s
@@ -173,7 +173,7 @@ aStarTest.s: aStarTest.c.s
 
 # target to generate assembly for a file
 aStarTest.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/aStarTest.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStarTest.c.s
 .PHONY : aStarTest.c.s
 
 createMap.obj: createMap.c.obj
@@ -181,7 +181,7 @@ createMap.obj: createMap.c.obj
 
 # target to build an object file
 createMap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/createMap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.obj
 .PHONY : createMap.c.obj
 
 createMap.i: createMap.c.i
@@ -189,7 +189,7 @@ createMap.i: createMap.c.i
 
 # target to preprocess a source file
 createMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/createMap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.i
 .PHONY : createMap.c.i
 
 createMap.s: createMap.c.s
@@ -197,7 +197,7 @@ createMap.s: createMap.c.s
 
 # target to generate assembly for a file
 createMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/createMap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.s
 .PHONY : createMap.c.s
 
 ifObstacle.obj: ifObstacle.c.obj
@@ -205,7 +205,7 @@ ifObstacle.obj: ifObstacle.c.obj
 
 # target to build an object file
 ifObstacle.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/ifObstacle.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ifObstacle.c.obj
 .PHONY : ifObstacle.c.obj
 
 ifObstacle.i: ifObstacle.c.i
@@ -213,7 +213,7 @@ ifObstacle.i: ifObstacle.c.i
 
 # target to preprocess a source file
 ifObstacle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/ifObstacle.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ifObstacle.c.i
 .PHONY : ifObstacle.c.i
 
 ifObstacle.s: ifObstacle.c.s
@@ -221,7 +221,7 @@ ifObstacle.s: ifObstacle.c.s
 
 # target to generate assembly for a file
 ifObstacle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/ifObstacle.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ifObstacle.c.s
 .PHONY : ifObstacle.c.s
 
 input.obj: input.c.obj
@@ -229,7 +229,7 @@ input.obj: input.c.obj
 
 # target to build an object file
 input.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/input.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/input.c.obj
 .PHONY : input.c.obj
 
 input.i: input.c.i
@@ -237,7 +237,7 @@ input.i: input.c.i
 
 # target to preprocess a source file
 input.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/input.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/input.c.i
 .PHONY : input.c.i
 
 input.s: input.c.s
@@ -245,7 +245,7 @@ input.s: input.c.s
 
 # target to generate assembly for a file
 input.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/input.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/input.c.s
 .PHONY : input.c.s
 
 linSearch.obj: linSearch.c.obj
@@ -253,7 +253,7 @@ linSearch.obj: linSearch.c.obj
 
 # target to build an object file
 linSearch.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/linSearch.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/linSearch.c.obj
 .PHONY : linSearch.c.obj
 
 linSearch.i: linSearch.c.i
@@ -261,7 +261,7 @@ linSearch.i: linSearch.c.i
 
 # target to preprocess a source file
 linSearch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/linSearch.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/linSearch.c.i
 .PHONY : linSearch.c.i
 
 linSearch.s: linSearch.c.s
@@ -269,7 +269,7 @@ linSearch.s: linSearch.c.s
 
 # target to generate assembly for a file
 linSearch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/linSearch.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/linSearch.c.s
 .PHONY : linSearch.c.s
 
 main.obj: main.c.obj
@@ -277,7 +277,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -285,7 +285,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -293,7 +293,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
 
 printMap.obj: printMap.c.obj
@@ -301,7 +301,7 @@ printMap.obj: printMap.c.obj
 
 # target to build an object file
 printMap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/printMap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMap.c.obj
 .PHONY : printMap.c.obj
 
 printMap.i: printMap.c.i
@@ -309,7 +309,7 @@ printMap.i: printMap.c.i
 
 # target to preprocess a source file
 printMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/printMap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMap.c.i
 .PHONY : printMap.c.i
 
 printMap.s: printMap.c.s
@@ -317,7 +317,7 @@ printMap.s: printMap.c.s
 
 # target to generate assembly for a file
 printMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_targe.dir\build.make CMakeFiles/new_targe.dir/printMap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMap.c.s
 .PHONY : printMap.c.s
 
 # Help Target
@@ -328,7 +328,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... new_targe
+	@echo ... main
 	@echo ... aStar.obj
 	@echo ... aStar.i
 	@echo ... aStar.s

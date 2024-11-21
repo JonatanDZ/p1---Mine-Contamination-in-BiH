@@ -10,18 +10,25 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+
 #include <stdbool.h>
+
 #include <math.h>
+
 #include <assert.h>
 
 typedef struct {
-    int parentRow;
-    int parentCol;
+    int row;
+    int col;
+} coor_t;
+
+typedef struct {
+    coor_t parentCoor;
     double g;
     double h;
     double f;
-    bool OpenList;
-    bool ClosedList;
+    bool openList;
+    bool closedList;
 } cell_t;
 
 typedef enum {
@@ -38,15 +45,17 @@ typedef enum {
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
-int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, int* destRow, int* destCol);
+int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coor_t* dest );
 
-void insertH(double* hMap, int destRow, int destCol);
+void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest);
 
 double hCalc(int i, int j, int destRow, int destCol);
 
 bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 bool isWithinArray(int row, int col);
+
+int linSearch(int arr[]);
 
 
 #endif //HEADER_H

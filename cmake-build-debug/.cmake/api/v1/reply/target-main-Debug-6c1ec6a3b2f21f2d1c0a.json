@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "new_targe.exe"
+			"path" : "main.exe"
 		},
 		{
-			"path" : "new_targe.pdb"
+			"path" : "main.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -63,7 +63,7 @@
 			]
 		}
 	],
-	"id" : "new_targe::@6890427a1f51a3e7e1df",
+	"id" : "main::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -83,8 +83,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "new_targe",
-	"nameOnDisk" : "new_targe.exe",
+	"name" : "main",
+	"nameOnDisk" : "main.exe",
 	"paths" : 
 	{
 		"build" : ".",
