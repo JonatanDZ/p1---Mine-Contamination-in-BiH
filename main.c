@@ -15,7 +15,7 @@ int main(){
     input(map, mapSize, &start, &dest);
 
     //Denne funktion sætter h-værdi på et hvert felt tilsvarende til map
-    insertH(hMap, dest);
+    //insertH(hMap, dest);
 
 
 
