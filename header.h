@@ -34,13 +34,15 @@ typedef enum {
     field = 173,
     forest = 216,
     mountain1 = 133,
-    mountain2 = 142
+    mountain2 = 142,
+    startPosition = 00,
+    endPosition = 01
 } moveValue;
 
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
-int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, int* destRow, int* destCol);
+int input(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void insertH(double* hMap, int destRow, int destCol);
 

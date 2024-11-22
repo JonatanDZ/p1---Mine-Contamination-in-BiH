@@ -31,6 +31,12 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                 case mountain2:
                     map[i][j] = 234;
                     break;
+                case startPosition:
+                    map[i][j] = 101;
+                    break;
+                case endPosition:
+                    map[i][j] = 202;
+                    break;
                 default:
                     map[i][j] = 150; //er for path værdien
             }

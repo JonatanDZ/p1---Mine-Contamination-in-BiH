@@ -6,7 +6,7 @@ int main(){
     int destCol;
     int map [MAPSIZEROW][MAPSIZECOL];
     //Vi laver et h map, hvor h-værdien af hvert felt er givet
-    double* hMap = malloc((mapSize * mapSize) * sizeof(double));
+    //double* hMap = malloc((mapSize * mapSize) * sizeof(double));
 
     createMap(map);
     ifObstacle(map, 0, 13);
@@ -19,7 +19,7 @@ int main(){
 
 
     randomMineGen(map);
-
+    input(map);
     printMap(map);
     terminalOutPut(map);
     printMapChar(map);
