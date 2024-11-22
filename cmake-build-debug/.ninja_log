@@ -1,11 +1,15 @@
 # ninja log v6
-2	426	7532683748331860	build.ninja	9fbd9f8090d1a7a1
-19	140	7531887185108212	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj	bd276e77b45344e8
-16	148	7531887185078232	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	28d5497062051e9c
-21	152	7531887185138214	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj	fbf3ac074ae8e011
-152	265	7531887186443780	p1___Mine_Contamination_in_BiH.exe	a4e038fade62e41d
-34	163	7532683756198941	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/main.c.obj	f9e7907fd2ff0637
-40	175	7532683756248990	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/createMap.c.obj	a536ae2d2add8ae6
-49	188	7532683756343812	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/printMap.c.obj	b55b02d1129d0fe
-54	189	7532683756393832	CMakeFiles/p1___Mine_Contamination_in_BiH.dir/input.c.obj	252b075aed7b3009
+2	426	7539687463567562	build.ninja	9fbd9f8090d1a7a1
 189	315	7532683757747655	p1___Mine_Contamination_in_BiH.exe	3a669f0734124645
+53	267	7539689703453196	CMakeFiles/main.dir/main.c.obj	4c57c76de1f34b41
+43	331	7539689703352991	CMakeFiles/main.dir/createMap.c.obj	9abd06deacbcbd3b
+60	338	7539689703513031	CMakeFiles/main.dir/linSearch.c.obj	ed1ece21cf924f24
+66	344	7539689703583092	CMakeFiles/main.dir/ifObstacle.c.obj	4bdc875bbbe526c7
+35	345	7539689703273008	CMakeFiles/main.dir/aStar.c.obj	c586065258422523
+73	359	7539689703643018	CMakeFiles/main.dir/input.c.obj	3d0ce5179dc0c07c
+271	483	7539689705633007	CMakeFiles/main.dir/printMap.c.obj	918b35e965b31f56
+338	520	7539689706303023	CMakeFiles/main.dir/terminalOutput.c.obj	f46eedd0e009e476
+331	547	7539689706233008	CMakeFiles/main.dir/aStarTest.c.obj	a0ad20a05f308548
+547	805	7539689708393017	main.exe	a070b6fa88a063b9
+39	148	7539690970741635	CMakeFiles/main.dir/terminalOutput.c.obj	f46eedd0e009e476
+149	309	7539690971841634	main.exe	a070b6fa88a063b9

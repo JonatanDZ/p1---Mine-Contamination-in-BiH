@@ -16,14 +16,24 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                 case asphalt:
                     map[i][j] = 27;
                     break;
-                
+                case city:
+                    map[i][j] = 10;
+                    break;
+                case field:
+                    map[i][j] = 11;
+                    break;
+                case forest:
+                    map[i][j] = 1;
+                    break;
+                case mountain1:
+                    map[i][j] = 2;
+                    break;
+                case mountain2:
+                    map[i][j] = 3;
+                    break;
+                default:
+                    printf("Error in output");
             }
         }
     }
 }
-
-    city = 202,
-    field = 173,
-    forest = 216,
-    mountain1 = 133,
-    mountain2 = 142
