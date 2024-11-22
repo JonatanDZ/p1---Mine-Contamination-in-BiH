@@ -7,7 +7,7 @@
 
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
-#define MAXSIZE 99
+#define MAXSIZE 999
 
 #include <stdlib.h>
 #include <stdio.h>

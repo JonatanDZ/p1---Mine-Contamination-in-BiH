@@ -34,18 +34,24 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     printf("Current iteration of while loop: %d\n\n", count);
     int index = fLinSearch(open);
 
+    printf("openList:\n");
+    for (int i = 0; i < MAXSIZE; i++)
+      if (open[i].f > 0.001)
+        printf("%d: %lf\n", i, open[i].f);
 
     //find the note with the smallest f value in the open list and pop it off open
     currentCell = popCell(open, index);
 
     //Insert currentCell to closed list
     closed[count] = currentCell;
+
+    printf("\n--From closed list--");
     printCell(closed[count]);
 
     generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
 
-    if (count == 3)
-      return;
+//    if (count == 3)
+//      return;
     count++;
 
   }
@@ -102,6 +108,7 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
               if (!isInList(open, successorCell)){
 
                 open[count] = successorCell;
+                count++;
 
               } else {
                 //if it is in the open list already. We are updating the shortest cost together with the parent coordinates
@@ -110,7 +117,11 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
                 open[shortestPathIndex].parentCoor.col = successorCell.currentCoor.col;
                 open[shortestPathIndex].g = successorCell.g;
                 open[shortestPathIndex].f = open[shortestPathIndex].g + open[shortestPathIndex].h;
+
+
               }
+              printf("\nsuccessorCell relation %d %d", row, col);
+              printCell(successorCell);
             }
           }
         }
