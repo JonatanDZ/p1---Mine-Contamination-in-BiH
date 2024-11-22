@@ -1,7 +1,7 @@
 #include "header.h"
 
 int main(){
-    const int mapSize = 32;
+    /*const int mapSize = 32;
     int destRow;
     int destCol;
     int map [MAPSIZEROW][MAPSIZECOL];
@@ -10,17 +10,13 @@ int main(){
 
     ifObstacle(map, 0, 12);
     createMap(map);
-
+*/
+    readMap();
    // input(map, mapSize, &destRow, &destCol);
 
     //Denne funktion sætter h-værdi på et hvert felt tilsvarende til map
     //insertH(hMap, destRow, destCol);
 
-
-
-
-
-    printMap(map);
 
 
     return 0;

@@ -1,9 +1,26 @@
-//
-// Created by marku on 13/11/2024.
-//
-
 #include "header.h"
 
+void readMap(int* map) {
+    FILE *mapfile;
+    char ch;
+
+    mapfile = fopen("map.txt", "r");
+    if (mapfile == NULL) {
+        printf("Bruh it ain't readin... we're cooked chat\n");
+            exit(EXIT_FAILURE);
+    }
+
+    while((ch = fgetc(mapfile)) != EOF) {
+        printf(" %c ", ch);
+    }
+    fclose(mapfile);
+}
+
+
+
+
+
+/*
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
@@ -45,3 +62,4 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
         {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
     };
 }
+*/
