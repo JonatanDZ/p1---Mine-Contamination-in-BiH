@@ -4,7 +4,7 @@ project(p1___Mine_Contamination_in_BiH C)
 set(CMAKE_C_STANDARD 11)
 
 
-add_executable(new_targe
+add_executable(main
         aStar.c
         createMap.c
         main.c
@@ -16,3 +16,4 @@ add_executable(new_targe
         printMap.c
         aStarTest.c
 )
+
