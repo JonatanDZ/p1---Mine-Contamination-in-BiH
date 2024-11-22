@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/linSearch.c" "CMakeFiles/main.dir/linSearch.c.o" "gcc" "CMakeFiles/main.dir/linSearch.c.o.d"
   "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/main.c" "CMakeFiles/main.dir/main.c.o" "gcc" "CMakeFiles/main.dir/main.c.o.d"
   "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c" "CMakeFiles/main.dir/printMap.c.o" "gcc" "CMakeFiles/main.dir/printMap.c.o.d"
+  "/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/terminalOutput.c" "CMakeFiles/main.dir/terminalOutput.c.o" "gcc" "CMakeFiles/main.dir/terminalOutput.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

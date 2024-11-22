@@ -15,5 +15,6 @@ add_executable(main
         input.c
         printMap.c
         aStarTest.c
+        terminalOutput.c
 )
 
