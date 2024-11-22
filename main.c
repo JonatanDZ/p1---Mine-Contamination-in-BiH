@@ -18,6 +18,7 @@ int main(){
 
 
 
+    randomMineGen(map);
 
     printMap(map);
     terminalOutPut(map);

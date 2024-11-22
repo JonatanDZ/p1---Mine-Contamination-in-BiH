@@ -17,6 +17,7 @@ add_executable(main
         aStarTest.c
         terminalOutput.c
         printMapChar.c
+        mineGen.c
 
 )
 

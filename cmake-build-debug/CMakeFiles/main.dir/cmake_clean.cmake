@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/linSearch.c.o.d"
   "CMakeFiles/main.dir/main.c.o"
   "CMakeFiles/main.dir/main.c.o.d"
+  "CMakeFiles/main.dir/mineGen.c.o"
+  "CMakeFiles/main.dir/mineGen.c.o.d"
   "CMakeFiles/main.dir/printMap.c.o"
   "CMakeFiles/main.dir/printMap.c.o.d"
   "CMakeFiles/main.dir/printMapChar.c.o"
