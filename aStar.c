@@ -45,7 +45,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     //Insert currentCell to closed list
     closed[count] = currentCell;
 
-    printf("\n--From closed list--");
+    printf("\n--From closed list %d--", count);
     printCell(closed[count]);
 
     generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
@@ -55,7 +55,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     count++;
 
   }
-  if (!(currentCell.currentCoor.row == dest.row && currentCell.currentCoor.col == dest.col)) {
+  if (!(closed[count].currentCoor.row == dest.row && closed[count].currentCoor.col == dest.col)) {
     printf("No Path is found");
   } else {
     printf("Path is found");;
@@ -84,8 +84,6 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
         //Initializing successor cells coordinates
         successorCell.currentCoor.row = successorCell.parentCoor.row + row;
         successorCell.currentCoor.col = successorCell.parentCoor.col + col;
-
-
 
         //Checking if the successor cell is not out of bounds
         if (isWithinArray(successorCell.currentCoor.row, successorCell.currentCoor.col)) {
@@ -120,8 +118,8 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
 
 
               }
-              printf("\nsuccessorCell relation %d %d", row, col);
-              printCell(successorCell);
+              //printf("\nsuccessorCell relation %d %d", row, col);
+              //printCell(successorCell);
             }
           }
         }
