@@ -8,6 +8,8 @@
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 
+#define MAPSIZE 32
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -50,5 +52,7 @@ bool isWithinArray(int row, int col);
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
+
+void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
 
 #endif //HEADER_H

@@ -297,6 +297,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
 
+mineGen.o: mineGen.c.o
+.PHONY : mineGen.o
+
+# target to build an object file
+mineGen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mineGen.c.o
+.PHONY : mineGen.c.o
+
+mineGen.i: mineGen.c.i
+.PHONY : mineGen.i
+
+# target to preprocess a source file
+mineGen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mineGen.c.i
+.PHONY : mineGen.c.i
+
+mineGen.s: mineGen.c.s
+.PHONY : mineGen.s
+
+# target to generate assembly for a file
+mineGen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mineGen.c.s
+.PHONY : mineGen.c.s
+
 printMap.o: printMap.c.o
 .PHONY : printMap.o
 
@@ -399,6 +423,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mineGen.o"
+	@echo "... mineGen.i"
+	@echo "... mineGen.s"
 	@echo "... printMap.o"
 	@echo "... printMap.i"
 	@echo "... printMap.s"
