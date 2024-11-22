@@ -16,10 +16,13 @@ int main(){
     //insertH(hMap, destRow, destCol);
 
 
-
-
     randomMineGen(map);
     input(map);
+
+    
+
+    //a* her
+
     printMap(map);
     terminalOutPut(map);
     printMapChar(map);
