@@ -21,6 +21,6 @@ int main(){
 
     printMap(map);
     terminalOutPut(map);
-    printMap(map);
+    printMapChar(map);
     return 0;
 }

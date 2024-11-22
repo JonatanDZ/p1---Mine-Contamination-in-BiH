@@ -8,31 +8,31 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
                 case mine:
-                    map[i][j] = 22;
+                    map[i][j] = 167;
                     break;
                 case water:
-                    map[i][j] = 45;
+                    map[i][j] = 247;
                     break;
                 case asphalt:
-                    map[i][j] = 27;
+                    map[i][j] = 186;
                     break;
                 case city:
-                    map[i][j] = 10;
+                    map[i][j] = 223;
                     break;
                 case field:
-                    map[i][j] = 11;
+                    map[i][j] = 178;
                     break;
                 case forest:
-                    map[i][j] = 1;
+                    map[i][j] = 157;
                     break;
                 case mountain1:
-                    map[i][j] = 2;
+                    map[i][j] = 239;
                     break;
                 case mountain2:
-                    map[i][j] = 3;
+                    map[i][j] = 234;
                     break;
                 default:
-                    printf("Error in output");
+                    map[i][j] = 150; //er for path værdien
             }
         }
     }

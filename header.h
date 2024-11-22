@@ -49,5 +49,6 @@ bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 bool isWithinArray(int row, int col);
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
+void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
 
 #endif //HEADER_H
