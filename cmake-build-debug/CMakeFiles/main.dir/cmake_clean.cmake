@@ -15,6 +15,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.c.o.d"
   "CMakeFiles/main.dir/printMap.c.o"
   "CMakeFiles/main.dir/printMap.c.o.d"
+  "CMakeFiles/main.dir/printMapChar.c.o"
+  "CMakeFiles/main.dir/printMapChar.c.o.d"
+  "CMakeFiles/main.dir/terminalOutput.c.o"
+  "CMakeFiles/main.dir/terminalOutput.c.o.d"
   "main"
   "main.pdb"
 )

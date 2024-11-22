@@ -181,6 +181,34 @@ CMakeFiles/main.dir/aStarTest.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/aStarTest.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c -o CMakeFiles/main.dir/aStarTest.c.s
 
+CMakeFiles/main.dir/terminalOutput.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/terminalOutput.c.o: /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/terminalOutput.c
+CMakeFiles/main.dir/terminalOutput.c.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/main.dir/terminalOutput.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/terminalOutput.c.o -MF CMakeFiles/main.dir/terminalOutput.c.o.d -o CMakeFiles/main.dir/terminalOutput.c.o -c /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/terminalOutput.c
+
+CMakeFiles/main.dir/terminalOutput.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/terminalOutput.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/terminalOutput.c > CMakeFiles/main.dir/terminalOutput.c.i
+
+CMakeFiles/main.dir/terminalOutput.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/terminalOutput.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/terminalOutput.c -o CMakeFiles/main.dir/terminalOutput.c.s
+
+CMakeFiles/main.dir/printMapChar.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/printMapChar.c.o: /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMapChar.c
+CMakeFiles/main.dir/printMapChar.c.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/main.dir/printMapChar.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/printMapChar.c.o -MF CMakeFiles/main.dir/printMapChar.c.o.d -o CMakeFiles/main.dir/printMapChar.c.o -c /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMapChar.c
+
+CMakeFiles/main.dir/printMapChar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/printMapChar.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMapChar.c > CMakeFiles/main.dir/printMapChar.c.i
+
+CMakeFiles/main.dir/printMapChar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/printMapChar.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMapChar.c -o CMakeFiles/main.dir/printMapChar.c.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/aStar.c.o" \
@@ -190,7 +218,9 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/ifObstacle.c.o" \
 "CMakeFiles/main.dir/input.c.o" \
 "CMakeFiles/main.dir/printMap.c.o" \
-"CMakeFiles/main.dir/aStarTest.c.o"
+"CMakeFiles/main.dir/aStarTest.c.o" \
+"CMakeFiles/main.dir/terminalOutput.c.o" \
+"CMakeFiles/main.dir/printMapChar.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -203,9 +233,11 @@ main: CMakeFiles/main.dir/ifObstacle.c.o
 main: CMakeFiles/main.dir/input.c.o
 main: CMakeFiles/main.dir/printMap.c.o
 main: CMakeFiles/main.dir/aStarTest.c.o
+main: CMakeFiles/main.dir/terminalOutput.c.o
+main: CMakeFiles/main.dir/printMapChar.c.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jonatanz/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

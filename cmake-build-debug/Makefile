@@ -321,6 +321,54 @@ printMap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/printMap.c.s
 .PHONY : printMap.c.s
 
+printMapChar.o: printMapChar.c.o
+.PHONY : printMapChar.o
+
+# target to build an object file
+printMapChar.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/printMapChar.c.o
+.PHONY : printMapChar.c.o
+
+printMapChar.i: printMapChar.c.i
+.PHONY : printMapChar.i
+
+# target to preprocess a source file
+printMapChar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/printMapChar.c.i
+.PHONY : printMapChar.c.i
+
+printMapChar.s: printMapChar.c.s
+.PHONY : printMapChar.s
+
+# target to generate assembly for a file
+printMapChar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/printMapChar.c.s
+.PHONY : printMapChar.c.s
+
+terminalOutput.o: terminalOutput.c.o
+.PHONY : terminalOutput.o
+
+# target to build an object file
+terminalOutput.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/terminalOutput.c.o
+.PHONY : terminalOutput.c.o
+
+terminalOutput.i: terminalOutput.c.i
+.PHONY : terminalOutput.i
+
+# target to preprocess a source file
+terminalOutput.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/terminalOutput.c.i
+.PHONY : terminalOutput.c.i
+
+terminalOutput.s: terminalOutput.c.s
+.PHONY : terminalOutput.s
+
+# target to generate assembly for a file
+terminalOutput.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/terminalOutput.c.s
+.PHONY : terminalOutput.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -354,6 +402,12 @@ help:
 	@echo "... printMap.o"
 	@echo "... printMap.i"
 	@echo "... printMap.s"
+	@echo "... printMapChar.o"
+	@echo "... printMapChar.i"
+	@echo "... printMapChar.s"
+	@echo "... terminalOutput.o"
+	@echo "... terminalOutput.i"
+	@echo "... terminalOutput.s"
 .PHONY : help
 
 
