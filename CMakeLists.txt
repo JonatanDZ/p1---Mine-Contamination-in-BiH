@@ -11,7 +11,7 @@ add_executable(main
         header.h
         linSearch.c
         aStar.c
-        ifObstacle.c
+        isUnblocked.c
         input.c
         printMap.c
         aStarTest.c

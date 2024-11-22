@@ -88,7 +88,7 @@ CMakeFiles/main.dir/createMap.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-C
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/header.h
 
-CMakeFiles/main.dir/ifObstacle.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/ifObstacle.c \
+CMakeFiles/main.dir/input.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
@@ -117,7 +117,7 @@ CMakeFiles/main.dir/ifObstacle.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/header.h
 
-CMakeFiles/main.dir/input.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c \
+CMakeFiles/main.dir/isUnblocked.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/isUnblocked.c \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
@@ -274,8 +274,6 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/math.h:
 
-C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/ifObstacle.c:
-
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/stdio.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
@@ -303,3 +301,5 @@ C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c:
 C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c:
 
 C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c:
+
+C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/isUnblocked.c:

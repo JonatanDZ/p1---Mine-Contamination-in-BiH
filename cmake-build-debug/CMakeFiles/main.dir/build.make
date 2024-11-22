@@ -124,19 +124,19 @@ CMakeFiles/main.dir/linSearch.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/linSearch.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\linSearch.c -o CMakeFiles\main.dir\linSearch.c.s
 
-CMakeFiles/main.dir/ifObstacle.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/ifObstacle.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/ifObstacle.c
-CMakeFiles/main.dir/ifObstacle.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.dir/ifObstacle.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/ifObstacle.c.obj -MF CMakeFiles\main.dir\ifObstacle.c.obj.d -o CMakeFiles\main.dir\ifObstacle.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\ifObstacle.c
+CMakeFiles/main.dir/isUnblocked.c.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/isUnblocked.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/isUnblocked.c
+CMakeFiles/main.dir/isUnblocked.c.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.dir/isUnblocked.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/isUnblocked.c.obj -MF CMakeFiles\main.dir\isUnblocked.c.obj.d -o CMakeFiles\main.dir\isUnblocked.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\isUnblocked.c
 
-CMakeFiles/main.dir/ifObstacle.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/ifObstacle.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\ifObstacle.c > CMakeFiles\main.dir\ifObstacle.c.i
+CMakeFiles/main.dir/isUnblocked.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/isUnblocked.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\isUnblocked.c > CMakeFiles\main.dir\isUnblocked.c.i
 
-CMakeFiles/main.dir/ifObstacle.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/ifObstacle.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\ifObstacle.c -o CMakeFiles\main.dir\ifObstacle.c.s
+CMakeFiles/main.dir/isUnblocked.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/isUnblocked.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\isUnblocked.c -o CMakeFiles\main.dir\isUnblocked.c.s
 
 CMakeFiles/main.dir/input.c.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/input.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c
@@ -186,7 +186,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/createMap.c.obj" \
 "CMakeFiles/main.dir/main.c.obj" \
 "CMakeFiles/main.dir/linSearch.c.obj" \
-"CMakeFiles/main.dir/ifObstacle.c.obj" \
+"CMakeFiles/main.dir/isUnblocked.c.obj" \
 "CMakeFiles/main.dir/input.c.obj" \
 "CMakeFiles/main.dir/printMap.c.obj" \
 "CMakeFiles/main.dir/aStarTest.c.obj"
@@ -198,7 +198,7 @@ main.exe: CMakeFiles/main.dir/aStar.c.obj
 main.exe: CMakeFiles/main.dir/createMap.c.obj
 main.exe: CMakeFiles/main.dir/main.c.obj
 main.exe: CMakeFiles/main.dir/linSearch.c.obj
-main.exe: CMakeFiles/main.dir/ifObstacle.c.obj
+main.exe: CMakeFiles/main.dir/isUnblocked.c.obj
 main.exe: CMakeFiles/main.dir/input.c.obj
 main.exe: CMakeFiles/main.dir/printMap.c.obj
 main.exe: CMakeFiles/main.dir/aStarTest.c.obj

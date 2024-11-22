@@ -200,30 +200,6 @@ createMap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.s
 .PHONY : createMap.c.s
 
-ifObstacle.obj: ifObstacle.c.obj
-.PHONY : ifObstacle.obj
-
-# target to build an object file
-ifObstacle.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ifObstacle.c.obj
-.PHONY : ifObstacle.c.obj
-
-ifObstacle.i: ifObstacle.c.i
-.PHONY : ifObstacle.i
-
-# target to preprocess a source file
-ifObstacle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ifObstacle.c.i
-.PHONY : ifObstacle.c.i
-
-ifObstacle.s: ifObstacle.c.s
-.PHONY : ifObstacle.s
-
-# target to generate assembly for a file
-ifObstacle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ifObstacle.c.s
-.PHONY : ifObstacle.c.s
-
 input.obj: input.c.obj
 .PHONY : input.obj
 
@@ -247,6 +223,30 @@ input.s: input.c.s
 input.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/input.c.s
 .PHONY : input.c.s
+
+isUnblocked.obj: isUnblocked.c.obj
+.PHONY : isUnblocked.obj
+
+# target to build an object file
+isUnblocked.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.obj
+.PHONY : isUnblocked.c.obj
+
+isUnblocked.i: isUnblocked.c.i
+.PHONY : isUnblocked.i
+
+# target to preprocess a source file
+isUnblocked.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.i
+.PHONY : isUnblocked.c.i
+
+isUnblocked.s: isUnblocked.c.s
+.PHONY : isUnblocked.s
+
+# target to generate assembly for a file
+isUnblocked.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.s
+.PHONY : isUnblocked.c.s
 
 linSearch.obj: linSearch.c.obj
 .PHONY : linSearch.obj
@@ -338,12 +338,12 @@ help:
 	@echo ... createMap.obj
 	@echo ... createMap.i
 	@echo ... createMap.s
-	@echo ... ifObstacle.obj
-	@echo ... ifObstacle.i
-	@echo ... ifObstacle.s
 	@echo ... input.obj
 	@echo ... input.i
 	@echo ... input.s
+	@echo ... isUnblocked.obj
+	@echo ... isUnblocked.i
+	@echo ... isUnblocked.s
 	@echo ... linSearch.obj
 	@echo ... linSearch.i
 	@echo ... linSearch.s
