@@ -21,7 +21,7 @@ int main(){
 
 
 
-   // printMap(map);
+   printMap(map);
 
 
 

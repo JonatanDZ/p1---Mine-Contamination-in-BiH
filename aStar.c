@@ -38,9 +38,6 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     count++;
   }
 
-
-
-
 }
 
 

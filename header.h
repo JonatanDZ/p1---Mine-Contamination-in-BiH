@@ -7,7 +7,6 @@
 
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
-#define DIRECTIONS 4
 
 #include <stdlib.h>
 #include <stdio.h>
