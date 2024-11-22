@@ -4,10 +4,9 @@
 int fLinSearch(cell_t cellList[]) {
     int result = 0;
     for (int i = 0; i < MAXSIZE; i++) {
-        if (cellList[i].f < cellList[result].f) {
+        if (cellList[i].f <= cellList[result].f && cellList[i].f > 0.000001 ) {
             result = i;
         }
-
     }
     return result;
 }

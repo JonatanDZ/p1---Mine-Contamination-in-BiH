@@ -9,15 +9,13 @@
 int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coor_t* dest) {
     // Starter fra 0, så minus en for koordinat.
 
-    int startPosistion = 0;
 
 
     printf("Input x og y koordinat for start koordinator");
     scanf(" %d %d", &start->row, &start->col);
 
-    map[start->row][start->col] = startPosistion;
+    //map[start->row][start->col] = startPosistion;
 
-    int endPosistion = 57;
 
 
 
@@ -25,7 +23,7 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coo
     scanf(" %d %d", &dest->row, &dest->col);
 
 
-    map[dest->row][dest->col] = endPosistion;
+    //map[dest->row][dest->col] = endPosistion;
 
     if (start->row == dest->row && start->col == dest->col) {
         return EXIT_FAILURE;

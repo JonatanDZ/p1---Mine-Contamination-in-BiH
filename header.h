@@ -29,19 +29,19 @@ typedef struct {
     double g;
     double h;
     double f;
-    bool openList;
-    bool closedList;
+    //bool openList;
+    //bool closedList;
 } cell_t;
 
 typedef enum {
-    mine = 167,
-    water = 247,
-    asphalt = 223,
-    city = 202,
-    field = 173,
-    forest = 216,
-    mountain1 = 133,
-    mountain2 = 142
+    mine = 00,
+    water = 1,
+    asphalt = 10,
+    city = 14,
+    field = 16,
+    forest = 24,
+    mountain1 = 27,
+    mountain2 = 35
 } moveValue;
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest);
@@ -70,6 +70,8 @@ bool isDestination(int row, int col, coor_t dest);
 bool isInList(cell_t list[], cell_t cellElement);
 
 void tracePath();
+
+void printCell(cell_t cell);
 
 
 

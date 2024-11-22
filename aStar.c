@@ -20,22 +20,34 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   startCell.h = hCalc(start.row, start.col, dest.row, dest.col);
   startCell.g = 0; //denne er 0 det er givet i input.c
   startCell.f = startCell.g + startCell.h;
+
+  //printCell(startCell);
+
   cell_t currentCell;
 
   //We are putting the starting cell in open list
   open[0] = startCell;
 
+
   //While open is not empty
   while(!pathFound) {
+    printf("Current iteration of while loop: %d\n\n", count);
+    int index = fLinSearch(open);
+
 
     //find the note with the smallest f value in the open list and pop it off open
-    currentCell = popCell(open, fLinSearch(open));
+    currentCell = popCell(open, index);
+
     //Insert currentCell to closed list
     closed[count] = currentCell;
+    printCell(closed[count]);
 
     generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
 
+    if (count == 3)
+      return;
     count++;
+
   }
   if (!(currentCell.currentCoor.row == dest.row && currentCell.currentCoor.col == dest.col)) {
     printf("No Path is found");
@@ -54,12 +66,11 @@ cell_t popCell(cell_t list[], int n) {
 }
 
 void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound) {
-
   for (int row = -1; row <= 1; row++) {
     for (int col = -1; col <= 1; col++) {
       cell_t successorCell;
 
-      if (row != 0 && col != 0) {
+      if (!(row == 0 && col == 0)) {
         //We are declaring parentValues for the successor
         successorCell.parentCoor.row = currentCell.currentCoor.row;
         successorCell.parentCoor.col = currentCell.currentCoor.col;
@@ -67,6 +78,7 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
         //Initializing successor cells coordinates
         successorCell.currentCoor.row = successorCell.parentCoor.row + row;
         successorCell.currentCoor.col = successorCell.parentCoor.col + col;
+
 
 
         //Checking if the successor cell is not out of bounds
@@ -85,6 +97,7 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
               successorCell.h = hCalc(successorCell.currentCoor.row, successorCell.currentCoor.col, dest.row, dest.col);
               successorCell.f = successorCell.g + successorCell.h;
 
+
               // If it isn't already in open list put it there
               if (!isInList(open, successorCell)){
 
@@ -97,22 +110,11 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
                 open[shortestPathIndex].parentCoor.col = successorCell.currentCoor.col;
                 open[shortestPathIndex].g = successorCell.g;
                 open[shortestPathIndex].f = open[shortestPathIndex].g + open[shortestPathIndex].h;
-
-
               }
-
             }
-
           }
-
-
-
         }
       }
-
-
-
-
     }
   }
 }
@@ -148,4 +150,9 @@ bool isWithinArray(int row, int col) {
 
 bool isDestination(int row, int col, coor_t dest) {
   return row == dest.row && col == dest.col;
+}
+
+void printCell(cell_t cell) {
+  printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", cell.currentCoor.row, cell.currentCoor.col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
+
 }
