@@ -89,8 +89,9 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
         if (isWithinArray(successorCell.currentCoor.row, successorCell.currentCoor.col)) {
 
           if (isDestination(successorCell.currentCoor.row, successorCell.currentCoor.col, dest)) {
-            printf("Wu!Hu!\nDesitination found!!");
+            printf("Wu!Hu!\nDesitination found!!\nIn closed: %d", count+1);
             closed[count+1] = successorCell;
+            printCell(closed[count+1]);
             *pathFound = true;
             return;
           }
@@ -163,5 +164,4 @@ bool isDestination(int row, int col, coor_t dest) {
 
 void printCell(cell_t cell) {
   printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", cell.currentCoor.row, cell.currentCoor.col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
-
 }
