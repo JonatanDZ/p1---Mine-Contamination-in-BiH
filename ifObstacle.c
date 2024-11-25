@@ -4,7 +4,7 @@
 #include "header.h"
 bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
     if (map[row][col] == water || map[row][col] == mine) {
-        return 1;
+        return true;
     }
-    return 0;
+    return false;
 }
