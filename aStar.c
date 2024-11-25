@@ -174,10 +174,10 @@ void printCell(cell_t cell) {
 
 int tracePath(int map[MAPSIZEROW][MAPSIZECOL],cell_t closed[], cell_t cell, coor_t start) {
   if (cell.currentCoor.row == start.row && cell.currentCoor.col == start.col) {
-    map[cell.currentCoor.row][cell.currentCoor.col] = 99;
+    map[cell.currentCoor.row][cell.currentCoor.col] = 9;
     return 1;
   }
   int index = findParentLinSearch(closed, cell);
-  map[cell.currentCoor.row][cell.currentCoor.col] = 99;
+  map[cell.currentCoor.row][cell.currentCoor.col] = 9;
   return tracePath(map, closed, closed[index], start);
 }
