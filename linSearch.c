@@ -33,9 +33,13 @@ int findParentLinSearch(cell_t parentCellList[], cell_t cell) {
             if (first) {
                 first = false;
                 result = i;
-            }else if (parentCellList[i].f + 0.1 < parentCellList[result].f) {
-                result = i;
 
+                printf("\n %d Parent Cell", i);
+                printCell(parentCellList[result]);
+            }else if (parentCellList[i].f + 0.1 < parentCellList[result].f) {
+                printf("%d Cell",i);
+                printCell(parentCellList[i]);
+                result = i;
             }
         }
     }

@@ -32,7 +32,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
   //While open is not empty
   while(!pathFound) {
-    printf("Current iteration of while loop: %d\n\n", count);
+    //printf("Current iteration of while loop: %d\n\n", count);
     int index = fLinSearch(open);
 /*
     printf("openList:\n");
@@ -159,6 +159,7 @@ void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
 
 double hCalc(int i, int j, int destRow, int destCol) {
   return sqrt(pow((i - destRow),2)+pow((j - destCol),2));         //En formel for hvordan den eucleadian distance beregnes ud fra nuværende og dest cellerne
+
 }
 
 bool isWithinArray(int row, int col) {
