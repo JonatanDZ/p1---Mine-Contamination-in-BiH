@@ -9,14 +9,13 @@ int main(){
     //double* hMap = malloc((mapSize * mapSize) * sizeof(double));
 
     createMap(map);
-    ifObstacle(map, 0, 13);
-   // input(map, mapSize, &destRow, &destCol);
 
     //Denne funktion sætter h-værdi på et hvert felt tilsvarende til map
     //insertH(hMap, destRow, destCol);
 
 
     randomMineGen(map);
+    shortestRoute(map);
     input(map);
 
     

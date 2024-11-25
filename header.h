@@ -57,4 +57,7 @@ void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
 
+void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
+
+
 #endif //HEADER_H
