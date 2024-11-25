@@ -59,11 +59,11 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   if (!(closed[count].currentCoor.row == dest.row && closed[count].currentCoor.col == dest.col)) {
     printf("No Path is found");
     printf("\n%d\n", endOfClosed);
-    tracePath(closed, closed[endOfClosed], start);
+    tracePath(map, closed, closed[endOfClosed], start);
   } else {
     printf("Path is found");
     printf("\n%d\n", endOfClosed);
-    tracePath(closed, closed[endOfClosed], start);
+    tracePath(map, closed, closed[endOfClosed], start);
   }
 }
 
@@ -172,12 +172,12 @@ void printCell(cell_t cell) {
   printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", cell.currentCoor.row, cell.currentCoor.col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
 }
 
-int tracePath(cell_t closed[], cell_t cell, coor_t start) {
+int tracePath(int map[MAPSIZEROW][MAPSIZECOL],cell_t closed[], cell_t cell, coor_t start) {
   if (cell.currentCoor.row == start.row && cell.currentCoor.col == start.col) {
+    map[cell.currentCoor.row][cell.currentCoor.col] = 99;
     return 1;
   }
   int index = findParentLinSearch(closed, cell);
-  printf("\n%d",index);
-  printCell(cell);
-  return tracePath(closed, closed[index], start);
+  map[cell.currentCoor.row][cell.currentCoor.col] = 99;
+  return tracePath(map, closed, closed[index], start);
 }

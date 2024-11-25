@@ -29,9 +29,9 @@ int findParentLinSearch(cell_t parentCellList[], cell_t cell) {
     int result = 0;
     for (int i = 0; i < MAXSIZE; i++) {
         if (parentCellList[i].currentCoor.row == cell.parentCoor.row && parentCellList[i].currentCoor.col == cell.parentCoor.col) {
-            if ((parentCellList[i].f < parentCellList[result].f && parentCellList[i].f > 0.01)) { //0.0001 is our buffer we have to do this working with floats
-                result = i;
-            }
+
+
+            result = i;
         }
     }
     return result;

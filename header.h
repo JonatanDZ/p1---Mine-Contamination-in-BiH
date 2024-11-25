@@ -70,7 +70,7 @@ bool isDestination(int row, int col, coor_t dest);
 
 bool isInList(cell_t list[], cell_t cellElement);
 
-int tracePath(cell_t closed[], cell_t cell, coor_t start);
+int tracePath(int map[MAPSIZEROW][MAPSIZECOL], cell_t closed[], cell_t cell, coor_t start);
 
 void printCell(cell_t cell);
 
