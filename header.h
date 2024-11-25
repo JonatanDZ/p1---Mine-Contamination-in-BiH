@@ -35,7 +35,8 @@ typedef enum {
     mountain2 = 142
 } moveValue;
 
-void readMap();
+
+//void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
