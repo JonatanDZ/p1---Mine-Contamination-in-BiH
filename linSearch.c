@@ -27,13 +27,13 @@ int gLinSearch(cell_t cellList[], cell_t successorCell) {
 
 int findParentLinSearch(cell_t parentCellList[], cell_t cell) {
     int result = 0;
-    int first = 1;
+    bool first = true;
     for (int i = 0; i < MAXSIZE; i++) {
         if (parentCellList[i].currentCoor.row == cell.parentCoor.row && parentCellList[i].currentCoor.col == cell.parentCoor.col) {
-            if (first == 1) {
-                first = 0;
+            if (first) {
+                first = false;
                 result = i;
-            }else if (parentCellList[i].f + 0.00001 < parentCellList[result].f) {
+            }else if (parentCellList[i].f + 0.1 < parentCellList[result].f) {
                 result = i;
 
             }
