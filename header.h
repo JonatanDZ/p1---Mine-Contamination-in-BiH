@@ -40,6 +40,7 @@ typedef enum {
 } moveValue;
 
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
+void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
 int input(int map[MAPSIZEROW][MAPSIZECOL]);

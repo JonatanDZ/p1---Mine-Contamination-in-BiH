@@ -8,7 +8,7 @@ int main(){
     //Vi laver et h map, hvor h-værdien af hvert felt er givet
     //double* hMap = malloc((mapSize * mapSize) * sizeof(double));
 
-    createMap(map);
+    createMapWFile(map);
 
     //Denne funktion sætter h-værdi på et hvert felt tilsvarende til map
     //insertH(hMap, destRow, destCol);

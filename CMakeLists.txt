@@ -19,6 +19,7 @@ add_executable(main
         printMapChar.c
         mineGen.c
         shortestRoute.c
+        createMapWFile.c
 
 )
 
