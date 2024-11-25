@@ -59,6 +59,10 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   if (!(closed[count].currentCoor.row == dest.row && closed[count].currentCoor.col == dest.col)) {
     printf("No Path is found");
     printf("\n%d\n", endOfClosed);
+
+    for (int i = 0; i <= endOfClosed; i++) {
+      printf("\n %d = %d,%d - f-value: %lf",i, closed[i].parentCoor.row, closed[i].parentCoor.col, closed[i].f);
+    }
     tracePath(map, closed, closed[endOfClosed], start);
   } else {
     printf("Path is found");
