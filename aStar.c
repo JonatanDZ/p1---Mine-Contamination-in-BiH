@@ -9,6 +9,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   cell_t closed[MAXSIZE];
   bool pathFound = false;
   int count = 0;
+  int endOfClosed;
 
 
   //initializing starting cell
@@ -18,7 +19,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   startCell.currentCoor.row = start.row;
   startCell.currentCoor.col = start.col;
   startCell.h = hCalc(start.row, start.col, dest.row, dest.col);
-  startCell.g = 0; //denne er 0 det er givet i input.c
+  startCell.g = 0;
   startCell.f = startCell.g + startCell.h;
 
   //printCell(startCell);
@@ -33,22 +34,22 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   while(!pathFound) {
     printf("Current iteration of while loop: %d\n\n", count);
     int index = fLinSearch(open);
-
+/*
     printf("openList:\n");
     for (int i = 0; i < MAXSIZE; i++)
       if (open[i].f > 0.001)
         printf("%d: %lf\n", i, open[i].f);
-
+*/
     //find the note with the smallest f value in the open list and pop it off open
     currentCell = popCell(open, index);
 
     //Insert currentCell to closed list
     closed[count] = currentCell;
-
+/*
     printf("\n--From closed list %d--", count);
     printCell(closed[count]);
-
-    generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
+*/
+    endOfClosed = generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
 
 //    if (count == 3)
 //      return;
@@ -57,8 +58,12 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   }
   if (!(closed[count].currentCoor.row == dest.row && closed[count].currentCoor.col == dest.col)) {
     printf("No Path is found");
+    printf("\n%d\n", endOfClosed);
+    tracePath(closed, closed[endOfClosed], start);
   } else {
-    printf("Path is found");;
+    printf("Path is found");
+    printf("\n%d\n", endOfClosed);
+    tracePath(closed, closed[endOfClosed], start);
   }
 }
 
@@ -71,7 +76,7 @@ cell_t popCell(cell_t list[], int n) {
   return returnCell;
 }
 
-void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound) {
+int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound) {
   for (int row = -1; row <= 1; row++) {
     for (int col = -1; col <= 1; col++) {
       cell_t successorCell;
@@ -89,11 +94,12 @@ void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cel
         if (isWithinArray(successorCell.currentCoor.row, successorCell.currentCoor.col)) {
 
           if (isDestination(successorCell.currentCoor.row, successorCell.currentCoor.col, dest)) {
-            printf("Wu!Hu!\nDesitination found!!\nIn closed: %d", count+1);
-            closed[count+1] = successorCell;
-            printCell(closed[count+1]);
+            count++;
+            printf("Wu!Hu!\nDesitination found!!\nIn closed: %d", count);
+            closed[count] = successorCell;
+            printCell(closed[count]);
             *pathFound = true;
-            return;
+            return count;
           }
           if (!isInList(closed, successorCell)) {
             //If the cell is walkable we give it values so we can compare them with each other
@@ -164,4 +170,14 @@ bool isDestination(int row, int col, coor_t dest) {
 
 void printCell(cell_t cell) {
   printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", cell.currentCoor.row, cell.currentCoor.col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
+}
+
+int tracePath(cell_t closed[], cell_t cell, coor_t start) {
+  if (cell.currentCoor.row == start.row && cell.currentCoor.col == start.col) {
+    return 1;
+  }
+  int index = findParentLinSearch(closed, cell);
+  printf("\n%d",index);
+  printCell(cell);
+  return tracePath(closed, closed[index], start);
 }

@@ -61,15 +61,16 @@ bool isWithinArray(int row, int col);
 
 int fLinSearch(cell_t cellList[]);
 int gLinSearch(cell_t cellList[], cell_t successorCell);
+int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
 
-void generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound);
+int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound);
 cell_t popCell(cell_t list[], int n);
 bool isDestination(int row, int col, coor_t dest);
 
 bool isInList(cell_t list[], cell_t cellElement);
 
-void tracePath();
+int tracePath(cell_t closed[], cell_t cell, coor_t start);
 
 void printCell(cell_t cell);
 
