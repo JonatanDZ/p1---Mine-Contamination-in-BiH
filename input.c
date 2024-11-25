@@ -10,7 +10,12 @@
 int input(int map[MAPSIZEROW][MAPSIZECOL]) {
     // Starter fra 0, så minus en for koordinat.
 
+
+    void shortestRoute(map);
+
     int startRow, startCol;
+
+
 
     printf("Input x og y koordinat for start koordinator, det går fra 0 0 til %d>", MAPSIZE-1);
     scanf(" %d %d", &startRow, &startCol);

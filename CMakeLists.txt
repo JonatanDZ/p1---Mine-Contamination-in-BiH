@@ -18,6 +18,7 @@ add_executable(main
         terminalOutput.c
         printMapChar.c
         mineGen.c
+        shortestRoute.c
 
 )
 
