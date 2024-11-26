@@ -8,7 +8,7 @@
 
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
-  /* 0) Set up */
+/* 0) Set up */
   cell_t open[MAXSIZE];
   cell_t closed[MAXSIZE];
   bool pathFound = false;
@@ -36,30 +36,32 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     }
   }
 
-  /* 1) Starting the search with start cell */
+/* 1) Starting the search with start cell */
+
   //Calculate f,g,h
   cellMap[start.row][start.col].h = hCalc(start.row, start.col, dest.row, dest.col);
   cellMap[start.row][start.col].g = 0;
   cellMap[start.row][start.col].f = cellMap[start.row][start.col].g + cellMap[start.row][start.col].h;
 
-  //Parents unknown, initialized to zero as of now / or to indicate start having no parents. Check later
+  //Parents unknown, initialized to zero as of now / or to indicate start having no parents. OBS: Check later
   cellMap[start.row][start.col].parentCoor.row = 0;
   cellMap[start.row][start.col].parentCoor.col = 0;
 
-
-
-  //Adding
+  //'Add' to open list
   cellMap[start.row][start.col].openList = true;
   cellMap[start.row][start.col].closedList = false;
 
 
 
-  //While open is not empty
+/* 2) Repeat, while open 'list' is not empty*/
+
+  // Coordinates determining which cell to look at.
+  int row, column;
   while(!pathFound) {
-    //Find the note with the smallest f value in the open list, pop it off open.
-        //By setting its open bool to false and keeping its coordinates
-    int row, column;
+    //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
     fLinSearch(cellMap, &row, &column);
+
+    //Remove it from the open list,
     cellMap[row][column].openList = false;
 
 
