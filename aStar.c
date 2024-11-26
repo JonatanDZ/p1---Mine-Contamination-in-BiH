@@ -104,19 +104,19 @@ int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col,
       //Ensuring center cell is ignored
       if (r != 0 || c != 0) {
 
+        //The successors' coordinates for readability
+        int successorRow = row + r;
+        int successorCol = col + c;
+
+
         //Setting parentValues for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
-        cellMap[row + r][col + c].parentCoor.row = row;
-        cellMap[row + r][col + c].parentCoor.col = col;
-        
+        cellMap[successorRow][successorCol].parentCoor.row = row;
+        cellMap[successorRow][successorCol].parentCoor.col = col;
 
-        //Initializing successor cells coordinates
-        successorCell.currentCoor.row = successorCell.parentCoor.row + r;
-        successorCell.currentCoor.col = successorCell.parentCoor.col + c;
+        //Checking if the successor cell is not outside map bounds || /*TODO: check that its not on the closed list */
+        if (isWithinArray(successorRow, successorCol)) {
 
-        //Checking if the successor cell is not out of bounds
-        if (isWithinArray(successorCell.currentCoor.row, successorCell.currentCoor.col)) {
-
-          if (isDestination(successorCell.currentCoor.row, successorCell.currentCoor.col, dest)) {
+          if (isDestination(successorRow, successorCol, dest)) {
             count++;
             printf("Wu!Hu!\nDesitination found!!\nIn closed: %d", count);
             closed[count] = successorCell;
