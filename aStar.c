@@ -95,7 +95,8 @@ cell_t popCell(cell_t list[], int n) {
   return returnCell;
 }
 
-int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound) {
+int generateSuccessors(int cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest, int count, bool* pathFound) {
+/* For each of the 8 cells surrounding current cell*/
   for (int r = -1; r <= 1; r++) {
     for (int c = -1; c <= 1; c++) {
       cell_t successorCell;
