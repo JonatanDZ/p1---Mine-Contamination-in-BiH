@@ -24,13 +24,12 @@ typedef struct {
 } coor_t;
 
 typedef struct {
-    coor_t currentCoor;
-    coor_t parentCoor;
+    double f;
     double g;
     double h;
-    double f;
-    //bool openList;
-    //bool closedList;
+    coor_t parentCoor;
+    bool openList;
+    bool closedList;
 } cell_t;
 
 typedef enum {
@@ -59,7 +58,7 @@ bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 bool isWithinArray(int row, int col);
 
-int fLinSearch(cell_t cellList[]);
+int fLinSearch(cell_t cellMap[]);
 int gLinSearch(cell_t cellList[], cell_t successorCell);
 int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
@@ -73,6 +72,8 @@ bool isInList(cell_t list[], cell_t cellElement);
 int tracePath(int map[MAPSIZEROW][MAPSIZECOL], cell_t closed[], cell_t cell, coor_t start);
 
 void printCell(cell_t cell);
+
+bool isEmpty(cell_t cellMap);
 
 
 

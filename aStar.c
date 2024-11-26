@@ -1,7 +1,10 @@
 //
 // Created by Jonatan Muhle-Zimino on 19/11/2024.
 //
+#include <float.h>
+
 #include "header.h"
+#define NOPARENTYET -1
 
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
@@ -11,48 +14,49 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   int count = 0;
   int endOfClosed;
 
+  //2d array to manage cells, initialized with max values for f,g,h and -1 for parents to indicate them as "empty".
+  cell_t cellMap[MAPSIZEROW][MAPSIZECOL];
+  for (int i = 0; i < MAPSIZEROW; i++) {
+    for (int j = 0; j < MAPSIZECOL; j++) {
+      cellMap[i][j].f = DBL_MAX;
+      cellMap[i][j].g = DBL_MAX;
+      cellMap[i][j].h = DBL_MAX;
 
-  //initializing starting cell
-  cell_t startCell;
-  startCell.parentCoor.row = 0;
-  startCell.parentCoor.col = 0;
-  startCell.currentCoor.row = start.row;
-  startCell.currentCoor.col = start.col;
-  startCell.h = hCalc(start.row, start.col, dest.row, dest.col);
-  startCell.g = 0;
-  startCell.f = startCell.g + startCell.h;
+      cellMap[i][j].parentCoor.row = NOPARENTYET;
+      cellMap[i][j].parentCoor.row = NOPARENTYET;
 
-  //printCell(startCell);
+      cellMap[i][j].openList = false;
+      cellMap[i][j].closedList = false;
+    }
+  }
 
-  cell_t currentCell;
+  //Initializing starting cell, and putting in open list
+  cellMap[start.row][start.col].h = hCalc(start.row, start.col, dest.row, dest.col);
+  cellMap[start.row][start.col].g = 0;
+  cellMap[start.row][start.col].f = cellMap[start.row][start.col].g + cellMap[start.row][start.col].h;
 
-  //We are putting the starting cell in open list
-  open[0] = startCell;
+  cellMap[start.row][start.col].parentCoor.row = 0;
+  cellMap[start.row][start.col].parentCoor.col = 0;
+
+  cellMap[start.row][start.col].openList = true;
+  cellMap[start.row][start.col].closedList = false;
+
 
 
   //While open is not empty
   while(!pathFound) {
-    //printf("Current iteration of while loop: %d\n\n", count);
-    int index = fLinSearch(open);
-/*
-    printf("openList:\n");
-    for (int i = 0; i < MAXSIZE; i++)
-      if (open[i].f > 0.001)
-        printf("%d: %lf\n", i, open[i].f);
-*/
-    //find the note with the smallest f value in the open list and pop it off open
+    //Find the note with the smallest f value in the open list, pop it off open.
+        //By setting its open bool to false and keeping its coordinates
+    int row, column;
+    int index = fLinSearch(cell);
+
     currentCell = popCell(open, index);
 
     //Insert currentCell to closed list
     closed[count] = currentCell;
-/*
-    printf("\n--From closed list %d--", count);
-    printCell(closed[count]);
-*/
+
     endOfClosed = generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
 
-//    if (count == 3)
-//      return;
     count++;
 
   }
@@ -81,18 +85,18 @@ cell_t popCell(cell_t list[], int n) {
 }
 
 int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound) {
-  for (int row = -1; row <= 1; row++) {
-    for (int col = -1; col <= 1; col++) {
+  for (int r = -1; r <= 1; r++) {
+    for (int c = -1; c <= 1; c++) {
       cell_t successorCell;
 
-      if (!(row == 0 && col == 0)) {
+      if (!(r == 0 && c == 0)) {
         //We are declaring parentValues for the successor
         successorCell.parentCoor.row = currentCell.currentCoor.row;
         successorCell.parentCoor.col = currentCell.currentCoor.col;
 
         //Initializing successor cells coordinates
-        successorCell.currentCoor.row = successorCell.parentCoor.row + row;
-        successorCell.currentCoor.col = successorCell.parentCoor.col + col;
+        successorCell.currentCoor.row = successorCell.parentCoor.row + r;
+        successorCell.currentCoor.col = successorCell.parentCoor.col + c;
 
         //Checking if the successor cell is not out of bounds
         if (isWithinArray(successorCell.currentCoor.row, successorCell.currentCoor.col)) {
@@ -105,7 +109,7 @@ int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell
             *pathFound = true;
             return count;
           }
-          if (!isInList(closed, successorCell)) {
+          if (cell[]) {
             //If the cell is walkable we give it values so we can compare them with each other
             if (isUnblocked(map, successorCell.currentCoor.row, successorCell.currentCoor.col)) {
               successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
@@ -114,10 +118,9 @@ int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell
 
 
               // If it isn't already in open list put it there
-              if (!isInList(open, successorCell)){
+              if (cellMap[row][col].openList == false){
 
-                open[count] = successorCell;
-                count++;
+                cellMap[row][col].openList == true;
 
               } else {
                 //if it is in the open list already. We are updating the shortest cost together with the parent coordinates
@@ -139,14 +142,11 @@ int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell
   }
 }
 
-bool isInList(cell_t list[], cell_t cellElement){
-  for (int i = 0; i < MAXSIZE; i++) {
-    if (cellElement.currentCoor.row == list[i].currentCoor.row && cellElement.currentCoor.col == list[i].currentCoor.col) {
-      return true;
-    }
-  }
-  return false;
+bool isInOpenList(cell_t cell){
+  if (cell.openList)
+  return true;
 }
+
 
 
 void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
@@ -157,10 +157,10 @@ void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
   }
 }
 
-double hCalc(int i, int j, int destRow, int destCol) {
+double hCalc(int row, int col, int destRow, int destCol) {
   //return sqrt(pow((i - destRow),2)+pow((j - destCol),2));         //En formel for hvordan den eucleadian distance beregnes ud fra nuværende og dest cellerne
-  int diffRow = abs(i - destRow);
-  int diffCol = abs(j - destCol);
+  int diffRow = abs(row - destRow);
+  int diffCol = abs(col - destCol);
   int D = 10;
   int D2 = 10 * 1.4;
   return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
@@ -177,16 +177,20 @@ bool isDestination(int row, int col, coor_t dest) {
   return row == dest.row && col == dest.col;
 }
 
-void printCell(cell_t cell) {
-  printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", cell.currentCoor.row, cell.currentCoor.col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
+void printCell(cell_t cell, int row, int col) {
+  printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", row, col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
 }
 
-int tracePath(int map[MAPSIZEROW][MAPSIZECOL],cell_t closed[], cell_t cell, coor_t start) {
-  if (cell.currentCoor.row == start.row && cell.currentCoor.col == start.col) {
-    map[cell.currentCoor.row][cell.currentCoor.col] = 9;
+int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start) {
+  if (row == start.row && col == start.col) {
+    cellMap[row][col].g = 9; //TODO: revurder om vi skal printe til g eller om vi skal lave et nyt map
     return 1;
   }
-  int index = findParentLinSearch(closed, cell);
-  map[cell.currentCoor.row][cell.currentCoor.col] = 9;
-  return tracePath(map, closed, closed[index], start);
+  //int index = findParentLinSearch(closed, cell);
+  cellMap[row][col].g = 9;
+  return tracePath(cellMap, row, col, start);
+}
+
+bool isEmpty(cell_t cellMap){
+
 }
