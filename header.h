@@ -58,7 +58,8 @@ bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 bool isWithinArray(int row, int col);
 
-int fLinSearch(cell_t cellMap[]);
+// Updated
+void fLinSearch(cell_t cellMap[][MAPSIZECOL], int* resultR, int* resultC);
 int gLinSearch(cell_t cellList[], cell_t successorCell);
 int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 

@@ -1,13 +1,19 @@
 #include "header.h"
 
-
-int fLinSearch(cell_t cellMap[][MAPSIZECOL], int row) {
-    int resultR = 0;
-    int resultC = 0;
-    for (int r = 0 < MAPSIZEROW; r++) {
+/**
+ *
+ * @param cellMap
+ * @param resultR
+ * @param resultC
+ * @return
+ */
+void fLinSearch(cell_t cellMap[][MAPSIZECOL], int* resultR, int* resultC) {
+    *resultR = 0;
+    *resultC = 0;
+    for (int r = 0; r < MAPSIZEROW; r++) {
         for (int c = 0; c < MAXSIZE; c++) {
             if (cellMap[r][c].openList == true) {
-                if ((cellMap[r][c].f < cellMap[resultR][resultC].f && cellMap[r][c].f > 0.01)) { //0.0001 is our buffer we have to do this working with floats
+                if ((cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01)) { //0.0001 is our buffer we have to do this working with floats
                     resultR = r;
                     resultC = c;
                 }
@@ -15,7 +21,6 @@ int fLinSearch(cell_t cellMap[][MAPSIZECOL], int row) {
         }
     }
     //printf("\nresult from linSearch: %d\n", result);
-    return result;
 }
 
 int gLinSearch(cell_t cellList[], cell_t successorCell) {
