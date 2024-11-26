@@ -8,6 +8,7 @@
 
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
+  /* 0) Set up */
   cell_t open[MAXSIZE];
   cell_t closed[MAXSIZE];
   bool pathFound = false;
@@ -35,12 +36,13 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     }
   }
 
-  //1. Starting the search
-  //Initializing starting cell, and 'putting' in open list. Parents unknown, initialized to zero as of now.
+  /* 1) Starting the search with start cell */
+  //Calculate f,g,h
   cellMap[start.row][start.col].h = hCalc(start.row, start.col, dest.row, dest.col);
   cellMap[start.row][start.col].g = 0;
   cellMap[start.row][start.col].f = cellMap[start.row][start.col].g + cellMap[start.row][start.col].h;
 
+  //Parents unknown, initialized to zero as of now / or to indicate start having no parents. Check later
   cellMap[start.row][start.col].parentCoor.row = 0;
   cellMap[start.row][start.col].parentCoor.col = 0;
 
