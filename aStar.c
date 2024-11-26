@@ -108,7 +108,11 @@ int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell
           if (!isInList(closed, successorCell)) {
             //If the cell is walkable we give it values so we can compare them with each other
             if (isUnblocked(map, successorCell.currentCoor.row, successorCell.currentCoor.col)) {
-              successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
+              if (row == 0 || col == 0) {
+                successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
+              } else {
+                successorCell.g = (currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row]) * 1.4;
+              }
               successorCell.h = hCalc(successorCell.currentCoor.row, successorCell.currentCoor.col, dest.row, dest.col);
               successorCell.f = successorCell.g + successorCell.h;
 
