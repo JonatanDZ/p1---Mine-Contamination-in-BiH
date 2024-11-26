@@ -111,7 +111,7 @@ int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell
               if (row == 0 || col == 0) {
                 successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
               } else {
-                successorCell.g = (currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row]) * 1.4;
+                successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row] * 1.4;
               }
               successorCell.h = hCalc(successorCell.currentCoor.row, successorCell.currentCoor.col, dest.row, dest.col);
               successorCell.f = successorCell.g + successorCell.h;
@@ -128,7 +128,12 @@ int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell
                 int shortestPathIndex = gLinSearch(open, successorCell);
                 open[shortestPathIndex].parentCoor.row = successorCell.currentCoor.row;
                 open[shortestPathIndex].parentCoor.col = successorCell.currentCoor.col;
-                open[shortestPathIndex].g = successorCell.g;
+                // denne checker om g-værdien er diagonal, hvis den er ganger vi g med 1.4
+                if (row == 0 || col == 0) {
+                  open[shortestPathIndex].g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
+                } else {
+                  open[shortestPathIndex].g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row] * 1.4;
+                }
                 open[shortestPathIndex].f = open[shortestPathIndex].g + open[shortestPathIndex].h;
 
 
