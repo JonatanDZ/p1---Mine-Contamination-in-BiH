@@ -95,17 +95,19 @@ cell_t popCell(cell_t list[], int n) {
   return returnCell;
 }
 
-int generateSuccessors(int cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest, int count, bool* pathFound) {
+int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest, int count, bool* pathFound) {
 /* For each of the 8 cells surrounding current cell*/
   for (int r = -1; r <= 1; r++) {
     for (int c = -1; c <= 1; c++) {
       cell_t successorCell;
 
-      //Making sure center cell is ignored
+      //Ensuring center cell is ignored
       if (r != 0 || c != 0) {
-        //Setting parentValues for all successors
-        cellMap[row + r][col + c].parentCoor.row = currentCell.currentCoor.row;
-        successorCell.parentCoor.col = currentCell.currentCoor.col;
+
+        //Setting parentValues for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
+        cellMap[row + r][col + c].parentCoor.row = row;
+        cellMap[row + r][col + c].parentCoor.col = col;
+        
 
         //Initializing successor cells coordinates
         successorCell.currentCoor.row = successorCell.parentCoor.row + r;
