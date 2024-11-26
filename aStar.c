@@ -158,8 +158,12 @@ void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
 }
 
 double hCalc(int i, int j, int destRow, int destCol) {
-  return sqrt(pow((i - destRow),2)+pow((j - destCol),2));         //En formel for hvordan den eucleadian distance beregnes ud fra nuværende og dest cellerne
-
+  //return sqrt(pow((i - destRow),2)+pow((j - destCol),2));         //En formel for hvordan den eucleadian distance beregnes ud fra nuværende og dest cellerne
+  int diffRow = abs(i - destRow);
+  int diffCol = abs(j - destCol);
+  int D = 10;
+  int D2 = 10 * 1.4;
+  return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
 
 bool isWithinArray(int row, int col) {
