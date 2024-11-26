@@ -55,20 +55,16 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
 /* 2) Repeat, while open 'list' is not empty*/
 
-  // Coordinates determining which cell to look at.
+  //Coordinates determining current cell.
   int row, column;
+
   while(!pathFound) {
     //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
     fLinSearch(cellMap, &row, &column);
 
-    //Remove it from the open list,
+    //Remove it from the 'open' list, then add to 'closed' list
     cellMap[row][column].openList = false;
-
-
-    currentCell = popCell(open, index);
-
-    //Insert currentCell to closed list, by updating its bool
-    closed[count] = currentCell;
+    cellMap[row][column].closedList = true;
 
     endOfClosed = generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
 
