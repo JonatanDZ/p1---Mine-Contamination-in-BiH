@@ -101,9 +101,10 @@ int generateSuccessors(int cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, co
     for (int c = -1; c <= 1; c++) {
       cell_t successorCell;
 
-      if (!(r == 0 && c == 0)) {
-        //We are declaring parentValues for the successor
-        successorCell.parentCoor.row = currentCell.currentCoor.row;
+      //Making sure center cell is ignored
+      if (r != 0 || c != 0) {
+        //Setting parentValues for all successors
+        cellMap[row + r][col + c].parentCoor.row = currentCell.currentCoor.row;
         successorCell.parentCoor.col = currentCell.currentCoor.col;
 
         //Initializing successor cells coordinates
