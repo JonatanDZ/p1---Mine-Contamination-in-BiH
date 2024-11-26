@@ -14,7 +14,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   int count = 0;
   int endOfClosed;
 
-  //2d array to manage cells, initialization
+  //2d array to manage cells and 'lists', initialization
   cell_t cellMap[MAPSIZEROW][MAPSIZECOL];
   for (int i = 0; i < MAPSIZEROW; i++) {
     for (int j = 0; j < MAPSIZECOL; j++) {
@@ -25,10 +25,11 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
       cellMap[i][j].g = DBL_MAX;
       cellMap[i][j].h = DBL_MAX;
 
-
+      //Parents set to -1
       cellMap[i][j].parentCoor.row = NOPARENTYET;
       cellMap[i][j].parentCoor.row = NOPARENTYET;
 
+      //Both lists should be empty at start
       cellMap[i][j].openList = false;
       cellMap[i][j].closedList = false;
     }
@@ -43,6 +44,9 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   cellMap[start.row][start.col].parentCoor.row = 0;
   cellMap[start.row][start.col].parentCoor.col = 0;
 
+
+
+  //Adding
   cellMap[start.row][start.col].openList = true;
   cellMap[start.row][start.col].closedList = false;
 
