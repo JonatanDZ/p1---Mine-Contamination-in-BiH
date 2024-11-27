@@ -51,6 +51,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   cellMap[start.row][start.col].openList = true;
   cellMap[start.row][start.col].closedList = false;
 
+  printf("--Starting cell--\n");
   printCell(cellMap[start.row][start.col], start.row, start.col);
 
 
@@ -64,6 +65,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
   while(openListIsEmpty == false) {
     int count = 0;
+    printf("\n\n--Entering while loop iteration: %d--\n", count);
     count++;
 
 
@@ -71,6 +73,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     openListIsEmpty = fLinSearch(cellMap, &row, &col);
     printf("\n--Cell from linear search - this should be in open list--");
     printCell(cellMap[row][col], row, col);
+    printf("_____________________");
 
 
     //Remove it from the 'open' list, then add to 'closed' list
@@ -79,6 +82,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
     printf("\n--This cell is moved to closedList--");
     printCell(cellMap[row][col], row, col);
+    printf("_____________________");
 
     printf("\nSuccessors generated");
 
