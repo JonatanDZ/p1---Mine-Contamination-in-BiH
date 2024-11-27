@@ -7,20 +7,24 @@
  * @param resultC
  * @return
  */
-void fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
-    *resultR = 0;
-    *resultC = 0;
+bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
+    bool first = true;
     for (int r = 0; r < MAPSIZEROW; r++) {
-        for (int c = 0; c < MAXSIZE; c++) {
+        for (int c = 0; c < MAPSIZECOL; c++) {
             if (cellMap[r][c].openList == true) {
-                if ((cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01)) { //0.0001 is our buffer we have to do this working with floats
-                    resultR = r;
-                    resultC = c;
+                if (first == true) {
+                    *resultR = r;
+                    *resultC = c;
+                    first = false;
+                } else if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
+                    *resultR = r;
+                    *resultC = c;
+                    printf("Result from linear search - Row: %d - Col: %d\n", *resultR, *resultC);
                 }
             }
         }
     }
-    //printf("\nresult from linSearch: %d\n", result);
+    return first;
 }
 /*
 int gLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZEROW], int* resultR, int* resultC) {

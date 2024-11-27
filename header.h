@@ -52,27 +52,27 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coo
 
 void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest);
 
-double hCalc(int i, int j, int destRow, int destCol);
+double hCalc(int row, int col, int destRow, int destCol);
 
 bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 bool isWithinArray(int row, int col);
 
 // Updated
-void fLinSearch(cell_t cellMap[][MAPSIZECOL], int* resultR, int* resultC);
-int gLinSearch(cell_t cellList[], cell_t successorCell);
-int findParentLinSearch(cell_t parentCellList[], cell_t cell);
+bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC);
+//int gLinSearch(cell_t cellList[], cell_t successorCell);
+//int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
 
-void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
+int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
 cell_t popCell(cell_t list[], int n);
 bool isDestination(int row, int col, coor_t dest);
 
 bool isInList(cell_t list[], cell_t cellElement);
 
-int tracePath(int map[MAPSIZEROW][MAPSIZECOL], cell_t closed[], cell_t cell, coor_t start);
+int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
 
-void printCell(cell_t cell);
+void printCell(cell_t cell, int row, int col);
 
 bool isEmpty(cell_t cellMap);
 
