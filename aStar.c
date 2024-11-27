@@ -56,21 +56,21 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 /* 2) Repeat, while open 'list' is not empty*/
 
   //Coordinates determining current cell.
-  int row, column;
+  int row, col;
 
   while(!pathFound) {
     //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
-    fLinSearch(cellMap, &row, &column);
+    fLinSearch(cellMap, &row, &col);
 
     //Remove it from the 'open' list, then add to 'closed' list
-    cellMap[row][column].openList = false;
-    cellMap[row][column].closedList = true;
+    cellMap[row][col].openList = false;
+    cellMap[row][col].closedList = true;
 
-    endOfClosed = generateSuccessors(map, currentCell, open, closed, dest, count, &pathFound);
+    generateSuccessors(cellMap, map, row, col, dest);
 
-    count++;
 
   }
+  /*
   if (!(closed[count].currentCoor.row == dest.row && closed[count].currentCoor.col == dest.col)) {
     printf("No Path is found");
     printf("\n%d\n", endOfClosed);
@@ -84,6 +84,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     printf("\n%d\n", endOfClosed);
     tracePath(map, closed, closed[endOfClosed], start);
   }
+  */
 }
 
 
@@ -95,11 +96,10 @@ cell_t popCell(cell_t list[], int n) {
   return returnCell;
 }
 
-int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest, int count, bool* pathFound) {
+void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
 /* For each of the 8 cells surrounding current cell*/
   for (int r = -1; r <= 1; r++) {
     for (int c = -1; c <= 1; c++) {
-      cell_t successorCell;
 
       //Ensuring center cell is ignored
       if (r != 0 || c != 0) {
@@ -109,44 +109,64 @@ int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col,
         int successorCol = col + c;
 
 
-        //Setting parentValues for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
-        cellMap[successorRow][successorCol].parentCoor.row = row;
-        cellMap[successorRow][successorCol].parentCoor.col = col;
-
-        //Checking if the successor cell is not outside map bounds || /*TODO: check that its not on the closed list */
+        //Ensuring successor cell is inside map bounds &&||? /*TODO: if it is in the closed list */
         if (isWithinArray(successorRow, successorCol)) {
 
-          if (isDestination(successorRow, successorCol, dest)) {
-            count++;
-            printf("Wu!Hu!\nDesitination found!!\nIn closed: %d", count);
-            closed[count] = successorCell;
-            printCell(closed[count]);
-            *pathFound = true;
-            return count;
+          if (isDestination(successorRow, successorCol, dest)) {  //TODO: måske vi skal rykke denne, fordi den ikke nødvendigvis peger på den hurtigste rute
+            printf("Wu!Hu!\nDesitination found!!\n");
+            cellMap[successorRow][successorCol].closedList = true;
+            return;
           }
-          if (cell[]) {
+          // Initialize the cell if it is
+          if (cellMap[successorRow][successorCol].closedList == false) {
             //If the cell is walkable we give it values so we can compare them with each other
-            if (isUnblocked(map, successorCell.currentCoor.row, successorCell.currentCoor.col)) {
-              successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
-              successorCell.h = hCalc(successorCell.currentCoor.row, successorCell.currentCoor.col, dest.row, dest.col);
-              successorCell.f = successorCell.g + successorCell.h;
+            if (isUnblocked(map, successorRow, successorCol)) {
 
 
-              // If it isn't already in open list put it there
-              if (cellMap[row][col].openList == false){
 
-                cellMap[row][col].openList == true;
+              // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
+              if (cellMap[successorRow][successorCol].openList == false) {
 
-              } else {
+                //Setting parentValues for the successor.                       Will be the same for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
+                cellMap[successorRow][successorCol].parentCoor.row = row;
+                cellMap[successorRow][successorCol].parentCoor.col = col;
+
+                //Record successor's f,g,h costs
+                cellMap[successorRow][successorCol].g = cellMap[row][col].g + map[successorRow][successorCol];
+                cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+                cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+
+                //Add it to the 'open' list
+                cellMap[successorRow][successorCol].openList = true;
+
+              }
+              // b) If successor IS already in 'open' list, check whether this path is better than previously stored one
+              else if (cellMap[row][col].g + map[successorRow][successorCol] < cellMap[successorRow][successorCol].g) {
+
+
+                  cellMap[successorRow][successorCol].g = cellMap[row][col].g + map[successorRow][successorCol];
+                  cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+                  cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+
+                //Setting parentValues for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
+                cellMap[successorRow][successorCol].parentCoor.row = row;
+                cellMap[successorRow][successorCol].parentCoor.col = col;
+                }
+
                 //if it is in the open list already. We are updating the shortest cost together with the parent coordinates
+
+
+
+                /*
                 int shortestPathIndex = gLinSearch(open, successorCell);
+
+
                 open[shortestPathIndex].parentCoor.row = successorCell.currentCoor.row;
                 open[shortestPathIndex].parentCoor.col = successorCell.currentCoor.col;
                 open[shortestPathIndex].g = successorCell.g;
                 open[shortestPathIndex].f = open[shortestPathIndex].g + open[shortestPathIndex].h;
+                */
 
-
-              }
               //printf("\nsuccessorCell relation %d %d", row, col);
               //printCell(successorCell);
             }

@@ -7,7 +7,7 @@
  * @param resultC
  * @return
  */
-void fLinSearch(cell_t cellMap[][MAPSIZECOL], int* resultR, int* resultC) {
+void fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
     *resultR = 0;
     *resultC = 0;
     for (int r = 0; r < MAPSIZEROW; r++) {
@@ -22,19 +22,25 @@ void fLinSearch(cell_t cellMap[][MAPSIZECOL], int* resultR, int* resultC) {
     }
     //printf("\nresult from linSearch: %d\n", result);
 }
-
-int gLinSearch(cell_t cellList[], cell_t successorCell) {
-    int result = 0;
-    for (int i = 0; i < MAXSIZE; i++) {
-        if (cellList[i].currentCoor.row == successorCell.currentCoor.row && cellList[i].currentCoor.col == successorCell.currentCoor.col) {
-            if (successorCell.g < cellList[i].g) {
-                result = i;
+/*
+int gLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZEROW], int* resultR, int* resultC) {
+    int resultR;
+    int resultC;
+    for (int r = 0; r < MAXSIZE; r++) {
+        for (int c = 0; c < MAPSIZECOL; c++) {
+            if (cellMap[r][c].openList == true){
+                if (cellMap[r][c].currentCoor.row == successorCell.currentCoor.row && cellList[i].currentCoor.col == successorCell.currentCoor.col) {
+                    if (successorCell.g < cellList[i].g) {
+                        result = i;
+                    }
+                }
             }
-        }
 
+
+        }
     }
-    return result;
 }
+*/
 
 /* TODO: find ud af om den er undværlig
 int findParentLinSearch(cell_t parentCellList[], cell_t cell) {

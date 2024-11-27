@@ -64,7 +64,7 @@ int gLinSearch(cell_t cellList[], cell_t successorCell);
 int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
 
-int generateSuccessors(int map[MAPSIZEROW][MAPSIZECOL], cell_t currentCell, cell_t open[], cell_t closed[], coor_t dest, int count, bool* pathFound);
+void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
 cell_t popCell(cell_t list[], int n);
 bool isDestination(int row, int col, coor_t dest);
 
