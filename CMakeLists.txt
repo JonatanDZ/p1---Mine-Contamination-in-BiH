@@ -21,6 +21,8 @@ add_executable(main
         shortestRoute.c
         createMapWFile.c
         fromNumberToEnum.c
+        tests.c
 
 )
 
+add_executable(test tests.c)
