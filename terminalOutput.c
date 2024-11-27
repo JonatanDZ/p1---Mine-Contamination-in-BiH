@@ -1,7 +1,7 @@
 //
 // Created by Jonatan Muhle-Zimino on 22/11/2024.
 //
-#include "header.h";
+#include "header.h"
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     for (int i = 0; i < MAPSIZEROW; i++) {
