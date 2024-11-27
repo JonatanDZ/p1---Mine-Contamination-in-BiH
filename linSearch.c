@@ -19,7 +19,6 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
                 } else if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
                     *resultR = r;
                     *resultC = c;
-                    printf("Result from linear search - Row: %d - Col: %d\n", *resultR, *resultC);
                 }
             }
         }

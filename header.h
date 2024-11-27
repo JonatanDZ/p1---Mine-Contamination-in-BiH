@@ -64,13 +64,13 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
 //int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
 
-int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
+bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
 cell_t popCell(cell_t list[], int n);
 bool isDestination(int row, int col, coor_t dest);
 
 bool isInList(cell_t list[], cell_t cellElement);
 
-int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
+int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
 
 void printCell(cell_t cell, int row, int col);
 
