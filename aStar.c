@@ -124,7 +124,7 @@ int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col,
             *pathFound = true;
             return count;
           }
-          if (cell[]) {
+          else if (cell[]) {
             //If the cell is walkable we give it values so we can compare them with each other
             if (isUnblocked(map, successorCell.currentCoor.row, successorCell.currentCoor.col)) {
               successorCell.g = currentCell.g + map[successorCell.currentCoor.row][successorCell.currentCoor.row];
