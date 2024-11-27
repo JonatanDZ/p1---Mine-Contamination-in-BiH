@@ -12,7 +12,7 @@ int main(){
 
     //Denne funktion sætter h-værdi på et hvert felt tilsvarende til map
     //insertH(hMap, destRow, destCol);
-
+    fromNumberToEnum(map);
 
     randomMineGen(map);
     shortestRoute(map);
@@ -23,7 +23,9 @@ int main(){
     //a* her
 
     printMap(map);
+
     terminalOutPut(map);
     printMapChar(map);
+
     return 0;
 }

@@ -20,6 +20,7 @@ add_executable(main
         mineGen.c
         shortestRoute.c
         createMapWFile.c
+        fromNumberToEnum.c
 
 )
 

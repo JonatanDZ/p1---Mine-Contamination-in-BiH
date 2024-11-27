@@ -17,18 +17,19 @@ void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]) {
         for (j = 0; j < MAPSIZECOL; j++) {
             // %3 = only loading 3 digets for each location in the array
             fscanf(mapfile, "%3d", &map[i][j]);
+
         }
     }
 
 
     // For loop printing the map, add space behind %d for human reading
-    for (i = 0; i < MAPSIZEROW; i++) {
+    /*for (i = 0; i < MAPSIZEROW; i++) {
         for (j = 0; j < MAPSIZECOL; j++) {
             printf("%d ", map[i][j]);
         }
         printf("\n");
     }
-
+*/
 
     // Closes the file
     fclose(mapfile);
