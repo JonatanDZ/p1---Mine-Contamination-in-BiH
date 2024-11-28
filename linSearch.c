@@ -2,10 +2,10 @@
 
 /**
  *
- * @param cellMap
- * @param resultR
+ * @param cellMap Provides cell list to search through
+ * @param resultR The row
  * @param resultC
- * @return
+ * @return true if no cells were found in open, false if at least one cell was in 'open'
  */
 bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
     bool first = true;
@@ -14,7 +14,7 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
     for (int r = 0; r < MAPSIZEROW; r++) {
         for (int c = 0; c < MAPSIZECOL; c++) {
 
-            //Only searching cells within 'open' list. Ignore all others.
+            //Only searching cells within 'open' list. Ignore all others. TODO: What happens with *resultCoor if the following block is never entered?
             if (cellMap[r][c].openList == true) {
 
                 /* To ensure that cells in 'open' are only compared to other cells in open,
@@ -28,13 +28,15 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
                  * compare the current cell's f cost to the previously found lowest f cost. */
                 else if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
 
-                    //Update the coordinates, which 
+                    /* If the current cell's f cost is lower than the previously found,
+                     *     update result coordinates to the current cell's coordinates */
                     *resultR = r;
                     *resultC = c;
                 }
             }
         }
     }
+    //If first is returned as true, no cells were found in open. If returned as false, at least one cell was in 'open'
     return first;
 }
 /*
