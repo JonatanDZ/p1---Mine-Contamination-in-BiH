@@ -51,7 +51,6 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   cellMap[start.row][start.col].openList = true;
   cellMap[start.row][start.col].closedList = false;
 
-  printf("--Starting cell--\n");
   printCell(cellMap[start.row][start.col], start.row, start.col);
 
 
@@ -60,54 +59,59 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
   //Coordinates determining current cell.
   int row, col;
-  int check = 0;
+  bool distinationCheck = false;
   bool openListIsEmpty = false;
 
-  while(openListIsEmpty == false) {
+  while(openListIsEmpty == false && distinationCheck == false) {
     int count = 0;
-    printf("\n\n--Entering while loop iteration: %d--\n", count);
     count++;
 
 
     //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
     openListIsEmpty = fLinSearch(cellMap, &row, &col);
+    /*
     printf("\n--Cell from linear search - this should be in open list--");
     printCell(cellMap[row][col], row, col);
-    printf("_____________________");
+    */
 
 
     //Remove it from the 'open' list, then add to 'closed' list
     cellMap[row][col].openList = false;
     cellMap[row][col].closedList = true;
 
+    /*
     printf("\n--This cell is moved to closedList--");
     printCell(cellMap[row][col], row, col);
-    printf("_____________________");
 
-    printf("\nSuccessors generated");
-
-    check = generateSuccessors(cellMap, map, row, col, dest);
+    printf("\nSuccessors generated\n");
+    */
+    distinationCheck = generateSuccessors(cellMap, map, row, col, dest);
 
 
   }
-  /*
-  if (!(closed[count].currentCoor.row == dest.row && closed[count].currentCoor.col == dest.col)) {
+
+  if (openListIsEmpty == true) {
     printf("No Path is found");
-    printf("\n%d\n", endOfClosed);
-
-    for (int i = 0; i <= endOfClosed; i++) {
-      printf("\n %d = %d,%d - f-value: %lf",i, closed[i].parentCoor.row, closed[i].parentCoor.col, closed[i].f);
-    }
-    tracePath(map, closed, closed[endOfClosed], start);
-  } else {
-    printf("Path is found");
-    printf("\n%d\n", endOfClosed);
-    tracePath(map, closed, closed[endOfClosed], start);
+    return;
   }
-  */
+  if (distinationCheck == true){
+/*
+    printf("Closed list\n");
+    for (int i = 0; i < MAPSIZEROW; i++) {
+      for (int j = 0; j < MAPSIZECOL; j++) {
+        if (cellMap[i][j].closedList == true ) {
+          printCell(cellMap[i][j], i , j);
+        }
+      }
+    }
+*/
+
+    printf("Here is the path that we found\n");
+    tracePath(cellMap, map, dest.row, dest.col, start);
+  }
 }
 
-int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
+bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
 /* For each of the 8 cells surrounding current cell*/
   for (int r = -1; r <= 1; r++) {
     for (int c = -1; c <= 1; c++) {
@@ -118,54 +122,80 @@ int generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZERO
         //The successors' coordinates for readability
         int successorRow = row + r;
         int successorCol = col + c;
+        int successorGCost;
+
+        //This ensures that walking diagonally has an extra cost which is the increased walking distance
+        if (r == 0 || c == 0) {
+          successorGCost = cellMap[row][col].g + map[successorRow][successorCol];
+        } else {
+          successorGCost = cellMap[row][col].g + map[successorRow][successorCol] * 1.4;
+        }
+
 
 
         //Ensuring successor cell is inside map bounds &&||? /*TODO: if it is in the closed list */
         if (isWithinArray(successorRow, successorCol)) {
-
-          if (isDestination(successorRow, successorCol, dest)) {  //TODO: måske vi skal rykke denne, fordi den ikke nødvendigvis peger på den hurtigste rute
-            printf("Wu!Hu!\nDesitination found!!\n");
-            cellMap[successorRow][successorCol].closedList = true;
-            return 1;
-          }
-          // Initialize the cell if it is
-          if (cellMap[successorRow][successorCol].closedList == false) {
-            //If the cell is walkable we give it values so we can compare them with each other
-            if (isUnblocked(map, successorRow, successorCol)) {
+          if (isUnblocked(map, successorRow, successorCol)) {
 
 
+            if (isDestination(successorRow, successorCol, dest)) {  //TODO: måske vi skal rykke denne, fordi den ikke nødvendigvis peger på den hurtigste rute
+              printf("Wu!Hu!\nDesitination found!!\n");
 
-              // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
-              if (cellMap[successorRow][successorCol].openList == false) {
 
-                //Setting parentValues for the successor.                       Will be the same for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
-                cellMap[successorRow][successorCol].parentCoor.row = row;
-                cellMap[successorRow][successorCol].parentCoor.col = col;
+              cellMap[successorRow][successorCol].parentCoor.row = row;
+              cellMap[successorRow][successorCol].parentCoor.col = col;
 
-                //Record successor's f,g,h costs
-                cellMap[successorRow][successorCol].g = cellMap[row][col].g + map[successorRow][successorCol];
-                cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
-                cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+              //Record successor's f,g,h costs
+              cellMap[successorRow][successorCol].g = cellMap[row][col].g + map[successorRow][successorCol];
+              cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+              cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
 
-                //Add it to the 'open' list
-                cellMap[successorRow][successorCol].openList = true;
-                printf("\nNew in openList");
-                printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
-              }
+              cellMap[successorRow][successorCol].closedList = true;
 
-              // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure: G.cost
-              if (cellMap[row][col].g + map[successorRow][successorCol] < cellMap[successorRow][successorCol].g) {
+              return true;
+            }
+            // Initialize the cell if it is
+            if (cellMap[successorRow][successorCol].closedList == false) {
+              //If the cell is walkable we give it values so we can compare them with each other
 
-                //If new path is better, update parentValues.
-                cellMap[successorRow][successorCol].parentCoor.row = row;
-                cellMap[successorRow][successorCol].parentCoor.col = col;
 
-                //Recalculate & update g and f values. h (estimated distance to dest) will remain the same, so no recalculations needed
-                cellMap[successorRow][successorCol].g = cellMap[row][col].g + map[successorRow][successorCol];
-                cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
 
-                printf("\nAlready in open. Updated g,f value and parents");
-                printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
+
+                // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
+                if (cellMap[successorRow][successorCol].openList == false) {
+
+                  //Setting parentValues for the successor.                       Will be the same for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
+                  cellMap[successorRow][successorCol].parentCoor.row = row;
+                  cellMap[successorRow][successorCol].parentCoor.col = col;
+
+                  //Record successor's f,g,h costs
+                  cellMap[successorRow][successorCol].g = successorGCost;
+                  cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+                  cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+
+                  //Add it to the 'open' list
+                  cellMap[successorRow][successorCol].openList = true;
+                  /*
+                  printf("\nNew in openList");
+                  printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
+                  */
+                }
+
+                // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure: G.cost
+                if (successorGCost < cellMap[successorRow][successorCol].g) {
+
+                  //If new path is better, update parentValues.
+                  cellMap[successorRow][successorCol].parentCoor.row = row;
+                  cellMap[successorRow][successorCol].parentCoor.col = col;
+
+                  //Recalculate & update g and f values. h (estimated distance to dest) will remain the same, so no recalculations needed
+                  cellMap[successorRow][successorCol].g = successorGCost;
+                  cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+                  cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+                  /*
+                  printf("\nAlready in open. Updated g,f value and parents");
+                  printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
+                  */
               }
             }
           }
@@ -208,14 +238,15 @@ void printCell(cell_t cell, int row, int col) {
   printf("Open %d - Closed %d\n", cell.openList, cell.closedList);
 }
 
-int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start) {
+int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start) {
   if (row == start.row && col == start.col) {
-    cellMap[row][col].g = 9; //TODO: revurder om vi skal printe til g eller om vi skal lave et nyt map
+    //printCell(cellMap[row][col], row, col);
+    map[row][col] = 9;
     return 1;
   }
-  //int index = findParentLinSearch(closed, cell);
-  cellMap[row][col].g = 9;
-  return tracePath(cellMap, row, col, start);
+  //printCell(cellMap[row][col], row, col);
+  map[row][col] = 9;
+  return tracePath(cellMap, map, cellMap[row][col].parentCoor.row, cellMap[row][col].parentCoor.col, start);
 }
 
 /*

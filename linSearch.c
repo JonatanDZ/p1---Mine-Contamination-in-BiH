@@ -8,34 +8,22 @@
  * @return
  */
 bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
-    printf("--Entering linear search - InOpen: looking for cell with lowest f. --\n");
-    *resultR = 0;
-    *resultC = 0;
-    //bool first = true;
+    bool first = true;
     for (int r = 0; r < MAPSIZEROW; r++) {
         for (int c = 0; c < MAPSIZECOL; c++) {
             if (cellMap[r][c].openList == true) {
-                printf("Cell %d, %d is in open.\n", r,c);
-                /*if (first == true) {
+                if (first == true) {
                     *resultR = r;
                     *resultC = c;
                     first = false;
-                } else */ if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
+                } else if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
                     *resultR = r;
                     *resultC = c;
-                    printf("Coordinates for lowest f value updated from (%d,%d).f = %lf to (%d,%d).f = %lf.\n",
-                        r, c, cellMap[r][c].f,
-                        *resultC, *resultC, cellMap[*resultR][*resultC].f);
-                } else {
-                    printf("(%d,%d).f = %lf was not smaller than (%d,%d).f = %lf.\n",
-                        r, c, cellMap[r][c].f,
-                        *resultC, *resultC, cellMap[*resultR][*resultC].f);
                 }
             }
         }
     }
-    printf("Exiting lin search with lowest f value found at (%d,%d).f = %lf.\n\n. In open = %d", *resultC, *resultC, cellMap[*resultR][*resultC].f, cellMap[*resultR][*resultC].openList);
-    return 1;
+    return first;
 }
 /*
 int gLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZEROW], int* resultR, int* resultC) {
