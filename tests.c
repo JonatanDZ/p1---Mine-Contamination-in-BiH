@@ -1,9 +1,11 @@
 #include "header.h"
 
 void testMapWFile();
+void testNumberToEnum();
 
 int main() {
     testMapWFile();
+    testNumberToEnum();
 
 }
 
