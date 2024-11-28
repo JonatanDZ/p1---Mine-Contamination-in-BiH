@@ -17,24 +17,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
   //2d array to manage cells and 'lists', initialization
   cell_t cellMap[MAPSIZEROW][MAPSIZECOL];
-  for (int i = 0; i < MAPSIZEROW; i++) {
-    for (int j = 0; j < MAPSIZECOL; j++) {
-    //To indicate all cells as unexplored:
-
-      //All cells' f, g, h, values set to maximum double allowed
-      cellMap[i][j].f = DBL_MAX;
-      cellMap[i][j].g = DBL_MAX;
-      cellMap[i][j].h = DBL_MAX;
-
-      //Parents set to -1
-      cellMap[i][j].parentCoor.row = NOPARENTYET;
-      cellMap[i][j].parentCoor.row = NOPARENTYET;
-
-      //Both lists should be empty at start
-      cellMap[i][j].openList = false;
-      cellMap[i][j].closedList = false;
-    }
-  }
+  initEmptyCellMap(cellMap);
 
 /* 1) Starting the search with start cell */
 
@@ -96,7 +79,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     return;
   }
   if (destinationCheck == true){
-/*
+        /*
     printf("Closed list\n");
     for (int i = 0; i < MAPSIZEROW; i++) {
       for (int j = 0; j < MAPSIZECOL; j++) {
@@ -204,14 +187,8 @@ bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
       }
     }
   }
-}
-
-void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
-  for(int i = 0; i < MAPSIZEROW; i++){                            // laves to for-løkker, for at indsætte værdierne i et 2D-array
-    for(int j = 0; j < MAPSIZECOL; j++){
-      hMap[i][j] = hCalc(i, j, dest.row, dest.col); //hCalc funktionen bruges, da det er her den har beregnet værdierne og indsætter dem
-    }
-  }
+  //If the early return has not happened, destination has not been found.
+  return false;
 }
 
 double hCalc(int row, int col, int destRow, int destCol) {
@@ -250,6 +227,32 @@ int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZ
   return tracePath(cellMap, map, cellMap[row][col].parentCoor.row, cellMap[row][col].parentCoor.col, start);
 }
 
+void tracePathIte(const cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start) {
+  while (row!= start.row || col != start.col) {
+    /*printf("--Checked--\n");
+    printf("Row: %d, col: %d", row, col);
+    printCell(cellMap[row][col], row, col);
+    printf("\n\n");*/
+
+    //Draw
+    map[row][col] = 9;
+
+    //Update
+    row = cellMap[row][col].parentCoor.row;
+    col = cellMap[row][col].parentCoor.col;
+  }
+  //Draw on start
+  map[row][col] = 9;
+}
+
+/*
+void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest){
+  for(int i = 0; i < MAPSIZEROW; i++){                            // laves to for-løkker, for at indsætte værdierne i et 2D-array
+    for(int j = 0; j < MAPSIZECOL; j++){
+      hMap[i][j] = hCalc(i, j, dest.row, dest.col); //hCalc funktionen bruges, da det er her den har beregnet værdierne og indsætter dem
+    }
+  }
+}
 /*
 cell_t popCell(cell_t list[], int n) {
   cell_t returnCell = list[n];
@@ -266,3 +269,25 @@ bool isInOpenList(cell_t cell){
   return true;
 }
 */
+
+void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]) {
+  for (int i = 0; i < MAPSIZEROW; i++) {
+    for (int j = 0; j < MAPSIZECOL; j++) {
+      //To indicate all cells as unexplored:
+
+      //All cells' f, g, h, values set to maximum double allowed
+      cellMap[i][j].f = DBL_MAX;
+      cellMap[i][j].g = DBL_MAX;
+      cellMap[i][j].h = DBL_MAX;
+
+      //Parents set to -1
+      cellMap[i][j].parentCoor.row = NOPARENTYET;
+      cellMap[i][j].parentCoor.row = NOPARENTYET;
+
+      //Both lists should be empty at start
+      cellMap[i][j].openList = false;
+      cellMap[i][j].closedList = false;
+    }
+  }
+}
+

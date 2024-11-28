@@ -71,12 +71,14 @@ bool isDestination(int row, int col, coor_t dest);
 bool isInList(cell_t list[], cell_t cellElement);
 
 int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
+void tracePathIte(const cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
 
 void printCell(cell_t cell, int row, int col);
 
 bool isEmpty(cell_t cellMap);
 
 
+void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
 
 
 #endif //HEADER_H
