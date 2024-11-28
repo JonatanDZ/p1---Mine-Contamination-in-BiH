@@ -9,14 +9,26 @@
  */
 bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
     bool first = true;
+
+    //r & c determine which cell is currently checked through its coordinates, starting from the beginning of the 2d cell array.
     for (int r = 0; r < MAPSIZEROW; r++) {
         for (int c = 0; c < MAPSIZECOL; c++) {
+
+            //Only searching cells within 'open' list. Ignore all others.
             if (cellMap[r][c].openList == true) {
+
+                /* To ensure that cells in 'open' are only compared to other cells in open,
+                 * the first cell found in 'open' should lay basis for f cost comparison.*/
                 if (first == true) {
                     *resultR = r;
                     *resultC = c;
                     first = false;
-                } else if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
+                }
+                /* In all other comparisons after finding the first 'open' cell,
+                 * compare the current cell's f cost to the previously found lowest f cost. */
+                else if (cellMap[r][c].f < cellMap[*resultR][*resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
+
+                    //Update the coordinates, which 
                     *resultR = r;
                     *resultC = c;
                 }
