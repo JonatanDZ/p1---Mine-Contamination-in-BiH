@@ -3,8 +3,8 @@
 /**
  *
  * @param cellMap Provides cell list to search through
- * @param resultR The row
- * @param resultC
+ * @param resultR The row-value currently with the lowest f-value
+ * @param resultC The column-value currently with the lowest f-value
  * @return true if no cells were found in open, false if at least one cell was in 'open'
  */
 bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
@@ -14,7 +14,7 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
     for (int r = 0; r < MAPSIZEROW; r++) {
         for (int c = 0; c < MAPSIZECOL; c++) {
 
-            //Only searching cells within 'open' list. Ignore all others. TODO: What happens with *resultCoor if the following block is never entered?
+            //Only searching cells within 'open' list. Ignore all others.
             if (cellMap[r][c].openList == true) {
 
                 /* To ensure that cells in 'open' are only compared to other cells in open,
@@ -39,45 +39,3 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
     //If first is returned as true, no cells were found in open. If returned as false, at least one cell was in 'open'
     return first;
 }
-/*
-int gLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZEROW], int* resultR, int* resultC) {
-    int resultR;
-    int resultC;
-    for (int r = 0; r < MAXSIZE; r++) {
-        for (int c = 0; c < MAPSIZECOL; c++) {
-            if (cellMap[r][c].openList == true){
-                if (cellMap[r][c].currentCoor.row == successorCell.currentCoor.row && cellList[i].currentCoor.col == successorCell.currentCoor.col) {
-                    if (successorCell.g < cellList[i].g) {
-                        result = i;
-                    }
-                }
-            }
-
-
-        }
-    }
-}
-*/
-
-/* TODO: find ud af om den er undværlig
-int findParentLinSearch(cell_t parentCellList[], cell_t cell) {
-    int result = 0;
-    bool first = true;
-    for (int i = 0; i < MAXSIZE; i++) {
-        if (parentCellList[i].currentCoor.row == cell.parentCoor.row && parentCellList[i].currentCoor.col == cell.parentCoor.col) {
-            if (first) {
-                first = false;
-                result = i;
-
-                printf("\n %d Parent Cell", i);
-                printCell(parentCellList[result]);
-            }else if (parentCellList[i].f + 0.1 < parentCellList[result].f) {
-                printf("%d Cell",i);
-                printCell(parentCellList[i]);
-                result = i;
-            }
-        }
-    }
-    return result;
-}
-*/
