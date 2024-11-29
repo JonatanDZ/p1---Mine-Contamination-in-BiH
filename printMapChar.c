@@ -3,7 +3,11 @@
 //
 
 #include "header.h"
-//Function that print the map, with the char values
+
+/**
+ * Function printing the map in chars.
+ * @param map int array from main.
+ */
 void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]) {
     printf("\n");
     for (int i = 0; i < MAPSIZEROW; i++){
