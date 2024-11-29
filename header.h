@@ -42,7 +42,9 @@ typedef enum {
     field = 16,
     forest = 24,
     mountain1 = 27,
-    mountain2 = 35
+    mountain2 = 35,
+    startPosition = 2,
+    endPosition = 3
 } moveValue;
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest);
@@ -51,7 +53,7 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
-int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coor_t* dest);
+int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
 
 void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest);
 

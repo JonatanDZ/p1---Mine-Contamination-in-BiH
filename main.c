@@ -1,7 +1,6 @@
 #include "header.h"
 
 int main(){
-    const int mapSize = 32;
     coor_t start, dest;
     int map [MAPSIZEROW][MAPSIZECOL];
 
@@ -15,7 +14,7 @@ int main(){
     randomMineGen(map);
     shortestRoute(map);
 
-    input(map, mapSize, &start, &dest);
+    input(map, &start, &dest);
 
     aStarSearch(map, start, dest);
 

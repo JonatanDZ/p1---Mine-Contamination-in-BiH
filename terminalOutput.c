@@ -38,7 +38,7 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                     map[i][j] = 202;
                     break;
                 default:
-                    map[i][j] = 150; //er for path værdien
+                    map[i][j] = 'R'; //er for path værdien
             }
         }
     }

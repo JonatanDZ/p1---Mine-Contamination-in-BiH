@@ -9,11 +9,6 @@
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 /* 0) Set up */
-  cell_t open[MAXSIZE];
-  cell_t closed[MAXSIZE];
-  bool pathFound = false;
-  int count = 0;
-  int endOfClosed;
 
   //2d array to manage cells and 'lists', initialization
   cell_t cellMap[MAPSIZEROW][MAPSIZECOL];
@@ -229,10 +224,10 @@ int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZ
 
 void tracePathIte(const cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start) {
   while (row!= start.row || col != start.col) {
-    /*printf("--Checked--\n");
+    printf("--Checked--\n");
     printf("Row: %d, col: %d", row, col);
     printCell(cellMap[row][col], row, col);
-    printf("\n\n");*/
+    printf("\n\n");
 
     //Draw
     map[row][col] = 9;

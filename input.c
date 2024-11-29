@@ -2,32 +2,48 @@
 // Created by Jonatan Muhle-Zimino on 13/11/2024.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "header.h"
 
-int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coor_t* dest) {
+int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     // Starter fra 0, så minus en for koordinat.
 
 
+    // Starter fra 0, så minus en for koordinat.
 
-    printf("Input x og y koordinat for start koordinator");
+    int startRow = -1, startCol = -1;
+
+    printf("Input x og y koordinat for start koordinator, det går fra 0 0 til %d>", MAPSIZE-1);
     scanf(" %d %d", &start->row, &start->col);
 
-    //map[start->row][start->col] = startPosistion;
+    map[start->row][start->col] = startPosition;
+
+    if (isUnblocked(map, start->row, start->col) == false) {
+        printf("Error: start cant be on a mine or river, pleas reenter the first coordinates \n");
+        return input(map, start, dest);
+    }
 
 
-
-
-    printf("Input x og y koordinat for end koordinator");
+    printf("Input x og y koordinat for end koordinator, det går fra 0 0 til %d>", MAPSIZE-1);
     scanf(" %d %d", &dest->row, &dest->col);
 
 
-    //map[dest->row][dest->col] = endPosistion;
 
-    if (start->row == dest->row && start->col == dest->col) {
-        return EXIT_FAILURE;
+    if (isUnblocked(map, dest->row, dest->col) == false) {
+        printf("Error: distination cant be on a mine or river, pleas reenter both coordinates \n");
+        return input(map, start, dest);
     }
 
-    return 1;
+    map[dest->row][dest->col] = endPosition;
+
+    if (start->row == dest->row && start->col == dest->row) {
+        return input(map, start, dest);
+    }
+
 }
+
+
+
+
+
+
