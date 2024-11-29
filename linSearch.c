@@ -32,6 +32,7 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
                      *     update result coordinates to the current cell's coordinates */
                     *resultR = r;
                     *resultC = c;
+                    
                 }
             }
         }
