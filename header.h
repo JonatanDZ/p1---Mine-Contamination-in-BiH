@@ -7,49 +7,57 @@
 
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
+#define MAXSIZE 999
 
 #define MAPSIZE 32
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <stdbool.h>
+
 #include <math.h>
+
 #include <assert.h>
 
 typedef struct {
-    int parentRow;
-    int parentCol;
+    int row;
+    int col;
+} coor_t;
+
+typedef struct {
+    double f;
     double g;
     double h;
-    double f;
-    bool OpenList;
-    bool ClosedList;
+    coor_t parentCoor;
+    bool openList;
+    bool closedList;
 } cell_t;
 
 typedef enum {
-    mine = 167,
-    water = 247,
-    asphalt = 223,
-    city = 202,
-    field = 173,
-    forest = 216,
-    mountain1 = 133,
-    mountain2 = 142,
-    startPosition = 00,
-    endPosition = 01
+    mine = 00,
+    water = 1,
+    asphalt = 10,
+    city = 14,
+    field = 16,
+    forest = 24,
+    mountain1 = 27,
+    mountain2 = 35
 } moveValue;
+
+void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest);
 
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
-int input(int map[MAPSIZEROW][MAPSIZECOL]);
+int input(int map[MAPSIZEROW][MAPSIZECOL], const int mapSize, coor_t* start, coor_t* dest);
 
-void insertH(double* hMap, int destRow, int destCol);
+void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest);
 
-double hCalc(int i, int j, int destRow, int destCol);
+double hCalc(int row, int col, int destRow, int destCol);
 
-bool ifObstacle(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
+bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 bool isWithinArray(int row, int col);
 
@@ -60,6 +68,28 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
+
+// Updated
+bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC);
+//int gLinSearch(cell_t cellList[], cell_t successorCell);
+//int findParentLinSearch(cell_t parentCellList[], cell_t cell);
+
+
+bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
+cell_t popCell(cell_t list[], int n);
+bool isDestination(int row, int col, coor_t dest);
+
+bool isInList(cell_t list[], cell_t cellElement);
+
+int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
+void tracePathIte(const cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
+
+void printCell(cell_t cell, int row, int col);
+
+bool isEmpty(cell_t cellMap);
+
+
+void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
 
 
 #endif //HEADER_H
