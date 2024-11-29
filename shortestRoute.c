@@ -3,8 +3,8 @@
 //
 #include "header.h"
 
+//Changes the enum to 10 so we are able to see the shortest route without terrain.
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
-
     int choice;
     printf("Normal(0)- or shortroute(1)> ");
     scanf(" %d", &choice);

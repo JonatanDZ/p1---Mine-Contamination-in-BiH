@@ -4,11 +4,8 @@
 
 
 #include "header.h"
-
+//Makes the start and end posistions.
 int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
-    // Starter fra 0, så minus en for koordinat.
-
-
     // Starter fra 0, så minus en for koordinat.
 
     int startRow = -1, startCol = -1;

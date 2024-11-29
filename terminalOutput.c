@@ -2,7 +2,7 @@
 // Created by Jonatan Muhle-Zimino on 22/11/2024.
 //
 #include "header.h"
-
+//Changes the value from enum to char, so it will be printed correcly.
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
