@@ -10,24 +10,24 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
 
     int startRow = -1, startCol = -1;
 
-    printf("Input x og y koordinat for start koordinator, det går fra 0 0 til %d>", MAPSIZE-1);
+    printf("Input x and y coordinates for your start location, the interval is from 0 0 to %d>", MAPSIZE-1);
     scanf(" %d %d", &start->row, &start->col);
 
     map[start->row][start->col] = startPosition;
 
     if (isUnblocked(map, start->row, start->col) == false) {
-        printf("Error: start cant be on a mine or river, pleas reenter the first coordinates \n");
+        printf("Error: Start cannot be on a mine or river, please reenter the first coordinates \n");
         return input(map, start, dest);
     }
 
 
-    printf("Input x og y koordinat for end koordinator, det går fra 0 0 til %d>", MAPSIZE-1);
+    printf("Input x and y coordinates for your destination, the interval is from 0 0 to %d>", MAPSIZE-1);
     scanf(" %d %d", &dest->row, &dest->col);
 
 
 
     if (isUnblocked(map, dest->row, dest->col) == false) {
-        printf("Error: distination cant be on a mine or river, pleas reenter both coordinates \n");
+        printf("Error: Destination cannot be on a mine or river, please reenter both coordinates \n");
         return input(map, start, dest);
     }
 
