@@ -3,6 +3,11 @@
 //
 #include "header.h"
 //Changes the value from enum to char, so it will be printed correcly.
+
+/**
+ * This function changes the values so it looks neat drawn with asciis symbols
+ * @param map s values are updated so it looks neat drawn with asciis symbols
+ */
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {

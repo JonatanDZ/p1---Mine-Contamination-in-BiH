@@ -18,11 +18,12 @@ int main(){
 
     aStarSearch(map, start, dest);
 
-    printMap(map);
+    //printMap(map);
 
-
+/*
     terminalOutPut(map);
     printMapChar(map);
+    */
 
     return 0;
 }
