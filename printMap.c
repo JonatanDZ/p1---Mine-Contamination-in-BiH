@@ -3,7 +3,7 @@
 //
 
 #include "header.h"
-
+//prints the map out.
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]) { //We are printing the map
     printf("\n");
     for (int i = 0; i < MAPSIZEROW; i++){

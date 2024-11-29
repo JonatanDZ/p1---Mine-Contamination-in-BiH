@@ -3,8 +3,8 @@
 //
 
 #include "header.h"
-
-void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]) { //We are printing the map
+//Function that print the map, with the char values
+void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]) {
     printf("\n");
     for (int i = 0; i < MAPSIZEROW; i++){
         for (int j = 0; j < MAPSIZEROW; j++){
