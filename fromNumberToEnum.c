@@ -1,9 +1,11 @@
-//
-// Created by Jonatan Muhle-Zimino on 22/11/2024.
-//
 #include "header.h"
 
+/**
+ * A function converting the array from the txt file data to our defined enums.
+ * @param map int array from main.
+ */
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]) {
+    // For-loop with a switch that converts ints to enums.
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
