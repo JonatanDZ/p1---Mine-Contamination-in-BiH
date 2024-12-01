@@ -10,19 +10,22 @@
 #include "header.h"
 
 /**
- * A struct for one component of the linked list. Next is NULL if no next ecists
+ * A struct for one component of the linked list. Next is NULL if no next exists
  */
-typedef struct node_t { //Needs name here...
+typedef struct listNode_t { //Needs name here...
     cell_t* cell;
-    struct node_t* next; //so it can be used here
-} node_t;
+    struct listNode_t* next; //so it can be used here
+} listNode_t;
 
 /**
  * The type for the list itself. In actuality it is simply a pointer to the head of the list.
  */
 typedef struct {
-    node_t* head;
+    listNode_t* head;
 } list_t;
+
+void addItem();
+void removeItem();
 
 
 
