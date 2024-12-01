@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/createMap.c.obj.d"
   "CMakeFiles/main.dir/createMapWFile.c.obj"
   "CMakeFiles/main.dir/createMapWFile.c.obj.d"
+  "CMakeFiles/main.dir/dataStructures.c.obj"
+  "CMakeFiles/main.dir/dataStructures.c.obj.d"
   "CMakeFiles/main.dir/fromNumberToEnum.c.obj"
   "CMakeFiles/main.dir/fromNumberToEnum.c.obj.d"
   "CMakeFiles/main.dir/input.c.obj"
