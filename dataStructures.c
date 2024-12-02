@@ -4,3 +4,6 @@
 
 #include "dataStructures.h"
 
+void addItem(list_t* list, cell_t* cell) {
+    listNode_t* newNode = (listNode_t*)malloc(sizeof(listNode_t));
+}
