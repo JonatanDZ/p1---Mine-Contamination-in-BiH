@@ -11,4 +11,24 @@ void addCell(list_t* list, cell_t* cell) {
     list->head = newNode;       //Update the head of the list to this node
 }
 
-void deleteCell
+
+void fLinSearch(list_t* list) {
+    listNode_t* currentNode = list->head;
+    listNode_t* resultNode = currentNode;
+
+
+    for (currentNode; currentNode != NULL; currentNode = currentNode->next ) {
+        if (currentNode->cell->f < resultNode->cell->f) {
+
+        }
+
+    }
+
+
+
+}
+
+void removeCell(list_t* list, cell_t* cell) {
+
+}
+
