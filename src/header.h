@@ -5,8 +5,6 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#define MAPSIZEROW 32
-#define MAPSIZECOL 32
 #define MAXSIZE 999
 
 #define MAPSIZE 32
@@ -36,9 +34,6 @@ typedef enum {
 } moveValue;
 
 
-void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
-void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
-void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
 
 
