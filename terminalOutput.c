@@ -15,50 +15,36 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
             switch (map[i][j]) {
                 case mine:
                     color(0x44);
-                    printf ("   ");
                     break;
                 case water:
                     color(0x99);
-                    printf("   ");
                     break;
                 case asphalt:
                     color(0x77);
-                    printf("   ");
                     break;
                 case city:
                     color(0x88);
-                    printf("   ");
                     break;
                 case field:
                     color(0xee);
-                    printf("   ");
                     break;
                 case forest:
                     color(0xAA);
-                    printf("   ");
                     break;
                 case mountain1:
                     color(0x22);
-                    printf("   ");
                     break;
                 case mountain2:
                     color(0x66);
-                    printf("   ");
                     break;
                 case startPosition:
-                    map[i][j] = 223;
                     color(0x0c);
-                    printf("   ");
                     break;
                 case endPosition:
-                    map[i][j] = 223;
                     color(0xcc);
-                    printf("   ");
                     break;
                 default:
-                    map[i][j] = 223; //er for path værdien
                     color(0xFF);
-                    printf("   ");
             }
         }
     }
@@ -67,4 +53,5 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
 void color(int colorValue) {
     HANDLE H= GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(H,colorValue);
+    printf("   ");
 }
