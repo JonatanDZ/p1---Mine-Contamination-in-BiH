@@ -20,10 +20,7 @@ int main(){
 
     printMap(map);
 
-/*
-    terminalOutPut(map);
-    printMapChar(map);
-    */
+
 
     return 0;
 }
