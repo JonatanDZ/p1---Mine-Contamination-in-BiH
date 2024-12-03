@@ -176,16 +176,6 @@ bool isWithinArray(int row, int col) {
 }
 
 /**
- * Utility function determining whether a not a given input is the destination.
- * @param row Input, row to check.
- * @param col Input, col to check.
- * @return true if within, else returns false.
- */
-bool isDestination(int row, int col, coor_t dest) {
-  return row == dest.row && col == dest.col;
-}
-
-/**
  * Recursive function tracing back from destination to start, and drawing on the map provided.
  * @param cellMap input only: Used to provide row and col input, by parents
  * @param map Array to change
@@ -201,5 +191,15 @@ int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZ
   }
   map[row][col] = 9;
   return tracePath(cellMap, map, cellMap[row][col].parentCoor.row, cellMap[row][col].parentCoor.col, start);
+}
+
+/**
+ * Utility function determining whether a not a given input is the destination.
+ * @param row Input, row to check.
+ * @param col Input, col to check.
+ * @return true if within, else returns false.
+ */
+bool isDestination(int row, int col, coor_t dest) {
+  return row == dest.row && col == dest.col;
 }
 

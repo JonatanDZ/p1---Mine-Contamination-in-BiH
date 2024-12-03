@@ -7,31 +7,18 @@
 
 #define MAXSIZE 999
 
-#define MAPSIZE 32
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
 #include "dataStructures.h"
+#include "map.h"
 #include <windows.h>
 #include <math.h>
 #include <assert.h>
 
 
-
-typedef enum {
-    mine = 00,
-    water = 1,
-    asphalt = 10,
-    city = 14,
-    field = 16,
-    forest = 24,
-    mountain1 = 27,
-    mountain2 = 35,
-    startPosition = 2,
-    endPosition = 3
-} moveValue;
 
 
 
@@ -44,9 +31,6 @@ bool isWithinArray(int row, int col);
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
-
-void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);
-void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 

@@ -42,7 +42,6 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
 
 }
 
-
 void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     int mineAnswer;
     int amountOfMines;

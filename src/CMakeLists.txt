@@ -6,19 +6,15 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(main
         aStar.c
-        createMap.c
         main.c
         header.h
         aStar.c
         isUnblocked.c
         input.c
-        printMap.c
         ../aStarTest.c
         terminalOutput.c
         printMapChar.c
         mineGen.c
-        shortestRoute.c
-        createMapWFile.c
         fromNumberToEnum.c
         aStar.h
         input.h

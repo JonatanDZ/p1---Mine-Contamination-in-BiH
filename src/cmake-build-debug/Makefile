@@ -176,54 +176,6 @@ aStar.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/aStar.c.s
 .PHONY : aStar.c.s
 
-createMap.obj: createMap.c.obj
-.PHONY : createMap.obj
-
-# target to build an object file
-createMap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.obj
-.PHONY : createMap.c.obj
-
-createMap.i: createMap.c.i
-.PHONY : createMap.i
-
-# target to preprocess a source file
-createMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.i
-.PHONY : createMap.c.i
-
-createMap.s: createMap.c.s
-.PHONY : createMap.s
-
-# target to generate assembly for a file
-createMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMap.c.s
-.PHONY : createMap.c.s
-
-createMapWFile.obj: createMapWFile.c.obj
-.PHONY : createMapWFile.obj
-
-# target to build an object file
-createMapWFile.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMapWFile.c.obj
-.PHONY : createMapWFile.c.obj
-
-createMapWFile.i: createMapWFile.c.i
-.PHONY : createMapWFile.i
-
-# target to preprocess a source file
-createMapWFile.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMapWFile.c.i
-.PHONY : createMapWFile.c.i
-
-createMapWFile.s: createMapWFile.c.s
-.PHONY : createMapWFile.s
-
-# target to generate assembly for a file
-createMapWFile.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMapWFile.c.s
-.PHONY : createMapWFile.c.s
-
 dataStructures.obj: dataStructures.c.obj
 .PHONY : dataStructures.obj
 
@@ -392,30 +344,6 @@ mineGen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/mineGen.c.s
 .PHONY : mineGen.c.s
 
-printMap.obj: printMap.c.obj
-.PHONY : printMap.obj
-
-# target to build an object file
-printMap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMap.c.obj
-.PHONY : printMap.c.obj
-
-printMap.i: printMap.c.i
-.PHONY : printMap.i
-
-# target to preprocess a source file
-printMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMap.c.i
-.PHONY : printMap.c.i
-
-printMap.s: printMap.c.s
-.PHONY : printMap.s
-
-# target to generate assembly for a file
-printMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMap.c.s
-.PHONY : printMap.c.s
-
 printMapChar.obj: printMapChar.c.obj
 .PHONY : printMapChar.obj
 
@@ -439,30 +367,6 @@ printMapChar.s: printMapChar.c.s
 printMapChar.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMapChar.c.s
 .PHONY : printMapChar.c.s
-
-shortestRoute.obj: shortestRoute.c.obj
-.PHONY : shortestRoute.obj
-
-# target to build an object file
-shortestRoute.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/shortestRoute.c.obj
-.PHONY : shortestRoute.c.obj
-
-shortestRoute.i: shortestRoute.c.i
-.PHONY : shortestRoute.i
-
-# target to preprocess a source file
-shortestRoute.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/shortestRoute.c.i
-.PHONY : shortestRoute.c.i
-
-shortestRoute.s: shortestRoute.c.s
-.PHONY : shortestRoute.s
-
-# target to generate assembly for a file
-shortestRoute.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/shortestRoute.c.s
-.PHONY : shortestRoute.c.s
 
 terminalOutput.obj: terminalOutput.c.obj
 .PHONY : terminalOutput.obj
@@ -503,12 +407,6 @@ help:
 	@echo ... aStar.obj
 	@echo ... aStar.i
 	@echo ... aStar.s
-	@echo ... createMap.obj
-	@echo ... createMap.i
-	@echo ... createMap.s
-	@echo ... createMapWFile.obj
-	@echo ... createMapWFile.i
-	@echo ... createMapWFile.s
 	@echo ... dataStructures.obj
 	@echo ... dataStructures.i
 	@echo ... dataStructures.s
@@ -530,15 +428,9 @@ help:
 	@echo ... mineGen.obj
 	@echo ... mineGen.i
 	@echo ... mineGen.s
-	@echo ... printMap.obj
-	@echo ... printMap.i
-	@echo ... printMap.s
 	@echo ... printMapChar.obj
 	@echo ... printMapChar.i
 	@echo ... printMapChar.s
-	@echo ... shortestRoute.obj
-	@echo ... shortestRoute.i
-	@echo ... shortestRoute.s
 	@echo ... terminalOutput.obj
 	@echo ... terminalOutput.i
 	@echo ... terminalOutput.s

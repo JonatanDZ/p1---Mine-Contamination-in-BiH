@@ -5,8 +5,7 @@
 #ifndef DATASTRUCTURES_H
 #define DATASTRUCTURES_H
 #include <stdbool.h>
-
-#include "header.h"
+#include "map.h"
 #define NOPARENTYET -1
 
 

@@ -4,7 +4,6 @@
 
 #include "dataStructures.h"
 #include <float.h>
-
 #include "aStar.h"
 #include "header.h"
 

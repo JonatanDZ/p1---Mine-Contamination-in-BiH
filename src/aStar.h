@@ -1,6 +1,7 @@
 #ifndef ASTAR_H
 #define ASTAR_H
 #include "dataStructures.h"
+#include "map.h"
 
 
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest);

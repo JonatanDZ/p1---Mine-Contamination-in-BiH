@@ -4,14 +4,28 @@
 
 #ifndef MAP_H
 #define MAP_H
-#include "header.h"
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
+#define MAPSIZE 32
+
+typedef enum {
+    mine = 00,
+    water = 1,
+    asphalt = 10,
+    city = 14,
+    field = 16,
+    forest = 24,
+    mountain1 = 27,
+    mountain2 = 35,
+    startPosition = 2,
+    endPosition = 3
+} moveValue;
 
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
+
+void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);
+void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
-
-
 
 #endif //MAP_H

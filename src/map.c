@@ -4,6 +4,10 @@
 
 #include "map.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 //Our hardcoded map.
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
     int templateMap[32][32] = { //This is our hardcoded map
@@ -45,4 +49,105 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
                 map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
         }
     }
+}
+
+/**
+ * Function that assigns data from txt file to an array.
+ * @param map int array from main.
+ */
+void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]) {
+    FILE *mapfile; // File we need to open
+    int i; // int to increment during for-loop
+    int j; // int to increment during for-loop
+
+    // Checks if the file opens.
+    mapfile = fopen("map.txt", "r");
+    if (mapfile == NULL) {
+        printf("Bruh it ain't readin... we're cooked chat :(\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // For-loop assigning the file data to the 2D array
+    for (i = 0; i < MAPSIZEROW; i++) {
+        for (j = 0; j < MAPSIZECOL; j++) {
+            // %3 = only loading 3 digets for each location in the array
+            fscanf(mapfile, "%3d", &map[i][j]);
+
+        }
+    }
+
+    // Closes the file
+    fclose(mapfile);
+}
+
+//Changes the enum to 10 so we are able to see the shortest route without terrain.
+/**
+ *
+ * @param map all terrain values in map are changed to the same so it will show the shortest rather than the fastest
+ */
+void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            switch (map[i][j]) {
+            case mine:
+                map[i][j] = mine;
+                break;
+            case water:
+                map[i][j] = water;
+                break;
+            case asphalt:
+                map[i][j] = 10;
+                break;
+            case city:
+                map[i][j] = 10;
+                break;
+            case field:
+                map[i][j] = 10;
+                break;
+            case forest:
+                map[i][j] = 10;
+                break;
+            case mountain1:
+                map[i][j] = 10;
+                break;
+            case mountain2:
+                map[i][j] = 10;
+                break;
+            case startPosition:
+                map[i][j] = 10;
+                break;
+            case endPosition:
+                map[i][j] = 10;
+            }
+        }
+    }
+}
+
+//Genereates mines that are placed random on the map, and overwrites the value already there
+void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
+    srand(time(NULL));
+    int upperBound = MAPSIZE;
+    // Set the lower bound for random numbers depending on where the mine can be placed
+    int lowerBound = 0;
+
+    //For loop that runs, until all mines are placed
+    for (int i = 0; i < amountOfMines; i++) {
+        map[rand() % (upperBound - lowerBound + 1)+ lowerBound][rand() % (upperBound - lowerBound + 1)+ lowerBound] = mine;
+    }
+}
+
+/**
+ * Function that prints the map.
+ * @param map int array from main.
+ */
+void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
+    printf("\n");
+    // For-loop which prints each value in the array.
+    for (int i = 0; i < MAPSIZEROW; i++){
+        for (int j = 0; j < MAPSIZEROW; j++){
+            printf("%2d ", map[i][j]);
+        }
+        printf("\n");
+    }
+
 }
