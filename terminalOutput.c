@@ -10,41 +10,61 @@
  */
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     for (int i = 0; i < MAPSIZEROW; i++) {
+        printf("\n");
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
                 case mine:
-                    map[i][j] = 167;
+                    color(0x44);
+                    printf ("   ");
                     break;
                 case water:
-                    map[i][j] = 247;
+                    color(0x99);
+                    printf("   ");
                     break;
                 case asphalt:
-                    map[i][j] = 186;
+                    color(0x77);
+                    printf("   ");
                     break;
                 case city:
-                    map[i][j] = 223;
+                    color(0x88);
+                    printf("   ");
                     break;
                 case field:
-                    map[i][j] = 178;
+                    color(0xee);
+                    printf("   ");
                     break;
                 case forest:
-                    map[i][j] = 157;
+                    color(0xAA);
+                    printf("   ");
                     break;
                 case mountain1:
-                    map[i][j] = 239;
+                    color(0x22);
+                    printf("   ");
                     break;
                 case mountain2:
-                    map[i][j] = 234;
+                    color(0x66);
+                    printf("   ");
                     break;
                 case startPosition:
-                    map[i][j] = 101;
+                    map[i][j] = 223;
+                    color(0x0c);
+                    printf("   ");
                     break;
                 case endPosition:
-                    map[i][j] = 202;
+                    map[i][j] = 223;
+                    color(0xcc);
+                    printf("   ");
                     break;
                 default:
-                    map[i][j] = 'R'; //er for path værdien
+                    map[i][j] = 223; //er for path værdien
+                    color(0xFF);
+                    printf("   ");
             }
         }
     }
+}
+
+void color(int colorValue) {
+    HANDLE H= GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(H,colorValue);
 }
