@@ -1,8 +1,4 @@
-//
-// Created by Jonatan Muhle-Zimino on 19/11/2024.
-//
 #include <float.h>
-
 #include "header.h"
 #define NOPARENTYET -1
 
@@ -49,20 +45,19 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     printCell(cellMap[row][col], row, col);
 
 
+    //Breaks the while loop if the destination has been moved to the closed list.
     if (cellMap[dest.row][dest.col].closedList == true) {
-      break;
+      printf("Here is the path that we found\n");
+      tracePath(cellMap, map, dest.row, dest.col, start);
+      return;
     }
 
     generateSuccessors(cellMap, map, row, col, dest);
-
   }
+
   if (openListIsEmpty == true) {
     printf("No Path is found");
-    return;
   }
-
-  printf("Here is the path that we found\n");
-  tracePath(cellMap, map, dest.row, dest.col, start);
 
 }
 
