@@ -11,7 +11,7 @@
  */
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
     int choice;
-    printf("Normal(0)- or shortroute(1)> ");
+    printf("\nDo you want normal terrain (0) or flat terrain (1)?\n>");
     scanf(" %d", &choice);
 
     if (choice == 1) {

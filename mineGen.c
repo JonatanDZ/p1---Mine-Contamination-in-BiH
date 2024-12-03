@@ -14,11 +14,11 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
-    printf("\nRandom mines, yes(1) no(0) ");
+    printf("Do you want additional random mines? No (0) or Yes (1)\n>");
     scanf("%d", &mineAnswer);
     //If loop that runs if the user wants
     if (mineAnswer == 1) {
-        printf("How many mines do you want? ");
+        printf("How many additional mines do you want?\n>");
         scanf("%d", &amountOfMines);
 
         //For loop that runs, until all mines are placed
