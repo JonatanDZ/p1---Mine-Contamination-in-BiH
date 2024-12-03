@@ -13,7 +13,7 @@ int main(){
 
     //randomMineGen(map);
     //shortestRoute(map);
-
+    inputForShortestRouteAndMineGen(map);
     input(map, &start, &dest);
 
     aStarSearch(map, start, dest);
