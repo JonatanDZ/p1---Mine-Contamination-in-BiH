@@ -19,8 +19,10 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   cellMap[start.row][start.col].openList = true;
   cellMap[start.row][start.col].closedList = false;
 
+  /* Print til debugging
   printf("--Starting Cell--\n");
   printCell(cellMap[start.row][start.col], start.row, start.col);
+  */
 
 /* 2) Repeat, while open 'list' is not empty*/
 
@@ -41,8 +43,10 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     cellMap[row][col].openList = false;
     cellMap[row][col].closedList = true;
 
+    /* Print til debugging
     printf("\n\n---this cell is new in closed list---\n");
     printCell(cellMap[row][col], row, col);
+    */
 
 
     //Breaks the while loop if the destination has been moved to the closed list.
@@ -86,7 +90,7 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
 
           //Also ignore blocked cells
           if (isUnblocked(map, successorRow, successorCol)) {
-          /**/
+
 
               // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
               if (cellMap[successorRow][successorCol].openList == false) {
@@ -101,13 +105,13 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
                 initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
 
             }
-            printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
+            // Print til debugging
+            /*printCell(cellMap[successorRow][successorCol], successorRow, successorCol);*/
           }
         }
       }
     }
   }
-  //If the early return has not happened, destination has not been found.
 }
 
 double hCalc(int row, int col, int destRow, int destCol) {
@@ -206,7 +210,8 @@ void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int succ
   cellMap[successorRow][successorCol].g = gCost;
   cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
   cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
-  printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
+  // Print til debugging.
+  //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 
 
 }
