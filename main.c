@@ -15,7 +15,7 @@ int main(){
     inputForShortestRouteAndMineGen(map);
     input(map, &start, &dest);
 
-    //aStarSearch(map, start, dest);
+    aStarSearch(map, start, dest);
 
     //print map without special char
     printMap(map);
