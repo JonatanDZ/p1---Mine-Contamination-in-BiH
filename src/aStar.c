@@ -1,5 +1,3 @@
-#include <float.h>
-#include "header.h"
 #include "aStar.h"
 
 
@@ -160,19 +158,6 @@ double hCalc(int row, int col, int destRow, int destCol) {
   int D = 10;
   int D2 = 10 * 1.4;
   return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
-}
-
-/**
- * Utility function determining whether a not a given input is within the 2d array.
- * @param row Input, row to check.
- * @param col Input, col to check.
- * @return true if within, else returns false.
- */
-bool isWithinArray(int row, int col) {
-  if (row >= 0 && row < MAPSIZEROW && col >= 0 && col < MAPSIZECOL) {
-    return true;
-  }
-  return false;
 }
 
 /**

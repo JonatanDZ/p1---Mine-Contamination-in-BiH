@@ -1,9 +1,3 @@
-//
-// Created by Jonatan Muhle-Zimino on 13/11/2024.
-//
-
-
-#include "header.h"
 #include "input.h"
 
 //Makes the start and end posistions.

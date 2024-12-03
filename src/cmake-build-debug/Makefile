@@ -128,29 +128,29 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.obj: C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.obj
-.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.obj
+C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.obj: C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.obj
+.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.obj
 
 # target to build an object file
-C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.obj
-.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.obj
+C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.obj
+.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.obj
 
-C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.i: C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.i
-.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.i
+C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.i: C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.i
+.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.i
 
 # target to preprocess a source file
-C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.i
-.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.i
+C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.i
+.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.i
 
-C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.s: C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.s
-.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.s
+C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.s: C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.s
+.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.s
 
 # target to generate assembly for a file
-C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.s
-.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c.s
+C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.s
+.PHONY : C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.c.s
 
 aStar.obj: aStar.c.obj
 .PHONY : aStar.obj
@@ -200,30 +200,6 @@ dataStructures.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/dataStructures.c.s
 .PHONY : dataStructures.c.s
 
-fromNumberToEnum.obj: fromNumberToEnum.c.obj
-.PHONY : fromNumberToEnum.obj
-
-# target to build an object file
-fromNumberToEnum.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/fromNumberToEnum.c.obj
-.PHONY : fromNumberToEnum.c.obj
-
-fromNumberToEnum.i: fromNumberToEnum.c.i
-.PHONY : fromNumberToEnum.i
-
-# target to preprocess a source file
-fromNumberToEnum.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/fromNumberToEnum.c.i
-.PHONY : fromNumberToEnum.c.i
-
-fromNumberToEnum.s: fromNumberToEnum.c.s
-.PHONY : fromNumberToEnum.s
-
-# target to generate assembly for a file
-fromNumberToEnum.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/fromNumberToEnum.c.s
-.PHONY : fromNumberToEnum.c.s
-
 input.obj: input.c.obj
 .PHONY : input.obj
 
@@ -247,30 +223,6 @@ input.s: input.c.s
 input.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/input.c.s
 .PHONY : input.c.s
-
-isUnblocked.obj: isUnblocked.c.obj
-.PHONY : isUnblocked.obj
-
-# target to build an object file
-isUnblocked.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.obj
-.PHONY : isUnblocked.c.obj
-
-isUnblocked.i: isUnblocked.c.i
-.PHONY : isUnblocked.i
-
-# target to preprocess a source file
-isUnblocked.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.i
-.PHONY : isUnblocked.c.i
-
-isUnblocked.s: isUnblocked.c.s
-.PHONY : isUnblocked.s
-
-# target to generate assembly for a file
-isUnblocked.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.s
-.PHONY : isUnblocked.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -320,78 +272,6 @@ map.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/map.c.s
 .PHONY : map.c.s
 
-mineGen.obj: mineGen.c.obj
-.PHONY : mineGen.obj
-
-# target to build an object file
-mineGen.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/mineGen.c.obj
-.PHONY : mineGen.c.obj
-
-mineGen.i: mineGen.c.i
-.PHONY : mineGen.i
-
-# target to preprocess a source file
-mineGen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/mineGen.c.i
-.PHONY : mineGen.c.i
-
-mineGen.s: mineGen.c.s
-.PHONY : mineGen.s
-
-# target to generate assembly for a file
-mineGen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/mineGen.c.s
-.PHONY : mineGen.c.s
-
-printMapChar.obj: printMapChar.c.obj
-.PHONY : printMapChar.obj
-
-# target to build an object file
-printMapChar.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMapChar.c.obj
-.PHONY : printMapChar.c.obj
-
-printMapChar.i: printMapChar.c.i
-.PHONY : printMapChar.i
-
-# target to preprocess a source file
-printMapChar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMapChar.c.i
-.PHONY : printMapChar.c.i
-
-printMapChar.s: printMapChar.c.s
-.PHONY : printMapChar.s
-
-# target to generate assembly for a file
-printMapChar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/printMapChar.c.s
-.PHONY : printMapChar.c.s
-
-terminalOutput.obj: terminalOutput.c.obj
-.PHONY : terminalOutput.obj
-
-# target to build an object file
-terminalOutput.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/terminalOutput.c.obj
-.PHONY : terminalOutput.c.obj
-
-terminalOutput.i: terminalOutput.c.i
-.PHONY : terminalOutput.i
-
-# target to preprocess a source file
-terminalOutput.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/terminalOutput.c.i
-.PHONY : terminalOutput.c.i
-
-terminalOutput.s: terminalOutput.c.s
-.PHONY : terminalOutput.s
-
-# target to generate assembly for a file
-terminalOutput.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/terminalOutput.c.s
-.PHONY : terminalOutput.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -401,39 +281,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... main
-	@echo ... C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.obj
-	@echo ... C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.i
-	@echo ... C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.s
+	@echo ... C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.obj
+	@echo ... C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.i
+	@echo ... C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/aStarTest.s
 	@echo ... aStar.obj
 	@echo ... aStar.i
 	@echo ... aStar.s
 	@echo ... dataStructures.obj
 	@echo ... dataStructures.i
 	@echo ... dataStructures.s
-	@echo ... fromNumberToEnum.obj
-	@echo ... fromNumberToEnum.i
-	@echo ... fromNumberToEnum.s
 	@echo ... input.obj
 	@echo ... input.i
 	@echo ... input.s
-	@echo ... isUnblocked.obj
-	@echo ... isUnblocked.i
-	@echo ... isUnblocked.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... map.obj
 	@echo ... map.i
 	@echo ... map.s
-	@echo ... mineGen.obj
-	@echo ... mineGen.i
-	@echo ... mineGen.s
-	@echo ... printMapChar.obj
-	@echo ... printMapChar.i
-	@echo ... printMapChar.s
-	@echo ... terminalOutput.obj
-	@echo ... terminalOutput.i
-	@echo ... terminalOutput.s
 .PHONY : help
 
 

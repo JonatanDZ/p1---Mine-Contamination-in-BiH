@@ -4,6 +4,7 @@
 
 #include "map.h"
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -80,6 +81,53 @@ void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]) {
     fclose(mapfile);
 }
 
+/**
+ * A function converting the array from the txt file data to our defined enums.
+ * @param map int array from main.
+ */
+void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]) {
+    // For-loop with a switch that converts ints to enums.
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            switch (map[i][j]) {
+            case 167:
+                map[i][j] = mine;
+                break;
+            case 247:
+                map[i][j] = water;
+                break;
+            case 223:
+                map[i][j] = asphalt;
+                break;
+            case 202:
+                map[i][j] = city;
+                break;
+            case 173:
+                map[i][j] = field;
+                break;
+            case 216:
+                map[i][j] = forest;
+                break;
+            case 133:
+                map[i][j] = mountain1;
+                break;
+            case 142:
+                map[i][j] = mountain2;
+                break;
+            case 00:
+                map[i][j] = startPosition;
+                break;
+            case 01:
+                map[i][j] = endPosition;
+                break;
+            default:
+                map[i][j] = 150; //er for path værdien
+            }
+        }
+    }
+}
+
+
 //Changes the enum to 10 so we are able to see the shortest route without terrain.
 /**
  *
@@ -137,6 +185,89 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
 }
 
 /**
+ * Function that checks if a cell in the array is blocked i.e. untraversable.
+ * @param map Int array from main.
+ * @param row Int indicating which row in the array should be looked up.
+ * @param col Int indication which column in the arary should be looked up.
+ * @return True or false whether the location in the array is traversable.
+ */
+bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
+    if (map[row][col] == water || map[row][col] == mine) {
+        return false;
+    }
+    return true;
+}
+
+/**
+ * Utility function determining whether a not a given input is within the 2d array.
+ * @param row Input, row to check.
+ * @param col Input, col to check.
+ * @return true if within, else returns false.
+ */
+bool isWithinArray(int row, int col) {
+    if (row >= 0 && row < MAPSIZEROW && col >= 0 && col < MAPSIZECOL) {
+        return true;
+    }
+    return false;
+}
+
+//Changes the value from enum to char, so it will be printed correcly.
+
+/**
+ * This function changes the values so it looks neat drawn with asciis symbols
+ * @param map s values are updated so it looks neat drawn with asciis symbols
+ */
+void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        printf("\n");
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            switch (map[i][j]) {
+            case mine:
+                color(0x44);
+                break;
+            case water:
+                color(0x99);
+                break;
+            case asphalt:
+                color(0x77);
+                break;
+            case city:
+                color(0x88);
+                break;
+            case field:
+                color(0xee);
+                break;
+            case forest:
+                color(0xAA);
+                break;
+            case mountain1:
+                color(0x22);
+                break;
+            case mountain2:
+                color(0x66);
+                break;
+            case startPosition:
+                color(0x0c);
+                break;
+            case endPosition:
+                color(0xcc);
+                break;
+            default:
+                color(0xFF);
+            }
+        }
+    }
+}
+
+void color(int colorValue) {
+    HANDLE H= GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(H,colorValue);
+    printf("   ");
+}
+
+
+
+/**
  * Function that prints the map.
  * @param map int array from main.
  */
@@ -150,4 +281,18 @@ void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
         printf("\n");
     }
 
+}
+
+/**
+ * Function printing the map in chars.
+ * @param map int array from main.
+ */
+void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]) {
+    printf("\n");
+    for (int i = 0; i < MAPSIZEROW; i++){
+        for (int j = 0; j < MAPSIZEROW; j++){
+            printf(" %c ", map[i][j]);
+        }
+        printf("\n");
+    }
 }

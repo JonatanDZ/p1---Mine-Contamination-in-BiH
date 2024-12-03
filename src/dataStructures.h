@@ -8,7 +8,6 @@
 #include "map.h"
 #define NOPARENTYET -1
 
-
 typedef struct {
     int row;
     int col;

@@ -7,15 +7,9 @@ set(CMAKE_C_STANDARD 11)
 add_executable(main
         aStar.c
         main.c
-        header.h
         aStar.c
-        isUnblocked.c
         input.c
-        ../aStarTest.c
-        terminalOutput.c
-        printMapChar.c
-        mineGen.c
-        fromNumberToEnum.c
+        ../test/aStarTest.c
         aStar.h
         input.h
         map.c

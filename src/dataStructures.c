@@ -1,12 +1,6 @@
-//
-// Created by a-bti on 12/3/2024.
-//
-
 #include "dataStructures.h"
-#include <float.h>
 #include "aStar.h"
-#include "header.h"
-
+#include <float.h>
 
 /** Initializes an empty cell map.
  * @param cellMap the array of cells structs to update values within.
