@@ -41,7 +41,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   bool destinationFound = false;
   bool openListIsEmpty = false;
 
-  while(openListIsEmpty == false && destinationFound == false) {
+  while(openListIsEmpty == false && cellMap[dest.row][dest.col].closedList == false) {
 
 
     //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
@@ -51,21 +51,23 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     cellMap[row][col].openList = false;
     cellMap[row][col].closedList = true;
 
-    destinationFound = generateSuccessors(cellMap, map, row, col, dest);
+    printf("--Cell added to closed list--\n");
+    printCell(cellMap[row][col], row, col);
+    generateSuccessors(cellMap, map, row, col, dest);
 
   }
   if (openListIsEmpty == true) {
     printf("No Path is found");
     return;
   }
-  if (destinationFound == true){
+  if (1/*destinationFound == true*/){
 
     printf("Here is the path that we found\n");
     tracePath(cellMap, map, dest.row, dest.col, start);
   }
 }
 
-bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
+void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
 /* For each of the 8 cells surrounding current cell*/
   for (int r = -1; r <= 1; r++) {
     for (int c = -1; c <= 1; c++) {
@@ -85,12 +87,20 @@ bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
           successorGCost = cellMap[row][col].g + map[successorRow][successorCol] * 1.4;
         }
 
+        // TODO: Husk og fjerne efter test.
+        map[successorRow][successorCol] = 9;
+
         //If cell is outside map bounds or already in the closed list, successors do should not be generated. Instead cell is ignored.
         if (isWithinArray(successorRow, successorCol) && cellMap[successorRow][successorCol].closedList == false) {
 
           //Also ignore blocked cells
           if (isUnblocked(map, successorRow, successorCol)) {
 
+
+
+            printf("\n--Current Succesor--");
+            printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
+/**
             if (isDestination(successorRow, successorCol, dest)) {
               printf("Wu!Hu!\nDesitination found!!\n");
 
@@ -109,7 +119,7 @@ bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
               //Early return if destination is met
               return true;
             }
-
+*/
               // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
               if (cellMap[successorRow][successorCol].openList == false) {
 
@@ -144,7 +154,7 @@ bool generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
     }
   }
   //If the early return has not happened, destination has not been found.
-  return false;
+  //return false;
 }
 
 double hCalc(int row, int col, int destRow, int destCol) {
