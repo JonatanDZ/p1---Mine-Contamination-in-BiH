@@ -264,19 +264,33 @@ CMakeFiles/main.dir/fromNumberToEnum.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/fromNumberToEnum.c.s"
 	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\fromNumberToEnum.c -o CMakeFiles\main.dir\fromNumberToEnum.c.s
 
-CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj: C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/src/inputForShortestRouteAndMineGen.c
-CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj"
-	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj -MF CMakeFiles\main.dir\inputForShortestRouteAndMineGen.c.obj.d -o CMakeFiles\main.dir\inputForShortestRouteAndMineGen.c.obj -c C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\inputForShortestRouteAndMineGen.c
+CMakeFiles/main.dir/map.c.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/map.c.obj: C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/src/map.c
+CMakeFiles/main.dir/map.c.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/main.dir/map.c.obj"
+	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/map.c.obj -MF CMakeFiles\main.dir\map.c.obj.d -o CMakeFiles\main.dir\map.c.obj -c C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\map.c
 
-CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.i"
-	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\inputForShortestRouteAndMineGen.c > CMakeFiles\main.dir\inputForShortestRouteAndMineGen.c.i
+CMakeFiles/main.dir/map.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/map.c.i"
+	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\map.c > CMakeFiles\main.dir\map.c.i
 
-CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.s"
-	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\inputForShortestRouteAndMineGen.c -o CMakeFiles\main.dir\inputForShortestRouteAndMineGen.c.s
+CMakeFiles/main.dir/map.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/map.c.s"
+	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\map.c -o CMakeFiles\main.dir\map.c.s
+
+CMakeFiles/main.dir/dataStructures.c.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/dataStructures.c.obj: C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/src/dataStructures.c
+CMakeFiles/main.dir/dataStructures.c.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/main.dir/dataStructures.c.obj"
+	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/dataStructures.c.obj -MF CMakeFiles\main.dir\dataStructures.c.obj.d -o CMakeFiles\main.dir\dataStructures.c.obj -c C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\dataStructures.c
+
+CMakeFiles/main.dir/dataStructures.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/dataStructures.c.i"
+	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\dataStructures.c > CMakeFiles\main.dir\dataStructures.c.i
+
+CMakeFiles/main.dir/dataStructures.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/dataStructures.c.s"
+	C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\dataStructures.c -o CMakeFiles\main.dir\dataStructures.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -294,7 +308,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/shortestRoute.c.obj" \
 "CMakeFiles/main.dir/createMapWFile.c.obj" \
 "CMakeFiles/main.dir/fromNumberToEnum.c.obj" \
-"CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj"
+"CMakeFiles/main.dir/map.c.obj" \
+"CMakeFiles/main.dir/dataStructures.c.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -313,12 +328,13 @@ main.exe: CMakeFiles/main.dir/mineGen.c.obj
 main.exe: CMakeFiles/main.dir/shortestRoute.c.obj
 main.exe: CMakeFiles/main.dir/createMapWFile.c.obj
 main.exe: CMakeFiles/main.dir/fromNumberToEnum.c.obj
-main.exe: CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj
+main.exe: CMakeFiles/main.dir/map.c.obj
+main.exe: CMakeFiles/main.dir/dataStructures.c.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,4 +1,6 @@
 #include "header.h"
+#include "aStar.h"
+#include "input.h"
 
 int main(){
     coor_t start, dest;

@@ -224,6 +224,30 @@ createMapWFile.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/createMapWFile.c.s
 .PHONY : createMapWFile.c.s
 
+dataStructures.obj: dataStructures.c.obj
+.PHONY : dataStructures.obj
+
+# target to build an object file
+dataStructures.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/dataStructures.c.obj
+.PHONY : dataStructures.c.obj
+
+dataStructures.i: dataStructures.c.i
+.PHONY : dataStructures.i
+
+# target to preprocess a source file
+dataStructures.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/dataStructures.c.i
+.PHONY : dataStructures.c.i
+
+dataStructures.s: dataStructures.c.s
+.PHONY : dataStructures.s
+
+# target to generate assembly for a file
+dataStructures.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/dataStructures.c.s
+.PHONY : dataStructures.c.s
+
 fromNumberToEnum.obj: fromNumberToEnum.c.obj
 .PHONY : fromNumberToEnum.obj
 
@@ -271,30 +295,6 @@ input.s: input.c.s
 input.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/input.c.s
 .PHONY : input.c.s
-
-inputForShortestRouteAndMineGen.obj: inputForShortestRouteAndMineGen.c.obj
-.PHONY : inputForShortestRouteAndMineGen.obj
-
-# target to build an object file
-inputForShortestRouteAndMineGen.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj
-.PHONY : inputForShortestRouteAndMineGen.c.obj
-
-inputForShortestRouteAndMineGen.i: inputForShortestRouteAndMineGen.c.i
-.PHONY : inputForShortestRouteAndMineGen.i
-
-# target to preprocess a source file
-inputForShortestRouteAndMineGen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.i
-.PHONY : inputForShortestRouteAndMineGen.c.i
-
-inputForShortestRouteAndMineGen.s: inputForShortestRouteAndMineGen.c.s
-.PHONY : inputForShortestRouteAndMineGen.s
-
-# target to generate assembly for a file
-inputForShortestRouteAndMineGen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.s
-.PHONY : inputForShortestRouteAndMineGen.c.s
 
 isUnblocked.obj: isUnblocked.c.obj
 .PHONY : isUnblocked.obj
@@ -367,6 +367,30 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
+
+map.obj: map.c.obj
+.PHONY : map.obj
+
+# target to build an object file
+map.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/map.c.obj
+.PHONY : map.c.obj
+
+map.i: map.c.i
+.PHONY : map.i
+
+# target to preprocess a source file
+map.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/map.c.i
+.PHONY : map.c.i
+
+map.s: map.c.s
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/map.c.s
+.PHONY : map.c.s
 
 mineGen.obj: mineGen.c.obj
 .PHONY : mineGen.obj
@@ -509,15 +533,15 @@ help:
 	@echo ... createMapWFile.obj
 	@echo ... createMapWFile.i
 	@echo ... createMapWFile.s
+	@echo ... dataStructures.obj
+	@echo ... dataStructures.i
+	@echo ... dataStructures.s
 	@echo ... fromNumberToEnum.obj
 	@echo ... fromNumberToEnum.i
 	@echo ... fromNumberToEnum.s
 	@echo ... input.obj
 	@echo ... input.i
 	@echo ... input.s
-	@echo ... inputForShortestRouteAndMineGen.obj
-	@echo ... inputForShortestRouteAndMineGen.i
-	@echo ... inputForShortestRouteAndMineGen.s
 	@echo ... isUnblocked.obj
 	@echo ... isUnblocked.i
 	@echo ... isUnblocked.s
@@ -527,6 +551,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... map.obj
+	@echo ... map.i
+	@echo ... map.s
 	@echo ... mineGen.obj
 	@echo ... mineGen.i
 	@echo ... mineGen.s

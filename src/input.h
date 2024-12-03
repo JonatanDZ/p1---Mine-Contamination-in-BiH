@@ -1,0 +1,13 @@
+//
+// Created by a-bti on 12/3/2024.
+//
+
+#ifndef INPUT_H
+#define INPUT_H
+
+#endif //INPUT_H
+
+
+
+int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
+void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]);

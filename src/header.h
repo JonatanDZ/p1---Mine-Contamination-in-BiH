@@ -48,17 +48,13 @@ typedef enum {
     endPosition = 3
 } moveValue;
 
-void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest);
 
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
-int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
 
-void insertH(double hMap[MAPSIZEROW][MAPSIZECOL], coor_t dest);
 
-double hCalc(int row, int col, int destRow, int destCol);
 
 bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
@@ -69,35 +65,24 @@ void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
-void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 
 // Updated
-bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC);
 //int gLinSearch(cell_t cellList[], cell_t successorCell);
 //int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
 
-void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest);
-cell_t popCell(cell_t list[], int n);
-bool isDestination(int row, int col, coor_t dest);
-
-bool isInList(cell_t list[], cell_t cellElement);
-
 int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
-void tracePathIte(const cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
 
 void printCell(cell_t cell, int row, int col);
 
-bool isEmpty(cell_t cellMap);
 
 void color(int colorValue);
 
 
 void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
 
-void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol, coor_t dest);
 
 
 #endif //HEADER_H
