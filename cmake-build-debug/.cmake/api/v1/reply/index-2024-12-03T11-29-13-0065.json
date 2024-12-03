@@ -1,0 +1,140 @@
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "Ninja"
+		},
+		"paths" : 
+		{
+			"cmake" : "C:/Program Files/JetBrains/CLion 2024.3/bin/cmake/win/x64/bin/cmake.exe",
+			"cpack" : "C:/Program Files/JetBrains/CLion 2024.3/bin/cmake/win/x64/bin/cpack.exe",
+			"ctest" : "C:/Program Files/JetBrains/CLion 2024.3/bin/cmake/win/x64/bin/ctest.exe",
+			"root" : "C:/Program Files/JetBrains/CLion 2024.3/bin/cmake/win/x64/share/cmake-3.30"
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 3,
+			"minor" : 30,
+			"patch" : 5,
+			"string" : "3.30.5",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "codemodel-v2-3ac7f2a47424a9cf80ae.json",
+========
+			"jsonFile" : "codemodel-v2-1200fc42ded9cc9c2016.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 7
+			}
+		},
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "cache-v2-dec8e229a84ec0bc525a.json",
+========
+			"jsonFile" : "cache-v2-25de53cb3620de3d3ee3.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "cache",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 0
+			}
+		},
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "cmakeFiles-v1-e27ad96d23a0d98afe9d.json",
+========
+			"jsonFile" : "cmakeFiles-v1-f475337215b7f082a464.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "cmakeFiles",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 1
+			}
+		},
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "toolchains-v1-fa3ea20c7bf46fcd84d4.json",
+========
+			"jsonFile" : "toolchains-v1-3348aceebd9e6a41c4ad.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "toolchains",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		}
+	],
+	"reply" : 
+	{
+		"cache-v2" : 
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "cache-v2-dec8e229a84ec0bc525a.json",
+========
+			"jsonFile" : "cache-v2-25de53cb3620de3d3ee3.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "cache",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 0
+			}
+		},
+		"cmakeFiles-v1" : 
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "cmakeFiles-v1-e27ad96d23a0d98afe9d.json",
+========
+			"jsonFile" : "cmakeFiles-v1-f475337215b7f082a464.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "cmakeFiles",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 1
+			}
+		},
+		"codemodel-v2" : 
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "codemodel-v2-3ac7f2a47424a9cf80ae.json",
+========
+			"jsonFile" : "codemodel-v2-1200fc42ded9cc9c2016.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 7
+			}
+		},
+		"toolchains-v1" : 
+		{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T10-51-16-0017.json
+			"jsonFile" : "toolchains-v1-fa3ea20c7bf46fcd84d4.json",
+========
+			"jsonFile" : "toolchains-v1-3348aceebd9e6a41c4ad.json",
+>>>>>>>> origin/ASCIIFarver:cmake-build-debug/.cmake/api/v1/reply/index-2024-12-03T11-29-13-0065.json
+			"kind" : "toolchains",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		}
+	}
+}

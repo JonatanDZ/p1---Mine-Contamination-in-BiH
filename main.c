@@ -11,8 +11,8 @@ int main(){
     createMap(map);
 
 
-    randomMineGen(map);
-    shortestRoute(map);
+    //randomMineGen(map);
+    //shortestRoute(map);
 
     input(map, &start, &dest);
 
