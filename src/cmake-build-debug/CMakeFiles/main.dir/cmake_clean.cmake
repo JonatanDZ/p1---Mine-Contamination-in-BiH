@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/input.c.obj.d"
   "CMakeFiles/main.dir/isUnblocked.c.obj"
   "CMakeFiles/main.dir/isUnblocked.c.obj.d"
-  "CMakeFiles/main.dir/linSearch.c.obj"
-  "CMakeFiles/main.dir/linSearch.c.obj.d"
   "CMakeFiles/main.dir/main.c.obj"
   "CMakeFiles/main.dir/main.c.obj.d"
   "CMakeFiles/main.dir/map.c.obj"

@@ -25,6 +25,8 @@ CMakeFiles/main.dir/C_/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamina
  C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/string.h \
  C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+ C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src/dataStructures.h \
+ C:\Users\a-bti\OneDrive\Documents\GitHub\p1---Mine-Contamination-in-BiH\src/header.h \
  C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/windows.h \
  C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
  C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/excpt.h \

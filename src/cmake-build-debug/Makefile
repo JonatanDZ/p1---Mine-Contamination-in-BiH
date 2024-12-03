@@ -320,30 +320,6 @@ isUnblocked.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/isUnblocked.c.s
 .PHONY : isUnblocked.c.s
 
-linSearch.obj: linSearch.c.obj
-.PHONY : linSearch.obj
-
-# target to build an object file
-linSearch.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/linSearch.c.obj
-.PHONY : linSearch.c.obj
-
-linSearch.i: linSearch.c.i
-.PHONY : linSearch.i
-
-# target to preprocess a source file
-linSearch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/linSearch.c.i
-.PHONY : linSearch.c.i
-
-linSearch.s: linSearch.c.s
-.PHONY : linSearch.s
-
-# target to generate assembly for a file
-linSearch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/linSearch.c.s
-.PHONY : linSearch.c.s
-
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -545,9 +521,6 @@ help:
 	@echo ... isUnblocked.obj
 	@echo ... isUnblocked.i
 	@echo ... isUnblocked.s
-	@echo ... linSearch.obj
-	@echo ... linSearch.i
-	@echo ... linSearch.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

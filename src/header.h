@@ -15,25 +15,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include "dataStructures.h"
 #include <windows.h>
-
 #include <math.h>
-
 #include <assert.h>
 
-typedef struct {
-    int row;
-    int col;
-} coor_t;
 
-typedef struct {
-    double f;
-    double g;
-    double h;
-    coor_t parentCoor;
-    bool openList;
-    bool closedList;
-} cell_t;
 
 typedef enum {
     mine = 00,
@@ -73,15 +60,9 @@ void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 //int findParentLinSearch(cell_t parentCellList[], cell_t cell);
 
 
-int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t start);
-
-void printCell(cell_t cell, int row, int col);
-
 
 void color(int colorValue);
 
-
-void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
 
 
 

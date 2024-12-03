@@ -9,7 +9,6 @@ add_executable(main
         createMap.c
         main.c
         header.h
-        linSearch.c
         aStar.c
         isUnblocked.c
         input.c
