@@ -25,6 +25,5 @@ int main(){
     //prints the new map with special chars.
     printMapChar(map);
 
-
     return 0;
 }

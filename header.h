@@ -94,5 +94,7 @@ bool isEmpty(cell_t cellMap);
 
 void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
 
+void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol, coor_t dest);
+
 
 #endif //HEADER_H

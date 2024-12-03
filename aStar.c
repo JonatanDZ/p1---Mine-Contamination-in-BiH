@@ -16,14 +16,8 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
 /* 1) Starting the search with start cell */
 
-  //Calculate f,g,h
-  cellMap[start.row][start.col].h = hCalc(start.row, start.col, dest.row, dest.col);
-  cellMap[start.row][start.col].g = 0;
-  cellMap[start.row][start.col].f = cellMap[start.row][start.col].g + cellMap[start.row][start.col].h;
+  initCell(cellMap, start.row, start.col, 0, 0, 0, dest);
 
-  //Parents unknown, initialized to zero as of now / or to indicate start having no parents. OBS: Check later
-  cellMap[start.row][start.col].parentCoor.row = 0;
-  cellMap[start.row][start.col].parentCoor.col = 0;
 
   //'Add' to open list
   cellMap[start.row][start.col].openList = true;
@@ -101,15 +95,7 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
 
               // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
               if (cellMap[successorRow][successorCol].openList == false) {
-
-                //Setting parentValues for the successor.                       Will be the same for all 8 successors to the same parent, whose coordinates were passed as 'row' & 'col' arguments in function call.
-                cellMap[successorRow][successorCol].parentCoor.row = row;
-                cellMap[successorRow][successorCol].parentCoor.col = col;
-
-                //Record successor's f,g,h costs
-                cellMap[successorRow][successorCol].g = successorGCost;
-                cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
-                cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+                initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
 
                 //Add it to the 'open' list
                 cellMap[successorRow][successorCol].openList = true;
@@ -117,15 +103,8 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
 
               // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure by G.cost
               if (successorGCost < cellMap[successorRow][successorCol].g) {
+                initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
 
-                //If new path is better, update parentValues.
-                cellMap[successorRow][successorCol].parentCoor.row = row;
-                cellMap[successorRow][successorCol].parentCoor.col = col;
-
-                //Recalculate & update g and f values. h (estimated distance to dest) will remain the same, so no recalculations needed
-                cellMap[successorRow][successorCol].g = successorGCost;
-                cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
-                cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
             }
             printCell(cellMap[successorRow][successorCol], successorRow, successorCol);
           }
@@ -223,3 +202,16 @@ void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]) {
   }
 }
 
+void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol, coor_t dest) {
+
+  cellMap[successorRow][successorCol].parentCoor.row = parentRow;
+  cellMap[successorRow][successorCol].parentCoor.col = parentCol;
+
+  //Recalculate & update g and f values. h (estimated distance to dest) will remain the same, so no recalculations needed
+  cellMap[successorRow][successorCol].g = gCost;
+  cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+  cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+  printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
+
+
+}
