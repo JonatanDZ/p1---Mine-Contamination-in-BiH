@@ -14,7 +14,7 @@ add_executable(main
         isUnblocked.c
         input.c
         printMap.c
-        aStarTest.c
+        ../aStarTest.c
         terminalOutput.c
         printMapChar.c
         mineGen.c

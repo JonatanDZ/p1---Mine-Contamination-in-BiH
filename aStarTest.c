@@ -1,4 +1,4 @@
-#include "header.h"
+#include "src/header.h"
 
 void test_isWithinArray(const int test_row, const int test_column) {
     //ARRANGE, from input
@@ -9,3 +9,4 @@ void test_isWithinArray(const int test_row, const int test_column) {
     //ASSERT
     assert(result == true);
 }
+
