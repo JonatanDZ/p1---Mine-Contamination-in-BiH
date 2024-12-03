@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/fromNumberToEnum.c.obj.d"
   "CMakeFiles/main.dir/input.c.obj"
   "CMakeFiles/main.dir/input.c.obj.d"
+  "CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj"
+  "CMakeFiles/main.dir/inputForShortestRouteAndMineGen.c.obj.d"
   "CMakeFiles/main.dir/isUnblocked.c.obj"
   "CMakeFiles/main.dir/isUnblocked.c.obj.d"
   "CMakeFiles/main.dir/linSearch.c.obj"

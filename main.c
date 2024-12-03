@@ -11,19 +11,18 @@ int main(){
     createMap(map);
 
 
-    randomMineGen(map);
-    shortestRoute(map);
+    inputForShortestRouteAndMineGen(map);
 
     input(map, &start, &dest);
 
-    aStarSearch(map, start, dest);
+    //aStarSearch(map, start, dest);
 
     printMap(map);
 
-/*
+
     terminalOutPut(map);
     printMapChar(map);
-    */
+
 
     return 0;
 }

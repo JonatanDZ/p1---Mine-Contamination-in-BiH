@@ -66,9 +66,10 @@ bool isWithinArray(int row, int col);
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
 
-void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
-
+void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
+void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
+
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 
 // Updated
