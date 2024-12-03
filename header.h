@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <windows.h>
 
 #include <math.h>
 
@@ -89,6 +90,8 @@ void tracePathIte(const cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
 void printCell(cell_t cell, int row, int col);
 
 bool isEmpty(cell_t cellMap);
+
+void color(int colorValue);
 
 
 void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
