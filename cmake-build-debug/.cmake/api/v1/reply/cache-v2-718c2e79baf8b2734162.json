@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug"
+			"value" : "c:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -415,7 +415,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -487,7 +487,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH"
+			"value" : "C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug"
+			"value" : "C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/cmake-build-debug"
 		},
 		{
 			"name" : "p1___Mine_Contamination_in_BiH_IS_TOP_LEVEL",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH"
+			"value" : "C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH"
 		}
 	],
 	"kind" : "cache",

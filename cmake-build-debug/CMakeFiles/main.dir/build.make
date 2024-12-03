@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH
+CMAKE_SOURCE_DIR = C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -69,200 +69,200 @@ include CMakeFiles/main.dir/progress.make
 include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/aStar.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/aStar.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStar.c
+CMakeFiles/main.dir/aStar.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/aStar.c
 CMakeFiles/main.dir/aStar.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/aStar.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/aStar.c.obj -MF CMakeFiles\main.dir\aStar.c.obj.d -o CMakeFiles\main.dir\aStar.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\aStar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/aStar.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/aStar.c.obj -MF CMakeFiles\main.dir\aStar.c.obj.d -o CMakeFiles\main.dir\aStar.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\aStar.c
 
 CMakeFiles/main.dir/aStar.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/aStar.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\aStar.c > CMakeFiles\main.dir\aStar.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\aStar.c > CMakeFiles\main.dir\aStar.c.i
 
 CMakeFiles/main.dir/aStar.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/aStar.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\aStar.c -o CMakeFiles\main.dir\aStar.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\aStar.c -o CMakeFiles\main.dir\aStar.c.s
 
 CMakeFiles/main.dir/createMap.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/createMap.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMap.c
+CMakeFiles/main.dir/createMap.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/createMap.c
 CMakeFiles/main.dir/createMap.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/createMap.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/createMap.c.obj -MF CMakeFiles\main.dir\createMap.c.obj.d -o CMakeFiles\main.dir\createMap.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\createMap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/createMap.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/createMap.c.obj -MF CMakeFiles\main.dir\createMap.c.obj.d -o CMakeFiles\main.dir\createMap.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\createMap.c
 
 CMakeFiles/main.dir/createMap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/createMap.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\createMap.c > CMakeFiles\main.dir\createMap.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\createMap.c > CMakeFiles\main.dir\createMap.c.i
 
 CMakeFiles/main.dir/createMap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/createMap.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\createMap.c -o CMakeFiles\main.dir\createMap.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\createMap.c -o CMakeFiles\main.dir\createMap.c.s
 
 CMakeFiles/main.dir/main.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/main.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/main.c
+CMakeFiles/main.dir/main.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/main.c
 CMakeFiles/main.dir/main.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/main.c.obj -MF CMakeFiles\main.dir\main.c.obj.d -o CMakeFiles\main.dir\main.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/main.c.obj -MF CMakeFiles\main.dir\main.c.obj.d -o CMakeFiles\main.dir\main.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\main.c
 
 CMakeFiles/main.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\main.c > CMakeFiles\main.dir\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\main.c > CMakeFiles\main.dir\main.c.i
 
 CMakeFiles/main.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\main.c -o CMakeFiles\main.dir\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\main.c -o CMakeFiles\main.dir\main.c.s
 
 CMakeFiles/main.dir/linSearch.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/linSearch.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/linSearch.c
+CMakeFiles/main.dir/linSearch.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/linSearch.c
 CMakeFiles/main.dir/linSearch.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/linSearch.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/linSearch.c.obj -MF CMakeFiles\main.dir\linSearch.c.obj.d -o CMakeFiles\main.dir\linSearch.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\linSearch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/linSearch.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/linSearch.c.obj -MF CMakeFiles\main.dir\linSearch.c.obj.d -o CMakeFiles\main.dir\linSearch.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\linSearch.c
 
 CMakeFiles/main.dir/linSearch.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/linSearch.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\linSearch.c > CMakeFiles\main.dir\linSearch.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\linSearch.c > CMakeFiles\main.dir\linSearch.c.i
 
 CMakeFiles/main.dir/linSearch.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/linSearch.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\linSearch.c -o CMakeFiles\main.dir\linSearch.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\linSearch.c -o CMakeFiles\main.dir\linSearch.c.s
 
 CMakeFiles/main.dir/isUnblocked.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/isUnblocked.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/isUnblocked.c
+CMakeFiles/main.dir/isUnblocked.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/isUnblocked.c
 CMakeFiles/main.dir/isUnblocked.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.dir/isUnblocked.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/isUnblocked.c.obj -MF CMakeFiles\main.dir\isUnblocked.c.obj.d -o CMakeFiles\main.dir\isUnblocked.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\isUnblocked.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.dir/isUnblocked.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/isUnblocked.c.obj -MF CMakeFiles\main.dir\isUnblocked.c.obj.d -o CMakeFiles\main.dir\isUnblocked.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\isUnblocked.c
 
 CMakeFiles/main.dir/isUnblocked.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/isUnblocked.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\isUnblocked.c > CMakeFiles\main.dir\isUnblocked.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\isUnblocked.c > CMakeFiles\main.dir\isUnblocked.c.i
 
 CMakeFiles/main.dir/isUnblocked.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/isUnblocked.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\isUnblocked.c -o CMakeFiles\main.dir\isUnblocked.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\isUnblocked.c -o CMakeFiles\main.dir\isUnblocked.c.s
 
 CMakeFiles/main.dir/input.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/input.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/input.c
+CMakeFiles/main.dir/input.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/input.c
 CMakeFiles/main.dir/input.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/main.dir/input.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/input.c.obj -MF CMakeFiles\main.dir\input.c.obj.d -o CMakeFiles\main.dir\input.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\input.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/main.dir/input.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/input.c.obj -MF CMakeFiles\main.dir\input.c.obj.d -o CMakeFiles\main.dir\input.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\input.c
 
 CMakeFiles/main.dir/input.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/input.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\input.c > CMakeFiles\main.dir\input.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\input.c > CMakeFiles\main.dir\input.c.i
 
 CMakeFiles/main.dir/input.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/input.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\input.c -o CMakeFiles\main.dir\input.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\input.c -o CMakeFiles\main.dir\input.c.s
 
 CMakeFiles/main.dir/printMap.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/printMap.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMap.c
+CMakeFiles/main.dir/printMap.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/printMap.c
 CMakeFiles/main.dir/printMap.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/main.dir/printMap.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/printMap.c.obj -MF CMakeFiles\main.dir\printMap.c.obj.d -o CMakeFiles\main.dir\printMap.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\printMap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/main.dir/printMap.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/printMap.c.obj -MF CMakeFiles\main.dir\printMap.c.obj.d -o CMakeFiles\main.dir\printMap.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\printMap.c
 
 CMakeFiles/main.dir/printMap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/printMap.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\printMap.c > CMakeFiles\main.dir\printMap.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\printMap.c > CMakeFiles\main.dir\printMap.c.i
 
 CMakeFiles/main.dir/printMap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/printMap.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\printMap.c -o CMakeFiles\main.dir\printMap.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\printMap.c -o CMakeFiles\main.dir\printMap.c.s
 
 CMakeFiles/main.dir/aStarTest.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/aStarTest.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/aStarTest.c
+CMakeFiles/main.dir/aStarTest.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/aStarTest.c
 CMakeFiles/main.dir/aStarTest.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/main.dir/aStarTest.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/aStarTest.c.obj -MF CMakeFiles\main.dir\aStarTest.c.obj.d -o CMakeFiles\main.dir\aStarTest.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\aStarTest.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/main.dir/aStarTest.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/aStarTest.c.obj -MF CMakeFiles\main.dir\aStarTest.c.obj.d -o CMakeFiles\main.dir\aStarTest.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\aStarTest.c
 
 CMakeFiles/main.dir/aStarTest.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/aStarTest.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\aStarTest.c > CMakeFiles\main.dir\aStarTest.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\aStarTest.c > CMakeFiles\main.dir\aStarTest.c.i
 
 CMakeFiles/main.dir/aStarTest.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/aStarTest.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\aStarTest.c -o CMakeFiles\main.dir\aStarTest.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\aStarTest.c -o CMakeFiles\main.dir\aStarTest.c.s
 
 CMakeFiles/main.dir/terminalOutput.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/terminalOutput.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/terminalOutput.c
+CMakeFiles/main.dir/terminalOutput.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/terminalOutput.c
 CMakeFiles/main.dir/terminalOutput.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/main.dir/terminalOutput.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/terminalOutput.c.obj -MF CMakeFiles\main.dir\terminalOutput.c.obj.d -o CMakeFiles\main.dir\terminalOutput.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\terminalOutput.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/main.dir/terminalOutput.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/terminalOutput.c.obj -MF CMakeFiles\main.dir\terminalOutput.c.obj.d -o CMakeFiles\main.dir\terminalOutput.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\terminalOutput.c
 
 CMakeFiles/main.dir/terminalOutput.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/terminalOutput.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\terminalOutput.c > CMakeFiles\main.dir\terminalOutput.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\terminalOutput.c > CMakeFiles\main.dir\terminalOutput.c.i
 
 CMakeFiles/main.dir/terminalOutput.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/terminalOutput.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\terminalOutput.c -o CMakeFiles\main.dir\terminalOutput.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\terminalOutput.c -o CMakeFiles\main.dir\terminalOutput.c.s
 
 CMakeFiles/main.dir/printMapChar.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/printMapChar.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/printMapChar.c
+CMakeFiles/main.dir/printMapChar.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/printMapChar.c
 CMakeFiles/main.dir/printMapChar.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/main.dir/printMapChar.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/printMapChar.c.obj -MF CMakeFiles\main.dir\printMapChar.c.obj.d -o CMakeFiles\main.dir\printMapChar.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\printMapChar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/main.dir/printMapChar.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/printMapChar.c.obj -MF CMakeFiles\main.dir\printMapChar.c.obj.d -o CMakeFiles\main.dir\printMapChar.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\printMapChar.c
 
 CMakeFiles/main.dir/printMapChar.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/printMapChar.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\printMapChar.c > CMakeFiles\main.dir\printMapChar.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\printMapChar.c > CMakeFiles\main.dir\printMapChar.c.i
 
 CMakeFiles/main.dir/printMapChar.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/printMapChar.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\printMapChar.c -o CMakeFiles\main.dir\printMapChar.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\printMapChar.c -o CMakeFiles\main.dir\printMapChar.c.s
 
 CMakeFiles/main.dir/mineGen.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/mineGen.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/mineGen.c
+CMakeFiles/main.dir/mineGen.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/mineGen.c
 CMakeFiles/main.dir/mineGen.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/main.dir/mineGen.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/mineGen.c.obj -MF CMakeFiles\main.dir\mineGen.c.obj.d -o CMakeFiles\main.dir\mineGen.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\mineGen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/main.dir/mineGen.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/mineGen.c.obj -MF CMakeFiles\main.dir\mineGen.c.obj.d -o CMakeFiles\main.dir\mineGen.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\mineGen.c
 
 CMakeFiles/main.dir/mineGen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/mineGen.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\mineGen.c > CMakeFiles\main.dir\mineGen.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\mineGen.c > CMakeFiles\main.dir\mineGen.c.i
 
 CMakeFiles/main.dir/mineGen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/mineGen.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\mineGen.c -o CMakeFiles\main.dir\mineGen.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\mineGen.c -o CMakeFiles\main.dir\mineGen.c.s
 
 CMakeFiles/main.dir/shortestRoute.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/shortestRoute.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/shortestRoute.c
+CMakeFiles/main.dir/shortestRoute.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/shortestRoute.c
 CMakeFiles/main.dir/shortestRoute.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/main.dir/shortestRoute.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/shortestRoute.c.obj -MF CMakeFiles\main.dir\shortestRoute.c.obj.d -o CMakeFiles\main.dir\shortestRoute.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\shortestRoute.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/main.dir/shortestRoute.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/shortestRoute.c.obj -MF CMakeFiles\main.dir\shortestRoute.c.obj.d -o CMakeFiles\main.dir\shortestRoute.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\shortestRoute.c
 
 CMakeFiles/main.dir/shortestRoute.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/shortestRoute.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\shortestRoute.c > CMakeFiles\main.dir\shortestRoute.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\shortestRoute.c > CMakeFiles\main.dir\shortestRoute.c.i
 
 CMakeFiles/main.dir/shortestRoute.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/shortestRoute.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\shortestRoute.c -o CMakeFiles\main.dir\shortestRoute.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\shortestRoute.c -o CMakeFiles\main.dir\shortestRoute.c.s
 
 CMakeFiles/main.dir/createMapWFile.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/createMapWFile.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/createMapWFile.c
+CMakeFiles/main.dir/createMapWFile.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/createMapWFile.c
 CMakeFiles/main.dir/createMapWFile.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/main.dir/createMapWFile.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/createMapWFile.c.obj -MF CMakeFiles\main.dir\createMapWFile.c.obj.d -o CMakeFiles\main.dir\createMapWFile.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\createMapWFile.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/main.dir/createMapWFile.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/createMapWFile.c.obj -MF CMakeFiles\main.dir\createMapWFile.c.obj.d -o CMakeFiles\main.dir\createMapWFile.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\createMapWFile.c
 
 CMakeFiles/main.dir/createMapWFile.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/createMapWFile.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\createMapWFile.c > CMakeFiles\main.dir\createMapWFile.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\createMapWFile.c > CMakeFiles\main.dir\createMapWFile.c.i
 
 CMakeFiles/main.dir/createMapWFile.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/createMapWFile.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\createMapWFile.c -o CMakeFiles\main.dir\createMapWFile.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\createMapWFile.c -o CMakeFiles\main.dir\createMapWFile.c.s
 
 CMakeFiles/main.dir/fromNumberToEnum.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/fromNumberToEnum.c.obj: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/fromNumberToEnum.c
+CMakeFiles/main.dir/fromNumberToEnum.c.obj: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/fromNumberToEnum.c
 CMakeFiles/main.dir/fromNumberToEnum.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/main.dir/fromNumberToEnum.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/fromNumberToEnum.c.obj -MF CMakeFiles\main.dir\fromNumberToEnum.c.obj.d -o CMakeFiles\main.dir\fromNumberToEnum.c.obj -c C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\fromNumberToEnum.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/main.dir/fromNumberToEnum.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/fromNumberToEnum.c.obj -MF CMakeFiles\main.dir\fromNumberToEnum.c.obj.d -o CMakeFiles\main.dir\fromNumberToEnum.c.obj -c C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\fromNumberToEnum.c
 
 CMakeFiles/main.dir/fromNumberToEnum.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/fromNumberToEnum.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\fromNumberToEnum.c > CMakeFiles\main.dir\fromNumberToEnum.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\fromNumberToEnum.c > CMakeFiles\main.dir\fromNumberToEnum.c.i
 
 CMakeFiles/main.dir/fromNumberToEnum.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/fromNumberToEnum.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\fromNumberToEnum.c -o CMakeFiles\main.dir\fromNumberToEnum.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\fromNumberToEnum.c -o CMakeFiles\main.dir\fromNumberToEnum.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -302,7 +302,7 @@ main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -314,6 +314,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug C:\Users\marku\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles\main.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug C:\Users\benja\OneDrive\Kode\p1---Mine-Contamination-in-BiH\p1---Mine-Contamination-in-BiH\cmake-build-debug\CMakeFiles\main.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/main.dir/depend
 

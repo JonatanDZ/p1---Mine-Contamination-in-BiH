@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH
+# Install script for directory: C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/marku/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/benja/OneDrive/Kode/p1---Mine-Contamination-in-BiH/p1---Mine-Contamination-in-BiH/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
