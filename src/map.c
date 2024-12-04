@@ -223,43 +223,42 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
         printf("\n");
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
-            case mine:
-                printf("\033[38;5;196mXX \033[0m");
+                case mine:
+                    printf("\033[38;5;196m██ \033[0m");
                 break;
-            case water:
-                printf("\033[38;5;32m~~ \033[0m");
+                case water:
+                    printf("\033[38;5;32m██ \033[0m");
                 break;
-            case asphalt:
-                printf("\033[38;5;214mMM \033[0m");
+                case asphalt:
+                    printf("\033[38;5;214m██ \033[0m");
                 break;
-            case city:
-                printf("\033[38;5;231mMM \033[0m");
+                case city:
+                    printf("\033[38;5;231m██ \033[0m");
                 break;
-            case field:
-                printf("\033[38;5;180mWW \033[0m");
+                case field:
+                    printf("\033[38;5;118m██ \033[0m");
                 break;
-            case forest:
-                printf("\033[38;5;100mTT \033[0m");
+                case forest:
+                    printf("\033[38;5;82m██ \033[0m");
                 break;
-            case mountain1:
-                    printf("\033[38;5;46mMM \033[0m");
+                case mountain1:
+                    printf("\033[38;5;46m██ \033[0m");
                 break;
-            case mountain2:
-                    printf("\033[38;5;22mMM \033[0m");
+                case mountain2:
+                    printf("\033[38;5;22m██ \033[0m");
                 break;
-            case startPosition:
-                printf("\033[38;5;213mMM \033[0m");
+                case startPosition:
+                    printf("\033[38;5;213m██ \033[0m");
                 break;
-            case endPosition:
-                printf("\033[38;5;213mMM \033[0m");
+                case endPosition:
+                    printf("\033[38;5;213m██ \033[0m");
                 break;
-            default:
-                printf("\033[38;5;213mMM \033[0m");
+                default:
+                    printf("\033[38;5;213m██ \033[0m");
             }
         }
     }
 }
-
 
 /**
  * Function that prints the map.
