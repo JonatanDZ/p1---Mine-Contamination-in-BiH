@@ -3,10 +3,7 @@ project(p1___Mine_Contamination_in_BiH C)
 
 set(CMAKE_C_STANDARD 11)
 
+add_executable(aStarTest aStarTest.c ../src/map.c)
 
-add_executable(test
-        aStarTest.c
-        inputTest.c
-        ../src/map.c
-)
+add_test(NAME aStarTest COMMAND aStarTest)
 
