@@ -144,28 +144,28 @@ void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
                 map[i][j] = water;
                 break;
             case asphalt:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case city:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case field:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case forest:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case mountain1:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case mountain2:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case startPosition:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case endPosition:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
             }
         }
     }
@@ -224,37 +224,37 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
             case mine:
-                printf("\033[38;5;196m██ \033[0m");
+                printf("\033[38;5;196mMM \033[0m");
                 break;
             case water:
-                printf("\033[38;5;32m██ \033[0m");
+                printf("\033[38;5;32mMM \033[0m");
                 break;
             case asphalt:
-                printf("\033[38;5;214m██ \033[0m");
+                printf("\033[38;5;214mMM \033[0m");
                 break;
             case city:
-                printf("\033[38;5;231m██ \033[0m");
+                printf("\033[38;5;231mMM \033[0m");
                 break;
             case field:
-                printf("\033[38;5;118m██ \033[0m");
+                printf("\033[38;5;118mMM \033[0m");
                 break;
             case forest:
-                printf("\033[38;5;82m██ \033[0m");
+                printf("\033[38;5;82mMM \033[0m");
                 break;
             case mountain1:
-                printf("\033[38;5;46m██ \033[0m");
+                printf("\033[38;5;46mMM \033[0m");
                 break;
             case mountain2:
-                printf("\033[38;5;22m██ \033[0m");
+                printf("\033[38;5;22mMM \033[0m");
                 break;
             case startPosition:
-                printf("\033[38;5;213m██ \033[0m");
+                printf("\033[38;5;213mMM \033[0m");
                 break;
             case endPosition:
-                printf("\033[38;5;213m██ \033[0m");
+                printf("\033[38;5;213mMM \033[0m");
                 break;
             default:
-                printf("\033[38;5;213m██ \033[0m");
+                printf("\033[38;5;213mMM \033[0m");
             }
         }
     }
