@@ -32,6 +32,8 @@ void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
 
+void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]);
+bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 bool isWithinArray(int row, int col);
 

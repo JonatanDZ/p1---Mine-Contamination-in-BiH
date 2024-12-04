@@ -26,6 +26,10 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
         return input(map, start, dest);
     }
 
+
+    map[dest->row][dest->col] = endPosition;
+
+  
     if (start->row == dest->row && start->col == dest->col) {
         printf("Error: Start and destination cannot be the same!\n");
         return input(map, start, dest);
