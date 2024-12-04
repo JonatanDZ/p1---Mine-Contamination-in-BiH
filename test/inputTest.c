@@ -1,6 +1,6 @@
 #include <assert.h>
-#include <stdbool.h>  // For 'false'
-#include "../src/input.h"  // Assuming input.h declares 'input' and 'coor_t'
+#include <stdbool.h>
+#include "../src/input.h"
 
 
 
@@ -11,12 +11,16 @@ int main(void) {
 }
 
 void test_error(void) {
-    int map[MAPSIZEROW][MAPSIZECOL] = {{0}};  // Example 2D array initialization
+//Arrange
+    int map[MAPSIZEROW][MAPSIZECOL] = {{0}};
     coor_t start = {0, 0};
-    coor_t dest = {1, 1};
+    coor_t dest = {30, 30};
+//Act
+    int expected = false;
 
-    int expected = false;  // Assuming 'false' represents an error code
-
-    int result = input(map, &start, &dest);
+    int result = isUnblocked(map, dest.row, dest.col);
+    //Asser
     assert(result == expected);
 }
+
+
