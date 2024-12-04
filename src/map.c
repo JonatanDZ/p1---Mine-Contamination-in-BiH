@@ -204,7 +204,7 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     while (i < amountOfMines) {
         int row = rand() % (upperBound - lowerBound + 1)+ lowerBound;
         int col = rand() % (upperBound - lowerBound + 1)+ lowerBound;
-        //If statemnet tha decides if the mine can be placed
+        //If statement that decides if the mine can be placed
         if (isMineable(map, row, col) == true) {
             map[row][col] = mine;
             i++;
@@ -217,7 +217,7 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
 /**
  *
  * @param map int array from main
- * @param row Int indicating which row in the array should be looked up
+ * @param row Int indicating which row in the array that should be looked up
  * @param col Ind indicating which column in the array that should be looked up
  * @return True or false whether amine can be place in the array
  */
