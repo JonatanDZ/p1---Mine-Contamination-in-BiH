@@ -1,7 +1,3 @@
-//
-// Created by a-bti on 12/3/2024.
-//
-
 #ifndef INPUT_H
 #define INPUT_H
 #include "map.h"
