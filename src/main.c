@@ -11,8 +11,6 @@ int main(){
 
     fromNumberToEnum(map);
 
-    inputForShortestRouteAndMineGen(map);
-
     input(map, &start, &dest);
 
     aStarSearch(map, start, dest);
