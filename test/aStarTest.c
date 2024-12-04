@@ -1,11 +1,13 @@
 #include <assert.h>
 #include "../src/map.h"
 
-void test_isWithinArray(const int test_row, const int test_column) {
+void test_isWithinArray() {
     //ARRANGE, from input
+    int test_row = 0;
+    int test_col = 0;
 
     //ACT
-    bool result = isWithinArray(test_row,test_column);
+    bool result = isWithinArray(test_row,test_col);
 
     //ASSERT
     assert(result == true);

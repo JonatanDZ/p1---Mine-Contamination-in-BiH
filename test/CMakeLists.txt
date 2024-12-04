@@ -6,5 +6,7 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(test
         aStarTest.c
+        inputTest.c
+        ../src/map.c
 )
 
