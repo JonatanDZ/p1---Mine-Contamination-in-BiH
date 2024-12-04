@@ -6,14 +6,13 @@
 int main(){
     coor_t start, dest;
     int map [MAPSIZEROW][MAPSIZECOL];
-    int mapWithoutMine [MAPSIZEROW][MAPSIZECOL];
 
+    //From file
     //createMapWFile(map);
-
     //fromNumberToEnum(map);
 
+    //From hardcoded
     createMap(map);
-    createMap(mapWithoutMine);
 
     inputForShortestRouteAndMineGen(map);
 
