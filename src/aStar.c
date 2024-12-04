@@ -51,6 +51,8 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     if (cellMap[dest.row][dest.col].closedList == true) {
       printf("Here is the path that we found\n");
       tracePath(cellMap, map, dest.row, dest.col, start);
+      int gTotal = cellMap[dest.row][dest.col].g;
+      printTime(gTotal);
       return;
     }
 
@@ -188,3 +190,6 @@ bool isDestination(int row, int col, coor_t dest) {
   return row == dest.row && col == dest.col;
 }
 
+int printTime(int gTotal) {
+  
+}
