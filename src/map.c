@@ -224,10 +224,10 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
             case mine:
-                printf("\033[38;5;196mMM \033[0m");
+                printf("\033[38;5;196mXX \033[0m");
                 break;
             case water:
-                printf("\033[38;5;32mMM \033[0m");
+                printf("\033[38;5;32m~~ \033[0m");
                 break;
             case asphalt:
                 printf("\033[38;5;214mMM \033[0m");
@@ -236,10 +236,10 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                 printf("\033[38;5;231mMM \033[0m");
                 break;
             case field:
-                printf("\033[38;5;118mMM \033[0m");
+                printf("\033[38;5;118mWW \033[0m");
                 break;
             case forest:
-                printf("\033[38;5;82mMM \033[0m");
+                printf("\033[38;5;100mTT \033[0m");
                 break;
             case mountain1:
                 printf("\033[38;5;46mMM \033[0m");
