@@ -49,7 +49,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
     //Breaks the while loop if the destination has been moved to the closed list.
     if (cellMap[dest.row][dest.col].closedList == true) {
-      printf("Here is the path that we found\n");
+      printf("Here is the path that we found.\n");
       tracePath(cellMap, map, dest.row, dest.col, start);
       int gTotal = cellMap[dest.row][dest.col].g;
       printTime(gTotal);
@@ -60,7 +60,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   }
 
   if (openListIsEmpty == true) {
-    printf("No Path is found");
+    printf("No Path is found.\n");
   }
 
 }
@@ -199,5 +199,5 @@ void printTime(int gTotal) {
   hours = gTotal / 3600;
   minutes = (gTotal % 3600) / 60;
   seconds = (gTotal % 3600) % 60;
-  printf("Estimated travel time --- %d hours, %d minutes and %d seconds.\n", hours, minutes, seconds);
+  printf("Estimated travel time: %d hours, %d minutes and %d seconds.\n", hours, minutes, seconds);
 }

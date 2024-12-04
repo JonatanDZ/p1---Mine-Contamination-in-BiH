@@ -39,7 +39,7 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
 void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     int mineAnswer;
     int amountOfMines;
-    printf("Do you want additional random mines? No (0) or Yes (1)\n>");
+    printf("Do you want additional random mines? No (0) or Yes (1).\n>");
     scanf("%d", &mineAnswer);
     //If loop that runs if the user wants
     if (mineAnswer == 1) {
