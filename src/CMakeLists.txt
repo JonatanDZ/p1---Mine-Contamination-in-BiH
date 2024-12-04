@@ -9,7 +9,6 @@ add_executable(main
         main.c
         aStar.c
         input.c
-        ../test/aStarTest.c
         aStar.h
         input.h
         map.c
@@ -17,4 +16,3 @@ add_executable(main
         dataStructures.c
         dataStructures.h
 )
-
