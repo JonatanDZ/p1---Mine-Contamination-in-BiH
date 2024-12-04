@@ -4,7 +4,8 @@
 #define MAPSIZECOL 32
 #define MAPSIZE 32
 #include <stdbool.h>
-#include <windows.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * Enum setting each cell's value to time it takes to walk in seconds.
@@ -36,9 +37,7 @@ bool isWithinArray(int row, int col);
 
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
-void color(int colorValue);
 
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
-void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
 
 #endif //MAP_H
