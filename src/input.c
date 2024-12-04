@@ -36,10 +36,23 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
 void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     int mineAnswer;
     int amountOfMines;
+    int validInput; // Variable to store the result of scanf
+
     do {
-    printf("Do you want additional random mines? No (0) or Yes (1).\n>");
-    scanf("%d", &mineAnswer);
-    } while(mineAnswer < 0 || mineAnswer > 1);
+        printf("Do you want additional random mines? No (0) or Yes (1).\n>");
+        validInput = scanf("%d", &mineAnswer);
+
+        // Clear the input buffer to remove invalid characters
+        fflush(stdin);
+
+        // Check if the input is valid and within the expected range
+        if (validInput != 1 || mineAnswer != 0 && mineAnswer != 1) {
+            printf("Invalid input. Please enter 0 or 1.\n");
+        }
+
+    } while (validInput != 1 || mineAnswer != 0 && mineAnswer != 1);
+    printf("You selected: %d\n", mineAnswer);
+
 
     //If loop that runs if the user wants random mines.
     if (mineAnswer == 1) {
@@ -51,10 +64,20 @@ void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     }
 
     int choice;
+
     do {
-    printf("\nDo you want normal terrain (0) or flat terrain (1)?\n>");
-    scanf(" %d", &choice);
-    } while(choice < 0 || choice > 1);
+        printf("\nDo you want normal terrain (0) or flat terrain (1)?\n>");
+        validInput = scanf("%d", &choice);
+
+        // Clear the input buffer to remove invalid characters
+        fflush(stdin);
+
+        if (validInput != 1 || choice != 0 && choice != 1) {
+            printf("Invalid input. Please enter 0 or 1.\n");
+        }
+
+    } while (validInput != 1 || choice != 0 && choice != 1);
+    printf("You selected: %d\n", choice);
 
     if (choice == 1) {
         shortestRoute(map);
