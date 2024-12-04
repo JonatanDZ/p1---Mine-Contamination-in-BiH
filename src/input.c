@@ -34,7 +34,7 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
         printf("Error: Start and destination cannot be the same!\n");
         return input(map, start, dest);
     }
-
+    return 1;
 }
 
 void inputForShortestRouteAndMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
