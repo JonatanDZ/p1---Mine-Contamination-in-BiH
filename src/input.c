@@ -10,8 +10,6 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     scanf(" %d %d", &start->row, &start->col);
     } while((start->row < 0 || start->row > 31) || (start->col < 0 || start->col > 31));
 
-    map[start->row][start->col] = startPosition;
-
     if (isUnblocked(map, start->row, start->col) == false) {
         printf("Error: Start cannot be on a mine or river, please reenter the first coordinates \n");
         return input(map, start, dest);
@@ -28,9 +26,8 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
         return input(map, start, dest);
     }
 
-    map[dest->row][dest->col] = endPosition;
-
-    if (start->row == dest->row && start->col == dest->row) {
+    if (start->row == dest->row && start->col == dest->col) {
+        printf("Error: Start and destination cannot be the same!\n");
         return input(map, start, dest);
     }
 
