@@ -178,11 +178,19 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
+    int i = 0;
     //For loop that runs, until all mines are placed
-    for (int i = 0; i < amountOfMines; i++) {
-        map[rand() % (upperBound - lowerBound + 1)+ lowerBound][rand() % (upperBound - lowerBound + 1)+ lowerBound] = mine;
+    while (i < amountOfMines) {
+        int row = rand() % (upperBound - lowerBound + 1)+ lowerBound;
+        int col = rand() % (upperBound - lowerBound + 1)+ lowerBound;
+        if (isUnblocked(map, row, col) == true) {
+            map[row][col] = mine;
+            i++;
+        }
     }
 }
+
+
 
 /**
  * Function that checks if a cell in the array is blocked i.e. untraversable.
