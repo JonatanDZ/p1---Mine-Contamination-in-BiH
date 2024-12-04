@@ -8,7 +8,7 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     do {
     printf("\nInput x y coordinates for the start location, within the coordinate interval from 0 0 to %d %d.\n>", MAPSIZE-1, MAPSIZE-1);
     scanf(" %d %d", &start->row, &start->col);
-    } while((start->row < 0 || start->row > 31) || (start->col < 0 || start->col > 31));
+    } while(!isWithinArray(start->row, start->col));
 
     if (isUnblocked(map, start->row, start->col) == false) {
         printf("Error: Start cannot be on a mine or river, please reenter the first coordinates \n");
@@ -18,7 +18,7 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     do {
     printf("\nInput x y coordinates for the destination, within the coordinate interval 0 0 to %d %d.\n>", MAPSIZE-1, MAPSIZE-1);
     scanf(" %d %d", &dest->row, &dest->col);
-    } while((dest->row < 0 || dest->row > 31) || (dest->col < 0 || dest->col > 31));
+    } while(!isWithinArray(dest->row, dest->col));
 
 
     if (isUnblocked(map, dest->row, dest->col) == false) {
