@@ -178,19 +178,55 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            switch (map[i][j]) {
+                case map[0][21]:
+                    map[i][j] = forest;
+                    break;
+                /*case 2:
+                    map[i][j] = map[0][24];
+                    map[0][24]=forest;
+                    break;
+                case 3:
+                    map[i][j] = map[0][27];
+                    map[0][27]=mountain1;
+                    break;
+                    */
+                default:
+                    break;
+            }
+        }
+    }
+
+    //while loop that runs, until all mines are placed
     int i = 0;
-    //For loop that runs, until all mines are placed
     while (i < amountOfMines) {
         int row = rand() % (upperBound - lowerBound + 1)+ lowerBound;
         int col = rand() % (upperBound - lowerBound + 1)+ lowerBound;
-        if (isUnblocked(map, row, col) == true) {
+        //If statemnet tha decides if the mine can be placed
+        if (isMineable(map, row, col) == true) {
             map[row][col] = mine;
             i++;
         }
+
     }
+
 }
 
-
+/**
+ *
+ * @param map int array from main
+ * @param row Int indicating which row in the array should be looked up
+ * @param col Ind indicating which column in the array that should be looked up
+ * @return True or false whether amine can be place in the array
+ */
+bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
+    if (map[row][col] == water || map[row][col] == mine || map[row][col] == asphalt || map[row][col] == city) {
+        return false;
+    }
+    return true;
+}
 
 /**
  * Function that checks if a cell in the array is blocked i.e. untraversable.
