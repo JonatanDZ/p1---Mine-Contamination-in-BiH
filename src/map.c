@@ -236,17 +236,17 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                 printf("\033[38;5;231mMM \033[0m");
                 break;
             case field:
-                printf("\033[38;5;118mWW \033[0m");
+                printf("\033[38;5;46mWW \033[0m");
                 break;
             case forest:
-                printf("\033[38;5;100mTT \033[0m");
+                printf("\033[38;5;22mTT \033[0m");
                 break;
-            case mountain1:
-                printf("\033[38;5;46mMM \033[0m");
-                break;
-            case mountain2:
-                printf("\033[38;5;22mMM \033[0m");
-                break;
+                case mountain1:
+                    printf("\033[28;5;8mMM \033[0m");
+                    break;
+                case mountain2:
+                    printf("\033[38;5;7mMM \033[0m");
+                    break;
             case startPosition:
                 printf("\033[38;5;213mMM \033[0m");
                 break;

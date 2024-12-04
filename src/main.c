@@ -7,11 +7,11 @@ int main(){
     coor_t start, dest;
     int map [MAPSIZEROW][MAPSIZECOL];
 
-    createMapWFile(map);
+    //createMapWFile(map);
 
-    fromNumberToEnum(map);
+    //fromNumberToEnum(map);
 
-    //createMap(map);
+    createMap(map);
 
     inputForShortestRouteAndMineGen(map);
 
