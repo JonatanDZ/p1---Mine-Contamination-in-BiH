@@ -30,7 +30,7 @@ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
 
     map[dest->row][dest->col] = endPosition;
 
-    if (start->row == dest->row && start->col == dest->row) {
+    if (start->row == dest->row && start->col == dest->col) {
         return input(map, start, dest);
     }
 

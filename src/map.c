@@ -178,26 +178,7 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
-    for (int i = 0; i < MAPSIZEROW; i++) {
-        for (int j = 0; j < MAPSIZECOL; j++) {
-            switch (map[i][j]) {
-                case map[0][21]:
-                    map[i][j] = forest;
-                    break;
-                /*case 2:
-                    map[i][j] = map[0][24];
-                    map[0][24]=forest;
-                    break;
-                case 3:
-                    map[i][j] = map[0][27];
-                    map[0][27]=mountain1;
-                    break;
-                    */
-                default:
-                    break;
-            }
-        }
-    }
+    mapMineReplace(map);
 
     //while loop that runs, until all mines are placed
     int i = 0;
@@ -209,9 +190,49 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
             map[row][col] = mine;
             i++;
         }
-
     }
-
+}
+/**
+ * Hardcode that replaces the mines
+ * @param map 
+ */
+void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]) {
+    map[0][21] = forest;
+    map[0][24] = forest;
+    map[0][27] = mountain1;
+    map[1][22] = forest;
+    map[2][26] = forest;
+    map[3][24] = field;
+    map[4][28] = forest;
+    map[5][26] = forest;
+    map[9][26] = forest;
+    map[11][24] = forest;
+    map[13][26] = forest;
+    map[14][24] = field; //Virker kun med den under
+    map[15][24] = field; //Virker kun med den over
+    map[16][22] = field;
+    map[16][26] = forest;
+    map[23][19] = city;
+    map[24][21] = field;
+    map[25][10] = city;
+    map[25][18] = field;
+    map[26][20] = forest;
+    map[27][8] = field;
+    map[27][11] = field;
+    map[27][17] = forest;
+    map[27][27] = mountain1;
+    map[28][10] = field;
+    map[28][29] = mountain2;
+    map[29][7] = field;
+    map[29][19] = mountain1;
+    map[29][24] = mountain2;
+    map[30][8] = field;
+    map[30][10] = forest;
+    map[30][26] = mountain2;
+    map[30][30] = mountain2;
+    map[31][6] = city;
+    map[31][23] = mountain2;
+    map[31][27] = mountain2;
 }
 
 /**

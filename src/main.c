@@ -6,12 +6,14 @@
 int main(){
     coor_t start, dest;
     int map [MAPSIZEROW][MAPSIZECOL];
+    int mapWithoutMine [MAPSIZEROW][MAPSIZECOL];
 
     //createMapWFile(map);
 
     //fromNumberToEnum(map);
 
     createMap(map);
+    createMap(mapWithoutMine);
 
 
     //randomMineGen(map);
