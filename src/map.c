@@ -259,12 +259,6 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     }
 }
 
-void color(int colorValue) {
-    HANDLE H= GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(H,colorValue);
-    printf("   ");
-}
-
 
 
 /**

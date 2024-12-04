@@ -8,7 +8,6 @@
 #define MAPSIZECOL 32
 #define MAPSIZE 32
 #include <stdbool.h>
-#include <windows.h>
 
 typedef enum {
     mine = 00,
@@ -35,7 +34,6 @@ bool isWithinArray(int row, int col);
 
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
-void color(int colorValue);
 
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
