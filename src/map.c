@@ -217,48 +217,48 @@ bool isWithinArray(int row, int col) {
  * This function changes the values so it looks neat drawn with asciis symbols
  * @param map s values are updated so it looks neat drawn with asciis symbols
  */
+
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     for (int i = 0; i < MAPSIZEROW; i++) {
         printf("\n");
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
             case mine:
-                color(0x44);
+                printf("\033[38;5;196m██ \033[0m");
                 break;
             case water:
-                color(0x99);
+                printf("\033[38;5;32m██ \033[0m");
                 break;
             case asphalt:
-                color(0x77);
+                printf("\033[38;5;214m██ \033[0m");
                 break;
             case city:
-                color(0x88);
+                printf("\033[38;5;231m██ \033[0m");
                 break;
             case field:
-                color(0xee);
+                printf("\033[38;5;118m██ \033[0m");
                 break;
             case forest:
-                color(0xAA);
+                printf("\033[38;5;82m██ \033[0m");
                 break;
             case mountain1:
-                color(0x22);
+                printf("\033[38;5;46m██ \033[0m");
                 break;
             case mountain2:
-                color(0x66);
+                printf("\033[38;5;22m██ \033[0m");
                 break;
             case startPosition:
-                color(0x0c);
+                printf("\033[38;5;213m██ \033[0m");
                 break;
             case endPosition:
-                color(0xcc);
+                printf("\033[38;5;213m██ \033[0m");
                 break;
             default:
-                color(0xFF);
+                printf("\033[38;5;213m██ \033[0m");
             }
         }
     }
 }
-
 
 
 /**
@@ -275,18 +275,4 @@ void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
         printf("\n");
     }
 
-}
-
-/**
- * Function printing the map in chars.
- * @param map int array from main.
- */
-void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]) {
-    printf("\n");
-    for (int i = 0; i < MAPSIZEROW; i++){
-        for (int j = 0; j < MAPSIZEROW; j++){
-            printf(" %c ", map[i][j]);
-        }
-        printf("\n");
-    }
 }
