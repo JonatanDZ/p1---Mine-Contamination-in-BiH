@@ -1,4 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\Users\Jonat\Documents\GitHub\p1---Mine-Contamination-in-BiH -B C:\Users\Jonat\Documents\GitHub\p1---Mine-Contamination-in-BiH\cmake-build-debug
--- Configuring done (0.3s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Users/Jonat/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug
