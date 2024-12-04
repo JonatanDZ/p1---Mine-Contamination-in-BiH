@@ -11,6 +11,8 @@ int main(){
 
     fromNumberToEnum(map);
 
+    //createMap(map);
+
     inputForShortestRouteAndMineGen(map);
 
     input(map, &start, &dest);
