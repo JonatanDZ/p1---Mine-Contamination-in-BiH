@@ -1,8 +1,9 @@
 #include <assert.h>
 #include "../src/map.h"
+#include <stdio.h>
 
 
-void test_isWithinArray(void) {
+bool test_isWithinArray(void) {
     //ARRANGE, from input
     int test_row = 5;
     int test_col = 5;
@@ -12,11 +13,13 @@ void test_isWithinArray(void) {
 
     //ASSERT
     assert(result == true);
+
+    return result;
 }
 
 
 
 int main(void) {
-    test_isWithinArray();
+    printf("%d",test_isWithinArray());
 
 }
