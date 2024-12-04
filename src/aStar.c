@@ -49,8 +49,10 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
     //Breaks the while loop if the destination has been moved to the closed list.
     if (cellMap[dest.row][dest.col].closedList == true) {
-      printf("Here is the path that we found\n");
+      printf("Here is the path that we found.\n");
       tracePath(cellMap, map, dest.row, dest.col, start);
+      int gTotal = cellMap[dest.row][dest.col].g;
+      printTime(gTotal);
       return;
     }
 
@@ -58,7 +60,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   }
 
   if (openListIsEmpty == true) {
-    printf("No Path is found");
+    printf("No Path is found.\n");
   }
 
 }
@@ -188,3 +190,14 @@ bool isDestination(int row, int col, coor_t dest) {
   return row == dest.row && col == dest.col;
 }
 
+/**
+ * Function that converts seconds into hours, minutes and seconds.
+ * @param gTotal value of g from the final route.
+ */
+void printTime(int gTotal) {
+  int hours, minutes, seconds;
+  hours = gTotal / 3600;
+  minutes = (gTotal % 3600) / 60;
+  seconds = (gTotal % 3600) % 60;
+  printf("Estimated travel time: %d hours, %d minutes and %d seconds.\n", hours, minutes, seconds);
+}

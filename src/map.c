@@ -144,28 +144,28 @@ void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
                 map[i][j] = water;
                 break;
             case asphalt:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case city:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case field:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case forest:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case mountain1:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case mountain2:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case startPosition:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
                 break;
             case endPosition:
-                map[i][j] = 10;
+                map[i][j] = asphalt;
             }
         }
     }
@@ -282,54 +282,48 @@ bool isWithinArray(int row, int col) {
  * This function changes the values so it looks neat drawn with asciis symbols
  * @param map s values are updated so it looks neat drawn with asciis symbols
  */
+
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     for (int i = 0; i < MAPSIZEROW; i++) {
         printf("\n");
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
             case mine:
-                color(0x44);
+                printf("\033[38;5;196mXX \033[0m");
                 break;
             case water:
-                color(0x99);
+                printf("\033[38;5;32m~~ \033[0m");
                 break;
             case asphalt:
-                color(0x77);
+                printf("\033[38;5;214mMM \033[0m");
                 break;
             case city:
-                color(0x88);
+                printf("\033[38;5;231mMM \033[0m");
                 break;
             case field:
-                color(0xee);
+                printf("\033[38;5;46mWW \033[0m");
                 break;
             case forest:
-                color(0xAA);
+                printf("\033[38;5;22mTT \033[0m");
                 break;
-            case mountain1:
-                color(0x22);
-                break;
-            case mountain2:
-                color(0x66);
-                break;
+                case mountain1:
+                    printf("\033[28;5;8mMM \033[0m");
+                    break;
+                case mountain2:
+                    printf("\033[38;5;7mMM \033[0m");
+                    break;
             case startPosition:
-                color(0x0c);
+                printf("\033[38;5;213mMM \033[0m");
                 break;
             case endPosition:
-                color(0xcc);
+                printf("\033[38;5;213mMM \033[0m");
                 break;
             default:
-                color(0xFF);
+                printf("\033[38;5;213mMM \033[0m");
             }
         }
     }
 }
-
-void color(int colorValue) {
-    HANDLE H= GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(H,colorValue);
-    printf("   ");
-}
-
 
 
 /**
@@ -346,18 +340,4 @@ void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
         printf("\n");
     }
 
-}
-
-/**
- * Function printing the map in chars.
- * @param map int array from main.
- */
-void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]) {
-    printf("\n");
-    for (int i = 0; i < MAPSIZEROW; i++){
-        for (int j = 0; j < MAPSIZEROW; j++){
-            printf(" %c ", map[i][j]);
-        }
-        printf("\n");
-    }
 }

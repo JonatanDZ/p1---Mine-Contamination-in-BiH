@@ -1,24 +1,26 @@
-//
-// Created by a-bti on 12/3/2024.
-//
-
 #ifndef MAP_H
 #define MAP_H
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 #define MAPSIZE 32
 #include <stdbool.h>
-#include <windows.h>
+#include <stdlib.h>
+#include <stdio.h>
 
+/**
+ * Enum setting each cell's value to time it takes to walk in seconds.
+ * Time value found by irl testing. (Asphalt - Mountain2)
+ * Mine, water, startPosition & endPosition are irrelevant for total time.
+ */
 typedef enum {
     mine = 00,
     water = 1,
-    asphalt = 10,
-    city = 14,
-    field = 16,
-    forest = 24,
-    mountain1 = 27,
-    mountain2 = 35,
+    asphalt = 15,
+    city = 16,
+    field = 19,
+    forest = 29,
+    mountain1 = 63,
+    mountain2 = 78,
     startPosition = 2,
     endPosition = 3
 } moveValue;
@@ -37,9 +39,7 @@ bool isWithinArray(int row, int col);
 
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
-void color(int colorValue);
 
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
-void printMapChar(int map[MAPSIZEROW][MAPSIZECOL]);
 
 #endif //MAP_H

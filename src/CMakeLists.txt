@@ -9,13 +9,10 @@ add_executable(main
         main.c
         aStar.c
         input.c
-        ../test/aStarTest.c
         aStar.h
         input.h
         map.c
         map.h
         dataStructures.c
         dataStructures.h
-
 )
-
