@@ -190,6 +190,14 @@ bool isDestination(int row, int col, coor_t dest) {
   return row == dest.row && col == dest.col;
 }
 
-int printTime(int gTotal) {
-  
+/**
+ * Function that converts seconds into hours, minutes and seconds.
+ * @param gTotal value of g from the final route.
+ */
+void printTime(int gTotal) {
+  int hours, minutes, seconds;
+  hours = gTotal / 3600;
+  minutes = (gTotal % 3600) / 60;
+  seconds = (gTotal % 3600) % 60;
+  printf("Estimated travel time --- %d hours, %d minutes and %d seconds.\n", hours, minutes, seconds);
 }
