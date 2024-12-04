@@ -2,6 +2,7 @@
 #define ASTAR_H
 #include "dataStructures.h"
 #include "map.h"
+//The following are used in the .c file. Do not delete.
 #include <math.h>
 #include <float.h>
 #include <stdio.h>
