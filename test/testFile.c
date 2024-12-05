@@ -1,16 +1,9 @@
-#include <stdbool.h>
-#include <stdio.h>
+
 #include "mapTest.c"
-
-
-bool assertion(bool expression) {
-    if (expression) {
-        return true;
-    }
-    return false;
-}
+#include "aStarTest.c"
 
 int main() {
     test_isWithinArray();
     test_isWithinArray_50_50();
+    routeTest();
 }

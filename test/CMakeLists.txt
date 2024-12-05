@@ -5,8 +5,9 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(testExe
         testFile.c ../src/map.c
-        test.h)
+        test.h
+        aStarTest.c)
 
 target_compile_options(testExe PRIVATE -Wall -Wextra -Wpedantic -Werror)
 
-add_test(NAME aStarTest COMMAND testExe)
+add_test(NAME aStar COMMAND testExe)

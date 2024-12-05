@@ -1,7 +1,5 @@
 #include <assert.h>
-
 #include "../src/map.h"
-#include "test.h"
 
 void test_isWithinArray(void) {
     //ARRANGE
