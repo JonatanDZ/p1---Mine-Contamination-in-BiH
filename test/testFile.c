@@ -2,7 +2,7 @@
 #include "../src/map.h"
 #include <stdio.h>
 
-bool assertion(void* input, void* expected);
+bool assertion(int expression);
 bool test_isWithinArray(void) {
     //ARRANGE, from input
     int test_row = 5;
@@ -12,15 +12,14 @@ bool test_isWithinArray(void) {
     bool result = isWithinArray(test_row,test_col);
 
     //ASSERT
-    return assertion((bool*)result ,(bool*)true);
+    return assertion(result == true);
 }
 
-bool assertion(void* input, void* expected) {
-    if (input == expected) {
+bool assertion(int expression) {
+    if (expression) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 int main(void) {
