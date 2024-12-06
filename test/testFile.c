@@ -32,19 +32,59 @@ bool test_isWithinArray7_55(void) {
     return result;
 }
 
-bool test_isUnblocked(void) {
+bool test_isUnblocked0_5(void) {
     //ARRANGE
     int test_row = 0;
     int test_col = 5;
-    int map[5][5] = {
+    int map2[5][5] = {
         {water, field, asphalt, forest, water},
         {water, asphalt, forest, water, water},
         {forest, asphalt, forest, forest, water},
         {asphalt, forest, forest, water, water},
-        {forest, asphalt, asphalt, water, forest}
+        {forest, asphalt, mine, water, forest}
         };
     //ACT
-    bool result = isUnblocked(map, test_row,test_col);
+    bool result = isUnblocked(map2, test_row,test_col);
+
+    //ASSERT
+    assert(result == false);
+
+    return result;
+}
+
+bool test_isUnblocked0_3(void) {
+    //ARRANGE
+    int test_row = 0;
+    int test_col = 3;
+    int map2[5][5] = {
+        {water, field, asphalt, forest, water},
+        {water, asphalt, forest, water, water},
+        {forest, asphalt, forest, forest, water},
+        {asphalt, forest, forest, water, water},
+        {forest, asphalt, mine, water, forest}
+    };
+    //ACT
+    bool result = isUnblocked(map2, test_row,test_col);
+
+    //ASSERT
+    assert(result == true);
+
+    return result;
+}
+
+bool test_isUnblocked3_5(void) {
+    //ARRANGE
+    int test_row = 3;
+    int test_col = 5;
+    int map2[5][5] = {
+        {water, field, asphalt, forest, water},
+        {water, asphalt, forest, water, water},
+        {forest, asphalt, forest, forest, water},
+        {asphalt, forest, forest, water, water},
+        {forest, asphalt, mine, water, forest}
+    };
+    //ACT
+    bool result = isUnblocked(map2, test_row,test_col);
 
     //ASSERT
     assert(result == false);
@@ -58,5 +98,9 @@ bool test_isUnblocked(void) {
 int main(void) {
     printf("Is Within Array 5,5: %d\n",test_isWithinArray5_5());
     printf("Is Within Array 7,55: %d\n",test_isWithinArray7_55());
-    printf("Is Unblocked 30,30: %d\n", test_isUnblocked());
+    printf("Is Unblocked 0,5: %d\n", test_isUnblocked0_5());
+    printf("Is Unblocked 0,3: %d\n", test_isUnblocked0_3());
+    printf("Is Unblocked 3,5: %d\n", test_isUnblocked3_5());
+
+
 }
