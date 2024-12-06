@@ -1,0 +1,160 @@
+Index: cmake-build-debug/Testing/Temporary/LastTest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Start testing: Nov 29 10:48 Romance Standard Time\r\n----------------------------------------------------------\r\nEnd testing: Nov 29 10:48 Romance Standard Time\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/Testing/Temporary/LastTest.log b/cmake-build-debug/Testing/Temporary/LastTest.log
+--- a/cmake-build-debug/Testing/Temporary/LastTest.log	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/cmake-build-debug/Testing/Temporary/LastTest.log	(date 1732874711596)
+@@ -1,3 +1,2 @@
+-Start testing: Nov 29 10:48 Romance Standard Time
+-----------------------------------------------------------
+-End testing: Nov 29 10:48 Romance Standard Time
++
++End testing: Nov 29 10:27 Romance Standard Time
+Index: isUnblocked.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by Jonatan Muhle-Zimino on 20/11/2024.\r\n//\r\n#include \"header.h\"\r\nbool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {\r\n    if (map[row][col] == water || map[row][col] == mine) {\r\n        return false;\r\n    }\r\n    return true;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/isUnblocked.c b/isUnblocked.c
+--- a/isUnblocked.c	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/isUnblocked.c	(date 1732874668563)
+@@ -2,6 +2,7 @@
+ // Created by Jonatan Muhle-Zimino on 20/11/2024.
+ //
+ #include "header.h"
++//Checker to see if the cell is blocked.
+ bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
+     if (map[row][col] == water || map[row][col] == mine) {
+         return false;
+Index: shortestRoute.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by Jonatan Muhle-Zimino on 25/11/2024.\r\n//\r\n#include \"header.h\"\r\n\r\nvoid shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {\r\n\r\n    int choice;\r\n    printf(\"Normal(0)- or shortroute(1)> \");\r\n    scanf(\" %d\", &choice);\r\n\r\n    if (choice == 1) {\r\n        for (int i = 0; i < MAPSIZEROW; i++) {\r\n            for (int j = 0; j < MAPSIZECOL; j++) {\r\n                switch (map[i][j]) {\r\n                    case mine:\r\n                        map[i][j] = mine;\r\n                    break;\r\n                    case water:\r\n                        map[i][j] = water;\r\n                    break;\r\n                    case asphalt:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case city:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case field:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case forest:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case mountain1:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case mountain2:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case startPosition:\r\n                        map[i][j] = 10;\r\n                    break;\r\n                    case endPosition:\r\n                        map[i][j] = 10;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/shortestRoute.c b/shortestRoute.c
+--- a/shortestRoute.c	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/shortestRoute.c	(date 1732874668574)
+@@ -3,8 +3,8 @@
+ //
+ #include "header.h"
+ 
++//Changes the enum to 10 so we are able to see the shortest route without terrain.
+ void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
+-
+     int choice;
+     printf("Normal(0)- or shortroute(1)> ");
+     scanf(" %d", &choice);
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CMakePythonSetting\">\r\n    <option name=\"pythonIntegrationState\" value=\"YES\" />\r\n  </component>\r\n  <component name=\"CMakeWorkspace\" PROJECT_DIR=\"$PROJECT_DIR$\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/.idea/misc.xml	(date 1732874668546)
+@@ -1,5 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BackendCodeEditorMiscSettings">
++    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
++    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
++    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
++    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
++  </component>
+   <component name="CMakePythonSetting">
+     <option name="pythonIntegrationState" value="YES" />
+   </component>
+Index: createMap.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by marku on 13/11/2024.\r\n//\r\n\r\n#include \"header.h\"\r\n\r\nvoid createMap(int map[MAPSIZEROW][MAPSIZECOL]){\r\n\r\n\r\n    int templateMap[32][32] = { //This is our hardcoded map\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2,mountain1,mountain1,mountain1,forest,forest, field, asphalt, city, water, water, city, city, asphalt, field,field,field,mine, forest, forest, mine, forest, forest, mine, mountain1, mountain2, mountain2, mountain2},\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,forest,forest,asphalt,asphalt, city, water, water, city, asphalt, field, field, field, field,mine,forest,forest,forest,forest,forest,mountain1, mountain1, mountain2, mountain2,},\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain1, mountain1, forest, field, asphalt, asphalt, city, water, water, asphalt, asphalt, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain2},\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, forest, forest, field, asphalt, city, water, water, water, asphalt,field,field,field, field, field, mine, field, forest, forest, forest, forest, mountain1, mountain2},\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, mountain1, forest, forest, asphalt, asphalt, water, water, water, asphalt, asphalt, city, field,field,field,field,field,forest, forest, mine, forest, mountain1, mountain1},\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, mountain1, mountain1, forest, field, asphalt, asphalt, water, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, mountain1, mountain1},\r\n            {mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, field, asphalt, water, water, water, asphalt , city, city, city, field, field, field, forest, forest, forest, mountain1, mountain1, mountain2},\r\n            {mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, forest, field, asphalt, water, water, water, asphalt, city, city, city, field, field, field, forest,forest,forest, mountain1, mountain1, mountain2 },\r\n            {mountain2, mountain2, mountain2,mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, mountain1, forest, forest, forest, field, asphalt, asphalt, city, water, water, asphalt, city, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2 },\r\n            {mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,mountain1,mountain1, forest, forest, field, field, field, asphalt, city, city, water, water, asphalt, city, city, city, field, field, forest, mine, forest, mountain1, mountain1, mountain2, mountain2},\r\n            {mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, forest, field, field, field, asphalt, asphalt, asphalt, city, city, water, water, asphalt, city, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1,mountain2},\r\n            {mountain2, mountain2, mountain2, mountain1, mountain1, forest, forest, field, field, field, asphalt, asphalt, asphalt, city, city, city, water, water, water, asphalt, city, city, field, field, mine, forest, forest, forest, mountain1, mountain2, mountain2, mountain2 },\r\n            {mountain2, mountain2, mountain2, mountain1, forest, forest, field, field, city, city, asphalt, city,city,city,city,city, water, water, asphalt, asphalt, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2, mountain2},\r\n            {mountain2, mountain2, mountain1, mountain1, forest, city, city, city, city, city, asphalt, city, city, city, city, water, water, water, asphalt, city, city, city, field, field, forest, forest, mine, forest, mountain1, mountain1, mountain1, mountain2},\r\n            {mountain2, mountain2, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, city, city, city, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1},\r\n            {mountain2, mountain2, mountain1, forest, city, city, city, city, city, city, city, asphalt, city, city, water, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1},\r\n            {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, city, asphalt, water, water, asphalt, asphalt, city, city, city, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain2},\r\n            {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, asphalt, asphalt, water, water, asphalt, city, city, city, city, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2},\r\n            {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, asphalt, asphalt, water, water, asphalt, city, city, city, city, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2},\r\n            {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, asphalt, asphalt, water, water, water, asphalt, city, city, city, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2}, //\r\n            {mountain1, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, asphalt, asphalt, water, asphalt, asphalt, city, city, field, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //\r\n            {mountain1, mountain1, forest, field, field, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, city, city, field, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //\r\n            {mountain1, forest, forest, field, asphalt, asphalt, water, water, water, water, water, city, city, city, city, city, city, city, city, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //\r\n            {mountain1, forest, forest, asphalt, asphalt, water, water, water, water, water, city, city, city, city, city, city, city, city, city, mine, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //\r\n            {mountain1, forest, field, asphalt, water, water, water, water, city, city, city, city, city , city, city, city, city, city, field, field, field, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2}, //\r\n            {forest, forest, asphalt, asphalt, water, city, water, city, city, field, mine, city, city, city, city, city, city, field, mine, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2}, //\r\n            {forest, field, asphalt, water, water, city, water, city, field, field, field, field, field, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2}, //\r\n            {field, asphalt, asphalt, water, city, water, water, city, mine, field, field, mine, field, forest, forest, forest, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mine, mountain2, mountain2, mountain2, mountain2}, //\r\n            {field, asphalt, water, water, city, water, city, field, field, field, mine, forest, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2}, //\r\n            {asphalt, asphalt, water, water, city, water, city, mine, field, field, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mine, mountain1, mountain1, mountain1, mountain2, mine, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2}, //\r\n            {asphalt, water, water, city, city, water, city, field, mine, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2}, //\r\n            {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //\r\n            };\r\n        for (int i = 0; i < MAPSIZEROW; i++) {\r\n            for (int j = 0; j < MAPSIZECOL; j++) {\r\n                map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/createMap.c b/createMap.c
+--- a/createMap.c	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/createMap.c	(date 1732874668555)
+@@ -3,10 +3,8 @@
+ //
+ 
+ #include "header.h"
+-
++//Our hardcoded map. 
+ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
+-
+-
+     int templateMap[32][32] = { //This is our hardcoded map
+             {mountain2,mountain2,mountain2,mountain2,mountain2,mountain1,mountain1,mountain1,forest,forest, field, asphalt, city, water, water, city, city, asphalt, field,field,field,mine, forest, forest, mine, forest, forest, mine, mountain1, mountain2, mountain2, mountain2},
+             {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,forest,forest,asphalt,asphalt, city, water, water, city, asphalt, field, field, field, field,mine,forest,forest,forest,forest,forest,mountain1, mountain1, mountain2, mountain2,},
+Index: input.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by Jonatan Muhle-Zimino on 13/11/2024.\r\n//\r\n\r\n\r\n#include \"header.h\"\r\n\r\nint input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {\r\n    // Starter fra 0, så minus en for koordinat.\r\n\r\n\r\n    // Starter fra 0, så minus en for koordinat.\r\n\r\n    int startRow = -1, startCol = -1;\r\n\r\n    printf(\"Input x og y koordinat for start koordinator, det går fra 0 0 til %d>\", MAPSIZE-1);\r\n    scanf(\" %d %d\", &start->row, &start->col);\r\n\r\n    map[start->row][start->col] = startPosition;\r\n\r\n    if (isUnblocked(map, start->row, start->col) == false) {\r\n        printf(\"Error: start cant be on a mine or river, pleas reenter the first coordinates \\n\");\r\n        return input(map, start, dest);\r\n    }\r\n\r\n\r\n    printf(\"Input x og y koordinat for end koordinator, det går fra 0 0 til %d>\", MAPSIZE-1);\r\n    scanf(\" %d %d\", &dest->row, &dest->col);\r\n\r\n\r\n\r\n    if (isUnblocked(map, dest->row, dest->col) == false) {\r\n        printf(\"Error: distination cant be on a mine or river, pleas reenter both coordinates \\n\");\r\n        return input(map, start, dest);\r\n    }\r\n\r\n    map[dest->row][dest->col] = endPosition;\r\n\r\n    if (start->row == dest->row && start->col == dest->row) {\r\n        return input(map, start, dest);\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/input.c b/input.c
+--- a/input.c	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/input.c	(date 1732874668560)
+@@ -4,12 +4,9 @@
+ 
+ 
+ #include "header.h"
+-
++//Makes the start and end posistions.
+ int input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
+     // Starter fra 0, så minus en for koordinat.
+-
+-
+-    // Starter fra 0, så minus en for koordinat.
+ 
+     int startRow = -1, startCol = -1;
+ 
+Index: terminalOutput.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by Jonatan Muhle-Zimino on 22/11/2024.\r\n//\r\n#include \"header.h\"\r\n\r\nvoid terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {\r\n    for (int i = 0; i < MAPSIZEROW; i++) {\r\n        for (int j = 0; j < MAPSIZECOL; j++) {\r\n            switch (map[i][j]) {\r\n                case mine:\r\n                    map[i][j] = 167;\r\n                    break;\r\n                case water:\r\n                    map[i][j] = 247;\r\n                    break;\r\n                case asphalt:\r\n                    map[i][j] = 186;\r\n                    break;\r\n                case city:\r\n                    map[i][j] = 223;\r\n                    break;\r\n                case field:\r\n                    map[i][j] = 178;\r\n                    break;\r\n                case forest:\r\n                    map[i][j] = 157;\r\n                    break;\r\n                case mountain1:\r\n                    map[i][j] = 239;\r\n                    break;\r\n                case mountain2:\r\n                    map[i][j] = 234;\r\n                    break;\r\n                case startPosition:\r\n                    map[i][j] = 101;\r\n                    break;\r\n                case endPosition:\r\n                    map[i][j] = 202;\r\n                    break;\r\n                default:\r\n                    map[i][j] = 'R'; //er for path værdien\r\n            }\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/terminalOutput.c b/terminalOutput.c
+--- a/terminalOutput.c	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/terminalOutput.c	(date 1732874668577)
+@@ -2,7 +2,7 @@
+ // Created by Jonatan Muhle-Zimino on 22/11/2024.
+ //
+ #include "header.h"
+-
++//Changes the value from enum to char, so it will be printed correcly.
+ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
+     for (int i = 0; i < MAPSIZEROW; i++) {
+         for (int j = 0; j < MAPSIZECOL; j++) {
+Index: printMap.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by marku on 13/11/2024.\r\n//\r\n\r\n#include \"header.h\"\r\n\r\nvoid printMap(int map[MAPSIZEROW][MAPSIZECOL]) { //We are printing the map\r\n    printf(\"\\n\");\r\n    for (int i = 0; i < MAPSIZEROW; i++){\r\n        for (int j = 0; j < MAPSIZEROW; j++){\r\n            printf(\"%2d \", map[i][j]);\r\n        }\r\n        printf(\"\\n\");\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/printMap.c b/printMap.c
+--- a/printMap.c	(revision 2a50d3e725b7867e023d051e61b185fd12a933a7)
++++ b/printMap.c	(date 1732874668569)
+@@ -3,7 +3,7 @@
+ //
+ 
+ #include "header.h"
+-
++//prints the map out.
+ void printMap(int map[MAPSIZEROW][MAPSIZECOL]) { //We are printing the map
+     printf("\n");
+     for (int i = 0; i < MAPSIZEROW; i++){
