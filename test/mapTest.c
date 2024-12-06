@@ -1,9 +1,7 @@
 #include <assert.h>
-
 #include "../src/map.h"
-#include "test.h"
 
-void test_isWithinArray(void) {
+void test_isWithinArray_5_5() {
     //ARRANGE
     int test_row = 5;
     int test_col = 5;
@@ -15,7 +13,7 @@ void test_isWithinArray(void) {
     assert(result == true);
 }
 
-void test_isWithinArray_50_50(void) {
+void test_isWithinArray_50_50() {
     //ARRANGE
     int test_row = 50;
     int test_col = 50;
@@ -24,6 +22,29 @@ void test_isWithinArray_50_50(void) {
     bool result = isWithinArray(test_row,test_col);
 
     //ASSERT
+    assert(result == true);
+}
+
+void test_isWithinArray_neg1_16() {
+    //ARRANGE
+    int test_row = -1;
+    int test_col = 16;
+
+    //ACT
+    bool result = isWithinArray(test_row,test_col);
+
+    //ASSERT
     assert(result == false);
 }
 
+void test_isWithinArray_19_neg20() {
+    //ARRANGE
+    int test_row = 19;
+    int test_col = -20;
+
+    //ACT
+    bool result = isWithinArray(test_row,test_col);
+
+    //ASSERT
+    assert(result == true);
+}

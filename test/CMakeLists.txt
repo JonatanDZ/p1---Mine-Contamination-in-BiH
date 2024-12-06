@@ -9,4 +9,4 @@ add_executable(testExe
 
 target_compile_options(testExe PRIVATE -Wall -Wextra -Wpedantic -Werror)
 
-add_test(NAME aStarTest COMMAND testExe)
+add_test(NAME arrayTester1 COMMAND testExe)
