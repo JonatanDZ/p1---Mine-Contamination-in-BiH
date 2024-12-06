@@ -1,6 +1,5 @@
 #ifndef INPUT_H
 #define INPUT_H
-
 #include "map.h"
 #include "dataStructures.h"
 #include <stdio.h>
