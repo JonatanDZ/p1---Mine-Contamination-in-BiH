@@ -1,6 +1,7 @@
 #include <assert.h>
 #include "../src/map.h"
 
+
 void test_isWithinArray_5_5() {
     //ARRANGE
     int test_row = 5;
@@ -22,7 +23,7 @@ void test_isWithinArray_50_50() {
     bool result = isWithinArray(test_row,test_col);
 
     //ASSERT
-    assert(result == true);
+    assert(result == false);
 }
 
 void test_isWithinArray_neg1_16() {
@@ -46,5 +47,22 @@ void test_isWithinArray_19_neg20() {
     bool result = isWithinArray(test_row,test_col);
 
     //ASSERT
-    assert(result == true);
+    assert(result == false);
+}
+
+void test_createMapWFile() {
+    //ARRANGE
+    int mapHardcoded[MAPSIZEROW][MAPSIZECOL];
+    int mapFromFile[MAPSIZEROW][MAPSIZECOL];
+
+    //ACT
+    createMap(mapHardcoded);
+    createMapWFile(mapFromFile);
+
+    //ASSERT
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            assert(mapHardcoded[i][j] == mapFromFile[i+1][j]);
+        }
+    }
 }

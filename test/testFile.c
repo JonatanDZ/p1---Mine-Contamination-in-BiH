@@ -15,4 +15,5 @@ int main() {
     test_isWithinArray_50_50();
     test_isWithinArray_neg1_16();
     test_isWithinArray_19_neg20();
+    test_createMapWFile();
 }
