@@ -144,28 +144,28 @@ void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
                 map[i][j] = water;
                 break;
             case asphalt:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case city:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case field:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case forest:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case mountain1:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case mountain2:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case startPosition:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
                 break;
             case endPosition:
-                map[i][j] = asphalt;
+                map[i][j] = 10;
             }
         }
     }
@@ -178,75 +178,10 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
-    mapMineReplace(map);
-
-    //while loop that runs, until all mines are placed
-    int i = 0;
-    while (i < amountOfMines) {
-        int row = rand() % (upperBound - lowerBound + 1)+ lowerBound;
-        int col = rand() % (upperBound - lowerBound + 1)+ lowerBound;
-        //If statement that decides if the mine can be placed
-        if (isMineable(map, row, col) == true) {
-            map[row][col] = mine;
-            i++;
-        }
+    //For loop that runs, until all mines are placed
+    for (int i = 0; i < amountOfMines; i++) {
+        map[rand() % (upperBound - lowerBound + 1)+ lowerBound][rand() % (upperBound - lowerBound + 1)+ lowerBound] = mine;
     }
-}
-/**
- * Hardcode that replaces the mines
- * @param map 
- */
-void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]) {
-    map[0][21] = forest;
-    map[0][24] = forest;
-    map[0][27] = mountain1;
-    map[1][22] = forest;
-    map[2][26] = forest;
-    map[3][24] = field;
-    map[4][28] = forest;
-    map[5][26] = forest;
-    map[9][26] = forest;
-    map[11][24] = forest;
-    map[13][26] = forest;
-    map[14][24] = field; //Virker kun med den under
-    map[15][24] = field; //Virker kun med den over
-    map[16][22] = field;
-    map[16][26] = forest;
-    map[23][19] = city;
-    map[24][21] = field;
-    map[25][10] = city;
-    map[25][18] = field;
-    map[26][20] = forest;
-    map[27][8] = field;
-    map[27][11] = field;
-    map[27][17] = forest;
-    map[27][27] = mountain1;
-    map[28][10] = field;
-    map[28][29] = mountain2;
-    map[29][7] = field;
-    map[29][19] = mountain1;
-    map[29][24] = mountain2;
-    map[30][8] = field;
-    map[30][10] = forest;
-    map[30][26] = mountain2;
-    map[30][30] = mountain2;
-    map[31][6] = city;
-    map[31][23] = mountain2;
-    map[31][27] = mountain2;
-}
-
-/**
- *
- * @param map int array from main
- * @param row Int indicating which row in the array that should be looked up
- * @param col Ind indicating which column in the array that should be looked up
- * @return True or false whether amine can be place in the array
- */
-bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
-    if (map[row][col] == water || map[row][col] == mine || map[row][col] == asphalt || map[row][col] == city) {
-        return false;
-    }
-    return true;
 }
 
 /**
@@ -289,37 +224,37 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
         for (int j = 0; j < MAPSIZECOL; j++) {
             switch (map[i][j]) {
             case mine:
-                printf("\033[38;5;196mXX \033[0m");
+                printf("\033[38;5;196m██ \033[0m");
                 break;
             case water:
-                printf("\033[38;5;32m~~ \033[0m");
+                printf("\033[38;5;32m██ \033[0m");
                 break;
             case asphalt:
-                printf("\033[38;5;214mMM \033[0m");
+                printf("\033[38;5;214m██ \033[0m");
                 break;
             case city:
-                printf("\033[38;5;231mMM \033[0m");
+                printf("\033[38;5;231m██ \033[0m");
                 break;
             case field:
-                printf("\033[38;5;46mWW \033[0m");
+                printf("\033[38;5;118m██ \033[0m");
                 break;
             case forest:
-                printf("\033[38;5;22mTT \033[0m");
+                printf("\033[38;5;82m██ \033[0m");
                 break;
-                case mountain1:
-                    printf("\033[28;5;8mMM \033[0m");
-                    break;
-                case mountain2:
-                    printf("\033[38;5;7mMM \033[0m");
-                    break;
+            case mountain1:
+                printf("\033[38;5;46m██ \033[0m");
+                break;
+            case mountain2:
+                printf("\033[38;5;22m██ \033[0m");
+                break;
             case startPosition:
-                printf("\033[38;5;213mMM \033[0m");
+                printf("\033[38;5;213m██ \033[0m");
                 break;
             case endPosition:
-                printf("\033[38;5;213mMM \033[0m");
+                printf("\033[38;5;213m██ \033[0m");
                 break;
             default:
-                printf("\033[38;5;213mMM \033[0m");
+                printf("\033[38;5;213m██ \033[0m");
             }
         }
     }

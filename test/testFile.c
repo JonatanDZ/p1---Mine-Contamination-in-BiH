@@ -1,29 +1,19 @@
-#include <assert.h>
-#include "../src/map.h"
+#include <stdbool.h>
 #include <stdio.h>
+#include "mapTest.c"
 
-bool assertion(void* input, void* expected);
-bool test_isWithinArray(void) {
-    //ARRANGE, from input
-    int test_row = 5;
-    int test_col = 5;
 
-    //ACT
-    bool result = isWithinArray(test_row,test_col);
-
-    //ASSERT
-    return assertion((bool*)result ,(bool*)true);
-}
-
-bool assertion(void* input, void* expected) {
-    if (input == expected) {
+bool assertion(bool expression) {
+    if (expression) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
-int main(void) {
-    printf("%d",test_isWithinArray());
-
+int main() {
+    test_isWithinArray_5_5();
+    test_isWithinArray_50_50();
+    test_isWithinArray_neg1_16();
+    test_isWithinArray_19_neg20();
+    test_createMapWFile();
 }

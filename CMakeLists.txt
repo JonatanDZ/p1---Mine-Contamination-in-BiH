@@ -5,8 +5,8 @@ set(CMAKE_C_STANDARD 11)
 
 set(CMAKE_BUILD_TYPE Debug)
 
-add_subdirectory(src)
 
 enable_testing()
 
+add_subdirectory(src)
 add_subdirectory(test)
