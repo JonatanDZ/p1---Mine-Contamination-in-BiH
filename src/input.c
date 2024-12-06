@@ -23,7 +23,7 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
 
     // Landmine generation
     do {
-        printf("Do you want additional random mines? No (0) or Yes (1).\n>");
+        printf("Do you want random landmines? No (0) or Yes (1).\n>");
         validInput = scanf("%d", &mineAnswer);
 
         // Clear the input buffer to remove invalid characters
@@ -31,7 +31,7 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
 
         // Check if the input is valid and within the expected range
         if (validInput != 1 || mineAnswer != 0 && mineAnswer != 1) {
-            printf("Invalid input. Please enter 0 or 1.\n");
+            printf("Error: Invalid input. Please enter 0 or 1.\n");
         }
 
     } while (validInput != 1 || mineAnswer != 0 && mineAnswer != 1);
@@ -41,7 +41,7 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     //If loop that runs if the user wants random mines.
     if (mineAnswer == 1) {
         do {
-            printf("\nHow many additional landmines do you want? (MAX = 500).\n>");
+            printf("\nHow many landmines do you want? (MAX = 500).\n>");
             validInput = scanf("%d", &amountOfMines);
 
             // Clear the input buffer to remove invalid characters
@@ -49,7 +49,7 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
 
             // Check if the input is valid and within the expected range
             if (validInput != 1 || amountOfMines < 0 || amountOfMines > 500) {
-                printf("Invalid input. Please enter 0 or 1.\n");
+                printf("Error: Invalid input. Please enter an integer in the interval [0,500].\n");
             }
 
         } while (validInput != 1 || amountOfMines < 0 || amountOfMines > 500);
@@ -76,7 +76,7 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
         fflush(stdin);
 
         if (validInput != 1 || choice != 0 && choice != 1) {
-            printf("Invalid input. Please enter 0 or 1.\n");
+            printf("Error: Invalid input. Please enter 0 or 1.\n");
         }
 
     } while (validInput != 1 || choice != 0 && choice != 1);
@@ -101,9 +101,13 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         fflush(stdin);
 
         // Check if the input is valid and within the expected range
-        if (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col)) {
-            printf("Input is either invalid, outside the array, or an obstacle. Please enter a valid coordinate.\n");
-        }
+            if(validInput != 2) {
+                printf("Error: Input is invalid, use two integers. Please enter a valid coordinate.\n");
+            } else if (!isWithinArray(start->row, start->col)) {
+                printf("Error: Input is not within the array. Please enter a valid coordinate.\n");
+            } else if (!isUnblocked(map, start->row, start->col)) {
+                printf("Error: Input is blocked by water or a landmine. Please enter a valid coordinate.\n");
+            }
 
     } while (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col));
     printf("You selected: %d %d\n", start->row, start->col);
@@ -117,8 +121,12 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         fflush(stdin);
 
         // Check if the input is valid and within the expected range
-        if (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col)) {
-            printf("Input is either invalid, outside the array, or an obstacle. Please enter a valid coordinate.\n");
+        if(validInput != 2) {
+            printf("Error: Input is invalid, use two integers. Please enter a valid coordinate.\n");
+        } else if (!isWithinArray(dest->row, dest->col)) {
+            printf("Error: Input is not within the array. Please enter a valid coordinate.\n");
+        } else if (!isUnblocked(map, dest->row, dest->col)) {
+            printf("Error: Input is blocked by water or a landmine. Please enter a valid coordinate.\n");
         }
 
     } while (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col));
