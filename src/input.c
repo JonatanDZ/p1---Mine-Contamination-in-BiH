@@ -142,5 +142,6 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         return inputCoordinates(map, start, dest);
     }
 
+    // Printing information text.
     printf("\nProcessing route from (%d , %d) --> (%d , %d).\n", start->row, start->col, dest->row, dest->col);
 }
