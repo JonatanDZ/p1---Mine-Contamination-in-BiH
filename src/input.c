@@ -41,9 +41,20 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     //If loop that runs if the user wants random mines.
     if (mineAnswer == 1) {
         do {
-            printf("How many additional mines do you want?\n>");
-            scanf("%d", &amountOfMines);
-        } while(amountOfMines < 0);
+            printf("\nHow many additional landmines do you want? (MAX = 500).\n>");
+            validInput = scanf("%d", &amountOfMines);
+
+            // Clear the input buffer to remove invalid characters
+            fflush(stdin);
+
+            // Check if the input is valid and within the expected range
+            if (validInput != 1 || amountOfMines < 0 || amountOfMines > 500) {
+                printf("Invalid input. Please enter 0 or 1.\n");
+            }
+
+        } while (validInput != 1 || amountOfMines < 0 || amountOfMines > 500);
+        printf("You selected: %d\n", amountOfMines);
+
         randomMineGen(map, amountOfMines);
     }
 }
@@ -53,10 +64,10 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
  * @param map map from main.
  */
 void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
-    // Terrain type
     int choice;
     int validInput; // Variable to store the result of scanf
 
+    // Terrain type
     do {
         printf("\nDo you want normal terrain (0) or flat terrain (1)?\n>");
         validInput = scanf("%d", &choice);
@@ -71,6 +82,7 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
     } while (validInput != 1 || choice != 0 && choice != 1);
     printf("You selected: %d\n", choice);
 
+    // If loop that runs shortestRoute function, if user chose said option.
     if (choice == 1) {
         shortestRoute(map);
     }
@@ -78,13 +90,11 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
 
 //Makes the start and end posistions.
 int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
-    // Starter fra 0, så minus en for koordinat.
-    int startRow = -1, startCol = -1;
     int validInput; // Variable to store the result of scanf
 
     // Start coordinates
     do {
-        printf("Input x y coordinates for the start location, within the coordinate interval from 0 0 to %d %d.\n>", MAPSIZE-1, MAPSIZE-1);
+        printf("\nInput x y coordinates for the start location, within the coordinate interval from 0 0 to %d %d.\n>", MAPSIZE-1, MAPSIZE-1);
         validInput = scanf("%d %d", &start->row, &start->col);
 
         // Clear the input buffer to remove invalid characters
@@ -98,7 +108,7 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
     } while (validInput != 2 || !isWithinArray(start->row, start->col));
     printf("You selected: %d %d\n", start->row, start->col);
 
-
+    // Checks the chosen coordinate is not intraversable
     if (isUnblocked(map, start->row, start->col) == false) {
         printf("Error: Start cannot be on a mine or river, please reenter the first coordinates \n");
         return inputCoordinates(map, start, dest);
@@ -118,13 +128,15 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         }
 
     } while (validInput != 2 || !isWithinArray(dest->row, dest->col));
-    printf("You selected: %d %d\n", dest->row, dest->col);
+    printf("You selected: %d %d\n\n", dest->row, dest->col);
 
+    // Checks the chosen coordinate is not intraversable
     if (isUnblocked(map, dest->row, dest->col) == false) {
         printf("Error: Destination cannot be on a mine or river, please enter both coordinates again.\n");
         return inputCoordinates(map, start, dest);
     }
 
+    // Checks the start and end coordinates are not the same cell.
     if (start->row == dest->row && start->col == dest->col) {
         printf("Error: Start and destination cannot be the same!\n");
         return inputCoordinates(map, start, dest);
