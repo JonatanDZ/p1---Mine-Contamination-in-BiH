@@ -9,4 +9,5 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
 void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
 void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]);
 
+
 #endif //INPUT_H

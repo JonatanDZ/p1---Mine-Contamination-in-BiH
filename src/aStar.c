@@ -157,8 +157,8 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
 double hCalc(int row, int col, int destRow, int destCol) {
   int diffRow = abs(row - destRow);
   int diffCol = abs(col - destCol);
-  int D = 10;
-  int D2 = 10 * 1.4;
+  int D = asphalt;
+  double D2 = asphalt * 1.4;
   return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
 

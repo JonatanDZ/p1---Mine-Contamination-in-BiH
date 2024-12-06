@@ -40,4 +40,7 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 
+void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]);
+bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
+
 #endif //MAP_H
