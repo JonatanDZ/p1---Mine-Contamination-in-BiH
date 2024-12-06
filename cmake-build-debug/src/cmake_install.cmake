@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/asta/OneDrive/Dokumenter/GitHub/p1---Mine-Contamination-in-BiH/src
+# Install script for directory: C:/Users/fange/OneDrive - Aalborg Universitet/P1 GitHub/p1---Mine-Contamination-in-BiH/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
