@@ -14,8 +14,6 @@ int main(){
     //From hardcoded
     createMap(map);
 
-    inputForShortestRouteAndMineGen(map);
-
     input(map, &start, &dest);
 
     aStarSearch(map, start, dest);
