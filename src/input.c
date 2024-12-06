@@ -101,18 +101,12 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         fflush(stdin);
 
         // Check if the input is valid and within the expected range
-        if (validInput != 2 || !isWithinArray(start->row, start->col)) {
+        if (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col)) {
             printf("Invalid input. Please enter a valid coordinate.\n");
         }
 
-    } while (validInput != 2 || !isWithinArray(start->row, start->col));
+    } while (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col));
     printf("You selected: %d %d\n", start->row, start->col);
-
-    // Checks the chosen coordinate is not intraversable
-    if (isUnblocked(map, start->row, start->col) == false) {
-        printf("Error: Start cannot be on a mine or river, please reenter the first coordinates \n");
-        return inputCoordinates(map, start, dest);
-    }
 
     // Destination coordinates
     do {
@@ -123,18 +117,12 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         fflush(stdin);
 
         // Check if the input is valid and within the expected range
-        if (validInput != 2 || !isWithinArray(dest->row, dest->col)) {
+        if (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col)) {
             printf("Invalid input. Please enter a valid coordinate.\n");
         }
 
-    } while (validInput != 2 || !isWithinArray(dest->row, dest->col));
+    } while (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col));
     printf("You selected: %d %d\n\n", dest->row, dest->col);
-
-    // Checks the chosen coordinate is not intraversable
-    if (isUnblocked(map, dest->row, dest->col) == false) {
-        printf("Error: Destination cannot be on a mine or river, please enter both coordinates again.\n");
-        return inputCoordinates(map, start, dest);
-    }
 
     // Checks the start and end coordinates are not the same cell.
     if (start->row == dest->row && start->col == dest->col) {
