@@ -102,7 +102,7 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
 
         // Check if the input is valid and within the expected range
         if (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col)) {
-            printf("Invalid input. Please enter a valid coordinate.\n");
+            printf("Input is either invalid, outside the array, or an obstacle. Please enter a valid coordinate.\n");
         }
 
     } while (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col));
@@ -118,7 +118,7 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
 
         // Check if the input is valid and within the expected range
         if (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col)) {
-            printf("Invalid input. Please enter a valid coordinate.\n");
+            printf("Input is either invalid, outside the array, or an obstacle. Please enter a valid coordinate.\n");
         }
 
     } while (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col));
@@ -130,6 +130,6 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         return inputCoordinates(map, start, dest);
     }
 
-    // Printing information text.
+
     printf("\nProcessing route from (%d , %d) --> (%d , %d).\n", start->row, start->col, dest->row, dest->col);
 }
