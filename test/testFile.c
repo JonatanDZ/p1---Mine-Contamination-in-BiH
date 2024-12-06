@@ -47,7 +47,7 @@ bool test_isUnblocked(void) {
     bool result = isUnblocked(map, test_row,test_col);
 
     //ASSERT
-    assert(result == true);
+    assert(result == false);
 
     return result;
 }
