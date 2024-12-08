@@ -57,12 +57,12 @@ void test_createMapWFile() {
 
     //ACT
     createMap(mapHardcoded);
-    readMapFileIntoArray(mapFromFile);
+    createMapWFile(mapFromFile);
 
     //ASSERT
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
-            assert(mapHardcoded[i][j] == mapFromFile[i+1][j]);
+            assert(mapHardcoded[i][j] == mapFromFile[i][j]);
         }
     }
 }

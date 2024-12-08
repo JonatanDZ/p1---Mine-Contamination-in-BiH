@@ -3,7 +3,6 @@
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 #define MAPSIZE 32
-#include "dataStructures.h"
 #include <stdbool.h>
 //The following are used in the .c file. Do not delete.
 #include <stdlib.h>
@@ -48,7 +47,7 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
 /* TODO: --- ONLY USED FOR TESTING --- */
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 /* TODO: --- UNUSED FUNCTIONS --- */
-bool isDestination(int row, int col, coor_t dest);
+bool isDestination(int row, int col, int destRow, int destCol);
 void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 #endif //MAP_H
 

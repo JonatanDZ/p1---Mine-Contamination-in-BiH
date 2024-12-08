@@ -1,4 +1,5 @@
 #include "map.h"
+#include "dataStructures.h"
 
 /**
  * Function encapsulating map creation from file, reading and converting to enum.
@@ -321,6 +322,7 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
         }
     }
 }
+
 /* TODO: --- UNUSED FUNCTIONS --- */
 /**
  * Utility function determining whether a not a given input is the destination.
@@ -328,8 +330,8 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
  * @param col Input, col to check.
  * @return true if within, else returns false.
  */
-bool isDestination(int row, int col, coor_t dest) {
-    return row == dest.row && col == dest.col;
+bool isDestination(int row, int col, int destRow, int destCol) {
+    return row == destRow && col == destCol;
 }
 /**
  * Function that prints the map.
