@@ -1,10 +1,19 @@
 #include "map.h"
 
 /**
- * Function that assigns data from txt file to an array.
+ * Function encapsulating map creation from file, reading and converting to enum.
  * @param map int array from main.
  */
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]) {
+    readMapFileIntoArray(map);
+    fromNumberToEnum(map);
+}
+
+/**
+ * Function that assigns data from txt file to an array.
+ * @param map int array from main.
+ */
+void readMapFileIntoArray(int map[MAPSIZEROW][MAPSIZECOL]) {
     FILE *mapfile; // File we need to open
     int i; // int to increment during for-loop
     int j; // int to increment during for-loop
@@ -75,93 +84,6 @@ void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]) {
     }
 }
 
-//Our hardcoded map.
-void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
-    int templateMap[32][32] = { //This is our hardcoded map
-        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain1,mountain1,mountain1,forest,forest, field, asphalt, city, water, water, city, city, asphalt, field,field,field,mine, forest, forest, mine, forest, forest, mine, mountain1, mountain2, mountain2, mountain2},
-        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,forest,forest,asphalt,asphalt, city, water, water, city, asphalt, field, field, field, field,mine,forest,forest,forest,forest,forest,mountain1, mountain1, mountain2, mountain2,},
-        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain1, mountain1, forest, field, asphalt, asphalt, city, water, water, asphalt, asphalt, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain2},
-        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, forest, forest, field, asphalt, city, water, water, water, asphalt,field,field,field, field, field, mine, field, forest, forest, forest, forest, mountain1, mountain2},
-        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, mountain1, forest, forest, asphalt, asphalt, water, water, water, asphalt, asphalt, city, field,field,field,field,field,forest, forest, mine, forest, mountain1, mountain1},
-        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, mountain1, mountain1, forest, field, asphalt, asphalt, water, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, mountain1, mountain1},
-        {mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, field, asphalt, water, water, water, asphalt , city, city, city, field, field, field, forest, forest, forest, mountain1, mountain1, mountain2},
-        {mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, forest, field, asphalt, water, water, water, asphalt, city, city, city, field, field, field, forest,forest,forest, mountain1, mountain1, mountain2 },
-        {mountain2, mountain2, mountain2,mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, mountain1, forest, forest, forest, field, asphalt, asphalt, city, water, water, asphalt, city, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2 },
-        {mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,mountain1,mountain1, forest, forest, field, field, field, asphalt, city, city, water, water, asphalt, city, city, city, field, field, forest, mine, forest, mountain1, mountain1, mountain2, mountain2},
-        {mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, forest, field, field, field, asphalt, asphalt, asphalt, city, city, water, water, asphalt, city, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1,mountain2},
-        {mountain2, mountain2, mountain2, mountain1, mountain1, forest, forest, field, field, field, asphalt, asphalt, asphalt, city, city, city, water, water, water, asphalt, city, city, field, field, mine, forest, forest, forest, mountain1, mountain2, mountain2, mountain2 },
-        {mountain2, mountain2, mountain2, mountain1, forest, forest, field, field, city, city, asphalt, city,city,city,city,city, water, water, asphalt, asphalt, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2, mountain2},
-        {mountain2, mountain2, mountain1, mountain1, forest, city, city, city, city, city, asphalt, city, city, city, city, water, water, water, asphalt, city, city, city, field, field, forest, forest, mine, forest, mountain1, mountain1, mountain1, mountain2},
-        {mountain2, mountain2, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, city, city, city, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1},
-        {mountain2, mountain2, mountain1, forest, city, city, city, city, city, city, city, asphalt, city, city, water, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1},
-        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, city, asphalt, water, water, asphalt, asphalt, city, city, city, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain2},
-        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, asphalt, asphalt, water, water, asphalt, city, city, city, city, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2},
-        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, asphalt, asphalt, water, water, asphalt, city, city, city, city, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2},
-        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, asphalt, asphalt, water, water, water, asphalt, city, city, city, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2}, //
-        {mountain1, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, asphalt, asphalt, water, asphalt, asphalt, city, city, field, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
-        {mountain1, mountain1, forest, field, field, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, city, city, field, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
-        {mountain1, forest, forest, field, asphalt, asphalt, water, water, water, water, water, city, city, city, city, city, city, city, city, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
-        {mountain1, forest, forest, asphalt, asphalt, water, water, water, water, water, city, city, city, city, city, city, city, city, city, mine, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
-        {mountain1, forest, field, asphalt, water, water, water, water, city, city, city, city, city , city, city, city, city, city, field, field, field, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2}, //
-        {forest, forest, asphalt, asphalt, water, city, water, city, city, field, mine, city, city, city, city, city, city, field, mine, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2}, //
-        {forest, field, asphalt, water, water, city, water, city, field, field, field, field, field, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2}, //
-        {field, asphalt, asphalt, water, city, water, water, city, mine, field, field, mine, field, forest, forest, forest, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mine, mountain2, mountain2, mountain2, mountain2}, //
-        {field, asphalt, water, water, city, water, city, field, field, field, mine, forest, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2}, //
-        {asphalt, asphalt, water, water, city, water, city, mine, field, field, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mine, mountain1, mountain1, mountain1, mountain2, mine, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2}, //
-        {asphalt, water, water, city, city, water, city, field, mine, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2}, //
-        {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
-    };
-    for (int i = 0; i < MAPSIZEROW; i++) {
-        for (int j = 0; j < MAPSIZECOL; j++) {
-            map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
-        }
-    }
-}
-
-
-//Changes the enum to 10 so we are able to see the shortest route without terrain.
-/**
- *
- * @param map all terrain values in map are changed to the same so it will show the shortest rather than the fastest
- */
-void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
-    for (int i = 0; i < MAPSIZEROW; i++) {
-        for (int j = 0; j < MAPSIZECOL; j++) {
-            switch (map[i][j]) {
-            case mine:
-                map[i][j] = mine;
-                break;
-            case water:
-                map[i][j] = water;
-                break;
-            case asphalt:
-                map[i][j] = asphalt;
-                break;
-            case city:
-                map[i][j] = asphalt;
-                break;
-            case field:
-                map[i][j] = asphalt;
-                break;
-            case forest:
-                map[i][j] = asphalt;
-                break;
-            case mountain1:
-                map[i][j] = asphalt;
-                break;
-            case mountain2:
-                map[i][j] = asphalt;
-                break;
-            case startPosition:
-                map[i][j] = 10;
-                break;
-            case endPosition:
-                map[i][j] = 10;
-            }
-        }
-    }
-}
-
 //Genereates mines that are placed random on the map, and overwrites the value already there
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     srand(time(NULL));
@@ -182,99 +104,6 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
             i++;
         }
     }
-}
-
-/**
- * Function that checks if a cell in the array is blocked i.e. untraversable.
- * @param map Int array from main.
- * @param row Int indicating which row in the array should be looked up.
- * @param col Int indication which column in the arary should be looked up.
- * @return True or false whether the location in the array is traversable.
- */
-bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
-    if (map[row][col] == water || map[row][col] == mine) {
-        return false;
-    }
-    return true;
-}
-
-/**
- * Utility function determining whether a not a given input is within the 2d array.
- * @param row Input, row to check.
- * @param col Input, col to check.
- * @return true if within, else returns false.
- */
-bool isWithinArray(int row, int col) {
-    if (row >= 0 && row < MAPSIZEROW && col >= 0 && col < MAPSIZECOL) {
-        return true;
-    }
-    return false;
-}
-
-//Changes the value from enum to char, so it will be printed correcly.
-
-/**
- * This function changes the values so it looks neat drawn with asciis symbols
- * @param map s values are updated so it looks neat drawn with asciis symbols
- */
-
-void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
-    for (int i = 0; i < MAPSIZEROW; i++) {
-        printf("\n");
-        for (int j = 0; j < MAPSIZECOL; j++) {
-            switch (map[i][j]) {
-                case mine:
-                    printf("\033[38;5;196mXX \033[0m");
-                break;
-                case water:
-                    printf("\033[38;5;32m~~ \033[0m");
-                break;
-                case asphalt:
-                    printf("\033[38;5;214mMM \033[0m");
-                break;
-                case city:
-                    printf("\033[38;5;231mMM \033[0m");
-                break;
-                case field:
-                    printf("\033[38;5;46mWW \033[0m");
-                break;
-                case forest:
-                    printf("\033[38;5;22mTT \033[0m");
-                break;
-                case mountain1:
-                    printf("\033[28;5;8mMM \033[0m");
-                break;
-                case mountain2:
-                    printf("\033[38;5;7mMM \033[0m");
-                break;
-                case startPosition:
-                    printf("\033[38;5;213mMM \033[0m");
-                break;
-                case endPosition:
-                    printf("\033[38;5;213mMM \033[0m");
-                break;
-                default:
-                    printf("\033[38;5;213mMM \033[0m");
-            }
-        }
-    }
-}
-
-
-/**
- * Function that prints the map.
- * @param map int array from main.
- */
-void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
-    printf("\n");
-    // For-loop which prints each value in the array.
-    for (int i = 0; i < MAPSIZEROW; i++){
-        for (int j = 0; j < MAPSIZEROW; j++){
-            printf("%2d ", map[i][j]);
-        }
-        printf("\n");
-    }
-
 }
 
 void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]) {
@@ -330,7 +159,168 @@ bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
     return true;
 }
 
+/**
+ *
+ * @param map all terrain values in map are changed to the same so it will show the shortest rather than the fastest
+ */
+void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            switch (map[i][j]) {
+            case mine:
+                map[i][j] = mine;
+                break;
+            case water:
+                map[i][j] = water;
+                break;
+            case asphalt:
+                map[i][j] = asphalt;
+                break;
+            case city:
+                map[i][j] = asphalt;
+                break;
+            case field:
+                map[i][j] = asphalt;
+                break;
+            case forest:
+                map[i][j] = asphalt;
+                break;
+            case mountain1:
+                map[i][j] = asphalt;
+                break;
+            case mountain2:
+                map[i][j] = asphalt;
+                break;
+            case startPosition:
+                map[i][j] = 10;
+                break;
+            case endPosition:
+                map[i][j] = 10;
+            }
+        }
+    }
+}
 
+/**
+ * Utility function determining whether a not a given input is within the 2d array.
+ * @param row Input, row to check.
+ * @param col Input, col to check.
+ * @return true if within, else returns false.
+ */
+bool isWithinArray(int row, int col) {
+    if (row >= 0 && row < MAPSIZEROW && col >= 0 && col < MAPSIZECOL) {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * Function that checks if a cell in the array is blocked i.e. untraversable.
+ * @param map Int array from main.
+ * @param row Int indicating which row in the array should be looked up.
+ * @param col Int indication which column in the arary should be looked up.
+ * @return True or false whether the location in the array is traversable.
+ */
+bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
+    if (map[row][col] == water || map[row][col] == mine) {
+        return false;
+    }
+    return true;
+}
+
+/**
+ * This function changes the values so it looks neat drawn with asciis symbols
+ * @param map s values are updated so it looks neat drawn with asciis symbols
+ */
+void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        printf("\n");
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            switch (map[i][j]) {
+                case mine:
+                    printf("\033[38;5;196mXX \033[0m");
+                break;
+                case water:
+                    printf("\033[38;5;32m~~ \033[0m");
+                break;
+                case asphalt:
+                    printf("\033[38;5;214mMM \033[0m");
+                break;
+                case city:
+                    printf("\033[38;5;231mMM \033[0m");
+                break;
+                case field:
+                    printf("\033[38;5;46mWW \033[0m");
+                break;
+                case forest:
+                    printf("\033[38;5;22mTT \033[0m");
+                break;
+                case mountain1:
+                    printf("\033[28;5;8mMM \033[0m");
+                break;
+                case mountain2:
+                    printf("\033[38;5;7mMM \033[0m");
+                break;
+                case startPosition:
+                    printf("\033[38;5;213mMM \033[0m");
+                break;
+                case endPosition:
+                    printf("\033[38;5;213mMM \033[0m");
+                break;
+                default:
+                    printf("\033[38;5;213mMM \033[0m");
+            }
+        }
+    }
+}
+
+
+
+/* TODO: --- ONLY USED FOR TESTING --- */
+/** Copies hardcoded array into provided array argument.
+ *
+ */
+void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
+    int templateMap[32][32] = { //This is our hardcoded map
+        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain1,mountain1,mountain1,forest,forest, field, asphalt, city, water, water, city, city, asphalt, field,field,field,mine, forest, forest, mine, forest, forest, mine, mountain1, mountain2, mountain2, mountain2},
+        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,forest,forest,asphalt,asphalt, city, water, water, city, asphalt, field, field, field, field,mine,forest,forest,forest,forest,forest,mountain1, mountain1, mountain2, mountain2,},
+        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain1, mountain1, forest, field, asphalt, asphalt, city, water, water, asphalt, asphalt, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain2},
+        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, forest, forest, field, asphalt, city, water, water, water, asphalt,field,field,field, field, field, mine, field, forest, forest, forest, forest, mountain1, mountain2},
+        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, mountain1, forest, forest, asphalt, asphalt, water, water, water, asphalt, asphalt, city, field,field,field,field,field,forest, forest, mine, forest, mountain1, mountain1},
+        {mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2,mountain2, mountain1, mountain1, mountain1, forest, field, asphalt, asphalt, water, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, mountain1, mountain1},
+        {mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, field, asphalt, water, water, water, asphalt , city, city, city, field, field, field, forest, forest, forest, mountain1, mountain1, mountain2},
+        {mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, forest, field, asphalt, water, water, water, asphalt, city, city, city, field, field, field, forest,forest,forest, mountain1, mountain1, mountain2 },
+        {mountain2, mountain2, mountain2,mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, mountain1, forest, forest, forest, field, asphalt, asphalt, city, water, water, asphalt, city, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2 },
+        {mountain2,mountain2,mountain2,mountain2,mountain2, mountain1,mountain1,mountain1,mountain1, forest, forest, field, field, field, asphalt, city, city, water, water, asphalt, city, city, city, field, field, forest, mine, forest, mountain1, mountain1, mountain2, mountain2},
+        {mountain2, mountain2, mountain2, mountain1, mountain1, mountain1, forest, forest, forest, field, field, field, asphalt, asphalt, asphalt, city, city, water, water, asphalt, city, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1,mountain2},
+        {mountain2, mountain2, mountain2, mountain1, mountain1, forest, forest, field, field, field, asphalt, asphalt, asphalt, city, city, city, water, water, water, asphalt, city, city, field, field, mine, forest, forest, forest, mountain1, mountain2, mountain2, mountain2 },
+        {mountain2, mountain2, mountain2, mountain1, forest, forest, field, field, city, city, asphalt, city,city,city,city,city, water, water, asphalt, asphalt, city, city, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain2, mountain2},
+        {mountain2, mountain2, mountain1, mountain1, forest, city, city, city, city, city, asphalt, city, city, city, city, water, water, water, asphalt, city, city, city, field, field, forest, forest, mine, forest, mountain1, mountain1, mountain1, mountain2},
+        {mountain2, mountain2, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, city, city, city, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1},
+        {mountain2, mountain2, mountain1, forest, city, city, city, city, city, city, city, asphalt, city, city, water, water, water, asphalt, city, city, city, field, field, field, mine, forest, forest, forest, forest, mountain1, mountain1, mountain1},
+        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, city, asphalt, water, water, asphalt, asphalt, city, city, city, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain2},
+        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, asphalt, asphalt, water, water, asphalt, city, city, city, city, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2},
+        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, city, asphalt, asphalt, water, water, asphalt, city, city, city, city, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2},
+        {mountain2, mountain1, mountain1, forest, city, city, city, city, city, city, asphalt, asphalt, water, water, water, asphalt, city, city, city, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain2, mountain2}, //
+        {mountain1, mountain1, forest, forest, city, city, city, city, city, asphalt, asphalt, asphalt, asphalt, water, asphalt, asphalt, city, city, field, field, field, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
+        {mountain1, mountain1, forest, field, field, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, city, city, field, field, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
+        {mountain1, forest, forest, field, asphalt, asphalt, water, water, water, water, water, city, city, city, city, city, city, city, city, field, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
+        {mountain1, forest, forest, asphalt, asphalt, water, water, water, water, water, city, city, city, city, city, city, city, city, city, mine, field, field, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2}, //
+        {mountain1, forest, field, asphalt, water, water, water, water, city, city, city, city, city , city, city, city, city, city, field, field, field, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2}, //
+        {forest, forest, asphalt, asphalt, water, city, water, city, city, field, mine, city, city, city, city, city, city, field, mine, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2}, //
+        {forest, field, asphalt, water, water, city, water, city, field, field, field, field, field, field, field, field, field, field, field, forest, mine, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2}, //
+        {field, asphalt, asphalt, water, city, water, water, city, mine, field, field, mine, field, forest, forest, forest, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mine, mountain2, mountain2, mountain2, mountain2}, //
+        {field, asphalt, water, water, city, water, city, field, field, field, mine, forest, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2}, //
+        {asphalt, asphalt, water, water, city, water, city, mine, field, field, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mine, mountain1, mountain1, mountain1, mountain2, mine, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2}, //
+        {asphalt, water, water, city, city, water, city, field, mine, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2}, //
+        {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
+    };
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
+        }
+    }
+}
 /* TODO: --- UNUSED FUNCTIONS --- */
 /**
  * Utility function determining whether a not a given input is the destination.
@@ -340,4 +330,19 @@ bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
  */
 bool isDestination(int row, int col, coor_t dest) {
     return row == dest.row && col == dest.col;
+}
+/**
+ * Function that prints the map.
+ * @param map int array from main.
+ */
+void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
+    printf("\n");
+    // For-loop which prints each value in the array.
+    for (int i = 0; i < MAPSIZEROW; i++){
+        for (int j = 0; j < MAPSIZEROW; j++){
+            printf("%2d ", map[i][j]);
+        }
+        printf("\n");
+    }
+
 }

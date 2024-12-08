@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+
+#include "dataStructures.h"
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 #define MAPSIZE 32
@@ -29,6 +31,7 @@ typedef enum {
 } moveValue;
 
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
+void readMapFileIntoArray(int map[MAPSIZEROW][MAPSIZECOL]);
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);

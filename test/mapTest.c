@@ -57,7 +57,7 @@ void test_createMapWFile() {
 
     //ACT
     createMap(mapHardcoded);
-    createMapWFile(mapFromFile);
+    readMapFileIntoArray(mapFromFile);
 
     //ASSERT
     for (int i = 0; i < MAPSIZEROW; i++) {

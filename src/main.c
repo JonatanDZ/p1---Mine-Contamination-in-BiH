@@ -9,14 +9,11 @@ int main(){
 
     createMapWFile(map);
 
-    fromNumberToEnum(map);
-
     input(map, &start, &dest);
 
     aStarSearch(map, start, dest);
 
     terminalOutPut(map);
-
 
     return 0;
 }
