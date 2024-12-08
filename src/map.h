@@ -1,11 +1,14 @@
 #ifndef MAP_H
 #define MAP_H
+#include "dataStructures.h"
+#include <stdbool.h>
+//The following are used in the .c file. Do not delete.
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 #define MAPSIZEROW 32
 #define MAPSIZECOL 32
 #define MAPSIZE 32
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * Enum setting each cell's value to time it takes to walk in seconds.
@@ -25,22 +28,26 @@ typedef enum {
     endPosition = 3
 } moveValue;
 
-void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
 void createMapWFile(int map[MAPSIZEROW][MAPSIZECOL]);
 void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]);
 
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines);
-void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
-
-bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
-bool isWithinArray(int row, int col);
-
-
-void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
-
-void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
-
 void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]);
 bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
+void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]);
+
+bool isWithinArray(int row, int col);
+bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
+
+void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
+
+
+
+/* TODO: --- ONLY USED FOR TESTING --- */
+void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
+/* TODO: --- UNUSED FUNCTIONS --- */
+bool isDestination(int row, int col, coor_t dest);
+void printMap(int map[MAPSIZEROW][MAPSIZECOL]);
 #endif //MAP_H
+

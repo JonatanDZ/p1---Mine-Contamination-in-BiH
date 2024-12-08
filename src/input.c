@@ -88,7 +88,10 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
     }
 }
 
-//Makes the start and end posistions.
+/**
+ * Function that prompts the user for input for start and destination coordinates.
+ * @param map map from main.
+ */
 int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     int validInput; // Variable to store the result of scanf
 
