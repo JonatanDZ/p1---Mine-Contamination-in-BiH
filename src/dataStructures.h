@@ -1,11 +1,11 @@
 #ifndef DATASTRUCTURES_H
 #define DATASTRUCTURES_H
+#define NOPARENTYET -1
 #include <stdbool.h>
 #include "map.h"
 //The following are used in the .c file. Do not delete.
 #include <float.h>
 #include <tgmath.h>
-#define NOPARENTYET -1
 
 typedef struct {
     int row;

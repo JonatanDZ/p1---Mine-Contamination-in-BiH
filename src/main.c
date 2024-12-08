@@ -1,7 +1,7 @@
-#include "aStar.h"
-#include "input.h"
 #include "dataStructures.h"
 #include "map.h"
+#include "input.h"
+#include "aStar.h"
 
 int main(){
     coor_t start, dest;

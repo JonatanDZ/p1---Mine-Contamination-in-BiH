@@ -1,16 +1,14 @@
 #ifndef MAP_H
 #define MAP_H
+#define MAPSIZEROW 32
+#define MAPSIZECOL 32
+#define MAPSIZE 32
 #include "dataStructures.h"
 #include <stdbool.h>
 //The following are used in the .c file. Do not delete.
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
-#include "dataStructures.h"
-#define MAPSIZEROW 32
-#define MAPSIZECOL 32
-#define MAPSIZE 32
 
 /**
  * Enum setting each cell's value to time it takes to walk in seconds.
