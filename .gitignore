@@ -1,0 +1,4 @@
+cmake-build-*
+.idea\*
+main.exe
+main
