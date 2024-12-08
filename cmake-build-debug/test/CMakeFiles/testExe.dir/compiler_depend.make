@@ -56,7 +56,8 @@ test/CMakeFiles/testExe.dir/testFile.c.obj: C:/Users/a-bti/OneDrive/Documents/Gi
   C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
   C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/src/map.h \
-  C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/mapTest.c
+  C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/mapTest.c \
+  C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/test.h
 
 
 C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h:
@@ -96,6 +97,8 @@ C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw3
 C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl:
 
 C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/errno.h:
+
+C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/test.h:
 
 C:/Users/a-bti/AppData/Local/JetBrains/CLion\ 2024.3/bin/mingw/x86_64-w64-mingw32/include/limits.h:
 
