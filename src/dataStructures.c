@@ -1,6 +1,4 @@
 #include "dataStructures.h"
-#include "aStar.h"
-#include <float.h>
 
 /** Initializes an empty cell map.
  * @param cellMap the array of cells structs to update values within.
@@ -42,6 +40,17 @@ void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int succ
     //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 }
 
+double hCalc(int row, int col, int destRow, int destCol) {
+    int diffRow = abs(row - destRow);
+    int diffCol = abs(col - destCol);
+    int D = asphalt;
+    double D2 = asphalt * 1.4;
+    return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
+}
+
+
+
+/* TODO: --- DEBUGGING FUNCTIONS --- */
 /**
  * Utility function printing a cell for debugging purposes.
  * @param cell, cell to print

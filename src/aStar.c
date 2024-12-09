@@ -1,6 +1,5 @@
 #include "aStar.h"
 
-
 void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 /* 0) Set up */
 
@@ -65,55 +64,6 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
 }
 
-void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
-/* For each of the 8 cells surrounding current cell*/
-  for (int r = -1; r <= 1; r++) {
-    for (int c = -1; c <= 1; c++) {
-
-      //Ensuring center cell is ignored
-      if (r != 0 || c != 0) {
-
-        //The successors' coordinates for readability
-        int successorRow = row + r;
-        int successorCol = col + c;
-
-        //This ensures that walking diagonally has an extra cost which is the increased walking distance
-        int successorGCost;
-        if (r == 0 || c == 0) {
-          successorGCost = cellMap[row][col].g + map[successorRow][successorCol];
-        } else {
-          successorGCost = cellMap[row][col].g + map[successorRow][successorCol] * 1.4;
-        }
-
-        //If cell is outside map bounds or already in the closed list, successors do should not be generated. Instead cell is ignored.
-        if (isWithinArray(successorRow, successorCol) && cellMap[successorRow][successorCol].closedList == false) {
-
-          //Also ignore blocked cells
-          if (isUnblocked(map, successorRow, successorCol)) {
-
-
-              // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
-              if (cellMap[successorRow][successorCol].openList == false) {
-                initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
-
-                //Add it to the 'open' list
-                cellMap[successorRow][successorCol].openList = true;
-              }
-
-              // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure by G.cost
-              if (successorGCost < cellMap[successorRow][successorCol].g) {
-                initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
-
-            }
-            // Print til debugging
-            /*printCell(cellMap[successorRow][successorCol], successorRow, successorCol);*/
-          }
-        }
-      }
-    }
-  }
-}
-
 /**
  *
  * @param cellMap Provides cell list to search through
@@ -154,12 +104,51 @@ bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resul
   return first;
 }
 
-double hCalc(int row, int col, int destRow, int destCol) {
-  int diffRow = abs(row - destRow);
-  int diffCol = abs(col - destCol);
-  int D = asphalt;
-  double D2 = asphalt * 1.4;
-  return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
+void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
+/* For each of the 8 cells surrounding current cell*/
+  for (int r = -1; r <= 1; r++) {
+    for (int c = -1; c <= 1; c++) {
+
+      //Ensuring center cell is ignored
+      if (r != 0 || c != 0) {
+
+        //The successors' coordinates for readability
+        int successorRow = row + r;
+        int successorCol = col + c;
+
+        //This ensures that walking diagonally has an extra cost which is the increased walking distance
+        int successorGCost;
+        if (r == 0 || c == 0) {
+          successorGCost = cellMap[row][col].g + map[successorRow][successorCol];
+        } else {
+          successorGCost = cellMap[row][col].g + map[successorRow][successorCol] * 1.4;
+        }
+
+        //If cell is outside map bounds or already in the closed list, successors do should not be generated. Instead cell is ignored.
+        if (isWithinArray(successorRow, successorCol) && cellMap[successorRow][successorCol].closedList == false) {
+
+          //Also ignore blocked cells
+          if (isUnblocked(map, successorRow, successorCol)) {
+
+
+              // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
+              if (cellMap[successorRow][successorCol].openList == false) {
+                initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
+
+                //Add it to the 'open' list
+                cellMap[successorRow][successorCol].openList = true;
+              }
+
+              // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure by G.cost
+              if (successorGCost < cellMap[successorRow][successorCol].g) {
+                initCell(cellMap, successorRow, successorCol, successorGCost, row, col , dest);
+
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -178,16 +167,6 @@ int tracePath(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZ
   }
   map[row][col] = 9;
   return tracePath(cellMap, map, cellMap[row][col].parentCoor.row, cellMap[row][col].parentCoor.col, start);
-}
-
-/**
- * Utility function determining whether a not a given input is the destination.
- * @param row Input, row to check.
- * @param col Input, col to check.
- * @return true if within, else returns false.
- */
-bool isDestination(int row, int col, coor_t dest) {
-  return row == dest.row && col == dest.col;
 }
 
 /**

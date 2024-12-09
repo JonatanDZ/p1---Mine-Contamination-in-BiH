@@ -1,5 +1,4 @@
 #include <assert.h>
-#include "test.h"
 #include "../src/map.h"
 
 
@@ -51,8 +50,7 @@ void test_isWithinArray_19_neg20() {
     assert(result == false);
 }
 
-bool test_createMapWFile() {
-    bool success = false;
+void test_createMapWFile() {
     //ARRANGE
     int mapHardcoded[MAPSIZEROW][MAPSIZECOL];
     int mapFromFile[MAPSIZEROW][MAPSIZECOL];
@@ -60,18 +58,11 @@ bool test_createMapWFile() {
     //ACT
     createMap(mapHardcoded);
     createMapWFile(mapFromFile);
-    fromNumberToEnum(mapFromFile);
 
     //ASSERT
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
-            if (assertion(mapHardcoded[i][j] == mapFromFile[i][j])) {
-                success = true;
-            } else {
-                return false;
-            }
+            assert(mapHardcoded[i][j] == mapFromFile[i][j]);
         }
     }
-
-    return success;
 }
