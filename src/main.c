@@ -9,6 +9,8 @@ int main(){
 
     createMapWFile(map);
 
+    terminalOutPut(map);
+
     input(map, &start, &dest);
 
     aStarSearch(map, start, dest);

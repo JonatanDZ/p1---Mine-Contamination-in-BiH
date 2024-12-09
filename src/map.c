@@ -273,6 +273,7 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
             }
         }
     }
+    printf("\n");
 }
 
 
