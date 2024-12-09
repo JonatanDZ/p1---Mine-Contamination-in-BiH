@@ -23,7 +23,7 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
 
     // Landmine generation
     do {
-        printf("Do you want random landmines? No (0) or Yes (1).\n>");
+        printf("Do you want random landmines instead? No (0) or Yes (1).\n>");
         validInput = scanf("%d", &mineAnswer);
 
         // Clear the input buffer to remove invalid characters
@@ -56,6 +56,7 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
         printf("You selected: %d\n", amountOfMines);
 
         randomMineGen(map, amountOfMines);
+        terminalOutPut(map);
     }
 }
 
@@ -69,7 +70,7 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
 
     // Terrain type
     do {
-        printf("\nDo you want normal terrain (0) or flat terrain (1)?\n>");
+        printf("\nDo you want to continue with normal terrain (0) or switch to flat terrain (1)?\n>");
         validInput = scanf("%d", &choice);
 
         // Clear the input buffer to remove invalid characters
@@ -82,9 +83,10 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
     } while (validInput != 1 || choice != 0 && choice != 1);
     printf("You selected: %d\n", choice);
 
-    // If loop that runs shortestRoute function, if user chose said option.
+    // Conditional that runs shortestRoute function, if user chose said option.
     if (choice == 1) {
         shortestRoute(map);
+        terminalOutPut(map);
     }
 }
 
