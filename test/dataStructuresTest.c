@@ -27,3 +27,21 @@ void test_initEmptyCellMap() {
     }
 
 }
+
+void test_initCell() {
+    cell_t emptyCellMap[MAPSIZEROW][MAPSIZECOL];
+    double tolerance = 0.01;
+
+    //Act
+    initEmptyCellMap(emptyCellMap);
+
+
+    int test_row;
+    int test_col;
+    int gCost;
+    int test_parRow;
+    int test_parCol;
+    coor_t dest;
+
+    initCell()
+}
