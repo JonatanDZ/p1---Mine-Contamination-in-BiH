@@ -25,4 +25,5 @@ int main() {
     //test_randomMineGen500();  TODO: Virker i test.exe, fejler i allTest fordi den ikke kan finde filen
     aStarRouteTest_s0100_d0004();
     aStarRouteTest_s0400_d0101();
+    aStarVSdijkstra();
 }

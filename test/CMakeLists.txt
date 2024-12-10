@@ -8,6 +8,7 @@ add_executable(testExe
         test.h
         ../src/dataStructures.c
         ../src/aStar.c
+        ../src/dijkstra.c
 )
 
 target_compile_options(testExe PRIVATE -Wall -Wextra -Wpedantic -Werror)
