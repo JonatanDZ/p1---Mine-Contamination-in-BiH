@@ -1,3 +1,18 @@
-Start testing: Dec 10 20:49 Romance Standard Time
+Start testing: Dec 10 21:59 Romance Standard Time
 ----------------------------------------------------------
-End testing: Dec 10 20:49 Romance Standard Time
+1/1 Testing: arrayTester1
+1/1 Test: arrayTester1
+Command: "C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/test/testExe.exe"
+Directory: C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/test
+"arrayTester1" start time: Dec 10 21:59 Romance Standard Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.61 sec
+----------------------------------------------------------
+Test Passed.
+"arrayTester1" end time: Dec 10 21:59 Romance Standard Time
+"arrayTester1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 10 21:59 Romance Standard Time

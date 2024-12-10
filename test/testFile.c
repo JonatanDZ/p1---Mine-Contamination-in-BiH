@@ -13,7 +13,9 @@ bool assertion(bool expression) {
 int main() {
 
     /*----------------------------- aStarTest ------------------------------*/
-
+    test_fLinSearch_3open_2not();
+    test_fLinSearch_noneOpen_firstTrue();
+    test_fLinSearch_1open_2not();
 
     /*------------------------- dataStructuresTest -------------------------*/
     test_initEmptyCellMap();
