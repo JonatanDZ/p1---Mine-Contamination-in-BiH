@@ -1,6 +1,6 @@
 #include "aStar.h"
 
-void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
+int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 /* 0) Set up */
 
   //2d array to manage cells and 'lists', initialization
@@ -52,7 +52,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
       tracePath(cellMap, map, dest.row, dest.col, start);
       int gTotal = cellMap[dest.row][dest.col].g;
       printTime(gTotal);
-      return;
+      return gTotal;
     }
 
     generateSuccessors(cellMap, map, row, col, dest);
@@ -61,7 +61,7 @@ void aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
   if (openListIsEmpty == true) {
     printf("No Path is found.\n");
   }
-
+  return 0;
 }
 
 /**

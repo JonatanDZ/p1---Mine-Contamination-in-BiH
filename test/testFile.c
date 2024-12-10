@@ -3,6 +3,7 @@
 #include "mapTest.c"
 #include "TimTestHcalc.c"
 #include "TimTestMineGen.c"
+#include "aStarTest.c"
 
 
 bool assertion(bool expression) {
@@ -13,6 +14,8 @@ bool assertion(bool expression) {
 }
 
 int main() {
+    aStarRouteTest_s0100_d0004();
+    aStarRouteTest_s0400_d0101();
     test_isWithinArray_5_5();
     test_isWithinArray_50_50();
     test_isWithinArray_neg1_16();
