@@ -28,26 +28,22 @@ void test_initEmptyCellMap() {
 
 }
 
-void test_initCell() {
+void test_initCell_rc00_d2525() {
     cell_t emptyCellMap[MAPSIZEROW][MAPSIZECOL];
-    initEmptyCellMap(emptyCellMap);
 
     //Arrange
-    int test_row = 10;
-    int test_col = 10;
-    int test_gCost = 15;
-    int test_parRow = 9;
-    int test_parCol = 9;
+    int test_row = 0;
+    int test_col = 0;
+    int test_gCost = 45;
+    int test_parRow = 1;
+    int test_parCol = 1;
+    coor_t test_dest = {25, 25};
 
-    coor_t test_dest = {31, 31};
-    double expected_hCost = 819;
+    double expected_hCost = 525;
     double tolerance = 0.1;
-
-
 
     //Act
     initCell(emptyCellMap, test_row, test_col, test_gCost, test_parRow, test_parCol, test_dest);
-
 
     //Assert
     assert(emptyCellMap[test_row][test_col].parentCoor.row == test_parRow);

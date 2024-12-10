@@ -13,7 +13,7 @@ bool assertion(bool expression) {
 int main() {
 
     test_initEmptyCellMap();
-    test_initCell();
+    test_initCell_rc00_d2525();
 
     /* --- mapTest --- */
 
