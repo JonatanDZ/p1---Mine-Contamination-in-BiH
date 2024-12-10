@@ -1,3 +1,2 @@
-arrayTester1 10 0
+arrayTester1 13 0.0902869
 ---
-arrayTester1
