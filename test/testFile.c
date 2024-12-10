@@ -1,6 +1,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "mapTest.c"
+#include "TimTestHcalc.c"
+#include "TimTestMineGen.c"
 
 
 bool assertion(bool expression) {
@@ -15,5 +17,9 @@ int main() {
     test_isWithinArray_50_50();
     test_isWithinArray_neg1_16();
     test_isWithinArray_19_neg20();
-    printf("%d",test_createMapWFile());
+    test_hCalc_s00_d2525();
+    test_hCalc_s1010_d3131();
+    test_hCalc_s2928_d24();
+    test_hCalc_s290_d029();
+    test_randomMineGen500();
 }
