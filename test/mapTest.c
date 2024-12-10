@@ -19,7 +19,6 @@ void test_createMapWFile() {
     }
 }
 
-
 //isMineable
 void test_isMineable_0_4_water() {
     //ARRANGE
@@ -175,7 +174,6 @@ void test_isMineable_3_4_endPosition() {
     assert(result == true);
 }
 
-
 //shortestRoute
 void test_shortestRoute() {
     //ARRANGE
@@ -197,6 +195,7 @@ void test_shortestRoute() {
 
 
 }
+
 //isWithin array
 void test_isWithinArray_5_5() {
     //ARRANGE

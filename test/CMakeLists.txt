@@ -4,8 +4,10 @@ project(p1___Mine_Contamination_in_BiH C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(testExe
-        testFile.c ../src/map.c
-        test.h)
+        testFile.c
+        test.h
+        ../src/map.c
+        ../src/dataStructures.c)
 
 target_compile_options(testExe PRIVATE -Wall -Wextra -Wpedantic -Werror)
 

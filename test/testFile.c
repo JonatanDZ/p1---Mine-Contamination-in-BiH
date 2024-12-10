@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "mapTest.c"
-
+#include "dataStructuresTest.c"
 
 bool assertion(bool expression) {
     if (expression) {
@@ -12,6 +12,9 @@ bool assertion(bool expression) {
 
 int main() {
 
+    test_initEmptyCellMap();
+
+    /* --- mapTest --- */
 
     //test_createMapWFile();
 
