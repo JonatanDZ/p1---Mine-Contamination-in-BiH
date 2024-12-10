@@ -2,6 +2,7 @@
 #include "../src/dataStructures.h"
 #include <float.h>
 
+//initEmptyCellMap
 void test_initEmptyCellMap() {
     //Arrange
     cell_t emptyCellMap[MAPSIZEROW][MAPSIZECOL];
@@ -28,6 +29,7 @@ void test_initEmptyCellMap() {
 
 }
 
+//initCell
 void test_initCell_rc00_d2525() {
     cell_t emptyCellMap[MAPSIZEROW][MAPSIZECOL];
 

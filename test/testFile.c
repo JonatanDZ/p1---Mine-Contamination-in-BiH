@@ -12,11 +12,14 @@ bool assertion(bool expression) {
 
 int main() {
 
+    /*----------------------------- aStarTest ------------------------------*/
 
+
+    /*------------------------- dataStructuresTest -------------------------*/
     test_initEmptyCellMap();
     test_initCell_rc00_d2525();
 
-    /* --- mapTest --- */
+    /*------------------------------- mapTest -------------------------------*/
 
     //test_createMapWFile(); TODO: Passes in test.exe, fails in allCTest because file is isn't found
 
@@ -31,9 +34,9 @@ int main() {
     test_isMineable_2_4_startPosition();
     test_isMineable_3_4_endPosition();
 
+    //shortestRoute
     test_shortestRoute();
     test_shortestRoute_miniMap();
-
 
     //isWithinArray
     test_isWithinArray_5_5();

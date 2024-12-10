@@ -1,7 +1,7 @@
 #include <assert.h>
 #include "../src/map.h"
 
-
+//createMapWFile
 void test_createMapWFile() {
     //ARRANGE
     int mapHardcoded[MAPSIZEROW][MAPSIZECOL];
@@ -193,9 +193,8 @@ void test_shortestRoute() {
         }
     }
 }
-
 void test_shortestRoute_miniMap() {
-    //ARRANGE       TODO: In the for loops
+    //ARRANGE       TODO: In the for loops check with MAPSIZEROW or variables below?
     int rowSize = 5;
     int colSize = 5;
 
