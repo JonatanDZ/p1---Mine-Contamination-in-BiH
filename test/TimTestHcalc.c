@@ -10,9 +10,9 @@ void test_hCalc_s00_d2525() {
     result = hCalc(0, 0, 25, 25);
 
     //ASSERT
-    assert(result - expectedResult < tolerance);
+    assert(fabs(result - expectedResult) < tolerance);
 }
-
+/* TODO: Denne fejler*/
 void test_hCalc_s1010_d3131() {
     //ARRANGE
     double expectedResult = 819;
@@ -22,9 +22,9 @@ void test_hCalc_s1010_d3131() {
     result = hCalc(10, 10, 31, 31);
 
     //ASSERT
-    assert(result - expectedResult < tolerance);
+    assert(fabs(result - expectedResult) < tolerance);
 }
-
+/* TODO: Denne fejler*/
 void test_hCalc_s2928_d24() {
     //ARRANGE
     double expectedResult = 762;
@@ -34,9 +34,9 @@ void test_hCalc_s2928_d24() {
     result = hCalc(29, 29, 2, 4);
 
     //ASSERT
-    assert(result - expectedResult < tolerance);
+    assert(fabs(result - expectedResult) < tolerance);
 }
-
+/* TODO: Denne fejler*/
 void test_hCalc_s290_d029() {
     //ARRANGE
     double expectedResult = 870;
@@ -46,5 +46,5 @@ void test_hCalc_s290_d029() {
     result = hCalc(29, 0, 0, 29);
 
     //ASSERT
-    assert(result - expectedResult < tolerance);
+    assert(fabs(result - expectedResult) < tolerance);
 }
