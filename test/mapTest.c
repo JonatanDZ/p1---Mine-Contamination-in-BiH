@@ -192,8 +192,38 @@ void test_shortestRoute() {
             assert(hardcodedFlatMap[i][j] == convertedMap[i][j]);
         }
     }
+}
 
+void test_shortestRoute_miniMap() {
+    //ARRANGE       TODO: In the for loops
+    int rowSize = 5;
+    int colSize = 5;
 
+    int hardcodedFlatMap[32][32] = {
+        {water, asphalt, asphalt, asphalt, water},
+        {water, asphalt, asphalt, water, water},
+        {asphalt, asphalt, asphalt, asphalt, 10},
+        {asphalt, asphalt, asphalt, water, 10},
+        {asphalt, asphalt, mine, asphalt, asphalt}
+    };
+
+    int convertedMap[32][32] = {
+        {water, field, asphalt, forest, water},
+        {water, asphalt, forest, water, water},
+        {forest, asphalt, city, city, startPosition},
+        {asphalt, forest, forest, water, endPosition},
+        {forest, asphalt, mine, mountain1, mountain2}
+    };
+
+    //ACT
+    shortestRoute(convertedMap);
+
+    //ASSERT
+    for (int i = 0; i < rowSize; i++) {
+        for (int j = 0; j < colSize; j++) {
+            assert(hardcodedFlatMap[i][j] == convertedMap[i][j]);
+        }
+    }
 }
 
 //isWithin array
