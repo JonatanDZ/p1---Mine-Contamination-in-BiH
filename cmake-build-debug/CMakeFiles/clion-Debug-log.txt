@@ -5,6 +5,6 @@
 -- Check for working C compiler: C:/Users/a-bti/AppData/Local/JetBrains/CLion 2024.3/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Configuring done (1.4s)
+-- Configuring done (1.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug
