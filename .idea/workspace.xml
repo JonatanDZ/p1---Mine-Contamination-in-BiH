@@ -32,7 +32,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e2733dd1-f783-46d4-9884-7593a61296b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/CTestCostData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/CTestCostData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/testExe.dir/testFile.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/testExe.dir/testFile.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/testExe.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/testExe.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mapTest.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/mapTest.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/testFile.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/testFile.c" afterDir="false" />
     </list>
@@ -137,7 +142,8 @@
       <workItem from="1733750894058" duration="188000" />
       <workItem from="1733751201332" duration="2617000" />
       <workItem from="1733828152887" duration="2922000" />
-      <workItem from="1733831600601" duration="2002000" />
+      <workItem from="1733831600601" duration="4164000" />
+      <workItem from="1733846010801" duration="596000" />
     </task>
     <servers />
   </component>
