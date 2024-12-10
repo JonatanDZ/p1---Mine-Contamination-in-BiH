@@ -7,7 +7,9 @@ add_executable(testExe
         testFile.c
         test.h
         ../src/map.c
-        ../src/dataStructures.c)
+        ../src/dataStructures.c
+        ../src/aStar.c
+)
 
 target_compile_options(testExe PRIVATE -Wall -Wextra -Wpedantic -Werror)
 
