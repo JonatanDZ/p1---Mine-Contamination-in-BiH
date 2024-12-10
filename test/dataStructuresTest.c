@@ -30,18 +30,30 @@ void test_initEmptyCellMap() {
 
 void test_initCell() {
     cell_t emptyCellMap[MAPSIZEROW][MAPSIZECOL];
-    double tolerance = 0.01;
-
-    //Act
     initEmptyCellMap(emptyCellMap);
 
+    //Arrange
+    int test_row = 10;
+    int test_col = 10;
+    int test_gCost = 15;
+    int test_parRow = 9;
+    int test_parCol = 9;
 
-    int test_row;
-    int test_col;
-    int gCost;
-    int test_parRow;
-    int test_parCol;
-    coor_t dest;
+    coor_t test_dest = {31, 31};
+    double expected_hCost = 819;
+    double tolerance = 0.1;
 
-    initCell()
+
+
+    //Act
+    initCell(emptyCellMap, test_row, test_col, test_gCost, test_parRow, test_parCol, test_dest);
+
+
+    //Assert
+    assert(emptyCellMap[test_row][test_col].parentCoor.row == test_parRow);
+    assert(emptyCellMap[test_row][test_col].parentCoor.col == test_parCol);
+
+    assert(emptyCellMap[test_row][test_col].g == test_gCost);
+    assert(fabs(emptyCellMap[test_row][test_col].h - expected_hCost) < tolerance );
+    assert(fabs(emptyCellMap[test_row][test_col].f - (test_gCost + expected_hCost) < tolerance));
 }

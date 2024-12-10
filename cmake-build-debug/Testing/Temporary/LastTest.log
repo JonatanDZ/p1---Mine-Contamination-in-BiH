@@ -1,3 +1,19 @@
-Start testing: Dec 10 18:23 Romance Standard Time
+Start testing: Dec 10 18:48 Romance Standard Time
 ----------------------------------------------------------
-End testing: Dec 10 18:23 Romance Standard Time
+1/1 Testing: arrayTester1
+1/1 Test: arrayTester1
+Command: "C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/test/testExe.exe"
+Directory: C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/cmake-build-debug/test
+"arrayTester1" start time: Dec 10 18:48 Romance Standard Time
+Output:
+----------------------------------------------------------
+Assertion failed: fabs(emptyCellMap[test_row][test_col].h - expected_hCost) < tolerance, file C:/Users/a-bti/OneDrive/Documents/GitHub/p1---Mine-Contamination-in-BiH/test/dataStructuresTest.c, line 57
+<end of output>
+Test time =   0.41 sec
+----------------------------------------------------------
+Test Failed.
+"arrayTester1" end time: Dec 10 18:48 Romance Standard Time
+"arrayTester1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 10 18:48 Romance Standard Time
