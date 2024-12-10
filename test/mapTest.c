@@ -19,6 +19,7 @@ void test_createMapWFile() {
     }
 }
 
+//isUnblocked, all enum types
 void test_isWithinArray_5_5() {
     //ARRANGE
     int test_row = 5;
@@ -64,8 +65,8 @@ void test_isWithinArray_19_neg20() {
     assert(result == false);
 }
 
-
-bool test_isUnblocked0_4water(void) {
+//isUnblocked, all enum types
+void test_isUnblocked_0_4_water() {
     //ARRANGE
     int test_row = 0;
     int test_col = 4;
@@ -81,11 +82,8 @@ bool test_isUnblocked0_4water(void) {
 
     //ASSERT
     assert(result == false);
-
-    return result;
 }
-
-bool test_isUnblocked0_3forest(void) {
+void test_isUnblocked_0_3_forest() {
     //ARRANGE
     int test_row = 0;
     int test_col = 3;
@@ -101,11 +99,8 @@ bool test_isUnblocked0_3forest(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
-
-bool test_isUnblocked4_2mine(void) {
+void test_isUnblocked_4_2_mine() {
     //ARRANGE
     int test_row = 4;
     int test_col = 2;
@@ -121,12 +116,8 @@ bool test_isUnblocked4_2mine(void) {
 
     //ASSERT
     assert(result == false);
-
-    return result;
 }
-
-
-bool test_isUnblocked0_1field(void) {
+void test_isUnblocked_0_1_field() {
     //ARRANGE
     int test_row = 0;
     int test_col = 1;
@@ -142,13 +133,8 @@ bool test_isUnblocked0_1field(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
-
-
-
-bool test_isUnblocked1_1asphalt(void) {
+void test_isUnblocked_1_1_asphalt() {
     //ARRANGE
     int test_row = 1;
     int test_col = 1;
@@ -164,11 +150,8 @@ bool test_isUnblocked1_1asphalt(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
-
-bool test_isUnblocked4_3mountain1(void) {
+void test_isUnblocked_4_3_mountain1() {
     //ARRANGE
     int test_row = 4;
     int test_col = 3;
@@ -184,11 +167,8 @@ bool test_isUnblocked4_3mountain1(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
-
-bool test_isUnblocked4_4mountain2(void) {
+void test_isUnblocked_4_4_mountain2() {
     //ARRANGE
     int test_row = 4;
     int test_col = 4;
@@ -204,11 +184,8 @@ bool test_isUnblocked4_4mountain2(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
-
-bool test_isUnblocked2_4startPosition(void) {
+void test_isUnblocked_2_4_startPosition() {
     //ARRANGE
     int test_row = 2;
     int test_col = 4;
@@ -224,11 +201,8 @@ bool test_isUnblocked2_4startPosition(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
-
-bool test_isUnblocked3_4endPosition(void) {
+void test_isUnblocked_3_4_endPosition() {
     //ARRANGE
     int test_row = 3;
     int test_col = 4;
@@ -244,6 +218,4 @@ bool test_isUnblocked3_4endPosition(void) {
 
     //ASSERT
     assert(result == true);
-
-    return result;
 }
