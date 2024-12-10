@@ -11,9 +11,12 @@ bool assertion(bool expression) {
 }
 
 int main() {
+
+
+    test_createMapWFile();
     test_isWithinArray_5_5();
     test_isWithinArray_50_50();
     test_isWithinArray_neg1_16();
     test_isWithinArray_19_neg20();
-    printf("%d",test_createMapWFile());
+
 }
