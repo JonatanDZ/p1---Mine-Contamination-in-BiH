@@ -58,18 +58,15 @@ void aStarRouteTest_s0400_d0101() {
 
 void aStarVSdijkstra_s1212_d2929() {
     //ARRANGE
-    coor_t start;
-    start.row = 12;
-    start.col = 12;
+    coor_t start, dest;
+    start.row = 12, start.col = 12;
 
-    coor_t dest;
-    dest.row = 29;
-    dest.col = 29;
+    dest.row = 29, dest.col = 29;
 
-    int map[MAPSIZEROW][MAPSIZECOL];
+    int map[MAPSIZEROW][MAPSIZECOL], mapD[MAPSIZEROW][MAPSIZECOL];
+
     createMap(map);
 
-    int mapD[MAPSIZEROW][MAPSIZECOL];
     createMap(mapD);
 
     //ACT
@@ -79,7 +76,6 @@ void aStarVSdijkstra_s1212_d2929() {
 
     double startTimeDijkstra = clock();
     int dijkstraCalc = dijkstra(mapD, start, dest);
-
     double dijkstraTime = (clock() - startTimeDijkstra) / CLOCKS_PER_SEC;
 
     //ASSERT
