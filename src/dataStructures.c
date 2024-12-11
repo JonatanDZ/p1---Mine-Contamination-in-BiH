@@ -40,11 +40,24 @@ void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int succ
     //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 }
 
+void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol) {
+
+    cellMap[successorRow][successorCol].parentCoor.row = parentRow;
+    cellMap[successorRow][successorCol].parentCoor.col = parentCol;
+
+    //Recalculate & update g and f values. h (estimated distance to dest) will remain the same, so no recalculations needed
+    cellMap[successorRow][successorCol].g = gCost;
+    cellMap[successorRow][successorCol].h = 0;
+    cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
+    // Print til debugging.
+    //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
+}
+
 double hCalc(int row, int col, int destRow, int destCol) {
     int diffRow = abs(row - destRow);
     int diffCol = abs(col - destCol);
     int D = asphalt;
-    double D2 = asphalt * 1.4;
+    double D2 = D * 1.4;
     return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
 

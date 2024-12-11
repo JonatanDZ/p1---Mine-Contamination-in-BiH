@@ -5,7 +5,12 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(testExe
         testFile.c ../src/map.c
-        test.h)
+        test.h
+        ../src/dataStructures.c
+        ../src/aStar.c
+        ../src/dijkstra.c
+
+)
 
 target_compile_options(testExe PRIVATE -Wall -Wextra -Wpedantic -Werror)
 

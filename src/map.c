@@ -88,7 +88,7 @@ void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]) {
 //Genereates mines that are placed random on the map, and overwrites the value already there
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     srand(time(NULL));
-    int upperBound = MAPSIZE;
+    int upperBound = MAPSIZE-1;
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
@@ -97,8 +97,8 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     //while loop that runs, until all mines are placed
     int i = 0;
     while (i < amountOfMines) {
-        int row = rand() % (upperBound - lowerBound + 1)+ lowerBound;
-        int col = rand() % (upperBound - lowerBound + 1)+ lowerBound;
+        int row = rand() % (upperBound - lowerBound)+ lowerBound;
+        int col = rand() % (upperBound - lowerBound)+ lowerBound;
         //If statement that decides if the mine can be placed
         if (isMineable(map, row, col) == true) {
             map[row][col] = mine;
@@ -316,6 +316,49 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
         {asphalt, asphalt, water, water, city, water, city, mine, field, field, forest, forest, forest, forest, forest, forest, mountain1, mountain1, mountain1, mine, mountain1, mountain1, mountain1, mountain2, mine, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2, mountain2}, //
         {asphalt, water, water, city, city, water, city, field, mine, forest, mine, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2}, //
         {asphalt, water, water, city, city, water, mine, field, field, forest, forest, forest, forest, mountain1, mountain1, mountain1, mountain1, mountain1, mountain2, mountain2, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mine, mountain2, mountain2, mountain2, mountain2}, //
+    };
+    for (int i = 0; i < MAPSIZEROW; i++) {
+        for (int j = 0; j < MAPSIZECOL; j++) {
+            map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
+        }
+    }
+}
+
+void createFlatMap(int map[MAPSIZEROW][MAPSIZECOL]) {
+
+    int templateMap[32][32] = { //This is our hardcoded map
+    {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt,asphalt,asphalt,mine, asphalt, asphalt, mine, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt},
+    {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt,mine,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt,},
+    {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, mine, asphalt, asphalt, asphalt},
+    {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt , asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt,asphalt,asphalt, asphalt, asphalt, asphalt },
+    {asphalt, asphalt, asphalt,asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt },
+    {asphalt,asphalt,asphalt,asphalt,asphalt, asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt,asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt },
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt,asphalt,asphalt,asphalt,asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt},
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, asphalt, asphalt, water, water, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, asphalt, water, water, water, water, asphalt, asphalt, asphalt, asphalt, asphalt , asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, asphalt, water, asphalt, water, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, water, water, asphalt, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, asphalt, water, asphalt, water, water, asphalt, mine, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, asphalt, water, water, asphalt, water, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt}, //
+    {asphalt, asphalt, water, water, asphalt, water, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt}, //
+    {asphalt, water, water, asphalt, asphalt, water, asphalt, asphalt, mine, asphalt, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, mine, asphalt}, //
+    {asphalt, water, water, asphalt, asphalt, water, mine, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt}, //
     };
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {

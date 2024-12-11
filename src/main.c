@@ -15,6 +15,8 @@ int main(){
 
     aStarSearch(map, start, dest);
 
+    //dijkstra(map, start, dest);
+
     terminalOutPut(map);
 
     return 0;
