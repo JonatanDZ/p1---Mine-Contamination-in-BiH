@@ -15,5 +15,4 @@ add_executable(main
         map.h
         dataStructures.c
         dataStructures.h
-        dijkstra.c
 )
