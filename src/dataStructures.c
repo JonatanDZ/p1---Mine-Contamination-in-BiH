@@ -57,7 +57,7 @@ double hCalc(int row, int col, int destRow, int destCol) {
     int diffRow = abs(row - destRow);
     int diffCol = abs(col - destCol);
     int D = asphalt;
-    double D2 = asphalt * 1.4;
+    double D2 = D * 1.4;
     return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
 }
 

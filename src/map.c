@@ -88,7 +88,7 @@ void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]) {
 //Genereates mines that are placed random on the map, and overwrites the value already there
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     srand(time(NULL));
-    int upperBound = MAPSIZE;
+    int upperBound = MAPSIZE-1;
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
@@ -97,8 +97,8 @@ void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     //while loop that runs, until all mines are placed
     int i = 0;
     while (i < amountOfMines) {
-        int row = rand() % (upperBound - lowerBound + 1)+ lowerBound;
-        int col = rand() % (upperBound - lowerBound + 1)+ lowerBound;
+        int row = rand() % (upperBound - lowerBound)+ lowerBound;
+        int col = rand() % (upperBound - lowerBound)+ lowerBound;
         //If statement that decides if the mine can be placed
         if (isMineable(map, row, col) == true) {
             map[row][col] = mine;

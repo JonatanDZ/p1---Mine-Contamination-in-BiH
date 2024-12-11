@@ -1,7 +1,7 @@
 #include <assert.h>
 #include "../src/dataStructures.h"
 
-void test_hCalc_s00_d2525() {
+void test_hCalc_s0000_d2525() {
     //ARRANGE
     double expectedResult = 525;
     double result;
@@ -15,7 +15,7 @@ void test_hCalc_s00_d2525() {
 /* TODO: Denne fejler*/
 void test_hCalc_s1010_d3131() {
     //ARRANGE
-    double expectedResult = 819;
+    double expectedResult = 441;
     double result;
     double tolerance = 0.1;
     //ACT
@@ -25,21 +25,21 @@ void test_hCalc_s1010_d3131() {
     assert(fabs(result - expectedResult) < tolerance);
 }
 /* TODO: Denne fejler*/
-void test_hCalc_s2928_d24() {
+void test_hCalc_s2928_d0204() {
     //ARRANGE
-    double expectedResult = 762;
+    double expectedResult = 549;
     double result;
     double tolerance = 0.1;
     //ACT
-    result = hCalc(29, 29, 2, 4);
+    result = hCalc(29, 28, 2, 4);
 
     //ASSERT
     assert(fabs(result - expectedResult) < tolerance);
 }
 /* TODO: Denne fejler*/
-void test_hCalc_s290_d029() {
+void test_hCalc_s2900_d0029() {
     //ARRANGE
-    double expectedResult = 870;
+    double expectedResult = 609;
     double result;
     double tolerance = 0.1;
     //ACT
