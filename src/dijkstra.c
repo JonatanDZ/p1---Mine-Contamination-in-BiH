@@ -34,7 +34,7 @@ int dijkstra(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
 
     //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
-    openListIsEmpty = fLinSearch(cellMap, &row, &col);
+    openListIsEmpty = fSearch(cellMap, &row, &col);
 
     //Remove it from the 'open' list, then add to 'closed' list
     cellMap[row][col].openList = false;

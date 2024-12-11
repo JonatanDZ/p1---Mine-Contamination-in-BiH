@@ -34,7 +34,7 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
 
     //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
-    openListIsEmpty = fLinSearch(cellMap, &row, &col);
+    openListIsEmpty = fSearch(cellMap, &row, &col);
 
     //Remove it from the 'open' list, then add to 'closed' list
     cellMap[row][col].openList = false;
@@ -71,7 +71,7 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
  * @param resultC The column-value currently with the lowest f-value
  * @return true if no cells were found in open, false if at least one cell was in 'open'
  */
-bool fLinSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
+bool fSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int* resultR, int* resultC) {
   bool first = true;
 
   //r & c determine which cell is currently checked through its coordinates, starting from the beginning of the 2d cell array.

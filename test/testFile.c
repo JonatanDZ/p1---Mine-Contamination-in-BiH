@@ -11,9 +11,9 @@ int main() {
 
     /*----------------------------- aStarTest ------------------------------*/
     //Search test
-    test_fLinSearch_3open_2not();
-    test_fLinSearch_noneOpen_firstTrue();
-    test_fLinSearch_1open_2not();
+    test_fSearch_3open_2not();
+    test_fSearch_noneOpen_firstTrue();
+    test_fSearch_1open_2not();
 
     //Complete test
     aStarRouteTest_s0100_d0004();

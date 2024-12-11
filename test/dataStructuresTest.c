@@ -58,7 +58,7 @@ void test_initCell_rc00_d2525() {
 }
 
 //Move to aStarTest
-void test_fLinSearch_3open_2not() {
+void test_fSearch_3open_2not() {
 
     //Arrange
     int expectedRow = 29;
@@ -83,7 +83,7 @@ void test_fLinSearch_3open_2not() {
     cMap[18][8].f = 24;
 
     //ACT
-    bool first = fLinSearch(cMap, &resultRow, &resultCol);
+    bool first = fSearch(cMap, &resultRow, &resultCol);
 
     //Assert
     assert(first == false &&
@@ -91,7 +91,7 @@ void test_fLinSearch_3open_2not() {
            resultCol == expectedCol
            );
 }
-void test_fLinSearch_noneOpen_firstTrue() {
+void test_fSearch_noneOpen_firstTrue() {
     //Arrange
 
     //TODO: Hvad sker i Astar, når der ingen åbne er?
@@ -112,7 +112,7 @@ void test_fLinSearch_noneOpen_firstTrue() {
     cMap[4][2].f = 45;
 
     //ACT
-    bool first = fLinSearch(cMap, &resultRow, &resultCol);
+    bool first = fSearch(cMap, &resultRow, &resultCol);
 
     //Assert
     assert(first == true &&
@@ -120,7 +120,7 @@ void test_fLinSearch_noneOpen_firstTrue() {
            resultCol == expectedCol
            );
 }
-void test_fLinSearch_1open_2not() {
+void test_fSearch_1open_2not() {
 
     //Arrange
     int expectedRow = 12;
@@ -141,7 +141,7 @@ void test_fLinSearch_1open_2not() {
     cMap[18][8].f = 24;
 
     //ACT
-    bool first = fLinSearch(cMap, &resultRow, &resultCol);
+    bool first = fSearch(cMap, &resultRow, &resultCol);
 
     //Assert
     assert(first == false &&
