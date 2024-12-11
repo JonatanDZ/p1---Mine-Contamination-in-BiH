@@ -8,6 +8,7 @@
 void input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
 void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]);
 void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]);
-int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
+void inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
+void inputAlgorithm(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest);
 
 #endif //INPUT_H

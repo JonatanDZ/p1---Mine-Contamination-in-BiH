@@ -48,6 +48,7 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
 
     //Breaks the while loop if the destination has been moved to the closed list.
     if (cellMap[dest.row][dest.col].closedList == true) {
+      printf("\nProcessing route from (%d , %d) --> (%d , %d).\n", start.row, start.col, dest.row, dest.col);
       printf("Here is the path that we found.\n");
       tracePath(cellMap, map, dest.row, dest.col, start);
       int gTotal = cellMap[dest.row][dest.col].g;

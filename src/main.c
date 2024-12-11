@@ -13,8 +13,6 @@ int main(){
 
     input(map, &start, &dest);
 
-    aStarSearch(map, start, dest);
-
     terminalOutPut(map);
 
     return 0;

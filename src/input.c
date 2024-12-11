@@ -1,4 +1,5 @@
 #include "input.h"
+#include "aStar.h"
 
 /**
  * Function that calls all input functions.
@@ -10,6 +11,7 @@ void input(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     inputMineGen(map);
     inputTerrain(map);
     inputCoordinates(map, start, dest);
+    inputAlgorithm(map, start, dest);
 }
 
 /**
@@ -94,7 +96,7 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
  * Function that prompts the user for input for start and destination coordinates.
  * @param map map from main.
  */
-int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
+void inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
     int validInput; // Variable to store the result of scanf
 
     // Start coordinates
@@ -142,7 +144,31 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         printf("Error: Start and destination cannot be the same!\n");
         return inputCoordinates(map, start, dest);
     }
+}
 
+void inputAlgorithm(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* dest) {
+    int choice;
+    int validInput; // Variable to store the result of scanf
 
-    printf("\nProcessing route from (%d , %d) --> (%d , %d).\n", start->row, start->col, dest->row, dest->col);
+    // Terrain type
+    do {
+        printf("\nDo you want to use the A* algorithm (0) or Dijkstra's algorithm (1) to find the route?\n>");
+        validInput = scanf("%d", &choice);
+
+        // Clear the input buffer to remove invalid characters
+        fflush(stdin);
+
+        if (validInput != 1 || choice != 0 && choice != 1) {
+            printf("Error: Invalid input. Please enter 0 or 1.\n");
+        }
+
+    } while (validInput != 1 || choice != 0 && choice != 1);
+
+    if(choice == 1) {
+        printf("You chose Dijkstra's algorithm\n");
+        dijkstra(map, *start, *dest);
+    } else {
+        printf("You chose the A* algorithm\n");
+        aStarSearch(map, *start, *dest);
+    }
 }
