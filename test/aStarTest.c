@@ -56,7 +56,7 @@ void aStarRouteTest_s0400_d0101() {
     assert(manualCalc == aStarCalc);
 }
 
-void aStarVSdijkstra_s0400_d2929() {
+void aStarVSdijkstra_s1212_d2929() {
     //ARRANGE
     coor_t start;
     start.row = 12;
@@ -66,27 +66,21 @@ void aStarVSdijkstra_s0400_d2929() {
     dest.row = 29;
     dest.col = 29;
 
-
-
     int map[MAPSIZEROW][MAPSIZECOL];
     createMap(map);
 
-
     int mapD[MAPSIZEROW][MAPSIZECOL];
     createMap(mapD);
-
 
     //ACT
     double startTimeAStar = clock();
     int aStarCalc = aStarSearch(map, start, dest);
     double aStarTime = (clock() - startTimeAStar) / CLOCKS_PER_SEC;
-    printf("A* time: %lf\n", aStarTime);
 
     double startTimeDijkstra = clock();
     int dijkstraCalc = dijkstra(mapD, start, dest);
 
     double dijkstraTime = (clock() - startTimeDijkstra) / CLOCKS_PER_SEC;
-    printf("Dijkstra time: %lf\n", dijkstraTime);
 
     //ASSERT
     //Check if the two funcitons went the same path
@@ -96,7 +90,7 @@ void aStarVSdijkstra_s0400_d2929() {
     assert(aStarTime < dijkstraTime + 0.0001);
 }
 
-void aStarVSdijkstra_s1212_d0131() {
+void aStarVSdijkstra_s1616_d0000() {
     //ARRANGE
     coor_t start;
     start.row = 16;
@@ -106,35 +100,27 @@ void aStarVSdijkstra_s1212_d0131() {
     dest.row = 00;
     dest.col = 00;
 
-
-
     int map[MAPSIZEROW][MAPSIZECOL];
     createMap(map);
 
-
     int mapD[MAPSIZEROW][MAPSIZECOL];
     createMap(mapD);
-
 
     //ACT
     double startTimeAStar = clock();
     int aStarCalc = aStarSearch(map, start, dest);
     double aStarTime = (clock() - startTimeAStar) / CLOCKS_PER_SEC;
-    printf("A* time: %lf\n", aStarTime);
 
     double startTimeDijkstra = clock();
     int dijkstraCalc = dijkstra(mapD, start, dest);
 
     double dijkstraTime = (clock() - startTimeDijkstra) / CLOCKS_PER_SEC;
-    printf("Dijkstra time: %lf\n", dijkstraTime);
 
     //ASSERT
     //Check if the two funcitons went the same path
-    assert(aStarCalc == dijkstraCalc + 0.0001);
+    assert(aStarCalc == dijkstraCalc);
 
     //Compares the time between them
-    //assert(aStarTime < dijkstraTime);
-
-
+    assert(aStarTime < dijkstraTime + 0.0001);
 }
 

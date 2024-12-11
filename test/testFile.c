@@ -18,8 +18,8 @@ int main() {
     //Complete test
     aStarRouteTest_s0100_d0004();
     aStarRouteTest_s0400_d0101();
-    aStarVSdijkstra_s0400_d2929();
-    aStarVSdijkstra_s1212_d0131();
+    aStarVSdijkstra_s1212_d2929();
+    aStarVSdijkstra_s1616_d0000();
 
     /*------------------------- dataStructuresTest -------------------------*/
     test_initEmptyCellMap();
