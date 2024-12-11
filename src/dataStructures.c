@@ -18,7 +18,7 @@ void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]) {
 
             //Parents set to -1
             cellMap[i][j].parentCoor.row = NOPARENTYET;
-            cellMap[i][j].parentCoor.row = NOPARENTYET;
+            cellMap[i][j].parentCoor.col = NOPARENTYET;
 
             //Both lists should be empty at start
             cellMap[i][j].openList = false;
