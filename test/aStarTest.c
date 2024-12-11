@@ -59,8 +59,8 @@ void aStarRouteTest_s0400_d0101() {
 void aStarVSdijkstra_s0400_d2929() {
     //ARRANGE
     coor_t start;
-    start.row = 4;
-    start.col = 0;
+    start.row = 12;
+    start.col = 12;
 
     coor_t dest;
     dest.row = 29;
@@ -93,18 +93,18 @@ void aStarVSdijkstra_s0400_d2929() {
     assert(aStarCalc == dijkstraCalc);
 
     //Compares the time between them
-    //assert(aStarTime < dijkstraTime);
+    assert(aStarTime < dijkstraTime + 0.0001);
 }
 
 void aStarVSdijkstra_s1212_d0131() {
     //ARRANGE
     coor_t start;
-    start.row = 00;
-    start.col = 00;
+    start.row = 16;
+    start.col = 16;
 
     coor_t dest;
-    dest.row = 0;
-    dest.col = 31;
+    dest.row = 00;
+    dest.col = 00;
 
 
 
@@ -130,7 +130,7 @@ void aStarVSdijkstra_s1212_d0131() {
 
     //ASSERT
     //Check if the two funcitons went the same path
-    assert(aStarCalc == dijkstraCalc);
+    assert(aStarCalc == dijkstraCalc + 0.0001);
 
     //Compares the time between them
     //assert(aStarTime < dijkstraTime);
