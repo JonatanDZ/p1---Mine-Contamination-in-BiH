@@ -21,6 +21,12 @@ int main() {
     aStarVSdijkstra_s1212_d2929();
     aStarVSdijkstra_s1616_d0000();
 
+    //hCalc
+    test_hCalc_s0000_d2525();
+    test_hCalc_s1010_d3131();
+    test_hCalc_s2928_d0204();
+    test_hCalc_s2900_d0029();
+
     /*------------------------- dataStructuresTest -------------------------*/
     test_initEmptyCellMap();
     test_initCell_rc00_d2525();
@@ -62,4 +68,11 @@ int main() {
     test_isUnblocked_2_4_startPosition();
     test_isUnblocked_3_4_endPosition();
 
+
+    //randomMineGen
+    test_randomMineGen500();
+    test_randomMineGen250();
+    test_randomMineGen146();
+    test_randomMineGen27();
+    
 }
