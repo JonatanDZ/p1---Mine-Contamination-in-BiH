@@ -31,5 +31,4 @@ void printCell(cell_t cell, int row, int col);
 
 void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol);
 
-
 #endif //DATASTRUCTURES_H
