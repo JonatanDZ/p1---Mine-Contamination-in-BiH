@@ -28,7 +28,6 @@ void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]) {
 }
 
 void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol, coor_t dest) {
-
     cellMap[successorRow][successorCol].parentCoor.row = parentRow;
     cellMap[successorRow][successorCol].parentCoor.col = parentCol;
 
@@ -36,12 +35,9 @@ void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int succ
     cellMap[successorRow][successorCol].g = gCost;
     cellMap[successorRow][successorCol].h = hCalc(successorRow, successorCol, dest.row, dest.col);
     cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
-    // Print til debugging.
-    //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 }
 
 void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol) {
-
     cellMap[successorRow][successorCol].parentCoor.row = parentRow;
     cellMap[successorRow][successorCol].parentCoor.col = parentCol;
 
@@ -49,12 +45,9 @@ void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, 
     cellMap[successorRow][successorCol].g = gCost;
     cellMap[successorRow][successorCol].h = 0;
     cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
-    // Print til debugging.
-    //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 }
 
 /**
- *
  * @param row the current row
  * @param col the current col
  * @param destRow the destination row
