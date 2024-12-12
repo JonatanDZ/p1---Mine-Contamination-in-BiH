@@ -19,14 +19,15 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     cellMap[start.row][start.col].openList = true;
     cellMap[start.row][start.col].closedList = false;
 
-    /* 2) Repeat, while open 'list' is not empty*/
     //Coordinates determining current cell.
     int row, col;
 
     bool openListIsEmpty = false;
 
+    /* 2) Repeat, while open 'list' is not empty*/
     while (openListIsEmpty == false) {
-        //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
+
+        //From the 'open' list, find the note with the smallest f value.
         openListIsEmpty = fSearch(cellMap, & row, & col);
 
         //Remove it from the 'open' list, then add to 'closed' list
