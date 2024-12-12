@@ -65,6 +65,13 @@ int dijkstra(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     return 0;
 }
 
+/**
+* This function creates successors from the current cell
+ * @param cellMap containing
+ * @param map containing the g-cost of every specific cell
+ * @param row current row
+ * @param col current column
+ */
 void generateSuccessorsDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
     /* For each of the 8 cells surrounding current cell*/
     for (int r = -1; r <= 1; r++) {

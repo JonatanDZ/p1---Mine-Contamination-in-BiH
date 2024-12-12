@@ -55,11 +55,11 @@ void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, 
 
 /**
  *
- * @param row
- * @param col
- * @param destRow
- * @param destCol
- * @return 
+ * @param row the current row
+ * @param col the current col
+ * @param destRow the destination row
+ * @param destCol the destination col
+ * @return the h-value when it's possible to move in 8 directions
  */
 double hCalc(int row, int col, int destRow, int destCol) {
     int diffRow = abs(row - destRow);

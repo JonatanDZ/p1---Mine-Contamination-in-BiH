@@ -93,6 +93,14 @@ bool fSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int * resultR, int * result
     return first;
 }
 
+/**
+ * This function creates successors from the current cell
+ * @param cellMap containing
+ * @param map containing the g-cost of every specific cell
+ * @param row current row
+ * @param col current column
+ * @param dest the destination decided in input
+ */
 void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZEROW][MAPSIZECOL], int row, int col, coor_t dest) {
     /* For each of the 8 cells surrounding current cell*/
     for (int r = -1; r <= 1; r++) {
