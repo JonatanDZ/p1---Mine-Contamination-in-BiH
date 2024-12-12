@@ -109,7 +109,6 @@ void generateSuccessorsDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[
                         // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure by G.cost
                         if (successorGCost < cellMap[successorRow][successorCol].g) {
                             initCellDijkstra(cellMap, successorRow, successorCol, successorGCost, row, col);
-
                         }
                     }
                 }

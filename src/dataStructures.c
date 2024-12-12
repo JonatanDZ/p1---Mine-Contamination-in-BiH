@@ -49,17 +49,18 @@ void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, 
     cellMap[successorRow][successorCol].g = gCost;
     cellMap[successorRow][successorCol].h = 0;
     cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
-    // Print til debugging.
-    //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 }
 
 /**
- *
+ * This function is calculating
  * @param row the current row
  * @param col the current col
  * @param destRow the destination row
  * @param destCol the destination col
- * @return the h-value when it's possible to move in 8 directions
+ * @var D is lowest g-cost you can experience on the map
+ * @var D2 is the lowest g-cost you can experience on the map if you move diagonally
+ * @return The function returns the cost of moving to the destination without moving diagonally
+ * then added with (-) what is saved by making the same move diagonally
  */
 double hCalc(int row, int col, int destRow, int destCol) {
     int diffRow = abs(row - destRow);
