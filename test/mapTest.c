@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "../src/map.h"
+#include "test.h"
 
 //createMapWFile
 void test_createMapWFile() {
