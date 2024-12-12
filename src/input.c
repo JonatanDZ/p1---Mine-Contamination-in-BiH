@@ -36,7 +36,6 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
     } while (validInput != 1 || mineAnswer != 0 && mineAnswer != 1);
     printf("You selected: %d\n", mineAnswer);
 
-
     //If loop that runs if the user wants random mines.
     if (mineAnswer == 1) {
         do {
@@ -137,6 +136,5 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         printf("Error: Start and destination cannot be the same!\n");
         return inputCoordinates(map, start, dest);
     }
-
     printf("\nProcessing route from (%d , %d) --> (%d , %d).\n", start->row, start->col, dest->row, dest->col);
 }

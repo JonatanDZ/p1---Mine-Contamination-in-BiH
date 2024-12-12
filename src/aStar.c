@@ -1,6 +1,5 @@
 #include "aStar.h"
 /**
- *
  * @param map is the containing the different costs of each cell.
  * @param start is the start coordinates chosen in input.
  * @param dest is the destination coordinates chosen in input.
@@ -14,7 +13,6 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     initEmptyCellMap(cellMap);
 
     /* 1) Starting the search with start cell */
-
     initCell(cellMap, start.row, start.col, 0, 0, 0, dest);
 
     //'Add' to open list
@@ -22,14 +20,12 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
     cellMap[start.row][start.col].closedList = false;
 
     /* 2) Repeat, while open 'list' is not empty*/
-
     //Coordinates determining current cell.
     int row, col;
 
     bool openListIsEmpty = false;
 
     while (openListIsEmpty == false) {
-
         //From the 'open' list, find the note with the smallest f value.      (Pop it off open, by setting its open bool to false and keeping its coordinates)
         openListIsEmpty = fSearch(cellMap, & row, & col);
 
@@ -45,16 +41,13 @@ int aStarSearch(int map[MAPSIZEROW][MAPSIZECOL], coor_t start, coor_t dest) {
             printTime(gTotal);
             return gTotal;
         }
-
         generateSuccessors(cellMap, map, row, col, dest);
     }
-
     printf("No Path is found.\n");
     return 0;
 }
 
 /**
- *
  * @param cellMap Provides cell list to search through
  * @param resultR The row-value currently with the lowest f-value
  * @param resultC The column-value currently with the lowest f-value
@@ -66,10 +59,8 @@ bool fSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int * resultR, int * result
     //r & c determine which cell is currently checked through its coordinates, starting from the beginning of the 2d cell array.
     for (int r = 0; r < MAPSIZEROW; r++) {
         for (int c = 0; c < MAPSIZECOL; c++) {
-
             //Only searching cells within 'open' list. Ignore all others.
             if (cellMap[r][c].openList == true) {
-
                 /* To ensure that cells in 'open' are only compared to other cells in open,
                  * the first cell found in 'open' should lay basis for f cost comparison.*/
                 if (first == true) {
@@ -80,7 +71,6 @@ bool fSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int * resultR, int * result
                 /* In all other comparisons after finding the first 'open' cell,
                  * compare the current cell's f cost to the previously found lowest f cost. */
                 else if (cellMap[r][c].f < cellMap[ * resultR][ * resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
-
                     /* If the current cell's f cost is lower than the previously found,
                      *     update result coordinates to the current cell's coordinates */
                     * resultR = r;
@@ -105,10 +95,8 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
     /* For each of the 8 cells surrounding current cell*/
     for (int r = -1; r <= 1; r++) {
         for (int c = -1; c <= 1; c++) {
-
             //Ensuring center cell is ignored
             if (r != 0 || c != 0) {
-
                 //The successors' coordinates for readability
                 int successorRow = row + r;
                 int successorCol = col + c;
@@ -123,10 +111,8 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
 
                 //If cell is outside map bounds or already in the closed list, successors do should not be generated. Instead, cell is ignored.
                 if (isWithinArray(successorRow, successorCol) && cellMap[successorRow][successorCol].closedList == false) {
-
                     //Also ignore blocked cells
                     if (isUnblocked(map, successorRow, successorCol)) {
-
                         // a) If it is NOT already in 'open' list, set values & add it to 'open' list.
                         if (cellMap[successorRow][successorCol].openList == false) {
                             initCell(cellMap, successorRow, successorCol, successorGCost, row, col, dest);
@@ -138,7 +124,6 @@ void generateSuccessors(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int map[MAPSIZER
                         // b) If successor IS already in 'open' list, check whether this path is better than previously stored one. Measure by G.cost
                         if (successorGCost < cellMap[successorRow][successorCol].g) {
                             initCell(cellMap, successorRow, successorCol, successorGCost, row, col, dest);
-
                         }
                     }
                 }

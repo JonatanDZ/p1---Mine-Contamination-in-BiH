@@ -33,7 +33,6 @@ void readMapFileIntoArray(int map[MAPSIZEROW][MAPSIZECOL]) {
             fscanf(mapfile, "%3d", &map[i][j]);
         }
     }
-
     // Closes the file
     fclose(mapfile);
 }
@@ -118,8 +117,8 @@ void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]) {
     map[9][26] = forest;
     map[11][24] = forest;
     map[13][26] = forest;
-    map[14][24] = field; //Virker kun med den under
-    map[15][24] = field; //Virker kun med den over
+    map[14][24] = field;
+    map[15][24] = field;
     map[16][22] = field;
     map[16][26] = forest;
     map[23][19] = city;
@@ -146,7 +145,6 @@ void mapMineReplace(int map[MAPSIZEROW][MAPSIZECOL]) {
 }
 
 /**
- *
  * @param map int array from main
  * @param row Int indicating which row in the array that should be looked up
  * @param col Ind indicating which column in the array that should be looked up
@@ -160,7 +158,6 @@ bool isMineable(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
 }
 
 /**
- *
  * @param map all terrain values in map are changed to the same so it will show the shortest rather than the fastest
  */
 void shortestRoute(int map[MAPSIZEROW][MAPSIZECOL]) {
@@ -315,7 +312,7 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
     };
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
-            map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
+            map[i][j] = templateMap[i][j]; //here we are copying it to our 2d array, so it can be used in other functions
         }
     }
 }
@@ -357,7 +354,7 @@ void createFlatMap(int map[MAPSIZEROW][MAPSIZECOL]) {
     };
     for (int i = 0; i < MAPSIZEROW; i++) {
         for (int j = 0; j < MAPSIZECOL; j++) {
-            map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
+            map[i][j] = templateMap[i][j]; //here we are copying it to our 2d array, so it can be used in other functions
         }
     }
 }
