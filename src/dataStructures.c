@@ -34,7 +34,7 @@ void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int succ
 
     //Recalculate & update g and f values. h (estimated distance to dest) will remain the same, so no recalculations needed
     cellMap[successorRow][successorCol].g = gCost;
-    cellMap[successorRow][successorCol].h = hCalc(successorRow,successorCol, dest.row, dest.col);
+    cellMap[successorRow][successorCol].h = hCalc(successorRow, successorCol, dest.row, dest.col);
     cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
     // Print til debugging.
     //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
@@ -53,25 +53,19 @@ void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, 
     //printCell(cellMap [successorRow][successorCol], successorRow, successorCol);
 }
 
+/**
+ *
+ * @param row
+ * @param col
+ * @param destRow
+ * @param destCol
+ * @return 
+ */
 double hCalc(int row, int col, int destRow, int destCol) {
     int diffRow = abs(row - destRow);
     int diffCol = abs(col - destCol);
     int D = asphalt;
     double D2 = D * 1.4;
     return D * (diffRow + diffCol) + (D2 - 2 * D) * fmin(diffRow, diffCol);
-}
-
-
-
-/* TODO: --- DEBUGGING FUNCTIONS --- */
-/**
- * Utility function printing a cell for debugging purposes.
- * @param cell, cell to print
- * @param row of the cell, because cell struct does not contain its own coordinates.
- * @param col of the cell, because cell struct does not contain its own coordinates.
- */
-void printCell(cell_t cell, int row, int col) {
-    printf("\nCell coor: (%d, %d):\nParentCoor: (%d, %d)\nh: %lf g: %lf f: %lf\n", row, col, cell.parentCoor.row, cell.parentCoor.col, cell.h, cell.g, cell.f);
-    printf("Open %d - Closed %d\n", cell.openList, cell.closedList);
 }
 
