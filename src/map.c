@@ -31,7 +31,6 @@ void readMapFileIntoArray(int map[MAPSIZEROW][MAPSIZECOL]) {
         for (j = 0; j < MAPSIZECOL; j++) {
             // %3 = only loading 3 digets for each location in the array
             fscanf(mapfile, "%3d", &map[i][j]);
-
         }
     }
 
@@ -240,34 +239,34 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
             switch (map[i][j]) {
                 case mine:
                     printf("\033[38;5;196mXX \033[0m");
-                break;
+                    break;
                 case water:
                     printf("\033[38;5;32m~~ \033[0m");
-                break;
+                    break;
                 case asphalt:
                     printf("\033[38;5;214mMM \033[0m");
-                break;
+                    break;
                 case city:
                     printf("\033[38;5;231mMM \033[0m");
-                break;
+                    break;
                 case field:
                     printf("\033[38;5;46mWW \033[0m");
-                break;
+                    break;
                 case forest:
                     printf("\033[38;5;22mTT \033[0m");
-                break;
+                    break;
                 case mountain1:
                     printf("\033[28;5;8mMM \033[0m");
-                break;
+                    break;
                 case mountain2:
                     printf("\033[38;5;7mMM \033[0m");
-                break;
+                    break;
                 case startPosition:
                     printf("\033[38;5;213mMM \033[0m");
-                break;
+                    break;
                 case endPosition:
                     printf("\033[38;5;213mMM \033[0m");
-                break;
+                    break;
                 default:
                     printf("\033[38;5;213mMM \033[0m");
             }
@@ -276,11 +275,8 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     printf("\n");
 }
 
-
-
 /* TODO: --- ONLY USED FOR TESTING --- */
 /** Copies hardcoded array into provided array argument.
- *
  */
 void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
     int templateMap[32][32] = { //This is our hardcoded map
@@ -325,7 +321,6 @@ void createMap(int map[MAPSIZEROW][MAPSIZECOL]){
 }
 
 void createFlatMap(int map[MAPSIZEROW][MAPSIZECOL]) {
-
     int templateMap[32][32] = { //This is our hardcoded map
     {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt,asphalt,asphalt,mine, asphalt, asphalt, mine, asphalt, asphalt, mine, asphalt, asphalt, asphalt, asphalt},
     {asphalt,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, water, water, asphalt, asphalt, asphalt, asphalt, asphalt, asphalt,mine,asphalt,asphalt,asphalt,asphalt,asphalt,asphalt, asphalt, asphalt, asphalt,},
@@ -365,30 +360,4 @@ void createFlatMap(int map[MAPSIZEROW][MAPSIZECOL]) {
             map[i][j] = templateMap[i][j]; //here we are copying it to our pseudo 2d array, so it can be used in other functions
         }
     }
-}
-
-/* TODO: --- UNUSED FUNCTIONS --- */
-/**
- * Utility function determining whether a not a given input is the destination.
- * @param row Input, row to check.
- * @param col Input, col to check.
- * @return true if within, else returns false.
- */
-bool isDestination(int row, int col, int destRow, int destCol) {
-    return row == destRow && col == destCol;
-}
-/**
- * Function that prints the map.
- * @param map int array from main.
- */
-void printMap(int map[MAPSIZEROW][MAPSIZECOL]) {
-    printf("\n");
-    // For-loop which prints each value in the array.
-    for (int i = 0; i < MAPSIZEROW; i++){
-        for (int j = 0; j < MAPSIZEROW; j++){
-            printf("%2d ", map[i][j]);
-        }
-        printf("\n");
-    }
-
 }

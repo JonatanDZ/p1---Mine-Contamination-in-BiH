@@ -33,7 +33,6 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
         if (validInput != 1 || mineAnswer != 0 && mineAnswer != 1) {
             printf("Error: Invalid input. Please enter 0 or 1.\n");
         }
-
     } while (validInput != 1 || mineAnswer != 0 && mineAnswer != 1);
     printf("You selected: %d\n", mineAnswer);
 
@@ -51,7 +50,6 @@ void inputMineGen(int map[MAPSIZEROW][MAPSIZECOL]) {
             if (validInput != 1 || amountOfMines < 0 || amountOfMines > 500) {
                 printf("Error: Invalid input. Please enter an integer in the interval [0,500].\n");
             }
-
         } while (validInput != 1 || amountOfMines < 0 || amountOfMines > 500);
         printf("You selected: %d\n", amountOfMines);
 
@@ -79,7 +77,6 @@ void inputTerrain(int map[MAPSIZEROW][MAPSIZECOL]) {
         if (validInput != 1 || choice != 0 && choice != 1) {
             printf("Error: Invalid input. Please enter 0 or 1.\n");
         }
-
     } while (validInput != 1 || choice != 0 && choice != 1);
     printf("You selected: %d\n", choice);
 
@@ -113,7 +110,6 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
             } else if (!isUnblocked(map, start->row, start->col)) {
                 printf("Error: Input is blocked by water or a landmine. Please enter a valid coordinate.\n");
             }
-
     } while (validInput != 2 || !isWithinArray(start->row, start->col) || !isUnblocked(map, start->row, start->col));
     printf("You selected: %d %d\n", start->row, start->col);
 
@@ -133,7 +129,6 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         } else if (!isUnblocked(map, dest->row, dest->col)) {
             printf("Error: Input is blocked by water or a landmine. Please enter a valid coordinate.\n");
         }
-
     } while (validInput != 2 || !isWithinArray(dest->row, dest->col) || !isUnblocked(map, dest->row, dest->col));
     printf("You selected: %d %d\n\n", dest->row, dest->col);
 
@@ -142,7 +137,6 @@ int inputCoordinates(int map[MAPSIZEROW][MAPSIZECOL], coor_t* start, coor_t* des
         printf("Error: Start and destination cannot be the same!\n");
         return inputCoordinates(map, start, dest);
     }
-
 
     printf("\nProcessing route from (%d , %d) --> (%d , %d).\n", start->row, start->col, dest->row, dest->col);
 }
