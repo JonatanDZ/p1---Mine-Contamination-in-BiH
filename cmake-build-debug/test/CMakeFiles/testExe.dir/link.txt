@@ -1,0 +1,3 @@
+"C:\Users\a-bti\AppData\Local\JetBrains\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\testExe.dir/objects.a
+C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\ar.exe qc CMakeFiles\testExe.dir/objects.a @CMakeFiles\testExe.dir\objects1.rsp
+C:\Users\a-bti\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\testExe.dir/objects.a -Wl,--no-whole-archive -o testExe.exe -Wl,--out-implib,libtestExe.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\testExe.dir\linkLibs.rsp
