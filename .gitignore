@@ -1,5 +1,6 @@
 cmake-build-*
 .idea\*
+.idea/*
 main.exe
 main
 *.xml
