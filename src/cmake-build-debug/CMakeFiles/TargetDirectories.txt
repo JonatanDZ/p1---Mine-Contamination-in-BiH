@@ -1,3 +1,0 @@
-C:/Users/asta/OneDrive/Dokumenter/GitHub/p1---Mine-Contamination-in-BiH/src/cmake-build-debug/CMakeFiles/main.dir
-C:/Users/asta/OneDrive/Dokumenter/GitHub/p1---Mine-Contamination-in-BiH/src/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/asta/OneDrive/Dokumenter/GitHub/p1---Mine-Contamination-in-BiH/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
