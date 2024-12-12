@@ -42,10 +42,4 @@ bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col);
 
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]);
 
-
-
-/* TODO: --- ONLY USED FOR TESTING --- */
-void createMap(int map[MAPSIZEROW][MAPSIZECOL]);
-void createFlatMap(int map[MAPSIZEROW][MAPSIZECOL]);
-
 #endif //MAP_H
