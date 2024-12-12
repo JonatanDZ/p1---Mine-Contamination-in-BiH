@@ -27,6 +27,9 @@ void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]) {
     }
 }
 
+/**
+ *This function is initializing the different cell values after they are generated.
+ */
 void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol, coor_t dest) {
     cellMap[successorRow][successorCol].parentCoor.row = parentRow;
     cellMap[successorRow][successorCol].parentCoor.col = parentCol;
@@ -37,6 +40,9 @@ void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int succ
     cellMap[successorRow][successorCol].f = cellMap[successorRow][successorCol].g + cellMap[successorRow][successorCol].h;
 }
 
+/**
+ *This function is initializing the different cell values after they are generated.
+ */
 void initCellDijkstra(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol) {
     cellMap[successorRow][successorCol].parentCoor.row = parentRow;
     cellMap[successorRow][successorCol].parentCoor.col = parentCol;
