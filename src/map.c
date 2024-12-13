@@ -290,16 +290,16 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                         printf("\033[38;5;231m██ \033[0m");
                     break;
                     case field:
-                        printf("\033[38;5;118m██ \033[0m");
-                    break;
-                    case forest:
-                        printf("\033[38;5;82m██ \033[0m");
-                    break;
-                    case mountain1:
                         printf("\033[38;5;46m██ \033[0m");
                     break;
-                    case mountain2:
+                    case forest:
                         printf("\033[38;5;22m██ \033[0m");
+                    break;
+                    case mountain1:
+                        printf("\033[28;5;8m██ \033[0m");
+                    break;
+                    case mountain2:
+                        printf("\033[38;5;7m██ \033[0m");
                     break;
                     case startPosition:
                         printf("\033[38;5;213m██ \033[0m");
@@ -314,7 +314,7 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
         }
         printf("\n");
     #else
-        printf("Sorry, the system are not listed above.\n");
+        printf("Sorry, the system has to be windows or macOS.\n");
     #endif
 }
 
