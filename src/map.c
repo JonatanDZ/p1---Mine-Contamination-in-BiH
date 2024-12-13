@@ -86,7 +86,7 @@ void fromNumberToEnum(int map[MAPSIZEROW][MAPSIZECOL]) {
 //Genereates mines that are placed random on the map, and overwrites the value already there
 void randomMineGen(int map[MAPSIZEROW][MAPSIZECOL], int amountOfMines) {
     srand(time(NULL));
-    int upperBound = MAPSIZE-1;
+    int upperBound = MAPSIZE;
     // Set the lower bound for random numbers depending on where the mine can be placed
     int lowerBound = 0;
 
@@ -231,42 +231,43 @@ bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
  */
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     #ifdef _WIN32
+    int block = 219;
         for (int i = 0; i < MAPSIZEROW; i++) {
             printf("\n");
             for (int j = 0; j < MAPSIZECOL; j++) {
                 switch (map[i][j]) {
                     case mine:
-                        printf("\033[38;5;196mXX \033[0m");
+                        printf("\033[38;5;196m%c%c \033[0m",block, block);
                     break;
                     case water:
-                        printf("\033[38;5;32m~~ \033[0m");
+                        printf("\033[38;5;32m%c%c \033[0m",block, block);
                     break;
                     case asphalt:
-                        printf("\033[38;5;214mMM \033[0m");
+                        printf("\033[38;5;214m%c%c \033[0m",block, block);
                     break;
                     case city:
-                        printf("\033[38;5;231mMM \033[0m");
+                        printf("\033[38;5;231m%c%c \033[0m",block, block);
                     break;
                     case field:
-                        printf("\033[38;5;46mWW \033[0m");
+                        printf("\033[38;5;46m%c%c \033[0m",block, block);
                     break;
                     case forest:
-                        printf("\033[38;5;22mTT \033[0m");
+                        printf("\033[38;5;22m%c%c \033[0m",block, block);
                     break;
                     case mountain1:
-                        printf("\033[28;5;8mMM \033[0m");
+                        printf("\033[28;5;8m%c%c \033[0m",block, block);
                     break;
                     case mountain2:
-                        printf("\033[38;5;7mMM \033[0m");
+                        printf("\033[38;5;7m%c%c \033[0m",block, block);
                     break;
                     case startPosition:
-                        printf("\033[38;5;213mMM \033[0m");
+                        printf("\033[38;5;213m%c%c \033[0m",block, block);
                     break;
                     case endPosition:
-                        printf("\033[38;5;213mMM \033[0m");
+                        printf("\033[38;5;213m%c%c \033[0m",block, block);
                     break;
                     default:
-                        printf("\033[38;5;213mMM \033[0m");
+                        printf("\033[38;5;213m%c%c \033[0m",block, block);
                 }
             }
         }
