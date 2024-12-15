@@ -73,10 +73,12 @@ void aStarVSdijkstra_s1212_d2929() {
     double startTimeAStar = clock();
     int aStarCalc = aStarSearch(map, start, dest);
     double aStarTime = (clock() - startTimeAStar) / CLOCKS_PER_SEC;
+    printf("A* time: %lf\n", aStarTime);
 
     double startTimeDijkstra = clock();
     int dijkstraCalc = dijkstra(mapD, start, dest);
     double dijkstraTime = (clock() - startTimeDijkstra) / CLOCKS_PER_SEC;
+    printf("dijkstra time: %lf\n", dijkstraTime);
 
     //ASSERT
     //Check if the two funcitons went the same path
@@ -106,11 +108,12 @@ void aStarVSdijkstra_s1616_d0000() {
     double startTimeAStar = clock();
     int aStarCalc = aStarSearch(map, start, dest);
     double aStarTime = (clock() - startTimeAStar) / CLOCKS_PER_SEC;
+    printf("A* time: %lf\n", aStarTime);
 
     double startTimeDijkstra = clock();
     int dijkstraCalc = dijkstra(mapD, start, dest);
-
     double dijkstraTime = (clock() - startTimeDijkstra) / CLOCKS_PER_SEC;
+    printf("dijkstra time: %lf\n", dijkstraTime);
 
     //ASSERT
     //Check if the two funcitons went the same path

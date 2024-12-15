@@ -4,7 +4,9 @@ project(p1___Mine_Contamination_in_BiH C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(testExe
-        testFile.c ../src/map.c
+        testFile.c 
+		../src/map.c
+		maptesthardcoded.c
         test.h
         ../src/dataStructures.c
         ../src/aStar.c

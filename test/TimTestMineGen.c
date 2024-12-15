@@ -18,7 +18,6 @@ void test_randomMineGen500() {
             }
         }
     }
-    printf("%d", mineAmount);
     //ASSSERT
     assert(mineAmount == expected);
 }
@@ -39,7 +38,6 @@ void test_randomMineGen250() {
             }
         }
     }
-    printf("%d", mineAmount);
     //ASSSERT
     assert(mineAmount == expected);
 }
@@ -61,7 +59,6 @@ void test_randomMineGen146() {
             }
         }
     }
-    printf("%d", mineAmount);
     //ASSSERT
     assert(mineAmount == expected);
 }
@@ -83,7 +80,6 @@ void test_randomMineGen27() {
             }
         }
     }
-    printf("%d", mineAmount);
     //ASSSERT
     assert(mineAmount == expected);
 }
