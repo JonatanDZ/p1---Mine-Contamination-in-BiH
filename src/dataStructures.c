@@ -72,11 +72,16 @@ double hCalc(int row, int col, int destRow, int destCol) {
     return D * (diffRow + diffCol) + (D2 - 2 * D) * min(diffRow, diffCol);
 }
 
+/**
+ * This returns the lowest of diffRow and diffCol normally 'fmin' could have been used but the program won't compile on linux with that function
+ * @param diffRow from hCalc the difference
+ * @param diffCol from hCalc the difference
+ * @return returns the lowest of diffRow and diffCol
+ */
 int min(int diffRow, int diffCol) {
     if (diffRow < diffCol) {
         return diffRow;
     } else {
         return diffCol;
     }
-
 }
