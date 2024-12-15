@@ -25,6 +25,9 @@ void initEmptyCellMap(cell_t cellMap[MAPSIZEROW][MAPSIZECOL]);
 void initCell(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int successorRow, int successorCol, int gCost, int parentRow, int parentCol, coor_t dest);
 double hCalc(int row, int col, int destRow, int destCol);
 
+int min(int diffRow, int diffCol);
+
+
 
 /* TODO: --- DEBUGGING FUNCTIONS --- */
 void printCell(cell_t cell, int row, int col);
