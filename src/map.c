@@ -231,48 +231,47 @@ bool isUnblocked(int map[MAPSIZEROW][MAPSIZECOL], int row, int col) {
  */
 void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
     #ifdef _WIN32
-    int block = 219;
-    
-    for (int i = 0; i < MAPSIZEROW; i++) {
-        printf("\n");
-        for (int j = 0; j < MAPSIZECOL; j++) {
-            switch (map[i][j]) {
-                case mine:
-                    printf("\033[38;5;196m%c%c \033[0m", block, block);
-                break;
-                case water:
-                    printf("\033[38;5;32m%c%c \033[0m", block, block);
-                break;
-                case asphalt:
-                    printf("\033[38;5;214m%c%c \033[0m", block, block);
-                break;
-                case city:
-                    printf("\033[38;5;231m%c%c \033[0m", block, block);
-                break;
-                case field:
-                    printf("\033[38;5;46m%c%c \033[0m", block, block);
-                break;
-                case forest:
-                    printf("\033[38;5;22m%c%c \033[0m", block, block);
-                break;
-                case mountain1:
-                    printf("\033[28;5;8m%c%c \033[0m", block, block);
-                break;
-                case mountain2:
-                    printf("\033[38;5;7m%c%c \033[0m", block, block);
-                break;
-                case startPosition:
-                    printf("\033[38;5;213m%c%c \033[0m", block, block);
-                break;
-                case endPosition:
-                    printf("\033[38;5;213m%c%c \033[0m", block, block);
-                break;
-                default:
-                    printf("\033[38;5;213m%c%c \033[0m", block, block);
+        int block = 219;
+
+        for (int i = 0; i < MAPSIZEROW; i++) {
+            printf("\n");
+            for (int j = 0; j < MAPSIZECOL; j++) {
+                switch (map[i][j]) {
+                    case mine:
+                        printf("\033[38;5;196m%c%c \033[0m", block, block);
+                    break;
+                    case water:
+                        printf("\033[38;5;32m%c%c \033[0m", block, block);
+                    break;
+                    case asphalt:
+                        printf("\033[38;5;214m%c%c \033[0m", block, block);
+                    break;
+                    case city:
+                        printf("\033[38;5;231m%c%c \033[0m", block, block);
+                    break;
+                    case field:
+                        printf("\033[38;5;46m%c%c \033[0m", block, block);
+                    break;
+                    case forest:
+                        printf("\033[38;5;22m%c%c \033[0m", block, block);
+                    break;
+                    case mountain1:
+                        printf("\033[28;5;8m%c%c \033[0m", block, block);
+                    break;
+                    case mountain2:
+                        printf("\033[38;5;7m%c%c \033[0m", block, block);
+                    break;
+                    case startPosition:
+                        printf("\033[38;5;213m%c%c \033[0m", block, block);
+                    break;
+                    case endPosition:
+                        printf("\033[38;5;213m%c%c \033[0m", block, block);
+                    break;
+                    default:
+                        printf("\033[38;5;213m%c%c \033[0m", block, block);
+                }
             }
         }
-    }
-
     #elif __APPLE__
         for (int i = 0; i < MAPSIZEROW; i++) {
             printf("\n");
@@ -314,45 +313,47 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
             }
         }
     #else
-    for (int i = 0; i < MAPSIZEROW; i++) {
-        printf("\n");
-        for (int j = 0; j < MAPSIZECOL; j++) {
-            switch (map[i][j]) {
-                case mine:
-                    printf("\033[38;5;196m▇▇ \033[0m");
-                break;
-                case water:
-                    printf("\033[38;5;32m▇▇ \033[0m");
-                break;
-                case asphalt:
-                    printf("\033[38;5;214m▇▇ \033[0m");
-                break;
-                case city:
-                    printf("\033[38;5;231m▇▇ \033[0m");
-                break;
-                case field:
-                    printf("\033[38;5;46m▇▇ \033[0m");
-                break;
-                case forest:
-                    printf("\033[38;5;22m▇▇ \033[0m");
-                break;
-                case mountain1:
-                    printf("\033[28;5;8m▇▇ \033[0m");
-                break;
-                case mountain2:
-                    printf("\033[38;5;7m▇▇ \033[0m");
-                break;
-                case startPosition:
-                    printf("\033[38;5;213m▇▇ \033[0m");
-                break;
-                case endPosition:
-                    printf("\033[38;5;213m▇▇ \033[0m");
-                break;
-                default:
-                    printf("\033[38;5;213m▇▇ \033[0m");
+        //This is for other OS's that is not Win or MacOS.
+        for (int i = 0; i < MAPSIZEROW; i++) {
+            printf("\n");
+            for (int j = 0; j < MAPSIZECOL; j++) {
+                switch (map[i][j]) {
+                    case mine:
+                        printf("\033[38;5;196mXX \033[0m");
+                    break;
+                    case water:
+                        printf("\033[38;5;32m~~ \033[0m");
+                    break;
+                    case asphalt:
+                        printf("\033[38;5;214mMM \033[0m");
+                    break;
+                    case city:
+                        printf("\033[38;5;231mMM \033[0m");
+                    break;
+                    case field:
+                        printf("\033[38;5;46mWW \033[0m");
+                    break;
+                    case forest:
+                        printf("\033[38;5;22mTT \033[0m");
+                    break;
+                    case mountain1:
+                        printf("\033[28;5;8mMM \033[0m");
+                    break;
+                    case mountain2:
+                        printf("\033[38;5;7mMM \033[0m");
+                    break;
+                    case startPosition:
+                        printf("\033[38;5;213mMM \033[0m");
+                    break;
+                    case endPosition:
+                        printf("\033[38;5;213mMM \033[0m");
+                    break;
+                    default:
+                        printf("\033[38;5;213mMM \033[0m");
+                }
             }
         }
-    }
+        printf("This OS does not support our special map. Please use windows or MacOS for a better visual representation.\n")
     #endif
     printf("\n");
 }
