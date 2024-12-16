@@ -312,6 +312,46 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                 }
             }
         }
+    #elif __linux__
+        for (int i = 0; i < MAPSIZEROW; i++) {
+            printf("\n");
+            for (int j = 0; j < MAPSIZECOL; j++) {
+                switch (map[i][j]) {
+                    case mine:
+                        printf("\033[38;5;196m▇▇ \033[0m");
+                    break;
+                    case water:
+                        printf("\033[38;5;32m▇▇ \033[0m");
+                    break;
+                    case asphalt:
+                        printf("\033[38;5;214m▇▇ \033[0m");
+                    break;
+                    case city:
+                        printf("\033[38;5;231m▇▇ \033[0m");
+                    break;
+                    case field:
+                        printf("\033[38;5;46m▇▇ \033[0m");
+                    break;
+                    case forest:
+                        printf("\033[38;5;22m▇▇ \033[0m");
+                    break;
+                    case mountain1:
+                        printf("\033[28;5;8m▇▇ \033[0m");
+                    break;
+                    case mountain2:
+                        printf("\033[38;5;7m▇▇ \033[0m");
+                    break;
+                    case startPosition:
+                        printf("\033[38;5;213m▇▇ \033[0m");
+                    break;
+                    case endPosition:
+                        printf("\033[38;5;213m▇▇ \033[0m");
+                    break;
+                    default:
+                        printf("\033[38;5;213m▇▇ \033[0m");
+                }
+            }
+        }
     #else
         //This is for other OS's that is not Win or MacOS.
         for (int i = 0; i < MAPSIZEROW; i++) {
@@ -353,7 +393,7 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
                 }
             }
         }
-        printf("This OS does not support our special map. Please use windows or MacOS for a better visual representation.\n")
+        printf("This OS does not support our special map. Please use windows or MacOS for a better visual representation.\n");
     #endif
     printf("\n");
 }
