@@ -71,7 +71,7 @@ bool fSearch(cell_t cellMap[MAPSIZEROW][MAPSIZECOL], int * resultR, int * result
                 }
                 /* In all other comparisons after finding the first 'open' cell,
                  * compare the current cell's f cost to the previously found lowest f cost. */
-                else if (cellMap[r][c].f < cellMap[ * resultR][ * resultC].f && cellMap[r][c].f > 0.01) { //0.0001 is our buffer we have to do this working with floats
+                else if (cellMap[r][c].f < cellMap[ * resultR][ * resultC].f && cellMap[r][c].f > 0.01) { //0.01 is our buffer we have to do this working with floats
                     /* If the current cell's f cost is lower than the previously found,
                      *     update result coordinates to the current cell's coordinates */
                     * resultR = r;
