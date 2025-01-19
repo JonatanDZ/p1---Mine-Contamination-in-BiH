@@ -9,13 +9,14 @@ int main(){
 
     createMapWFile(map);
 
-    terminalOutPut(map);
-
     input(map, &start, &dest);
-
-    aStarSearch(map, start, dest);
-
-    terminalOutPut(map);
-
+    
+    for (int r = 0; r < MAPSIZEROW; r++){
+        for (int c = 0; c < MAPSIZECOL; c++){
+            printf(" %3.0lf", hCalc(r, c, dest.row, dest.col));
+        }
+        printf("\n");
+    }
+    
     return 0;
 }
