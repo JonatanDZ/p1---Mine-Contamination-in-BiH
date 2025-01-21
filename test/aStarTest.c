@@ -61,7 +61,7 @@ void aStarVSdijkstra_s0591_d6348() {
     coor_t start, dest;
     start.row = 5, start.col = 91;
 
-    dest.row = 63, dest.col = 48;
+    dest.row = 97, dest.col = 01;
 
     int map[MAPSIZE][MAPSIZE], mapD[MAPSIZE][MAPSIZE];
 
