@@ -56,12 +56,12 @@ void aStarRouteTest_s0400_d0101() {
     assert(manualCalc == aStarCalc);
 }
 
-void aStarVSdijkstra_s1212_d2929() {
+void aStarVSdijkstra_s0591_d6348() {
     //ARRANGE
     coor_t start, dest;
-    start.row = 35, start.col = 84;
+    start.row = 5, start.col = 91;
 
-    dest.row = 63, dest.col = 22;
+    dest.row = 63, dest.col = 48;
 
     int map[MAPSIZE][MAPSIZE], mapD[MAPSIZE][MAPSIZE];
 
@@ -88,7 +88,7 @@ void aStarVSdijkstra_s1212_d2929() {
     assert(aStarTime < dijkstraTime + 0.0001);
 }
 
-void aStarVSdijkstra_s1616_d0000() {
+void aStarVSdijkstra_s5050_d9901() {
     //ARRANGE
     coor_t start;
     start.row = 50;
@@ -96,7 +96,7 @@ void aStarVSdijkstra_s1616_d0000() {
 
     coor_t dest;
     dest.row = 99;
-    dest.col = 00;
+    dest.col = 01;
 
     int map[MAPSIZE][MAPSIZE];
     createMapWFile(map);

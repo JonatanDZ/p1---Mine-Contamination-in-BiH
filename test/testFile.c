@@ -17,10 +17,10 @@ int main() {
     test_fSearch_1open_2not();
     */
     //Complete test
-    aStarRouteTest_s0100_d0004();
-    aStarRouteTest_s0400_d0101();
-    aStarVSdijkstra_s1212_d2929();
-   // aStarVSdijkstra_s1616_d0000();
+    //aStarRouteTest_s0100_d0004();
+    //aStarRouteTest_s0400_d0101();
+    aStarVSdijkstra_s5050_d9901();
+    aStarVSdijkstra_s0591_d6348();
     /*
     //hCalc
     test_hCalc_s0000_d2525();
