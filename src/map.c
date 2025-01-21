@@ -20,7 +20,7 @@ void readMapFileIntoArray(int map[MAPSIZEROW][MAPSIZECOL]) {
     int j; // int to increment during for-loop
 
     // Checks if the file opens.
-    mapfile = fopen("map.txt", "r");
+    mapfile = fopen("pixel_art_map.txt", "r");
     if (mapfile == NULL) {
         printf("Bruh it ain't readin... we're cooked chat :(\n");
         exit(EXIT_FAILURE);
@@ -238,37 +238,37 @@ void terminalOutPut(int map[MAPSIZEROW][MAPSIZECOL]) {
             for (int j = 0; j < MAPSIZECOL; j++) {
                 switch (map[i][j]) {
                     case mine:
-                        printf("\033[38;5;196m%c%c \033[0m", block, block);
+                        printf("\033[38;5;196m%c%c\033[0m", block, block);
                     break;
                     case water:
-                        printf("\033[38;5;32m%c%c \033[0m", block, block);
+                        printf("\033[38;5;32m%c%c\033[0m", block, block);
                     break;
                     case asphalt:
-                        printf("\033[38;5;214m%c%c \033[0m", block, block);
+                        printf("\033[38;5;214m%c%c\033[0m", block, block);
                     break;
                     case city:
-                        printf("\033[38;5;231m%c%c \033[0m", block, block);
+                        printf("\033[38;5;231m%c%c\033[0m", block, block);
                     break;
                     case field:
-                        printf("\033[38;5;46m%c%c \033[0m", block, block);
+                        printf("\033[38;5;46m%c%c\033[0m", block, block);
                     break;
                     case forest:
-                        printf("\033[38;5;22m%c%c \033[0m", block, block);
+                        printf("\033[38;5;22m%c%c\033[0m", block, block);
                     break;
                     case mountain1:
-                        printf("\033[28;5;8m%c%c \033[0m", block, block);
+                        printf("\033[28;5;8m%c%c\033[0m", block, block);
                     break;
                     case mountain2:
-                        printf("\033[38;5;7m%c%c \033[0m", block, block);
+                        printf("\033[38;5;7m%c%c\033[0m", block, block);
                     break;
                     case startPosition:
-                        printf("\033[38;5;213m%c%c \033[0m", block, block);
+                        printf("\033[38;5;213m%c%c\033[0m", block, block);
                     break;
                     case endPosition:
-                        printf("\033[38;5;213m%c%c \033[0m", block, block);
+                        printf("\033[38;5;213m%c%c\033[0m", block, block);
                     break;
                     default:
-                        printf("\033[38;5;213m%c%c \033[0m", block, block);
+                        printf("\033[38;5;213m%c%c\033[0m", block, block);
                 }
             }
         }

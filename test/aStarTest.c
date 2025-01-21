@@ -59,9 +59,9 @@ void aStarRouteTest_s0400_d0101() {
 void aStarVSdijkstra_s1212_d2929() {
     //ARRANGE
     coor_t start, dest;
-    start.row = 12, start.col = 12;
+    start.row = 14, start.col = 30;
 
-    dest.row = 29, dest.col = 29;
+    dest.row = 63, dest.col = 0;
 
     int map[MAPSIZEROW][MAPSIZECOL], mapD[MAPSIZEROW][MAPSIZECOL];
 
