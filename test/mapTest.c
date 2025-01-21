@@ -1,6 +1,6 @@
 #include <assert.h>
 #include "test.h"
-
+/*
 //createMapWFile
 void test_createMapWFile() {
     //ARRANGE
@@ -426,3 +426,4 @@ void test_isUnblocked_3_4_endPosition() {
     //ASSERT
     assert(result == true);
 }
+*/

@@ -20,7 +20,7 @@ void readMapFileIntoArray(int map[MAPSIZEROW][MAPSIZECOL]) {
     int j; // int to increment during for-loop
 
     // Checks if the file opens.
-    mapfile = fopen("pixel_art_map.txt", "r");
+    mapfile = fopen("pixel_art_map_100x100.txt", "r");
     if (mapfile == NULL) {
         printf("Bruh it ain't readin... we're cooked chat :(\n");
         exit(EXIT_FAILURE);

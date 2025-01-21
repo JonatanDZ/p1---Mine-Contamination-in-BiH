@@ -59,15 +59,15 @@ void aStarRouteTest_s0400_d0101() {
 void aStarVSdijkstra_s1212_d2929() {
     //ARRANGE
     coor_t start, dest;
-    start.row = 14, start.col = 30;
+    start.row = 35, start.col = 84;
 
-    dest.row = 63, dest.col = 0;
+    dest.row = 63, dest.col = 22;
 
-    int map[MAPSIZEROW][MAPSIZECOL], mapD[MAPSIZEROW][MAPSIZECOL];
+    int map[MAPSIZE][MAPSIZE], mapD[MAPSIZE][MAPSIZE];
 
-    createMap(map);
+    createMapWFile(map);
 
-    createMap(mapD);
+    createMapWFile(mapD);
 
     //ACT
     double startTimeAStar = clock();
@@ -91,18 +91,18 @@ void aStarVSdijkstra_s1212_d2929() {
 void aStarVSdijkstra_s1616_d0000() {
     //ARRANGE
     coor_t start;
-    start.row = 16;
-    start.col = 16;
+    start.row = 50;
+    start.col = 50;
 
     coor_t dest;
-    dest.row = 00;
+    dest.row = 99;
     dest.col = 00;
 
-    int map[MAPSIZEROW][MAPSIZECOL];
-    createMap(map);
+    int map[MAPSIZE][MAPSIZE];
+    createMapWFile(map);
 
-    int mapD[MAPSIZEROW][MAPSIZECOL];
-    createMap(mapD);
+    int mapD[MAPSIZE][MAPSIZE];
+    createMapWFile(mapD);
 
     //ACT
     double startTimeAStar = clock();

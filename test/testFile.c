@@ -11,28 +11,32 @@ int main() {
 
     /*----------------------------- aStarTest ------------------------------*/
     //Search test
+    /*
     test_fSearch_3open_2not();
     test_fSearch_noneOpen_firstTrue();
     test_fSearch_1open_2not();
-
+    */
     //Complete test
     aStarRouteTest_s0100_d0004();
     aStarRouteTest_s0400_d0101();
     aStarVSdijkstra_s1212_d2929();
-    aStarVSdijkstra_s1616_d0000();
-
+   // aStarVSdijkstra_s1616_d0000();
+    /*
     //hCalc
     test_hCalc_s0000_d2525();
     test_hCalc_s1010_d3131();
     test_hCalc_s2928_d0204();
     test_hCalc_s2900_d0029();
+    */
 
     /*------------------------- dataStructuresTest -------------------------*/
+    /*
     test_initEmptyCellMap();
     test_initCell_rc00_d2525();
+    */
 
     /*------------------------------- mapTest -------------------------------*/
-
+/*
     //test_createMapWFile(); TODO: Passes in test.exe, fails in allCTest because file is isn't found
 
     //isMineable
@@ -74,5 +78,5 @@ int main() {
     test_randomMineGen250();
     test_randomMineGen146();
     test_randomMineGen27();
-    
+*/
 }

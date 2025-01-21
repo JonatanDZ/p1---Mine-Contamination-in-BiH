@@ -1,8 +1,8 @@
 #ifndef MAP_H
 #define MAP_H
-#define MAPSIZEROW 64
-#define MAPSIZECOL 64
-#define MAPSIZE 64
+#define MAPSIZEROW 100
+#define MAPSIZECOL 100
+#define MAPSIZE 100
 #include <stdbool.h>
 //The following are used in the .c file. Do not delete.
 #include <stdlib.h>
